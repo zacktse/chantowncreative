@@ -1,0 +1,30 @@
+// base styling - styling applied to all pages
+
+html {
+  min-height: 100%;
+  /* background-color: $lighter-orange; */
+  box-sizing: border-box;
+  border: solid $page-border-width-mobile $lighter-orange;
+  @include media($tablet-up) {
+    border: solid $page-border-width-desktop $lighter-orange;
+  }
+  border-bottom: none;
+  border-top: none;
+  scroll-behavior: smooth;
+}
+
+body {
+    background-color: whitesmoke;
+    color: $chantown-gray;
+
+
+}
+
+
+.content-main {
+  @include outer-container;
+  margin-top: 140px;
+  padding-left: 16px;
+  padding-right: 16px;
+/*   @include pad(); */
+}

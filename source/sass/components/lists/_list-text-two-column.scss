@@ -1,0 +1,14 @@
+.list__two-col{
+  @include padding(16,0,26,0);
+  li {
+    display: block;
+    @include padding(12,12,12,12);
+    @include span-columns(2);
+    @include omega(2n);
+
+    @include media($tablet-up) {
+      @include span-columns(4);
+      @include omega(4n);
+    }
+  }
+}

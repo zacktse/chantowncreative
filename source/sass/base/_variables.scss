@@ -1,0 +1,40 @@
+// base font size
+
+$base-font-size: 1em;
+$base-font-size-no-px: 16;
+
+// Typography global variables
+//$base-font-family: $helvetica;
+$base-font-family: $sans-serif;
+$heading-font-family: $joesfin; // from google web fonts scss
+//@debug ms-list($start, $end, $ms-base, $ms-ratio);
+// Font Sizes
+$base-font-size: ms(0);
+
+// Line height
+$base-line-height: 1.5em;
+$heading-line-height: 1.2;
+
+// spacing
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+
+
+// Other Sizes
+$base-border-radius: 0;
+$base-z-index: 0;
+
+// Borders
+
+$page-border-width-mobile: 2px;
+$page-border-width-desktop: 6px;
+
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// transitions
+$default-transition-speed: 333ms;
