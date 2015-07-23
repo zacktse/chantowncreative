@@ -18,9 +18,13 @@
 @import "neat";
 
 
+// Typography
+@import "typography/typography";
+
 
 //--------------------------------------------------------------------------
 //  Layout
 //--------------------------------------------------------------------------
-@import "layout/header",
+@import "layout/base",
+        "layout/header",
         "layout/footer";
