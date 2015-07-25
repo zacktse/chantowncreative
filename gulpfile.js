@@ -50,7 +50,8 @@ var path = {
     js_dest : 'build/assets/js',                                   // where to put minified js
     js_vendor_dest : 'build/assets/js/vendor',                     // where to copy vendor js
     img_src : 'source/img/**/*.*',                          // images for the website assets
-    img_dest : 'build/assets/img'                                              // where to build out images to
+    img_dest : 'build/assets/img',                                              // where to build out images to
+    favicon_src: 'source/img/favicon/*.*'                   // 'dem favicons
 };
 
 /*******************************************************************************
@@ -119,7 +120,6 @@ gulp.task('sass', function(){
         //    'android 4'
         //))
         //.pipe(cssmin())                                      // minify css
-
         .pipe(gulp.dest(path.sass_dest))                  //destination
         .pipe(connect.reload());
 });
@@ -206,8 +206,11 @@ gulp.task('buildhtml', function() {
 gulp.task('build_imgs', function() {
   gulp.src(path.img_src)
     .pipe(plumber())
-    .pipe(gulp.dest('./build/assets/img'))
-    .pipe(connect.reload());
+    .pipe(gulp.dest('./build/assets/img'));
+  gulp.src(path.favicon_src)
+    .pipe(plumber())
+    .pipe(gulp.dest('./build/'))
+  .pipe(connect.reload());
 });
 
 /*******************************************************************************
@@ -251,8 +254,8 @@ gulp.task('deploy-to-staging', function() {
       buffer: false
     })
     .pipe(plumber())
-    .pipe(conn.newer('./chantown.com/newwebtest/joesfin')) // only upload newer files
-    .pipe(conn.dest('./chantown.com/newwebtest/joesfin'));
+    .pipe(conn.newer('./chantown.com/newwebtest/')) // only upload newer files
+    .pipe(conn.dest('./chantown.com/newwebtest/'));
 });
 
 

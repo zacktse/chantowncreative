@@ -5,8 +5,14 @@ $base-font-size-no-px: 16;
 
 // Typography global variables
 //$base-font-family: $helvetica;
+
+//$base-font-family: $joesfin;
 $base-font-family: $sans-serif;
+$body-text-font: $joesfin;
 $heading-font-family: $joesfin; // from google web fonts scss
+
+
+
 //@debug ms-list($start, $end, $ms-base, $ms-ratio);
 // Font Sizes
 $base-font-size: ms(0);
@@ -38,3 +44,11 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $l
 
 // transitions
 $default-transition-speed: 333ms;
+
+// z-index scale
+$z-behind-bg:     0;
+$z-bg:            10;
+$z-content:       20;
+$z-above-content: 30;
+$z-above-nav:     40;
+$z-above-all:     50;

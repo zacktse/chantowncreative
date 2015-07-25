@@ -11,7 +11,6 @@ footer {
 .blog-link {
   background-color: $pale-orange;
   height: 30px;
-  position:fixed;
   width: 100%;
   border-left: solid $page-border-width-mobile $lighter-orange;
   border-right: solid $page-border-width-mobile $lighter-orange;
@@ -39,21 +38,23 @@ footer {
 }
 
 .back-to-top {
+  position:fixed;
+  width:100%;
+  height:3.5em;
+  background:$lighter-orange;
+  left:0;
+  bottom:-54px;
+  z-index:1;
+  &.visible {
+    bottom:0;
+    @include transition(all $default-transition-speed ease-out);
+  }
   a {
     display: block;
     color: white;
     width: 100%;
-    padding-top: 8px;
+    padding-top: 16px;
     text-align: center;
     }
-}
 
-.bottom-border {
-    position:fixed;
-    width:100%;
-    height:2.5em;
-    background:$lighter-orange;
-    left:0;
-    bottom:0;
-    z-index:1;
 }

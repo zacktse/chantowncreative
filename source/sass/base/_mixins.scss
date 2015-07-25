@@ -1,3 +1,12 @@
+@mixin bootstrap-container {
+    @include outer-container;
+		@include media($large-mobile-up)  { max-width:  639px; }
+		@include media($tablet-up)  { max-width:  959px; }
+		@include media($desktop-up)  { max-width: 1279px; }
+    @include media($large-screen-up) { max-width:  2800px; }
+
+}
+
 @mixin font-size($font-size){
 		font-size:$font-size +px;
 		font-size:$font-size / $base-font-size-no-px  +rem;
@@ -26,5 +35,44 @@
   &:hover {
     padding-bottom: 3px;
     @include transition(all $default-transition-speed ease-out);
+  }
+}
+
+
+// default link underlines
+
+@mixin animated-link-underline ($link-color: $lighter-orange, $underline-color: $lighter-orange, $hover-color: $chantown-gray ) {
+  font-weight: bolder;
+  color: $link-color;
+  position: relative;
+  &:hover, &:focus, &:active {
+    color: $hover-color;
+  }
+
+
+
+  &::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    //background: rgba(0,0,0,0.1);
+    background: $underline-color;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity $default-transition-speed, -webkit-transform $default-transition-speed;
+    -moz-transition: opacity $default-transition-speed, -moz-transform $default-transition-speed;
+    transition: opacity $default-transition-speed, transform $default-transition-speed;
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+
+  &:hover::after, &:focus::after {
+    opacity: 1;
+    -webkit-transform: translateY(2px);
+    -moz-transform: translateY(2px);
+    transform: translateY(2px);
   }
 }

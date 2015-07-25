@@ -1,4 +1,4 @@
-header.navigation {
+header.main-header {
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $action-color: $dark-gray !default;
@@ -8,6 +8,9 @@ header.navigation {
   $navigation-color: white;
   $navigation-color-hover: $lighter-orange;
   $navigation-height: 60px;
+  $navigation-height-desktop: 120px;
+  $navigation-height-collapsed-mobile: 46px;
+  $navigation-height-collapsed-desktop: 60px;
   $navigation-nav-button-background: $action-color;
   $navigation-nav-button-background-hover: lighten($navigation-background, 10%);
   $navigation-nav-button-border: 1px solid lighten($navigation-nav-button-background, 20%);
@@ -17,47 +20,55 @@ header.navigation {
   $navigation-submenu-padding: 1em;
   $navigation-submenu-width: 12em;
   $horizontal-bar-mode: $desktop-screen;
-
   background-color: $navigation-background;
   //border-bottom: 1px solid darken($navigation-background, 10);
+  @include transition(all $default-transition-speed ease-out);
   min-height: $navigation-height;
   width: 100%;
   z-index: 999;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  border-top: $page-border-width-mobile solid $lighter-orange;
-  border-left: $page-border-width-mobile solid $lighter-orange;
-  border-right: $page-border-width-mobile solid $lighter-orange;
+  margin-top: $page-border-width-mobile;
+  margin-left: $page-border-width-mobile;
+  margin-right: $page-border-width-mobile;
+
   @include media($tablet-up) {
-    border-top: $page-border-width-desktop solid $lighter-orange;
-    border-left: $page-border-width-desktop solid $lighter-orange;
-    border-right: $page-border-width-desktop solid $lighter-orange;
+    margin-top: $page-border-width-desktop;
+    margin-left: $page-border-width-desktop;
+    margin-right: $page-border-width-desktop;
+    min-height: $navigation-height-desktop;
   }
 
-  // @include media ($horizontal-bar-mode) {
-  //     min-height: 180px;
-  // }
+  @include media ($horizontal-bar-mode) {
+      min-height: 180px;
+      max-width: 1280px;
+      width: 92.5%;
+      margin: 0 auto;
+      text-align: center;
+  }
 
   .navigation-wrapper {
     @include clearfix;
     @include outer-container;
+
     position: relative;
     overflow: hidden;
-    z-index: 9999;
+    z-index: $z-content;
     background-color: $darker-orange;
-
     // desktop styles for main navigation
     @include media ($horizontal-bar-mode) {
         min-height: 60px;
-        background-color: whitesmoke;
+        background-color: opacify(whitesmoke, 0.7);;
     }
   }
+
   .logo-wrapper{
     @include clearfix;
     @include outer-container;
+    overflow: hidden;
+    max-width: 1280px;
+    margin: 0 auto;
     @include media ($horizontal-bar-mode) {
-      margin-top: 0px
+      margin-top: 0px;
+      @include span-columns(9);
     }
 
   }
@@ -66,16 +77,21 @@ header.navigation {
     max-height: $navigation-height;
     width: 300px;
     margin-top: 16px;
-    margin-left: 12px;
-    margin-right: 12px;
+    margin-left: 16px;
     @include hide-text;
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: top left;
     background-image: url(../img/ChantownCreative_LOGO_mobile.png);
-    @include media($tablet-up) {
+    @include media($desktop-up) {
       background-image: url(../img/ChantownCreative_LOGO_desktop.png);
+      position: absolute;
+      top: 6px;
+      width: 450px;
+      margin-left: -6px;
+      max-height: $navigation-height-desktop;
     }
+    z-index: $z-above-nav;
 
   }
   .logo:hover {
@@ -83,20 +99,37 @@ header.navigation {
   }
 
 
+  // navigation
 
-  ul.navigation-menu{
+  ul.navigation-menu {
     padding-top: 0;
-
+    padding-left: 12px;
+    padding-right: 12px;
+    max-height: 46px;
+    text-align: justify;
     @include media ($horizontal-bar-mode) {
       @include span-columns(8 of 16, block-collapse);
-      @include shift(8);
+      @include shift(9);
+      padding-top: 30px;
+      padding-left: 0;
+      max-height: 160px;
+    }
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+      @include media ($horizontal-bar-mode) {
+        width: auto;
+      }
+      height: 0px;
     }
   }
   .nav-link {
-    @include span-columns(1);
+   width: auto;
+   display: inline-block;
+
     @include media ($horizontal-bar-mode) {
-      min-width: 40px;
-      width: auto;
+
     }
   }
 
@@ -107,21 +140,75 @@ header.navigation {
     text-align: left;
     color: white;
     text-transform: uppercase;
+    padding-left: 0;
     @include media ($horizontal-bar-mode) {
       color: $darker-orange;
       text-align: center;
-      padding: 0 16px
+      padding: 16px 16px;
+      @include animated-link-underline();
     }
-  }
-  .nav-link a:first-of-type {
-    padding-left: 12px;
-  }
-
-  .nav-link a:last-of-type {
-    padding-right: 12px;
   }
   .nav-link a:active {
     color: $dark-gray;
+  }
+
+  // &.header--hidden{
+  //   position: fixed;
+  //   top: -120px;
+  //   opacity: 0;
+  // }
+
+}
+
+
+header.main-header .nav-link a {
+  @include animated-link-underline();
+}
+
+
+// styles after user scrolls down
+
+header.main-header.header--narrow {
+  position: fixed;
+  top: 0px;
+  margin-top: 0;
+  max-height: 60px;
+  overflow: hidden;
+  @include media($desktop-up) {
+
+    &:hover .navigation-wrapper{
+        background-color: whitesmoke;
+        @include transition(all $default-transition-speed ease-out);
+    }
+
+    .navigation-wrapper {
+      height: 60px;
+      background-color: transparent;
+      @include transition(all $default-transition-speed ease-out);
+    }
+
+    ul.navigation-menu {
+      padding-top: 0;
+    }
+  }
+  .logo {
+    max-height: calc($navigation-height / 3);
+    width: 300px;
+    margin-top: 16px;
+    margin-left: 16px;
+    @include media($desktop-up) {
+      background-image: url(../img/ChantownCreative_LOGO_desktop.png);
+      position: absolute;
+      top: 6px;
+      margin-top: 6px;
+      width: 260px;
+      margin-left: 0;
+      max-height:  60px;
+    }
+  }
+
+  .logo h1 {
+    margin-bottom: 0;
   }
 
 }
