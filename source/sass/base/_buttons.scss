@@ -33,7 +33,9 @@ button {
 
 // fancy buttons - from codrops
 /* General button style (reset) */
-.btn {
+
+
+.fancy-btn {
 	border: none;
 	font-family: inherit;
 	font-size: inherit;
@@ -53,7 +55,7 @@ button {
 	transition: all 0.3s;
 }
 
-.btn:after {
+.fancy-btn:after {
 	content: '';
 	position: absolute;
 	z-index: -1;
@@ -63,7 +65,7 @@ button {
 }
 
 /* Pseudo elements for icons */
-.btn:before,
+.fancy-btn:before,
 {
 	font-family: 'icomoon';
 	speak: none;
@@ -74,4 +76,72 @@ button {
 	line-height: 1;
 	position: relative;
 	-webkit-font-smoothing: antialiased;
+}
+
+.icon-cog:before {
+	content: "\e010";
+}
+
+/* Button 3 */
+.btn-w-icon {
+	background: #fcad26;
+	color: #fff;
+}
+
+.btn-w-icon:hover {
+	background: #f29e0d;
+}
+
+.btn-w-icon:active {
+	background: #f58500;
+	top: 2px;
+}
+
+.btn-w-icon:before {
+	position: absolute;
+	height: 100%;
+	left: 0;
+	top: 0;
+	line-height: 3;
+	font-size: 140%;
+	width: 60px;
+}
+
+/* Button 3d */
+.btn-3d {
+	padding: 25px 60px 25px 120px;
+	border-radius: 10px;
+}
+
+.btn-3d:before {
+	background: #fff;
+	color: #fcad26;
+	z-index: 2;
+	border-radius: 10px 0 0 10px;
+}
+
+.btn-3d:after {
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	z-index: 1;
+	left: 55px;
+	top: 50%;
+	margin: -10px 0 0 -10px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.btn-3d:active:before {
+	color: #f58500;
+}
+
+.btn-3d:active {
+	top: 0;
+}
+
+.btn-3d:active:after {
+	left: 60px;
 }

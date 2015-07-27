@@ -19,43 +19,127 @@
 
 
   <div class="row">
-    <section class="mix-it-up-gallery">
+    <!-- <section class="mix-it-up-gallery">
       <button class="sort" data-sort="random">Shuffle</button>
       <button class="filter" data-filter="all">View All</button>
-      <button class="filter" data-filter=".category-1">Category 1</button>
-      <button class="filter" data-filter="all">Category 2</button>
+      <button class="filter" data-filter=".painting">Painting</button>
+      <button class="filter" data-filter=".screenprint">Screenprint</button>
+      <button class="filter" data-filter=".llustration">Illustration</button>
+      <button class="filter" data-filter=".sketch">Sketch</button>
+      <button class="filter" data-filter=".commercial">Commercial</button>
+      <button class="filter" data-filter=".mixed-media">Mixed Media</button>
 
       <div id="gallery-container" class="flex-container">
-        <div class="mix">
+        <div class="mix sketch">
           <img src="assets/img/gallery/test/2014-02_AngkorEastGate.jpg" alt="">
         </div>
-        <div class="mix category-1">
+        <div class="mix illustration">
           <img src="assets/img/gallery/test/2014-02_TaPhrom.jpg" alt="">
         </div>
-        <div class="mix category-1">
+        <div class="mix screenprint">
           <img src="assets/img/gallery/test/2014_AW4-10_EastGateBrownYellOverprint-201406.jpg" alt="">
         </div>
-        <div class="mix">
+        <div class="mix sketch illustration">
           <img src="assets/img/gallery/test/2014_AW5-10_AngkorWatEastGateOrangeDraw-201408.jpg" alt="">
         </div>
         <div class="mix category-1">
           <img src="assets/img/gallery/test/2014_BeggarInTheMorning_30_small.jpg" alt="">
         </div>
-        <div class="mix">
+        <div class="mix illustration">
           <img src="assets/img/gallery/test/201506_MichaelsBearTrap.jpg" alt="">
         </div>
-        <div class="mix category-1">
+        <div class="mix painting">
           <img src="assets/img/gallery/test/2014_LeicesterFoxCLEAN.jpg" alt="">
         </div>
-        <div class="mix">
+        <div class="mix mixed-media">
           <img src="assets/img/gallery/test/2015_ButYoullCry-FULL.jpg" alt="">
         </div>
 
         <div class="gap"></div>
       </div>
-    </section>
+    </section> -->
+
+
+
+
+    <!-- photoswipe plugin -->
+
+    <div class="picture" itemscope itemtype="http://schema.org/ImageGallery">
+      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="assets/img/gallery/test/test1.jpg" itemprop="contentUrl" data-size="1000x667" data-index="0">
+          <img src="assets/img/gallery/test/test1.jpg" height="400" width="600" itemprop="thumbnail" alt="Beach">
+        </a>
+      </figure>
+      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="assets/img/gallery/test/test2.jpg" itemprop="contentUrl" data-size="1000x667" data-index="0">
+          <img src="assets/img/gallery/test/test2.jpg" height="400" width="600" itemprop="thumbnail" alt="Beach">
+        </a>
+      </figure>
+      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="assets/img/gallery/test/test3.jpg" itemprop="contentUrl" data-size="1000x667" data-index="0">
+          <img src="assets/img/gallery/test/test3.jpg" height="400" width="600" itemprop="thumbnail" alt="Beach">
+        </a>
+      </figure>
+      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="assets/img/gallery/test/test4.jpg" itemprop="contentUrl" data-size="1000x667" data-index="0">
+          <img src="assets/img/gallery/test/test4.jpg" height="400" width="600" itemprop="thumbnail" alt="Beach">
+        </a>
+      </figure>
+      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="assets/img/gallery/test/test5.jpg" itemprop="contentUrl" data-size="1000x667" data-index="0">
+          <img src="assets/img/gallery/test/test5.jpg" height="400" width="600" itemprop="thumbnail" alt="Beach">
+        </a>
+      </figure>
+    </div>
+
+
+
+
+
   </div>
 </section>
+</div>
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
 </div>
 
 @@include('../templates/global/_html-footer.tpl.html')

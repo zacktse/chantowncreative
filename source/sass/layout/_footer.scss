@@ -5,6 +5,10 @@ footer {
   .copyright {
     text-align: center;
     font-size: 12px;
+
+    a{
+      @include animated-link-underline();
+    }
   }
 }
 
@@ -34,7 +38,8 @@ footer {
     padding-top:4px;
     padding-bottom: 6px;
     line-height: 1.5em;
-    }
+
+  }
 }
 
 .back-to-top {
@@ -44,7 +49,7 @@ footer {
   background:$lighter-orange;
   left:0;
   bottom:-54px;
-  z-index:1;
+  z-index:$z-above-all;
   &.visible {
     bottom:0;
     @include transition(all $default-transition-speed ease-out);
@@ -55,6 +60,7 @@ footer {
     width: 100%;
     padding-top: 16px;
     text-align: center;
+
     }
 
 }

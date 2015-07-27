@@ -12,6 +12,7 @@
 *******************************************************************************/
 
 var gulp = require ('gulp'),                                //require gulp
+    debug = require('gulp-debug'),
     gutils = require('gulp-util'),                          // gulp utilities (date)
     templator = require('gulp-file-include'),               // used to build preototype files from multiple includes
     header  = require('gulp-header'),                       // adds header to top of files (last updated message)
@@ -30,6 +31,13 @@ var gulp = require ('gulp'),                                //require gulp
     cssmin = require('gulp-cssmin'),                        // minify the css files
     // neat = require('node-neat').includePaths             // make node-neat work
     stylish = require('jshint-stylish'),                    // make errors look good in shell
+    responsive = require('gulp-responsive'),                // used to resize images
+    imagemin = require('gulp-imagemin'),                    // used to compress images
+    pngquant = require('imagemin-pngquant'),
+    parallel = require('concurrent-transform'),
+    changed = require('gulp-changed'),                    // only process files that have changed
+    imageResize = require('gulp-image-resize'),
+    os = require("os"),
     ftp = require('vinyl-ftp'),
     ftp_details = require('./ftp-details.json');
     // neat.with('source/sass/');   // set path to sass for bourbon neat
@@ -49,8 +57,12 @@ var path = {
     js_vendor_src : 'source/js/vendor/*.js',                // vendor js scripts
     js_dest : 'build/assets/js',                                   // where to put minified js
     js_vendor_dest : 'build/assets/js/vendor',                     // where to copy vendor js
+    resp_png_src: ['source/img/**/*.png','!source/img/favicon/*.*','!source/img/vendor/*.*'],
+    resp_jpg_src: ['source/img/**/*.jpg','!source/img/favicon/*.*','!source/img/vendor/*.*'],
     img_src : 'source/img/**/*.*',                          // images for the website assets
-    img_dest : 'build/assets/img',                                              // where to build out images to
+    img_dest : 'build/assets/img',                          // where to build out images to
+    fonts_src : 'source/fonts/**/**.*',                     // where to grab fonts from
+    fonts_dest : 'build/assets/fonts',                     // where to place fonts
     favicon_src: 'source/img/favicon/*.*'                   // 'dem favicons
 };
 
@@ -103,7 +115,7 @@ gulp.task('js-copy-vendorscripts', function() {
 gulp.task('sass', function(){
     gulp.src(path.sass_src)                                 // source
         .pipe(plumber())
-        .pipe(sourcemaps.init())                                  // Use plumber
+        .pipe(sourcemaps.init())                            // Use plumber
         .pipe(sass({                                        // task
             // includePaths: ['styles'].concat(neat),        // Make node-neat work
             includePaths: require('node-neat').includePaths,
@@ -198,20 +210,85 @@ gulp.task('buildhtml', function() {
     .pipe(connect.reload());
 });
 
+
 /*******************************************************************************
-## build images
-## builds out image assets and copys to build folder
-##
+## responsive images
+## Generates different sized images from the src images for serving to different devices
+## and copies to the build folder
 *******************************************************************************/
-gulp.task('build_imgs', function() {
-  gulp.src(path.img_src)
+gulp.task('responsive-imgs', function() {
+  // pngs
+  gulp.src(path.resp_png_src)
     .pipe(plumber())
-    .pipe(gulp.dest('./build/assets/img'));
+    .pipe(changed('./build/assets/img/'))
+    .pipe(gulp.dest('./build/assets/img/')) // copy full size images
+    .pipe(debug({title: 'image:'}))
+    .pipe(parallel(
+      imageResize({ width : 640 }), os.cpus().length
+    ))
+    .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true,  use: [pngquant()] }))
+    .pipe(rename(function(dir,base,ext){                // append the filename with  '-sml' title before file extension
+        var trunc = base.split('.')[0];
+        return trunc + '-sml' + ext;
+    }))
+    .pipe(gulp.dest('./build/assets/img/'));
+
+    // jpgs
+    gulp.src(path.resp_jpg_src)
+      .pipe(plumber())
+      .pipe(changed('./build/assets/img/'))
+      .pipe(gulp.dest('./build/assets/img/')) // copy full size images
+      .pipe(debug({title: 'image:'}))
+      .pipe(parallel(
+        imageResize({ width : 640 }), os.cpus().length
+      ))
+      .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true,  use: [pngquant()] }))
+      .pipe(rename(function(dir,base,ext){                // append the filename with  '-sml' title before file extension
+          var trunc = base.split('.')[0];
+          return trunc + '-sml' + ext;
+      }))
+      .pipe(gulp.dest('./build/assets/img/'));
+});
+
+
+gulp.task('copy-favicon', function() {
+  // favicon sheet
   gulp.src(path.favicon_src)
     .pipe(plumber())
     .pipe(gulp.dest('./build/'))
   .pipe(connect.reload());
 });
+
+
+/*******************************************************************************
+## build images
+## builds out image assets and copys to build folder
+##
+*******************************************************************************/
+// gulp.task('build_imgs', function() {
+//   gulp.src(path.img_src)
+//     .pipe(plumber())
+//     .pipe(gulp.dest('./build/assets/img'));
+//   gulp.src(path.favicon_src)
+//     .pipe(plumber())
+//     .pipe(gulp.dest('./build/'))
+//   .pipe(connect.reload());
+// });
+
+
+
+/*******************************************************************************
+## fonts
+## sends fonts to the build folder
+##
+*******************************************************************************/
+gulp.task('build_fonts', function() {
+  gulp.src(path.fonts_src)
+    .pipe(plumber())
+    .pipe(gulp.dest(path.fonts_dest));
+});
+
+
 
 /*******************************************************************************
 ##  WATCH TASKS
@@ -266,4 +343,15 @@ gulp.task('deploy-to-staging', function() {
 ##  Go Gulp Go! // "gulp" or "gulp scripts" etc...
 *******************************************************************************/
 
-gulp.task('default', ['buildhtml','js-uglify', 'js-lint', 'js-concat','js-copy-vendorscripts', 'build_imgs', 'sass', 'connect', 'watch']);
+gulp.task('default', [
+    'buildhtml',
+    'build_fonts',
+    'js-uglify',
+    'js-lint',
+    'js-concat',
+    'js-copy-vendorscripts',
+    'responsive-imgs',
+    'copy-favicon',
+    'sass',
+    'connect',
+    'watch']);

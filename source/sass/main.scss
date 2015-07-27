@@ -19,6 +19,8 @@
 
 
 // Typography
+@import "typography/google-web-fonts/google-web-fonts";
+@import "typography/icon-font/icon-font";
 @import "typography/typography";
 
 
@@ -34,4 +36,5 @@
 //--------------------------------------------------------------------------
 @import "components/lists/list-text-two-column",
         "components/mix-it-up-filters/mix-it-up",
-        "components/profile-image";
+        "components/profile-image",
+        "components/photoswipe/photoswipe";
