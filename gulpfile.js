@@ -329,21 +329,117 @@ gulp.task('responsive-imgs', function() {
       .pipe(changed('./build/assets/img/'))
       .pipe(gulp.dest('./build/assets/img/')) // copy full size images
       .pipe(debug({title: 'image:'}))
+      // .pipe(parallel(
+      //   imageResize({ width : 640 }), os.cpus().length
+      // ))
       .pipe(parallel(
-        imageResize({ width : 640 }), os.cpus().length
+        responsive(
+        {
+          '**/*.png' : [
+            {
+              width: 320,
+              rename: {
+                //path.dirname += "";
+                suffix: "_small"
+                //path.extname = ".md"
+              },
+              background: {r: 255, g: 255, b: 255, a: 255},
+              embed: true,
+              withoutEnlargement: false
+            },
+            {
+              width: 640,
+              rename: {
+                //path.dirname += "";
+                suffix: "_small@2x"
+                //path.extname = ".md"
+              },
+              background: {r: 255, g: 255, b: 255, a: 255},
+              embed: true,
+              withoutEnlargement: false
+            },
+            {
+              width: 650,
+              rename: {
+                //path.dirname += "";
+                suffix: "_medium"
+                //path.extname = ".md"
+              },
+              background: {r: 255, g: 255, b: 255, a: 255},
+              embed: true,
+              withoutEnlargement: false
+            },
+            {
+              width: 1300,
+              rename: {
+                //path.dirname += "";
+                suffix: "_medium@2x"
+                //path.extname = ".md"
+              },
+              background: {r: 255, g: 255, b: 255, a: 255},
+              embed: true,
+              withoutEnlargement: false
+            },
+            {
+              width: 940,
+              rename: {
+                //path.dirname += "";
+                suffix: "_large"
+                //path.extname = ".md"
+              },
+              background: {r: 255, g: 255, b: 255, a: 255},
+              embed: true,
+              withoutEnlargement: false
+            },
+            {
+              width: 1880,
+              rename: {
+                //path.dirname += "";
+                suffix: "_large@2x"
+                //path.extname = ".md"
+              },
+              background: {r: 255, g: 255, b: 255, a: 255},
+              embed: true,
+              withoutEnlargement: false
+            },
+            {
+              width: 1440,
+              rename: {
+                //path.dirname += "";
+                suffix: "_x-large"
+                //path.extname = ".md"
+              },
+              background: {r: 255, g: 255, b: 255, a: 255},
+              embed: true,
+              withoutEnlargement: false
+            },
+            {
+              width: 2880,
+              rename: {
+                //path.dirname += "";
+                suffix: "_x-large@2x"
+                //path.extname = ".md"
+              },
+              background: {r: 255, g: 255, b: 255, a: 255},
+              embed: true,
+              withoutEnlargement: false
+            }
+          ]
+        })
       ))
+
       .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true,  use: [pngquant()] }))
-      .pipe(rename(function(dir,base,ext){                // append the filename with  '-sml' title before file extension
-          var trunc = base.split('.')[0];
-          return trunc + '-sml' + ext;
-      }))
+      // .pipe(rename(function(dir,base,ext){                // append the filename with  '-sml' title before file extension
+      //     var trunc = base.split('.')[0];
+      //     return trunc + '-sml' + ext;
+      // }))
       .pipe(gulp.dest('./build/assets/img/'));
 
     // svgs + gifs
     gulp.src(path.img_src)
       .pipe(plumber())
       .pipe(gulp.dest('./build/assets/img/'));
-    
+
 });
 
 

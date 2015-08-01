@@ -1,10 +1,11 @@
 (function(){
 
   /*
+		scroll / reveal header script
 		By Osvaldas Valutis, www.osvaldas.info
 		Available for use under the MIT License
 	*/
-	$('#gallery-container').mixItUp();
+
 
 	;( function ( document, window, index )
 	{
@@ -14,7 +15,7 @@
 			var elSelector		= 'body',
 			elClassHidden	= 'header--hidden',
 			elClassNarrow	= 'header--narrow',
-			elNarrowOffset	= 50,
+			elNarrowOffset	= 135,
 			throttleTimeout	= 500,
 			element			= document.querySelector( elSelector );
 
@@ -25,7 +26,6 @@
 			wScrollCurrent	= 0,
 			wScrollBefore	= 0,
 			wScrollDiff		= 0,
-
 			hasElementClass		= function( element, className ){ return element.classList ? element.classList.contains( className ) : new RegExp( '(^| )' + className + '( |$)', 'gi' ).test( element.className ); },
 			addElementClass		= function( element, className ){ element.classList ? element.classList.add( className ) : element.className += ' ' + className; },
 			removeElementClass	= function( element, className ){ element.classList ? element.classList.remove( className ) : element.className = element.className.replace( new RegExp( '(^|\\b)' + className.split( ' ' ).join( '|' ) + '(\\b|$)', 'gi' ), ' ' ); },
@@ -94,7 +94,7 @@
         var scrollBarPosition = window.pageYOffset | document.body.scrollTop;
         var bk2TopLink = document.querySelectorAll('.back-to-top')[0];
         // show back to top link after user has scrolled 200px from the top
-        if(scrollBarPosition > 40) {
+        if(scrollBarPosition > 140) {
           bk2TopLink.classList.add('visible');
         }
         else {
@@ -106,14 +106,29 @@
 
 
 
+	// active page highlighting
+	function setActive() {
+		var aObj = document.getElementById('js-navigation-menu').getElementsByTagName('a');
+		for(var i=0;i<aObj.length;i++) {
+			if(document.location.href.indexOf(aObj[i].href)>=0) {
+				aObj[i].className='active';
+			}
+		}
+	}
+	setActive();
+
+
+
 	// isotope / masonry-grid
 
 	var $grid = $('.masonry-grid').isotope({
-    itemSelector: '.grid-item',
-		percentPosition: true,
-    masonry: {
-      columnWidth: 100
-    }
+			 layoutMode: 'moduloColumns',
+			 moduloColumns: {
+			 columnWidth: 100,
+			 gutter: 20
+		 },
+		sortBy:'random'
+
   });
 
 
@@ -164,15 +179,29 @@
 	 //filterValue = filterFns[ filterValue ] || filterValue;
 
 
-	 $grid.isotope({
-		 filter: filterValue,
-		 itemSelector: '.grid-item',
-		 masonry: {
-			 colmunWidth: '.grid-sizer'
-		 },
-		 sortBy:'random'
-		 });
+	//  $grid.isotope({
+	// 	 filter: filterValue,
+	// 	 itemSelector: '.grid-item',
+	// 	 masonry: {
+	// 		 colmunWidth: '.grid-sizer'
+	// 	 },
+	// 	 sortBy:'random'
+	// 	 });
+ //
+
+		 $grid.isotope({
+  		 	filter: filterValue,
+			 	layoutMode: 'moduloColumns',
+		  	moduloColumns: {
+		    columnWidth: 200,
+		    gutter: 20
+		  },
+	  		 sortBy:'random'
+  	});
+
  });
+
+
  // change is-checked class on buttons
  $('.filter-btns').each( function( i, buttonGroup ) {
 	 var $buttonGroup = $( buttonGroup );

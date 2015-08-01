@@ -20,16 +20,18 @@
 
 /* ---- .masonry-grid-item ---- */
 .grid-item figure{
-  padding: 6px;
+  //padding: 6px;
 }
 
 .grid-item, .grid-sizer {
   width: 100%;
+  padding-bottom:12px;
   @include media($tablet-up) {
-    width: 45%;
+    //width: 45%;
+    max-width: 200px;
   }
   @include media($desktop-up) {
-    width: 25%;
+    max-width: 300px;
   }
 }
 

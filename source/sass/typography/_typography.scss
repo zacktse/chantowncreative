@@ -209,12 +209,23 @@ p a {
   &.underlined{ @include animated-link-underline(); }
 }
 
+
+p.centered {
+  text-align: center;
+}
+
 hr {
-  border-bottom: $base-border;
+  border-bottom: 1px solid $light-gray ;
   border-left: none;
   border-right: none;
   border-top: none;
-  margin: $base-spacing 0;
+  max-width: 30%;
+  height:2px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  @include clearfix();
+  z-index: $z-above-content;
 }
 
 mark {
@@ -237,7 +248,7 @@ figcaption {
   @extend .small;
   padding-top: 6px;
 
-  a{
+  a {
      @include animated-link-underline();
   }
 }
@@ -268,11 +279,54 @@ blockquote {
 
   }
 
-  @include media($desktop-up){
+  @include media($tablet-up){
     p {
-      @include span-columns(9);
+      max-width: 600px;
       float: none;
       clear: both;
     }
   }
+}
+
+
+
+// chevrons
+
+.chevron {}
+
+.chevron::before {
+	border-style: solid;
+  border-color: whitesmoke;
+	border-width: 0.3em 0.3em 0 0;
+	content: '';
+	display: inline-block;
+	height: 1em;
+	left: 0;
+	position: relative;
+	top: 12px;
+	transform: rotate(-45deg);
+	vertical-align: top;
+	width: 1em;
+}
+.chevron:hover{
+  border-radius: 50%;
+  /* border: 1px solid white ; */
+}
+.chevron:hover::before {
+  color: white;
+}
+.chevron.right:before {
+	left: 0;
+	transform: rotate(45deg);
+}
+
+.chevron.bottom:before {
+	top: 0;
+  left: 0;
+	transform: rotate(135deg);
+}
+
+.chevron.left:before {
+	left: 0.25em;
+	transform: rotate(-135deg);
 }

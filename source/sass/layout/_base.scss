@@ -49,27 +49,35 @@ body {
   @include padding(0,16,0,16);
   @include media($desktop-up) {
     padding: 0;
+    
   }
 /*   @include pad(); */
 }
 
 
 .home-cta-block-left-col {
+  padding:16px;
+  @include media($tablet-up) {
+    @include span-columns(4 of 8);
+  }
+  @include media($desktop-up) {
+    @include span-columns(8 of 16);
+    p { width: 100%; }
+  }
+
+}
+
+.home-cta-block-right-col {
+  padding: 16px;
     @include media($tablet-up) {
       @include span-columns(4 of 8);
     }
     @include media($desktop-up) {
-      @include fill-parent();
-    }
-}
+      @include span-columns(8 of 16);
+      p { width: 100%; }
 
-.home-cta-block-right-col {
-    @include media($tablet-up){
-      @include span-columns(4 of 8);
     }
-    @include media($desktop-up) {
-      @include fill-parent();
-    }
+
 }
 
 @if ($visual-grid) {

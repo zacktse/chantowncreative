@@ -63,12 +63,12 @@
     -webkit-transition: opacity $default-transition-speed, -webkit-transform $default-transition-speed;
     -moz-transition: opacity $default-transition-speed, -moz-transform $default-transition-speed;
     transition: opacity $default-transition-speed, transform $default-transition-speed;
-    -webkit-transform: translateY(10px);
-    -moz-transform: translateY(10px);
-    transform: translateY(10px);
+    -webkit-transform: translateY(4px);
+    -moz-transform: translateY(4px);
+    transform: translateY(4px);
   }
 
-  &:hover::after, &:focus::after, &:active::after {
+  &:hover::after, &:focus::after, &:active::after, &.active::after {
     opacity: 1;
     -webkit-transform: translateY(2px);
     -moz-transform: translateY(2px);

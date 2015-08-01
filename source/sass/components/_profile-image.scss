@@ -19,24 +19,30 @@
 
    .images-wrapper {
     //  @include background(url('/assets/img/VickieChanHeadshot.jpg'), linear-gradient($side-image-background-top, $side-image-background-bottom), no-repeat $side-image-background-top scroll);
-     @include background(url('../img/VickieChanHeadshot.jpg'));
+     @include background(url('../img/VickieChanHeadshot_small@2x.jpg'));
 
     //  background-color: $side-image-background-top;
-     background-size: cover;
+     background-size: contain;
+     background-position: center;
      background-repeat: no-repeat;
     //  border-bottom: $side-image-border;
      display: block;
      padding: 0;
-     min-height: 360px;
+     min-height: 260px;
      @include media($tablet-up) {
-
+       @include background(url('../img/VickieChanHeadshot_medium@2x.jpg'));
        @include span-columns(6);
-       background-position: center;
-       background-size: cover;
+       background-position: top center;
+       background-size: contain;
+       background-repeat: no-repeat;
       //  border-right: $side-image-border;
      }
 
      @include media($desktop-up) {
+        @include background(url('../img/VickieChanHeadshot_medium@2x.jpg'));
+        background-size: contain;
+        background-position: top center;
+        background-repeat: no-repeat;
         @include span-columns(4);
         padding: 3em;
      }
@@ -56,18 +62,14 @@
        padding: 0em 4em 0em 4em;
      }
 
-     h4 {
-       background: #BBB;
-       color: white;
-       display: inline-block;
-       font-size: 0.75em;
-       font-weight: 800;
-       margin-bottom: 1.3em;
-       padding: 3px 8px;
-       text-transform: uppercase;
+     h2 {
+       @include media($desktop-up) {
+         padding-top: 0;
+         margin-top: 0;
+       }
      }
 
-     p {width: 100%;}
+     p { width: 100%; }
    }
 
    @include reset-display();

@@ -7,6 +7,7 @@ footer {
   }
   @include outer-container;
   .copyright {
+    color: $medium-gray;
     text-align: center;
     font-size: 12px;
 
@@ -53,6 +54,9 @@ footer {
   left:0;
   bottom:-54px;
   z-index:$z-above-all;
+  @include media($desktop-up) {
+    position: static;
+  }
   &.visible {
     bottom:0;
     @include transition(all $default-transition-speed ease-out);
@@ -65,7 +69,44 @@ footer {
     text-align: center;
 
     }
-  @include media($desktop-up) {
-    position: static;
+
+
+}
+
+.up-arrow {
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
+
+  &:before {
+    content: " ";
+    width: 16px;
+    height: 3px;
+    left: 50%;
+    margin-left: -13px;
+    background-color: whitesmoke;
+    position: absolute;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+   &:after {
+    content: " ";
+    width: 16px;
+    height: 3px;
+    background-color: whitesmoke;
+    position: absolute;
+    right: -3px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
   }
 }
