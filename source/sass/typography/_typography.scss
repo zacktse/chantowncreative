@@ -69,6 +69,7 @@ h1, .size-h1 {
     @include font-size($h1-font-size);
     @include line-height($h1-line-height);
     @include padding($h1-margin-top, 0, $h1-margin-bottom, 0);
+    @include padding($h1-margin-top, 0, 0, 0);
     @include margin(0);
   }
 }

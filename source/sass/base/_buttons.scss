@@ -83,8 +83,25 @@ button {
 	-webkit-font-smoothing: antialiased;
 }
 
-.icon-cog:before {
-	content: "\e010";
+.icon-bolt:before {
+	//content: "\e010";
+  content:' ';
+  background-color: white;
+  background-image:url('../img/bolt-sml.png');
+  background-size:30px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-idea:before {
+	//content: "\e010";
+  content:' ';
+  background-color: white;
+  background-image:url('../img/lightbulb-sml.png');
+  background-size:30px;
+  background-repeat: no-repeat;
+  background-position: center;
+
 }
 
 /* Button 3 */
@@ -121,7 +138,6 @@ button {
 }
 
 .btn-3d:before {
-	background: #fff;
 	color: $darker-orange;
 	z-index: 2;
 	border-radius: 8px 0 0 8px;

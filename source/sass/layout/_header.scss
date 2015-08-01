@@ -38,7 +38,7 @@ header.main-header {
   }
 
   @include media ($horizontal-bar-mode) {
-      min-height: 180px;
+      min-height: $navigation-height-desktop;
       max-width: 1280px;
       width: 92.5%;
       margin: 0 auto;
