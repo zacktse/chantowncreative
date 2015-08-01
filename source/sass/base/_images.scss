@@ -1,0 +1,31 @@
+figure {
+  margin: 0;
+
+  // make images span to the edge of the screen on mobile
+  width: calc(100% + 32px);
+  margin-left: -16px;
+  @include media($tablet-up) {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+// lazyload
+
+.lazyload,
+.lazyloading {
+    opacity: 0;
+}
+.lazyloaded {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+
+//photoswipe gallery specific
+
+.my-gallery {
+  figcaption {
+    display: none;
+  }
+}

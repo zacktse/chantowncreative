@@ -60,21 +60,80 @@
     </section> -->
 
 
+  <div class="row filter-btns">
+    <!-- <button class="sort" data-sort="random">Shuffle</button> -->
+    <button class="filter" data-filter="*">View All</button>
+    <button class="filter" data-filter=".painting">Painting</button>
+    <button class="filter" data-filter=".screenprint">Screenprint</button>
+    <button class="filter" data-filter=".llustration">Illustration</button>
+    <button class="filter" data-filter=".sketch">Sketch</button>
+    <button class="filter" data-filter=".commercial">Commercial</button>
+    <button class="filter" data-filter=".mixed-media">Mixed Media</button>
+  </div>
 
-
-    <!-- photoswipe plugin -->
-
-    <div class="picture" itemscope itemtype="http://schema.org/ImageGallery">
+    <!-- photoswipe  -->
+  <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+    <div class="masonry-grid">
+      <!-- width of .grid-sizer used for columnWidth -->
+      <div class="grid-sizer"></div>
+      <div class="grid-item grid-item--width2 painting" data-filter="painting">
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+          <a href="assets/img/gallery/test/test1_x-large@2x.jpg" itemprop="contentUrl" data-size="1000x667" data-index="0" data-artwork-title="Sketch of something artwork">
+            <img class="lazyload"
+                 itemprop="thumbnail"
+                 alt="Sketch 1"
+                 src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                 data-sizes="auto"
+                 data-srcset="assets/img/gallery/test/test1_small@2x.jpg 350w,
+                              assets/img/gallery/test/test1_medium@2x.jpg 700w"
+            class="lazyload" />
+          </a>
+          <figcaption itemprop="caption description">
+            Image Caption here. This could contain a <a href="#">link</a> or info about the image.
+          </figcaption>
+        </figure>
+      </div>
+    <div class="grid-item sketch" data-filter="sketch" data-category="sketch">
+       <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+          <a href="assets/img/gallery/test/test2.jpg" itemprop="contentUrl" data-size="1000x667" data-index="1"  data-artwork-title="Sketch of another artwork">
+            <img src="assets/img/gallery/test/test2.jpg" class="lazyload" itemprop="thumbnail" alt="Sketch 2">
+          </a>
+          <figcaption itemprop="caption description">
+            Image Caption 2 here
+          </figcaption>
+        </figure>
+    </div>
+    <div class="grid-item grid-item--width2 sketch" data-filter="sketch">
       <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-        <a href="assets/img/gallery/test/test1.jpg" itemprop="contentUrl" data-size="1000x667" data-index="0">
-          <img src="assets/img/gallery/test/test1.jpg" height="400" width="600" itemprop="thumbnail" alt="Beach">
+        <a href="assets/img/gallery/test/test4.jpg" itemprop="contentUrl" data-size="1000x667" data-index="2" data-artwork-title="Sketch of something artwork">
+          <img src="assets/img/gallery/test/test4.jpg" class="lazyload" height="400" width="600" itemprop="thumbnail" alt="Sketch 1">
         </a>
+        <figcaption itemprop="caption description">
+          Image Caption here. This could contain a <a href="#">link</a> or info about the image.
+        </figcaption>
       </figure>
+    </div>
+    <div class="grid-item grid-item--width2 illustration" data-filter="illustration">
+     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="assets/img/gallery/test/test4.jpg" itemprop="contentUrl" data-size="1000x667" data-index="3"  data-artwork-title="Sketch of another artwork">
+          <img src="assets/img/gallery/test/test4.jpg" class="lazyload" height="400" width="600" itemprop="thumbnail" alt="Sketch 2">
+        </a>
+        <figcaption itemprop="caption description">
+          Image Caption 4 here
+        </figcaption>
+      </figure>
+    </div>
+    <div class="grid-item grid-item--width2 ">
       <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-        <a href="assets/img/gallery/test/test2.jpg" itemprop="contentUrl" data-size="1000x667" data-index="0">
-          <img src="assets/img/gallery/test/test2.jpg" height="400" width="600" itemprop="thumbnail" alt="Beach">
+        <a href="assets/img/gallery/test/test5.jpg" itemprop="contentUrl" data-size="1000x667" data-index="4" data-artwork-title="Sketch of something artwork">
+          <img src="assets/img/gallery/test/test5.jpg" class="lazyload" height="400" width="600" itemprop="thumbnail" alt="Sketch 1">
         </a>
+        <figcaption itemprop="caption description">
+          Image Caption here. This could contain a <a href="#">link</a> or info about the image.
+        </figcaption>
       </figure>
+      </div>
+    <!--
       <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="assets/img/gallery/test/test3.jpg" itemprop="contentUrl" data-size="1000x667" data-index="0">
           <img src="assets/img/gallery/test/test3.jpg" height="400" width="600" itemprop="thumbnail" alt="Beach">
@@ -89,7 +148,8 @@
         <a href="assets/img/gallery/test/test5.jpg" itemprop="contentUrl" data-size="1000x667" data-index="0">
           <img src="assets/img/gallery/test/test5.jpg" height="400" width="600" itemprop="thumbnail" alt="Beach">
         </a>
-      </figure>
+      </figure> -->
+    </div>
     </div>
 
 
@@ -102,7 +162,7 @@
 
 
 
-
+<!-- photo swipe -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="pswp__bg"></div>
     <div class="pswp__scroll-wrap">

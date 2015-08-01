@@ -8,19 +8,20 @@ button {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: $base-font-family;
-  font-size: $base-font-size;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 14px;
   font-weight: 600;
-  line-height: 1;
+
+  letter-spacing: 1px;
   padding: 0.75em 1em;
   text-decoration: none;
   user-select: none;
-  vertical-align: middle;
+  vertical-align: baseline;
   white-space: nowrap;
 
   &:hover,
   &:focus {
-    background-color: darken($action-color, 15%);
+    background-color: lighten($action-color, 15%);
     color: #fff;
   }
 
@@ -36,18 +37,22 @@ button {
 
 
 .fancy-btn {
-	border: none;
+	border: solid 2px $darker-orange;
 	font-family: inherit;
 	font-size: inherit;
 	color: inherit;
 	background: none;
 	cursor: pointer;
-	padding: 25px 80px;
+  min-width: 220px;
+	padding: 30px 60px;
 	display: inline-block;
-	margin: 15px 30px;
+	/* margin: 15px 30px; */
 	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-weight: 700;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  /* line-height: 40px; */
 	outline: none;
 	position: relative;
 	-webkit-transition: all 0.3s;
@@ -84,16 +89,18 @@ button {
 
 /* Button 3 */
 .btn-w-icon {
-	background: #fcad26;
+	background: $darker-orange;
 	color: #fff;
 }
 
 .btn-w-icon:hover {
-	background: #f29e0d;
+	background: $lighter-orange;
+  border: solid 2px $lighter-orange;
 }
 
 .btn-w-icon:active {
-	background: #f58500;
+	background: $lighter-orange;
+  border: solid 2px $lighter-orange;
 	top: 2px;
 }
 
@@ -102,22 +109,22 @@ button {
 	height: 100%;
 	left: 0;
 	top: 0;
-	line-height: 3;
-	font-size: 140%;
+	line-height: 2.15;
+	font-size: 120%;
 	width: 60px;
 }
 
 /* Button 3d */
 .btn-3d {
-	padding: 25px 60px 25px 120px;
+	padding: 10px 10px 10px 60px;
 	border-radius: 10px;
 }
 
 .btn-3d:before {
 	background: #fff;
-	color: #fcad26;
+	color: $darker-orange;
 	z-index: 2;
-	border-radius: 10px 0 0 10px;
+	border-radius: 8px 0 0 8px;
 }
 
 .btn-3d:after {
@@ -144,4 +151,20 @@ button {
 
 .btn-3d:active:after {
 	left: 60px;
+}
+
+.btn-3d:hover {
+  color: #fff;
+}
+
+.btn-3d:hover:before {
+  color: $lighter-orange;
+}
+
+
+// photoswipe
+
+button.pswp__button.pswp__button--arrow--right:hover,
+button.pswp__button.pswp__button--arrow--left:hover {
+  background-color: transparent;
 }

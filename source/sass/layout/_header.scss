@@ -7,7 +7,7 @@ header.main-header {
   $navigation-background: transparent;
   $navigation-color: white;
   $navigation-color-hover: $lighter-orange;
-  $navigation-height: 30px;
+  $navigation-height: 42px;
   $navigation-height-desktop: 120px;
   $navigation-height-collapsed-mobile: 46px;
   $navigation-height-collapsed-desktop: 60px;
@@ -31,7 +31,7 @@ header.main-header {
 
   @include media($tablet-up) {
 
-    margin-top: $page-border-width-desktop;
+    //margin-top: 0;
     margin-left: $page-border-width-desktop;
     margin-right: $page-border-width-desktop;
     min-height: $navigation-height-desktop;
@@ -75,9 +75,9 @@ header.main-header {
   .logo {
     display: block;
     max-height: $navigation-height;
-    width: 190px;
+    width: 260px;
     margin-top: 16px;
-    margin-left: 6px;
+    margin-left: 12px;
     @include hide-text;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -109,10 +109,11 @@ header.main-header {
   // navigation
 
   ul.navigation-menu {
-    padding-top: 0;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-top: 3px;
+    padding-left: 16px;
+    padding-right: 16px;
     max-height: 46px;
+    max-width: 600px;
     text-align: justify;
     @include media ($horizontal-bar-mode) {
       @include span-columns(8 of 16, block-collapse);
@@ -120,6 +121,7 @@ header.main-header {
       padding-top: 30px;
       padding-left: 0;
       max-height: 160px;
+      max-width: auto;
     }
     &:after {
       content: '';
@@ -132,9 +134,9 @@ header.main-header {
     }
   }
   .nav-link {
-   width: auto;
-   display: inline-block;
-
+    width: auto;
+    display: inline-block;
+    padding-top: 2px;
     @include media ($horizontal-bar-mode) {
 
     }
@@ -144,6 +146,7 @@ header.main-header {
     line-height: 40px;
     display: block;
     font-size: 14px;
+    font-family: $joesfin;
     text-align: left;
     color: white;
     text-transform: uppercase;
@@ -170,18 +173,27 @@ header.main-header {
 
 
 
-nav.main-nav{
+nav.main-nav {
   border-top: 1px solid $lighter-orange;
   border-bottom: 1px solid $lighter-orange;
+  margin-top: 12px;
+  margin-bottom: 12px;
 /*   margin-left: -6px; */
   ul {
     margin-left: 0;
+  }
+
+  @include media($tablet-up) {
+    border: 0;
   }
 }
 
 
 header.main-header .nav-link a {
   @include animated-link-underline();
+  /* border-top: solid 2px $lighter-orange;
+  border-bottom: solid 2px $lighter-orange; */
+  font-weight: 600;
 }
 
 

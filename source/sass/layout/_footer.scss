@@ -1,12 +1,12 @@
 footer {
   margin-top: 60px;
-  margin-bottom: 90px;
+  margin-bottom: 60px;
   @include outer-container;
   .copyright {
     text-align: center;
     font-size: 12px;
 
-    a{
+    a {
       @include animated-link-underline();
     }
   }
@@ -16,14 +16,13 @@ footer {
   background-color: $pale-orange;
   height: 30px;
   width: 100%;
-  border-left: solid $page-border-width-mobile $lighter-orange;
-  border-right: solid $page-border-width-mobile $lighter-orange;
+  margin-top: 60px;
+//  border-left: solid $page-border-width-mobile $lighter-orange;
+  //border-right: solid $page-border-width-mobile $lighter-orange;
   @include media($tablet-up) {
-    border-left: solid $page-border-width-desktop $lighter-orange;
-    border-right: solid $page-border-width-desktop $lighter-orange;
+  //  border-left: solid $page-border-width-desktop $lighter-orange;
+    //border-right: solid $page-border-width-desktop $lighter-orange;
   }
-  bottom:2.5em;
-  left: 0;
   @include transition(all $default-transition-speed ease-out);
   &:hover {
      background-color: darken($pale-orange, 10%);
@@ -62,5 +61,7 @@ footer {
     text-align: center;
 
     }
-
+  @include media($desktop-up) {
+    position: static;
+  }
 }

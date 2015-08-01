@@ -31,10 +31,15 @@
         "layout/header",
         "layout/footer";
 
+
+// Images
+@import "base/images";
+
 //--------------------------------------------------------------------------
 //  Components
 //--------------------------------------------------------------------------
 @import "components/lists/list-text-two-column",
         "components/mix-it-up-filters/mix-it-up",
         "components/profile-image",
+        "components/isotope/isotope",
         "components/photoswipe/photoswipe";

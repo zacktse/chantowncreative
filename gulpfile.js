@@ -59,7 +59,7 @@ var path = {
     js_vendor_dest : 'build/assets/js/vendor',                     // where to copy vendor js
     resp_png_src: ['source/img/**/*.png','!source/img/favicon/*.*','!source/img/vendor/*.*'],
     resp_jpg_src: ['source/img/**/*.jpg','!source/img/favicon/*.*','!source/img/vendor/*.*'],
-    img_src : 'source/img/**/*.*',                          // images for the website assets
+    img_src : ['source/img/**/*.gif','source/img/**/*.svg'],                          // images for the website assets
     img_dest : 'build/assets/img',                          // where to build out images to
     fonts_src : 'source/fonts/**/**.*',                     // where to grab fonts from
     fonts_dest : 'build/assets/fonts',                     // where to place fonts
@@ -214,27 +214,117 @@ gulp.task('buildhtml', function() {
 /*******************************************************************************
 ## responsive images
 ## Generates different sized images from the src images for serving to different devices
-## and copies to the build folder
+## and copies them to the build folder
 *******************************************************************************/
 gulp.task('responsive-imgs', function() {
-  // pngs
-  gulp.src(path.resp_png_src)
+  // jpgs
+  gulp.src(path.resp_jpg_src)
     .pipe(plumber())
     .pipe(changed('./build/assets/img/'))
     .pipe(gulp.dest('./build/assets/img/')) // copy full size images
     .pipe(debug({title: 'image:'}))
+    // .pipe(parallel(
+    //   imageResize({ width : 640 }), os.cpus().length
+    // ))
     .pipe(parallel(
-      imageResize({ width : 640 }), os.cpus().length
+      responsive(
+      {
+        '**/*.jpg' : [
+          {
+            width: 320,
+            rename: {
+              //path.dirname += "";
+              suffix: "_small"
+              //path.extname = ".md"
+            },
+            background: {r: 255, g: 255, b: 255, a: 255},
+            embed: true,
+            withoutEnlargement: false
+          },
+          {
+            width: 640,
+            rename: {
+              //path.dirname += "";
+              suffix: "_small@2x"
+              //path.extname = ".md"
+            },
+            background: {r: 255, g: 255, b: 255, a: 255},
+            embed: true,
+            withoutEnlargement: false
+          },
+          {
+            width: 650,
+            rename: {
+              //path.dirname += "";
+              suffix: "_medium"
+              //path.extname = ".md"
+            },
+            background: {r: 255, g: 255, b: 255, a: 255},
+            embed: true,
+            withoutEnlargement: false
+          },
+          {
+            width: 1300,
+            rename: {
+              //path.dirname += "";
+              suffix: "_medium@2x"
+              //path.extname = ".md"
+            },
+            background: {r: 255, g: 255, b: 255, a: 255},
+            embed: true,
+            withoutEnlargement: false
+          },
+          {
+            width: 940,
+            rename: {
+              //path.dirname += "";
+              suffix: "_large"
+              //path.extname = ".md"
+            },
+            background: {r: 255, g: 255, b: 255, a: 255},
+            embed: true,
+            withoutEnlargement: false
+          },
+          {
+            width: 1880,
+            rename: {
+              //path.dirname += "";
+              suffix: "_large@2x"
+              //path.extname = ".md"
+            },
+            background: {r: 255, g: 255, b: 255, a: 255},
+            embed: true,
+            withoutEnlargement: false
+          },
+          {
+            width: 1440,
+            rename: {
+              //path.dirname += "";
+              suffix: "_x-large"
+              //path.extname = ".md"
+            },
+            background: {r: 255, g: 255, b: 255, a: 255},
+            embed: true,
+            withoutEnlargement: false
+          },
+          {
+            width: 2880,
+            rename: {
+              //path.dirname += "";
+              suffix: "_x-large@2x"
+              //path.extname = ".md"
+            },
+            background: {r: 255, g: 255, b: 255, a: 255},
+            embed: true,
+            withoutEnlargement: false
+          }
+        ]
+      })
     ))
-    .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true,  use: [pngquant()] }))
-    .pipe(rename(function(dir,base,ext){                // append the filename with  '-sml' title before file extension
-        var trunc = base.split('.')[0];
-        return trunc + '-sml' + ext;
-    }))
     .pipe(gulp.dest('./build/assets/img/'));
 
-    // jpgs
-    gulp.src(path.resp_jpg_src)
+    // pngs
+    gulp.src(path.resp_png_src)
       .pipe(plumber())
       .pipe(changed('./build/assets/img/'))
       .pipe(gulp.dest('./build/assets/img/')) // copy full size images
@@ -248,6 +338,12 @@ gulp.task('responsive-imgs', function() {
           return trunc + '-sml' + ext;
       }))
       .pipe(gulp.dest('./build/assets/img/'));
+
+    // svgs + gifs
+    gulp.src(path.img_src)
+      .pipe(plumber())
+      .pipe(gulp.dest('./build/assets/img/'));
+    
 });
 
 

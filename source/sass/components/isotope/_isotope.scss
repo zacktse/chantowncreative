@@ -1,0 +1,37 @@
+.filter-btns {
+  @include margin(12,0,16,0);
+  button{
+    @include margin(10,10,0,0);
+  }
+}
+
+.masonry-grid {
+  max-width: 1200px;
+  min-height: 600px;
+}
+
+/* clear fix */
+.masonry-grid:after {
+  content: '';
+  display: block;
+  clear: both;
+  @include clearfix;
+}
+
+/* ---- .masonry-grid-item ---- */
+.grid-item figure{
+  padding: 6px;
+}
+
+.grid-item, .grid-sizer {
+  width: 100%;
+  @include media($tablet-up) {
+    width: 45%;
+  }
+  @include media($desktop-up) {
+    width: 25%;
+  }
+}
+
+/* .grid-item--width2 { width: 200px; }
+.grid-item--height2 { height: 200px; } */

@@ -53,6 +53,25 @@ body {
 /*   @include pad(); */
 }
 
+
+.home-cta-block-left-col {
+    @include media($tablet-up) {
+      @include span-columns(4 of 8);
+    }
+    @include media($desktop-up) {
+      @include fill-parent();
+    }
+}
+
+.home-cta-block-right-col {
+    @include media($tablet-up){
+      @include span-columns(4 of 8);
+    }
+    @include media($desktop-up) {
+      @include fill-parent();
+    }
+}
+
 @if ($visual-grid) {
  body:before {
    margin: 0 auto;
