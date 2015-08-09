@@ -1,0 +1,24 @@
+ul.list__clients {
+  @include margin(16,0,26,0);
+  @include outer-container;
+  overflow: hidden;
+  li {
+    display: block;
+    list-style-type: none;
+    @include padding(0);
+    @include span-columns(2);
+    @include omega(2n);
+
+    @include media($tablet-up) {
+      @include span-columns(1);
+      @include omega-reset(2n); // Pa
+      @include omega(4n);
+    }
+
+    &::before {
+      content: "";
+
+    }
+  }
+
+}

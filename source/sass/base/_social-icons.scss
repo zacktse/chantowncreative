@@ -69,14 +69,15 @@
   transition: color 0.6s ease-out;
 }
 
-// Neat color trick, <3 Sass
-@for $i from 1 through 29 {
-  .icon-#{$i} {
-    color: $pale-orange;
-    fill: $pale-orange;
+// @for $i from 1 through 3 {
+//  .icon-#{$i} {
+  .icon{
+
+    color: $medium-gray;
+    fill: $medium-gray;
     &:hover {
       background: $lighter-orange;
       @extend %social-icon-hover;
     }
   }
-}
+// }

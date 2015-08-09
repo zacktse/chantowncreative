@@ -168,6 +168,7 @@ header.main-header {
     padding-left: 0;
     padding-top:2px;
     letter-spacing: 1px;
+    @include animated-link-underline($darker-orange);
     @include media($tablet-up) {
       margin-right: 16px;
     }
@@ -175,7 +176,7 @@ header.main-header {
       color: $darker-orange;
       text-align: center;
       padding: 16px 16px;
-      @include animated-link-underline();
+      @include animated-link-underline($darker-orange);
     }
   }
   .nav-link a.active {
@@ -203,7 +204,7 @@ header.main-header {
 
 nav.main-nav {
   border-top: 1px solid $lighter-orange;
-  border-bottom: 1px solid $lighter-orange;
+  border-bottom: 1px solid $darker-orange;
   margin-top: 12px;
   margin-bottom: 12px;
 /*   margin-left: -6px; */
@@ -240,9 +241,6 @@ header.main-header .nav-link a {
          background-color: whitesmoke;
          @include transition(all $default-transition-speed ease-out);
      }
-   }
-   .social-icons {
-     display: none;
    }
    header.main-header {
      margin-top: 0;
@@ -319,6 +317,6 @@ header.main-header .nav-link a {
  }
 
 //prevent page jank when narrow nav is shown
-.header--hidden .page-container {
+/* .header--hidden .page-container {
   padding-top: 185px;
-}
+} */

@@ -41,7 +41,7 @@
 
 // default link underlines
 
-@mixin animated-link-underline ($link-color: $lighter-orange, $underline-color: $lighter-orange, $hover-color: $chantown-gray ) {
+@mixin animated-link-underline ($link-color: $darker-orange, $underline-color: $darker-orange, $hover-color: $chantown-gray ) {
   color: $link-color;
   position: relative;
   &:hover, &:focus, &:active {
@@ -74,4 +74,13 @@
     -moz-transform: translateY(2px);
     transform: translateY(2px);
   }
+}
+// -------------------------------------------------------------------
+// Omega Reset for Bourbon Neat
+//
+// http://joshfry.me/notes/omega-reset-for-bourbon-neat
+// -------------------------------------------------------------------
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter($grid-columns, $gutter); }
+  &:nth-child(#{$nth}+1) { clear: none }
 }

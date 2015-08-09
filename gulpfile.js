@@ -57,9 +57,9 @@ var path = {
     js_vendor_src : 'source/js/vendor/*.js',                // vendor js scripts
     js_dest : 'build/assets/js',                                   // where to put minified js
     js_vendor_dest : 'build/assets/js/vendor',                     // where to copy vendor js
-    resp_png_src: ['source/img/**/*.png','!source/img/favicon/*.*','!source/img/vendor/*.*'],
+    resp_png_src: ['source/img/**/*.png','!source/img/favicon/*.*','!source/img/vendor/*.*','!source/img/clients/*.*'],
     resp_jpg_src: ['source/img/**/*.jpg','!source/img/favicon/*.*','!source/img/vendor/*.*'],
-    img_src : ['source/img/**/*.gif','source/img/**/*.svg'],                          // images for the website assets
+    img_src : ['source/img/**/*.gif','source/img/**/*.svg', 'source/img/clients/*.png'],                          // images for the website assets
     img_dest : 'build/assets/img',                          // where to build out images to
     fonts_src : 'source/fonts/**/**.*',                     // where to grab fonts from
     fonts_dest : 'build/assets/fonts',                     // where to place fonts
