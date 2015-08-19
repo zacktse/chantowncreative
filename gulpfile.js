@@ -12,34 +12,36 @@
 *******************************************************************************/
 
 var gulp = require ('gulp'),                                //require gulp
-    debug = require('gulp-debug'),
-    gutils = require('gulp-util'),                          // gulp utilities (date)
-    templator = require('gulp-file-include'),               // used to build preototype files from multiple includes
-    header  = require('gulp-header'),                       // adds header to top of files (last updated message)
-    uglify = require ('gulp-uglify'),                       //require uglify
-    sass = require ('gulp-sass'),                           //require sass
-    sourcemaps = require ('gulp-sourcemaps'),               // sass sourcemaps
-    plumber = require ('gulp-plumber'),                     //require plumber
-    connect = require ('gulp-connect'),                     // local server                                    // initialise server
-    livereload = require('gulp-livereload'),                // livereload
-    browserSync = require('browser-sync').create(),
-    embedlr = require("gulp-embedlr"),                      // embed livereload snippet in html pages
-    autoprefixer = require('gulp-autoprefixer'),            // sets missing browserprefixes
-    concat = require('gulp-concat'),                        // concatinate js
-    rename = require("gulp-rename"),                        // rename files
-    jshint = require('gulp-jshint'),                        // check if js is ok
-    cssmin = require('gulp-cssmin'),                        // minify the css files
-    // neat = require('node-neat').includePaths             // make node-neat work
-    stylish = require('jshint-stylish'),                    // make errors look good in shell
-    responsive = require('gulp-responsive'),                // used to resize images
-    imagemin = require('gulp-imagemin'),                    // used to compress images
-    pngquant = require('imagemin-pngquant'),
-    parallel = require('concurrent-transform'),
-    changed = require('gulp-changed'),                    // only process files that have changed
-    imageResize = require('gulp-image-resize'),
-    os = require("os"),
-    ftp = require('vinyl-ftp'),
-    ftp_details = require('./ftp-details.json');
+    debug        = require('gulp-debug'),
+    gutils       = require('gulp-util'), // gulp utilities (date)
+    templator    = require('gulp-file-include'), // used to build preototype files from multiple includes
+    browserify   = require('browserify'),
+    source       = require('vinyl-source-stream'),
+    streamify    = require('gulp-streamify'),
+    header       = require('gulp-header'), // adds header to top of files (last updated message)
+    uglify       = require('gulp-uglify'), //require uglify
+    sass         = require('gulp-sass'), //require sass
+    sourcemaps   = require('gulp-sourcemaps'), // sass sourcemaps
+    plumber      = require('gulp-plumber'), //require plumber
+    connect      = require('gulp-connect'), // local server // initialise server
+    livereload   = require('gulp-livereload'), // livereload
+    browserSync  = require('browser-sync').create(),
+    embedlr      = require("gulp-embedlr"), // embed livereload snippet in html pages
+    autoprefixer = require('gulp-autoprefixer'), // sets missing browserprefixes
+    concat       = require('gulp-concat'), // concatinate js
+    rename       = require("gulp-rename"), // rename files
+    jshint       = require('gulp-jshint'), // check if js is ok
+    cssmin       = require('gulp-cssmin'), // minify the css files
+    stylish      = require('jshint-stylish'), // make errors look good in shell
+    responsive   = require('gulp-responsive'), // used to resize images
+    imagemin     = require('gulp-imagemin'), // used to compress images
+    pngquant     = require('imagemin-pngquant'),
+    parallel     = require('concurrent-transform'),
+    changed      = require('gulp-changed'), // only process files that have changed
+    imageResize  = require('gulp-image-resize'),
+    os           = require("os"),
+    ftp          = require('vinyl-ftp'),
+    ftp_details  = require('./ftp-details.json');
     // neat.with('source/sass/');   // set path to sass for bourbon neat
 
 /*******************************************************************************
@@ -47,23 +49,23 @@ var gulp = require ('gulp'),                                //require gulp
 *******************************************************************************/
 
 var path = {
-    prototypes: 'source/prototypes/**/*.tpl.html' ,         // prototypes
-    templates : 'source/templates/*.tpl.html',              // template files
-    sass_src :  'source/sass/*.scss',                       // all sass files
-    sass_dest : 'build/assets/css',                                // where to put minified css
-    js_lint_src : 'build/assets/js/*.js',                          // all js that should be linted
-    js_uglify_src : 'source/js/libs/*.js',                  // all js files that should not be concatinated
-    js_concat_src : 'source/js/*.js',                       // all js files that should be concatinated
-    js_vendor_src : 'source/js/vendor/*.js',                // vendor js scripts
-    js_dest : 'build/assets/js',                                   // where to put minified js
-    js_vendor_dest : 'build/assets/js/vendor',                     // where to copy vendor js
-    resp_png_src: ['source/img/**/*.png','!source/img/favicon/*.*','!source/img/vendor/*.*','!source/img/clients/*.*'],
-    resp_jpg_src: ['source/img/**/*.jpg','!source/img/favicon/*.*','!source/img/vendor/*.*'],
-    img_src : ['source/img/**/*.gif','source/img/**/*.svg', 'source/img/clients/*.png'],                          // images for the website assets
-    img_dest : 'build/assets/img',                          // where to build out images to
-    fonts_src : 'source/fonts/**/**.*',                     // where to grab fonts from
-    fonts_dest : 'build/assets/fonts',                     // where to place fonts
-    favicon_src: 'source/img/favicon/*.*'                   // 'dem favicons
+    prototypes     : 'source/prototypes/**/*.tpl.html' , // prototypes
+    templates      : 'source/templates/*.tpl.html', // template files
+    sass_src       : 'source/sass/*.scss', // all sass files
+    sass_dest      : 'build/assets/css', // where to put minified css
+    js_lint_src    : 'build/assets/js/*.js', // all js that should be linted
+    js_uglify_src  : 'source/js/libs/*.js', // all js files that should not be concatinated
+    js_concat_src  : 'source/js/*.js', // all js files that should be concatinated
+    js_vendor_src  : 'source/js/vendor/*.js', // vendor js scripts
+    js_dest        : 'build/assets/js', // where to put minified js
+    js_vendor_dest : 'build/assets/js/vendor', // where to copy vendor js
+    resp_png_src   : ['source/img/**/*.png','!source/img/favicon/*.*','!source/img/vendor/*.*','!source/img/clients/*.*'],
+    resp_jpg_src   : ['source/img/**/*.jpg','!source/img/favicon/*.*','!source/img/vendor/*.*'],
+    img_src        : ['source/img/**/*.gif','source/img/**/*.svg', 'source/img/clients/*.png'], // images for the website assets
+    img_dest       : 'build/assets/img', // where to build out images to
+    fonts_src      : 'source/fonts/**/**.*', // where to grab fonts from
+    fonts_dest     : 'build/assets/fonts', // where to place fonts
+    favicon_src    : 'source/img/favicon/*.*' // 'dem favicons
 };
 
 /*******************************************************************************
@@ -100,6 +102,19 @@ gulp.task('js-concat', function() {
         .pipe(header('/* Last Updated:' + gutils.date('mmm d, yyyy h:MM:ss TT')  + '*/\n')) // Add date top of the file
         .pipe(gulp.dest(path.js_dest));                   // where to put the files
 });
+
+
+
+// js concat and require modules and minify JS (using browserify and uglify)
+gulp.task('js-browserify', function() {
+  return browserify('./source/js/index.js', { debug: true})
+        .bundle()
+        .pipe(source('bundle.js'))
+        //.pipe(streamify(uglify()))
+        .pipe(gulp.dest(path.js_dest));                   // where to put the files
+});
+
+
 
 // copy vendor js to build folder
 gulp.task('js-copy-vendorscripts', function() {
@@ -148,45 +163,6 @@ gulp.task('connect', function() {
     livereload: true
   });
 });
-
-
-/*******************************************************************************
-## Live Reload
-## Same as below. Just not as cool.
-*******************************************************************************/
-
-//Livereload goes here
-
-/*******************************************************************************
-## BROWSER SYNC
-## Checks for changes in these files, triggers update of browser.
-*******************************************************************************/
-
-//http://localhost:3000/ is default.
-
-// gulp.task('browser-sync', function() {
-//     browserSync.init(['build/css/*.css', 'build/js/*.js', '*.html'], {
-//         server: {
-//             baseDir: './build/'
-//         },
-//         proxy: {
-//                     host: 'chantown.dev',                          // development server
-//                     port: '4321'                                // development server port
-//                 }
-//     });
-// });
-
-//set own settings... for Rails for example.
-
-// gulp.task('browser-sync', function() {
-//     browserSync.init(['css/*.css', 'js/*.js'], {        // files to inject
-//         proxy: {
-//             host: 'localhost',                          // development server
-//             port: '2368'                                // development server port
-//         }
-//     });
-// });
-
 
 
 
@@ -488,7 +464,10 @@ gulp.task('build_fonts', function() {
 *******************************************************************************/
 
 gulp.task('watch', function(){
-    gulp.watch('source/js/**/*.js', ['js-lint', 'js-uglify', 'js-concat','js-copy-vendorscripts']);    //Watch Scripts
+    // gulp.watch('source/js/**/*.js', ['js-lint', 'js-uglify', 'js-concat','js-copy-vendorscripts']);    //Watch Scripts
+
+    gulp.watch('source/js/**/*.js', ['js-browserify', 'js-copy-vendorscripts']);    //Watch Scripts
+
     gulp.watch('source/sass/**/*.scss', ['sass']);                             //Watch Styles
     gulp.watch('source/prototypes/**/**/*.tpl.html', ['buildhtml']);              // Watch prototypes
     gulp.watch('source/templates/**/**/*.tpl.html', ['buildhtml']);              // Watch templates
@@ -538,9 +517,10 @@ gulp.task('deploy-to-staging', function() {
 gulp.task('default', [
     'buildhtml',
     'build_fonts',
-    'js-uglify',
-    'js-lint',
-    'js-concat',
+    //'js-uglify',
+    //'js-lint',
+    //'js-concat',
+    'js-browserify',
     'js-copy-vendorscripts',
     'responsive-imgs',
     'copy-favicon',

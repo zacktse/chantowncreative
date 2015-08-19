@@ -4,9 +4,16 @@
   }))
 
 @@include('../templates/global/_header.tpl.html')
-<div class="page-container">
+<div id="js-content" class="page-container">
 <section class="content-main" role="main">
     <div class="row">
+      <img
+          src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+          data-sizes="auto"
+          data-srcset="assets/img/CREATEWIDEish%20BEST_small.jpg 175w,
+          assets/img/CREATEWIDEish%20BEST_small@2x.jpg 350w,
+          assets/img/CREATEWIDEish%20BEST_medium@2x.jpg 700w,
+          assets/img/CREATEWIDEish%20BEST_large.jpg 1400w" class="lazyload full-width feature-image" />
         <h2 class="size-h1">Create</h2>
 
         <p class="leader">Vickie Chan, Director of Chantown Creative, is an artist and illustrator.
@@ -78,13 +85,20 @@
       <div class="grid-item grid-item--width2 painting" data-filter="painting">
         <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
           <a href="assets/img/gallery/test/test1_x-large@2x.jpg" itemprop="contentUrl" data-size="1000x667" data-index="0" data-artwork-title="Sketch of something artwork">
-            <img class="lazyload"
+            <!-- <img class="lazyload"
                  itemprop="thumbnail"
                  alt="Sketch 1"
                  src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                  data-sizes="auto"
-                 data-srcset="assets/img/gallery/test/test1_small@2x.jpg 350w,
-                              assets/img/gallery/test/test1_medium@2x.jpg 700w"
+                 data-srcset="
+                              assets/img/gallery/test/test1_small.jpg 320w,
+                              assets/img/gallery/test/test1_small@2x.jpg 640w,
+                              assets/img/gallery/test/test1_medium.jpg 650w"
+            class="lazyload" /> -->
+            <img class="lazyload"
+                 itemprop="thumbnail"
+                 alt="Sketch 1"
+                 src="assets/img/gallery/test/test1_small@2x.jpg"
             class="lazyload" />
           </a>
           <figcaption itemprop="caption description">
@@ -95,7 +109,7 @@
     <div class="grid-item sketch" data-filter="sketch" data-category="sketch">
        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
           <a href="assets/img/gallery/test/test2.jpg" itemprop="contentUrl" data-size="1000x667" data-index="1"  data-artwork-title="Sketch of another artwork">
-            <img src="assets/img/gallery/test/test2.jpg" class="lazyload" itemprop="thumbnail" alt="Sketch 2">
+            <img src="assets/img/gallery/test/test2_small@2x.jpg" class="lazyload" itemprop="thumbnail" alt="Sketch 2">
           </a>
           <figcaption itemprop="caption description">
             Image Caption 2 here
@@ -105,7 +119,7 @@
     <div class="grid-item grid-item--width2 sketch" data-filter="sketch">
       <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="assets/img/gallery/test/test4.jpg" itemprop="contentUrl" data-size="1000x667" data-index="2" data-artwork-title="Sketch of something artwork">
-          <img src="assets/img/gallery/test/test4.jpg" class="lazyload" height="400" width="600" itemprop="thumbnail" alt="Sketch 1">
+          <img src="assets/img/gallery/test/test4_small@2x.jpg" class="lazyload" height="400" width="600" itemprop="thumbnail" alt="Sketch 1">
         </a>
         <figcaption itemprop="caption description">
           Image Caption here. This could contain a <a href="#">link</a> or info about the image.
@@ -115,7 +129,7 @@
     <div class="grid-item grid-item--width2 illustration" data-filter="illustration">
      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="assets/img/gallery/test/test4.jpg" itemprop="contentUrl" data-size="1000x667" data-index="3"  data-artwork-title="Sketch of another artwork">
-          <img src="assets/img/gallery/test/test4.jpg" class="lazyload" height="400" width="600" itemprop="thumbnail" alt="Sketch 2">
+          <img src="assets/img/gallery/test/test4_small@2x.jpg" class="lazyload" height="400" width="600" itemprop="thumbnail" alt="Sketch 2">
         </a>
         <figcaption itemprop="caption description">
           Image Caption 4 here
@@ -125,7 +139,7 @@
     <div class="grid-item grid-item--width2 ">
       <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="assets/img/gallery/test/test5.jpg" itemprop="contentUrl" data-size="1000x667" data-index="4" data-artwork-title="Sketch of something artwork">
-          <img src="assets/img/gallery/test/test5.jpg" class="lazyload" height="400" width="600" itemprop="thumbnail" alt="Sketch 1">
+          <img src="assets/img/gallery/test/test5.jpg_small@2x" class="lazyload" height="400" width="600" itemprop="thumbnail" alt="Sketch 1">
         </a>
         <figcaption itemprop="caption description">
           Image Caption here. This could contain a <a href="#">link</a> or info about the image.

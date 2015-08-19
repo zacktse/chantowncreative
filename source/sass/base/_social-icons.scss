@@ -21,7 +21,9 @@
   }
 
   @include media($desktop-up) {
+    display: none;
     padding-top: 6px;
+    z-index: $z-above-all;
   }
 
   li {

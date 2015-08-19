@@ -64,7 +64,7 @@ header.main-header {
     @include media ($horizontal-bar-mode) {
         min-height: 60px;
         margin-left: 0;
-        background-color: opacify(whitesmoke, 0.7);;
+        background-color: transparent;
     }
   }
 
