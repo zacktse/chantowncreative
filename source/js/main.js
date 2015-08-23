@@ -22,7 +22,7 @@
 
 
  var pixel_bg = new DeadPixels();
- pixel_bg.initialize();
+ //pixel_bg.initialize();
 
 
 
