@@ -215,7 +215,8 @@ a {
 
 p a {
   font-weight: 600;
-  color: $lighter-orange;
+  // color: $lighter-orange;
+  color: $darker-orange;
   &.underlined{ @include animated-link-underline(); }
 }
 

@@ -15,7 +15,7 @@ _.extend(exports.DeadPixels.prototype, {
    initialize:function (){
        _.bindAll(this,'random_color','reposition');
 
-       this.$el = $('#splats-bg');
+       this.$el = $('body');
        this.pixels = [];
 
        for(var i=0; i < this.count; i++){
@@ -33,7 +33,7 @@ _.extend(exports.DeadPixels.prototype, {
            });
            pixel.css('transform','rotate('+_.random(360)+'deg)');
            pixel.addClass('on');
-           _.delay(this.reposition,_.random(this.delay*0.25,this.delay*1.25),i);
+           //_.delay(this.reposition,_.random(this.delay*0.25,this.delay*1.25),i);
        }
 
        // extend array class to allow calls to randomElement on any array
