@@ -21,15 +21,17 @@ _.extend(exports.DeadPixels.prototype, {
        for(var i=0; i < this.count; i++){
            var pixel = $("<div class='pixel'>");
            this.pixels.push(pixel);
-           this.$el.append(pixel);
+           this.$el.prepend(pixel);
 
            var dim = _.random(1,3);
            pixel.css({
-               left:_.random(100)+'%',
-               top:_.random(100)+'%',
-               width:dim,
-               height:dim,
-               'background-color': this.random_color()
+               'left':_.random(100)+'%',
+               'top':_.random(100)+'%',
+               'width':dim,
+               'height':dim,
+               'background-color': this.random_color(),
+               'z-index': 0,
+               'opacity': .9
            });
            pixel.css('transform','rotate('+_.random(360)+'deg)');
            pixel.addClass('on');

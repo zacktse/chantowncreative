@@ -1,3 +1,24 @@
+@import "neat-helpers";
 .hide-text {
    @include hide-text;
+}
+
+.m-hide {
+  display: none;
+  @include media($tablet-up) {
+    display:block;
+  }
+}
+
+
+.d-t-hide {
+  @include media($tablet-up) {
+    display:none;
+  }
+}
+
+.d-hide {
+  @include media($desktop-up) {
+    display:none;
+  }
 }
