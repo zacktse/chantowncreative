@@ -2,7 +2,7 @@
 button {
   @include appearance(none);
   -webkit-font-smoothing: antialiased;
-  background-color: $action-color;
+  background-color: $lighter-orange;
   border-radius: $base-border-radius;
   border: none;
   color: #fff;
@@ -21,13 +21,16 @@ button {
 
   &:hover,
   &:focus {
-    background-color: lighten($action-color, 15%);
+    background-color: $action-color;
     color: #fff;
   }
 
   &:disabled {
     cursor: not-allowed;
     opacity: 0.5;
+  }
+  &.is-checked {
+    background-color: $action-color
   }
 }
 

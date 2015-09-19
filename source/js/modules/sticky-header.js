@@ -2,7 +2,7 @@
 var ScrollMagic = require('scrollmagic');
 //var TweenMax = require('../vendor/tweenMax.min.js');
 require('scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap');
-var gsap = require("gsap");
+// var gsap = require("gsap");
 
 var controller = new ScrollMagic.Controller({
     globalSceneOptions: {triggerHook: "onLeave"}

@@ -6,14 +6,16 @@ $h1-font-size: 42;
 $h1-line: 28;
 $h1-lines: 2;
 $h1-line-height: $h1-line * $h1-lines;
-$h1-margin-top: 2 * $h1-line;
+// $h1-margin-top: 2 * $h1-line;
+$h1-margin-top: 0;
 $h1-margin-bottom: 0;
 
 $h2-font-size: 42;
 $h2-line: 28;
 $h2-lines: 2;
 $h2-line-height: $h2-line * $h2-lines;
-$h2-margin-top: 2 * $h2-line;
+// $h2-margin-top: 2 * $h2-line;
+$h2-margin-top: 0;
 $h2-margin-bottom: 0;
 
 $h3-font-size: 24;
@@ -63,7 +65,7 @@ h1, .size-h1 {
   @include font-size(24);
   @include line-height(30);
   // @include padding(14, 0, 12, 0);
-  @include padding(14, 0, 0, 0);
+  @include padding(0, 0, 0, 0);
 
   @include margin(0);
 
@@ -78,12 +80,10 @@ h1, .size-h1 {
 
 h2, .size-h2 {
 
-
-
   @include font-size(24);
   @include line-height(30);
   // @include padding(26, 0, 12, 0);
-  @include padding(26, 0, 0, 0);
+  @include padding(0, 0, 0, 0);
 
   @include margin(0);
 
@@ -135,8 +135,8 @@ h6, .size-h6 {
 
 p {
 
-  @include font-size(20);
-  @include line-height(26);
+  @include font-size(18);
+  @include line-height(23);
   @include padding(12, 0, 18, 0);
   @include margin(0);
   font-family: $joesfin;
@@ -144,12 +144,12 @@ p {
 font-weight: 300; */
   font-family: 400;
 
-  @include media($desktop-up) {
-    @include font-size(22);
-    @include line-height(30);
-    @include padding(12, 0, 18, 0);
-    @include margin(0);
-  }
+  // @include media($desktop-up) {
+  //   @include font-size(22);
+  //   @include line-height(30);
+  //   @include padding(12, 0, 18, 0);
+  //   @include margin(0);
+  // }
 
 
 }
@@ -157,9 +157,9 @@ font-weight: 300; */
 // additional paragraph styles
 .leader {
 
-  @include font-size(22);
-  @include line-height(28);
-  @include padding(24, 0, 12, 0);
+  @include font-size(21);
+  @include line-height(24);
+  @include padding(0, 0, 12, 0);
   @include margin(0);
   color: darken($base-font-color, 10%);
   @include media($desktop-up) {

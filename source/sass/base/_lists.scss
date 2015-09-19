@@ -21,8 +21,8 @@ ol {
 
 .content-main ul {
   list-style-type: none;
-  @include font-size(20);
-  @include line-height(26);
+  @include font-size(18);
+  @include line-height(23);
   font-family: $joesfin;
   @include margin(12, 0, 18, 0);
   list-style-position: inside;

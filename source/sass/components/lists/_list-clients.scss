@@ -1,18 +1,18 @@
 ul.list__clients {
   @include outer-container;
-  @include margin(-42,-18,26,-18);
+  @include margin(-42,0,26,12);
   overflow: hidden;
   li {
     display: block;
     list-style-type: none;
     @include padding(0);
-    @include span-columns(2);
-    @include omega(2n);
+    @include span-columns(1);
+    @include omega(3n);
 
     @include media($tablet-up) {
       @include span-columns(1);
-      @include omega-reset(2n); // Pa
-      @include omega(4n);
+      @include omega-reset(3n); // Pa
+      @include omega(9n);
     }
 
     &::before {

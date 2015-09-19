@@ -7,13 +7,13 @@ var equalheights = require('./modules/equal_heights');
 var back_to_top = require('./modules/back_to_top');
 var isotope = require('./modules/isotope');
 var lazyloading = require('./modules/lazyloading');
-var deadPixels = require('./modules/pixels');
+var dp = require('./modules/pixels');
 
 var StickyHeader = require('./modules/sticky-header');
 
-var test = new deadPixels.DeadPixels;
+var pixel_bg = new dp.DeadPixels();
 
-test.initialize();
+pixel_bg.initialize();
 
 // deadPixels.deadPixels();
 
