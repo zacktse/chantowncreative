@@ -66,6 +66,10 @@ header.main-header {
         margin-left: 0;
         background-color: transparent;
     }
+
+    &.pinned {
+      background-color: transparentize(whitesmoke, .2);
+    }
   }
 
   .logo-wrapper{
@@ -85,6 +89,7 @@ header.main-header {
     max-height: $navigation-height;
     width: 260px;
     margin-top: 16px;
+    margin-bottom: 16px;
     margin-left: auto;
     margin-right: auto;
     @include hide-text;
@@ -118,21 +123,22 @@ header.main-header {
   // navigation
 
   ul.navigation-menu {
-    //padding-top: 3px;
-    margin-top: -4px;
+    padding-top: 10px;
     padding-left: 16px;
     padding-right: 16px;
-    max-height: 50px;
+    max-height: 52px;
+
     text-align: justify;
 
     @include media($tablet-up) {
       text-align: right;
+      padding-top: 6px;
+      max-height: 48px;
     }
-
     @include media ($horizontal-bar-mode) {
       @include span-columns(7 of 16);
       @include shift(9);
-      padding-top: 48px;
+      padding-top: 54px;
       padding-left: 0;
       padding-right: 0;
       text-align: right;
@@ -153,36 +159,60 @@ header.main-header {
     width: auto;
     display: inline-block;
     //padding-top: 2px;
-    @include media ($horizontal-bar-mode) {
-
-    }
   }
 
-  .nav-link a{
+  .nav-link a {
     // height: 38px;
-    line-height: 36px;
-    display: block;
+    position: relative;
+    line-height: 38px;
+    display: inline-block;
     font-size: 14px;
     font-family: $joesfin;
     text-align: left;
-    color: white;
+    vertical-align: middle;
+    color: $chantown-gray;
     text-transform: uppercase;
     padding-left: 0;
     // padding-top:2px;
     letter-spacing: 1px;
-    @include animated-link-underline($darker-orange);
     @include media($tablet-up) {
       margin-right: 16px;
+      @include animated-link-underline($chantown-gray);
     }
     @include media ($horizontal-bar-mode) {
-      color: $darker-orange;
+
       text-align: center;
       @include padding(0,12,0,12);
-      @include animated-link-underline($darker-orange);
+      @include animated-link-underline($chantown-gray);
     }
   }
+
+  .nav-link span.arrow {
+    position: absolute;
+    display: none;
+    bottom: -4px;
+    left: 50%;
+    width: 0px;
+    height: 0px;
+    margin-left: -5px;
+    border-style: solid;
+    border-width: 6px 5px 4px 5px;
+    border-color: transparent transparent $darker-orange transparent;
+  }
+
   .nav-link a.active {
-    color: $dark-gray;
+    color: $darker-orange;
+    span.arrow {
+      display: block !important;
+    }
+  }
+
+
+  .nav-link a.active:hover {
+    border-bottom: 0;
+    span.arrow {
+      display: none !important;
+    }
   }
 
   .nav-link a:hover::after {
@@ -192,9 +222,7 @@ header.main-header {
 
   }
 
-  #home-link {
-    height: 46px;
-  }
+
 
   // &.header--hidden{
   //   position: fixed;
@@ -209,8 +237,8 @@ header.main-header {
 nav.main-nav {
   border-top: 1px solid $lighter-orange;
   border-bottom: 1px solid $darker-orange;
-  margin-top: 12px;
-  margin-bottom: 12px;
+  //margin-top: 12px;
+  //margin-bottom: 12px;
 /*   margin-left: -6px; */
   ul {
     margin-left: 0;
@@ -223,7 +251,6 @@ nav.main-nav {
 
 
 header.main-header .nav-link a {
-  @include animated-link-underline();
   /* border-top: solid 2px $lighter-orange;
   border-bottom: solid 2px $lighter-orange; */
   font-weight: 600;

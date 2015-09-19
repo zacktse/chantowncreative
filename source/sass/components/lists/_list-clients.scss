@@ -1,6 +1,6 @@
 ul.list__clients {
-  @include margin(16,0,26,0);
   @include outer-container;
+  @include margin(-42,-18,26,-18);
   overflow: hidden;
   li {
     display: block;

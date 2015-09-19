@@ -32,9 +32,11 @@
   padding-bottom:2px;
   border-bottom: solid 1px $color;
   @include transition(all $default-transition-speed ease-out);
+
   &:hover {
     padding-bottom: 3px;
     @include transition(all $default-transition-speed ease-out);
+
   }
 }
 

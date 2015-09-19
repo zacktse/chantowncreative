@@ -10,7 +10,7 @@ footer {
     text-align: center;
     font-size: 12px;
     margin-top: 24px;
-    margin-bottom: 60px;
+    margin-bottom: 24px;
     a {
       @include animated-link-underline();
     }
@@ -21,6 +21,7 @@ footer {
   background-color: $pale-orange;
   min-height: 46px;
   width: 100%;
+  margin: 0 auto;
   margin-top: 0;
   font-family: $joesfin;
   text-transform: uppercase;
@@ -49,7 +50,7 @@ footer {
 }
 
 .back-to-top {
-  position:fixed;
+  position:static;
   width:100%;
   height:2.5em;
   background:$lighter-orange;
@@ -67,11 +68,14 @@ footer {
     display: block;
     color: white;
     width: 100%;
+    height: 46px;
     text-align: center;
 
     }
 
-
+  // .homepage & {
+  //   display: none;
+  // }
 }
 
 .up-arrow {
@@ -80,7 +84,7 @@ footer {
   position: relative;
   width: 20px;
   height: 20px;
-  margin-top: 20px;
+  padding-top: 20px;
 
   &:before {
     content: " ";

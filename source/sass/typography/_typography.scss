@@ -211,6 +211,9 @@ a {
   &:focus {
     outline: none;
   }
+  &:active {
+    top: 1px;
+  }
 }
 
 p a {

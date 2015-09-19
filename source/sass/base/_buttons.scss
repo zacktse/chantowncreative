@@ -43,7 +43,9 @@ button {
 	color: inherit;
 	background: none;
 	cursor: pointer;
-  min-width: 220px;
+  //min-width: 220px;
+  width: 100%;
+  max-width: 320px;
 	padding: 30px 60px;
 	display: inline-block;
 	/* margin: 15px 30px; */

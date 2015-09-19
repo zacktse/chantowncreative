@@ -6,7 +6,6 @@ figure {
   margin-left: -16px;
   @include media($tablet-up) {
     width: 100%;
-    margin-left: 0;
   }
 }
 

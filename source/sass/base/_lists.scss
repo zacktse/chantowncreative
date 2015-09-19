@@ -26,6 +26,7 @@ ol {
   font-family: $joesfin;
   @include margin(12, 0, 18, 0);
   list-style-position: inside;
+  padding-left: 6px;
 }
 
 .content-main ul li a {
@@ -34,9 +35,14 @@ ol {
   color: $chantown-gray;
 }
 
+.content-main ul li {
+  margin-bottom: 6px;
+}
+
 .content-main ul li::before {
     content: "• ";
     color: $darker-orange;
+    padding-right: 6px;
 }
 .content-main ol {
   list-style-type: decimal;

@@ -10,10 +10,11 @@ var imagesLoaded = require('imagesloaded');
 var $grid = new Isotope ('.masonry-grid', {
   layoutMode: 'packery',
   packery: {
-    columnWidth: '.grid-sizer'
+    columnWidth: '.grid-sizer',
+    gutter: 20
   },
   itemSelector: '.grid-item',
-  percentPosition: true,
+   percentPosition: true,
   sortBy: 'random'
   });
 

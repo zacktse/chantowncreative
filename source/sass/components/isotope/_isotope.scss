@@ -35,5 +35,25 @@
   }
 }
 
-/* .grid-item--width2 { width: 200px; }
-.grid-item--height2 { height: 200px; } */
+.grid-item--width2 { width: 200px;
+
+  @include media($tablet-up) {
+    //width: 45%;
+    max-width: 200px;
+  }
+  @include media($desktop-up) {
+    max-width: 450px;
+    width: 450px;
+  }
+}
+.grid-item--height2 {
+  height: 200px;
+  @include media($tablet-up) {
+    //width: 45%;
+    max-width: 200px;
+  }
+  @include media($desktop-up) {
+    max-width: 450px;
+    height: 400px;
+  }
+}

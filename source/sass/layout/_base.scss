@@ -5,18 +5,22 @@ html {
   box-sizing: border-box;
   background-color: $lighter-orange;
   padding: 6px;
+  //overflow: hidden;
   //border: solid $page-border-width-mobile $lighter-orange;
   /* @include media($tablet-up) {
     border: solid $page-border-width-desktop $lighter-orange;
   }
   border-bottom: none;
   border-top: none; */
-  scroll-behavior: smooth;
+//  scroll-behavior: smooth;
 }
 
 body {
     background-color: whitesmoke;
     color: $chantown-gray;
+    min-height: 100%;
+
+
 }
 
 .row{

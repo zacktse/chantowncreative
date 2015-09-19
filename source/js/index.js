@@ -9,7 +9,7 @@ var isotope = require('./modules/isotope');
 var lazyloading = require('./modules/lazyloading');
 var deadPixels = require('./modules/pixels');
 
-
+var StickyHeader = require('./modules/sticky-header');
 
 var test = new deadPixels.DeadPixels;
 
@@ -20,6 +20,5 @@ test.initialize();
 
 // execute photoswipe function if there is a gallery on the page
 if (document.querySelector('.my-gallery') !== null ) {
-  console.log('gallery exists');
   PhotoSwipe.initPhotoSwipeFromDOM('.my-gallery');
 }

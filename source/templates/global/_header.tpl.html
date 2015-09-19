@@ -1,5 +1,5 @@
 
-<header class="main-header" role="banner">
+<header id="global-header" class="main-header" role="banner">
 
   <div class="logo-wrapper">
     <a href="index.html" class="logo">
@@ -8,7 +8,7 @@
   </div>
 
 
-  <div class="navigation-wrapper">
+  <div id="js-global-nav" class="navigation-wrapper">
 
     <!-- <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a> -->
     <nav role="navigation" class="main-nav">
@@ -16,14 +16,15 @@
        <li class="nav-link block">
            <a id="home-link" href="index.html" class="underlined">
              <div class="icon-home-wrapper d-t-hide">
-               <div class="icon-home hide-text"> home </div>
+               <div class="icon-home"></div>
              </div>
              <span class="m-hide">Home</span>
+             <span class="arrow"></span>
           </a>
         </li>
-        <li class="nav-link block"><a href="consult.html">Consult</a></li>
-        <li class="nav-link block"><a href="create.html">Create</a></li>
-        <li class="nav-link block"><a href="contact.html">Contact</a></li>
+        <li class="nav-link block"><a href="consult.html">Consult <span class="arrow"></span></a></li>
+        <li class="nav-link block"><a href="create.html">Create <span class="arrow"></span></a></li>
+        <li class="nav-link block"><a href="contact.html">Contact <span class="arrow"></span></a></li>
       </ul>
     </nav>
   </div>
