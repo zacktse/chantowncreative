@@ -13,7 +13,7 @@ _.extend(exports.DeadPixels.prototype, {
   //  sat:83,
   //  value:75,
    colors: ['#FF5000', '#0078AE', '#F65097'],
-   delay:5000,
+   delay:1000,
    initialize:function (_pixel_container){
        _.bindAll(this,'random_color','reposition');
 
@@ -35,12 +35,13 @@ _.extend(exports.DeadPixels.prototype, {
                'height':dim,
                'background-color': this.random_color(),
                'z-index': -1,
-               'opacity': .9,
+               //'opacity': .9,
                'pointer-events': 'none'
            });
            pixel.css('transform','rotate('+_.random(360)+'deg)');
-           pixel.addClass('on');
-           //_.delay(this.reposition,_.random(this.delay*0.25,this.delay*1.25),i);
+           _.delay(this.reposition,_.random(this.delay*1,this.delay*1.25),i);
+           //_.delay(pixel.addClass('on'),_.random(this.delay*0.25,this.delay*1.25),i);
+
        }
 
        // extend array class to allow calls to randomElement on any array
@@ -61,17 +62,17 @@ _.extend(exports.DeadPixels.prototype, {
   //  },
 
    reposition:function (i){
-       this.pixels[i].removeClass('on');
+       //this.pixels[i].removeClass('on');
        _.delay(_.bind(function (){
            this.pixels[i].css({
-               left:_.random(100)+'%',
-               top:_.random(100)+'%',
-               'background-color': this.random_color()
+               //left:_.random(100)+'%',
+               //top:_.random(100)+'%',
+               //'background-color': this.random_color()
            });
 
            this.pixels[i].addClass('on');
-           _.delay(this.reposition,_.random(this.delay*0.25,this.delay*1.25),i);
-       },this),3500)
+          _.delay(this.reposition,_.random(this.delay*0.25,this.delay*1.25),i);
+       },this),100)
    }
 
 

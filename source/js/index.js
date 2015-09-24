@@ -12,10 +12,8 @@ var dp = require('./modules/pixels');
 var StickyHeader = require('./modules/sticky-header');
 
 var pixel_bg = new dp.DeadPixels();
-
 pixel_bg.initialize();
 
-// deadPixels.deadPixels();
 
 
 // execute photoswipe function if there is a gallery on the page

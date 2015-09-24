@@ -110,7 +110,7 @@ gulp.task('js-browserify', function() {
   return browserify('./source/js/index.js', { debug: true})
         .bundle()
         .pipe(source('bundle.js'))
-        .pipe(streamify(uglify()))
+        //.pipe(streamify(uglify()))
         .pipe(gulp.dest(path.js_dest));                   // where to put the files
 });
 
@@ -523,7 +523,7 @@ gulp.task('default', [
     //'js-concat',
     'js-browserify',
     'js-copy-vendorscripts',
-    'js-uglify',
+    //'js-uglify',
     'responsive-imgs',
     'copy-favicon',
     'sass',
