@@ -2,9 +2,12 @@
 
 html {
   min-height: 100%;
+  height: 100%;
+  height: 100vh;
   box-sizing: border-box;
   background-color: $lighter-orange;
   padding: 6px;
+  overflow-x: hidden;
   //overflow: hidden;
   //border: solid $page-border-width-mobile $lighter-orange;
   /* @include media($tablet-up) {
@@ -19,7 +22,9 @@ body {
     background-color: whitesmoke;
     color: $chantown-gray;
     min-height: 100%;
-
+    margin: 0;
+    padding: 0;
+    position: relative;
 
 }
 
@@ -36,18 +41,41 @@ body {
   }
 }
 .page-container {
+  position: relative;
   margin: 0 auto;
   max-width: 1280px;
   width: 100%;
+  min-height:100%;
+  margin-bottom: -160px;
+  //background-color: lightgreen;
+  opacity: .99; // this is needed to set up a new z-index context
   z-index: $z-content;
   @include media($desktop-up) {
     width: 92.5%;
     max-width: 1280px;
   }
 }
+
+.full-height-wrapper{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  pointer-events: none; // to improve performance of the div that contains the pixels
+}
+.body-pixels-container {
+    position: relative;
+    display: block;
+    //margin: 0 auto;
+    overflow: hidden;
+    min-height: 100%;
+    z-index: $z-bg;
+}
 .content-main {
   @include outer-container;
   // margin-top: 120px;
+  z-index: $z-content;
   @include padding(0,16,0,16);
   @include media($desktop-up) {
     padding: 0;
@@ -62,7 +90,7 @@ body {
 }
 
 .home-cta-block-left-col {
-  padding:16px;
+  //padding:16px;
   //box-shadow: inset 0 1px 0 rgba(255,255,255,0.1), 0 2px 2px rgba(0,0,0,0.05), 0 0 4px 1px rgba(0,0,0,0.05);
   @include media($tablet-up) {
     @include span-columns(4 of 8);
@@ -75,8 +103,8 @@ body {
 }
 
 .home-cta-block-right-col {
-  padding: 16px;
-  margin-top: 26px;
+  //padding: 16px;
+//  margin-top: 26px;
   //box-shadow: inset 0 1px 0 rgba(255,255,255,0.1), 0 2px 2px rgba(0,0,0,0.05), 0 0 4px 1px rgba(0,0,0,0.05);
     @include media($tablet-up) {
       @include span-columns(4 of 8);

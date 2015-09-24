@@ -1,9 +1,9 @@
 .list__two-col{
-  @include margin(16,0,26,0);
+  //@include margin(16,0,26,0);
   overflow: hidden;
   li {
     display: block;
-    @include padding(12,12,12,12);
+    //@include padding(12,12,12,12);
     @include span-columns(2);
     @include omega(2n);
 

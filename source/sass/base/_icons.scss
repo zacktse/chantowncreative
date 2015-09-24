@@ -1,5 +1,5 @@
 .icon-home-wrapper {
-  // height: 36px;
+  height: 38px;
   position: relative;
   width: 32px;
   max-width:            32px;
@@ -7,6 +7,8 @@
 }
 
 .icon-home {
+  position: absolute;
+  top:3px;
   width: 32px;
   height: 32px;
   max-width:            32px;

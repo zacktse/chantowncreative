@@ -26,7 +26,8 @@ header.main-header {
   width: 100%;
   z-index: 999;
   margin-top: $page-border-width-mobile;
-
+  margin-bottom: 18px;
+  position: relative;
   //margin-left: $page-border-width-mobile;
   //margin-right: $page-border-width-mobile;
 
@@ -47,17 +48,20 @@ header.main-header {
       position: relative;
   }
 
+  header.main-header .navigation-wrapper.pinned {
+    border-left: solid 6px $lighter-orange ;
+  }
+
   .navigation-wrapper {
     @include clearfix;
     @include outer-container;
 
-    position: relative;
     overflow: hidden;
     z-index: $z-content;
     //background-color: $darker-orange;
 
     @include media($tablet-up) {
-      margin-left: -12px;
+      margin-left: -6px !important;
     }
 
     // desktop styles for main navigation
@@ -65,6 +69,10 @@ header.main-header {
         min-height: 60px;
         margin-left: 0;
         background-color: transparent;
+        position: absolute;
+        top: 36px;
+        right: 0px;
+
     }
 
     &.pinned {
@@ -73,43 +81,49 @@ header.main-header {
   }
 
   .logo-wrapper{
+    position: relative;
     @include clearfix;
-    @include outer-container;
+    //@include outer-container;
     overflow: hidden;
-    max-width: 1280px;
+    max-width: 100%;
     margin: 0 auto;
+    height: 96px;
+    z-index: $z-content;
     @include media ($horizontal-bar-mode) {
       margin-top: 0px;
-      @include span-columns(9);
+      margin-left: 0;
+      //@include span-columns(9);
     }
 
   }
   .logo {
     display: block;
-    max-height: $navigation-height;
-    width: 260px;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    //max-height: $navigation-height;
+    width: 300px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
     @include hide-text;
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position: top left;
+    background-position: 55% 60%;
     background-image: url(../img/ChantownCreative_LOGO_mobile.png);
     @include transition(all $default-transition-speed ease-out);
     @include media($tablet-up) {
+      background-position: 100% 100%;
       margin-left: 6px;
-      max-height: 60px;
+      max-height: 72px;
       width: 320px;
     }
 
     @include media($desktop-up) {
       background-image: url(../img/ChantownCreative_LOGO_desktop.png);
+      background-position: top left;
       position: absolute;
       top: 26px;
       width: 450px;
-      margin-left: -6px;
+      //margin-left: -6px;
       max-height: $navigation-height-desktop;
     }
     z-index: $z-above-nav;
@@ -136,11 +150,13 @@ header.main-header {
       max-height: 48px;
     }
     @include media ($horizontal-bar-mode) {
-      @include span-columns(7 of 16);
-      @include shift(9);
-      padding-top: 54px;
+      //@include span-columns(7 of 16);
+      //@include shift(9);
+      //padding-top: 54px;
+      float:right;
       padding-left: 0;
       padding-right: 0;
+      padding-top:12px;
       text-align: right;
       max-height: 160px;
       max-width: auto;
@@ -173,11 +189,12 @@ header.main-header {
     color: $chantown-gray;
     text-transform: uppercase;
     padding-left: 0;
+    @include animated-link-underline($chantown-gray);
     // padding-top:2px;
     letter-spacing: 1px;
     @include media($tablet-up) {
       margin-right: 16px;
-      @include animated-link-underline($chantown-gray);
+
     }
     @include media ($horizontal-bar-mode) {
 
@@ -187,32 +204,32 @@ header.main-header {
     }
   }
 
-  .nav-link span.arrow {
-    position: absolute;
-    display: none;
-    bottom: -4px;
-    left: 50%;
-    width: 0px;
-    height: 0px;
-    margin-left: -5px;
-    border-style: solid;
-    border-width: 6px 5px 4px 5px;
-    border-color: transparent transparent $darker-orange transparent;
-  }
+  // .nav-link span.arrow {
+  //   position: absolute;
+  //   display: none;
+  //   bottom: -4px;
+  //   left: 50%;
+  //   width: 0px;
+  //   height: 0px;
+  //   margin-left: -5px;
+  //   border-style: solid;
+  //   border-width: 6px 5px 4px 5px;
+  //   border-color: transparent transparent $darker-orange transparent;
+  // }
 
   .nav-link a.active {
     color: $darker-orange;
-    span.arrow {
-      display: block !important;
-    }
+    // span.arrow {
+    //   display: block !important;
+    // }
   }
 
 
   .nav-link a.active:hover {
     border-bottom: 0;
-    span.arrow {
-      display: none !important;
-    }
+    // span.arrow {
+    //   display: none !important;
+    // }
   }
 
   .nav-link a:hover::after {
@@ -220,6 +237,12 @@ header.main-header {
     -moz-transform: translateY(-10px);
     transform: translateY(-10px) ;
 
+  }
+
+  .nav-link a.active::after {
+    -webkit-transform: translateY(3px);
+    -moz-transform: translateY(3px);
+    transform: translateY(3px) ;
   }
 
 

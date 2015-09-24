@@ -8,14 +8,19 @@
    $side-image-background-bottom: #5DAC5D;
    $side-image-content-background: #F9F9F9;
    $side-image-border: 1px solid darken(transparentize($side-image-background-bottom, 0.8), 30%);
-   @include margin(18,0,26,0);
+   @include margin(0,0,18,0);
    background: transparent;
 
    @include media($tablet-up) {
      @include row(table);
+     @include span-columns(8);
      @include padding(34,0,26,0);
      clear: both;
    }
+   @include media($desktop-up) {
+      @include span-columns(16);
+   }
+
 
    .images-wrapper {
     //  @include background(url('/assets/img/VickieChanHeadshot.jpg'), linear-gradient($side-image-background-top, $side-image-background-bottom), no-repeat $side-image-background-top scroll);

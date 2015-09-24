@@ -110,7 +110,7 @@ gulp.task('js-browserify', function() {
   return browserify('./source/js/index.js', { debug: true})
         .bundle()
         .pipe(source('bundle.js'))
-        //.pipe(streamify(uglify()))
+        .pipe(streamify(uglify()))
         .pipe(gulp.dest(path.js_dest));                   // where to put the files
 });
 
@@ -134,7 +134,8 @@ gulp.task('sass', function(){
         .pipe(sass({                                        // task
             // includePaths: ['styles'].concat(neat),        // Make node-neat work
             includePaths: require('node-neat').includePaths,
-            // style: 'expanded'                             // choose style //expanded, compressed
+            // style: 'expanded'                             // choose style //expanded,
+            style: 'compressed'
         }))
         .pipe(header('/* Last Updated:' + gutils.date('mmm d, yyyy h:MM:ss TT')  + '*/\n')) // Add date top of the file
         .pipe(sourcemaps.write())
@@ -522,6 +523,7 @@ gulp.task('default', [
     //'js-concat',
     'js-browserify',
     'js-copy-vendorscripts',
+    'js-uglify',
     'responsive-imgs',
     'copy-favicon',
     'sass',

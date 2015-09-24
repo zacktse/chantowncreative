@@ -2,16 +2,16 @@ $base-font-size: 18px;
 $base-line-height: 28px;
 $measure: 760px;
 
-$h1-font-size: 42;
-$h1-line: 28;
+$h1-font-size: 24;
+$h1-line: 30;
 $h1-lines: 2;
 $h1-line-height: $h1-line * $h1-lines;
 // $h1-margin-top: 2 * $h1-line;
 $h1-margin-top: 0;
 $h1-margin-bottom: 0;
 
-$h2-font-size: 42;
-$h2-line: 28;
+$h2-font-size: 20;
+$h2-line: 26;
 $h2-lines: 2;
 $h2-line-height: $h2-line * $h2-lines;
 // $h2-margin-top: 2 * $h2-line;
@@ -70,67 +70,73 @@ h1, .size-h1 {
   @include margin(0);
 
   @include media ($tablet-up) {
-    @include font-size($h1-font-size);
-    @include line-height($h1-line-height);
-    @include padding($h1-margin-top, 0, $h1-margin-bottom, 0);
-    @include padding($h1-margin-top, 0, 0, 0);
-    @include margin(0);
+    //@include font-size($h1-font-size);
+    //@include line-height($h1-line-height);
+    //@include padding($h1-margin-top, 0, $h1-margin-bottom, 0);
+    //@include padding($h1-margin-top, 0, 0, 0);
+    //@include margin(0);
   }
 }
 
 h2, .size-h2 {
 
-  @include font-size(24);
-  @include line-height(30);
+  @include font-size(20);
+  @include line-height(26);
   // @include padding(26, 0, 12, 0);
   @include padding(0, 0, 0, 0);
 
   @include margin(0);
 
   @include media($tablet-up) {
-    @include font-size($h2-font-size);
-    @include line-height($h2-line-height);
-    @include padding($h2-margin-top, 0, $h2-margin-bottom, 0);
-    @include margin(0);
+    //@include font-size($h2-font-size);
+    //@include line-height($h2-line-height);
+    //@include padding($h2-margin-top, 0, $h2-margin-bottom, 0);
+    //@include margin(0);
   }
 }
 
 h3, .size-h3 {
 
-  @include font-size(22);
-  @include line-height(28);
+  @include font-size(18);
+  @include line-height(23);
   //@include padding(16, 0, 10, 0);
-  @include padding(16, 0, 0, 0);
+  @include padding(0, 0, 0, 0);
 
   @include margin(0);
 
   @include media ($tablet-up) {
-    @include font-size($h3-font-size);
-    @include line-height($h3-line-height);
+    //@include font-size($h3-font-size);
+    //@include line-height($h3-line-height);
   //@include padding($h3-margin-top, 0, $h3-margin-bottom, 0);
-    @include margin(0);
+    //@include margin(0);
 
   }
 }
 
 h4, .size-h4 {
 
-  @include font-size($h4-font-size);
-  @include line-height($h4-line-height);
+  @include font-size(16);
+  @include line-height(23);
+  //@include padding(16, 0, 10, 0);
   @include padding(0, 0, 0, 0);
   @include margin(0);
+
 }
 
 h5, .size-h5 {
   @include font-size(16);
+  @include line-height(20);
   @include padding(0, 0, 0, 0);
   @include margin(0);
 }
 
-h6, .size-h6 {
-  @include font-size(14);
-  @include padding(0, 0, 0, 0);
-  @include margin(0);
+
+h1 ~ p, h2 ~ p, h3 ~ p{
+  padding-top:6px;
+}
+
+h4 ~ p, h5 ~ p {
+  padding-top: 0;
 }
 
 p {
@@ -159,13 +165,13 @@ font-weight: 300; */
 
   @include font-size(21);
   @include line-height(24);
-  @include padding(0, 0, 12, 0);
+  @include padding(6, 0, 12, 0);
   @include margin(0);
   color: darken($base-font-color, 10%);
   @include media($desktop-up) {
-    @include font-size(26);
-    @include line-height(36);
-    @include padding(24, 0, 16, 0);
+    @include font-size(21);
+    @include line-height(24);
+    @include padding(0, 0, 16, 0);
     @include margin(0);
   }
 }
@@ -212,7 +218,7 @@ a {
     outline: none;
   }
   &:active {
-    top: 1px;
+    //top: 1px;
   }
 }
 
@@ -295,8 +301,10 @@ blockquote {
     content: '\201C';
     position: absolute;
     padding-top: 12px;
+    height: 42px;
     top: 24px;
     left: 16px;
+    overflow-y:visible;
     @include media($desktop-up) {
       left: 12px;
     }

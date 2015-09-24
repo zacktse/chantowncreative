@@ -77,6 +77,17 @@
     transform: translateY(2px);
   }
 }
+
+/* Mixin */
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
 // -------------------------------------------------------------------
 // Omega Reset for Bourbon Neat
 //

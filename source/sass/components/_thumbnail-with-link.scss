@@ -1,0 +1,34 @@
+.thumbnail-with-link {
+  @include margin(16,0,16,0);
+  clear: both;
+  overflow: hidden;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+
+  align-items: center;
+}
+
+a.thumbnail-with-link__image {
+  @include span-columns(1);
+}
+
+.thumbnail-with-link__link_wrap {
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  @include span-columns(3);
+}
+
+.thumbnail-with-link__link {
+  @include animated-link-underline();
+  overflow: visible;
+}

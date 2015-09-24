@@ -1,6 +1,7 @@
 @import "neat-helpers";
 .hide-text {
    @include hide-text;
+   display:none;
 }
 
 .m-hide {
@@ -21,4 +22,8 @@
   @include media($desktop-up) {
     display:none;
   }
+}
+
+.no-pad-bottom {
+  padding-bottom: 0;
 }

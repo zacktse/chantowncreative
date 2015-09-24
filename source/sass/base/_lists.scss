@@ -36,20 +36,23 @@ ol {
 }
 
 .content-main ul li {
-  margin-bottom: 6px;
+  margin-bottom: 12px;
 }
 
 .content-main ul li::before {
     content: "• ";
+    float: left;
     color: $darker-orange;
     padding-right: 6px;
+    height: 100%;
+    min-height: 24px;
 }
 .content-main ol {
   list-style-type: decimal;
   margin-bottom: $small-spacing;
   padding-left: $base-spacing;
-  @include font-size(20);
-  @include line-height(26);
+  @include font-size(18);
+  @include line-height(23);
   font-family: $joesfin;
   @include margin(12, 0, 18, 0);
   list-style-position: inside;
