@@ -24,7 +24,7 @@ ol {
   @include font-size(18);
   @include line-height(23);
   font-family: $joesfin;
-  @include margin(12, 0, 18, 0);
+  @include margin(6, 0, 6, 0);
   list-style-position: inside;
   padding-left: 6px;
 }
@@ -36,7 +36,7 @@ ol {
 }
 
 .content-main ul li {
-  margin-bottom: 12px;
+  margin-bottom: 3px;
 }
 
 .content-main ul li::before {

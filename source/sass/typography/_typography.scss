@@ -148,7 +148,7 @@ p {
   font-family: $joesfin;
 /*   font-family: $fira;
 font-weight: 300; */
-  font-family: 400;
+  font-weight: 400;
 
   // @include media($desktop-up) {
   //   @include font-size(22);
@@ -156,20 +156,24 @@ font-weight: 300; */
   //   @include padding(12, 0, 18, 0);
   //   @include margin(0);
   // }
+}
 
+// paragraphs following headings (remove all top padding on the paragraphs)
 
+h1 + p, h2 + p, h3 + p, h4 + p {
+  padding-top: 0;
 }
 
 // additional paragraph styles
 .leader {
 
-  @include font-size(21);
+  @include font-size(20);
   @include line-height(24);
   @include padding(6, 0, 12, 0);
   @include margin(0);
   color: darken($base-font-color, 10%);
   @include media($desktop-up) {
-    @include font-size(21);
+    @include font-size(20);
     @include line-height(24);
     @include padding(0, 0, 16, 0);
     @include margin(0);

@@ -192,15 +192,23 @@ header.main-header {
     @include animated-link-underline($chantown-gray);
     // padding-top:2px;
     letter-spacing: 1px;
+    &:hover {
+      color: lighten($chantown-gray, 10);
+    }
     @include media($tablet-up) {
       margin-right: 16px;
 
     }
     @include media ($horizontal-bar-mode) {
 
-      text-align: center;
-      @include padding(0,12,0,12);
+      text-align: right;
+      line-height: 24px;
+      @include padding(12,12,0,12);
+      margin-bottom: 12px;
+
       @include animated-link-underline($chantown-gray);
+
+
     }
   }
 
@@ -218,7 +226,7 @@ header.main-header {
   // }
 
   .nav-link a.active {
-    color: $darker-orange;
+    color: $pale-orange;
     // span.arrow {
     //   display: block !important;
     // }
@@ -233,16 +241,27 @@ header.main-header {
   }
 
   .nav-link a:hover::after {
-    -webkit-transform: translateY(-10px);
-    -moz-transform: translateY(-10px);
-    transform: translateY(-10px) ;
+    -webkit-transform: translateY(3px);
+    -moz-transform: translateY(3px);
+    transform: translateY(3px);
+
+    @include media($desktop-up) {
+      -webkit-transform: translateY(-2px);
+      -moz-transform: translateY(-2px);
+      transform: translateY(-2px);
+    }
 
   }
 
   .nav-link a.active::after {
     -webkit-transform: translateY(3px);
     -moz-transform: translateY(3px);
-    transform: translateY(3px) ;
+    transform: translateY(3px);
+    @include media($desktop-up) {
+      -webkit-transform: translateY(-2px);
+      -moz-transform: translateY(-2px);
+      transform: translateY(-2px) ;
+    }
   }
 
 

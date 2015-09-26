@@ -11,6 +11,12 @@
   }
 }
 
+.t-hide {
+  @include media($tablet-only) {
+    display:none;
+  }
+}
+
 
 .d-t-hide {
   @include media($tablet-up) {

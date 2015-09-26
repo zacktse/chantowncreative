@@ -29,15 +29,15 @@ footer {
   text-transform: uppercase;
 //  border-left: solid $page-border-width-mobile $lighter-orange;
   //border-right: solid $page-border-width-mobile $lighter-orange;
-  @include media($tablet-up) {
+  @include media($desktop-up) {
   //  border-left: solid $page-border-width-desktop $lighter-orange;
     //border-right: solid $page-border-width-desktop $lighter-orange;
+      background-color: transparent;
+      width: auto;
+
+
   }
   @include transition(all $default-transition-speed ease-out);
-  &:hover {
-     background-color: darken($pale-orange, 10%);
-     @include transition(all $default-transition-speed ease-out);
-  }
   a {
     display: block;
     width: 100%;
@@ -49,21 +49,50 @@ footer {
     line-height: 1.5em;
 
   }
+
+  &:hover {
+    background-color: darken($pale-orange, 10%);
+    @include transition(all $default-transition-speed ease-out);
+
+
+    @include media($desktop-up) {
+      background-color: transparent;
+    }
+
+  }
+  @include media($desktop-up) {
+      background-color: transparent;
+      a {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+      a:hover {
+        text-decoration: none;
+      }
+  }
+
 }
 
 .back-to-top {
-  position:static;
+  position:fixed;
+  bottom:0;
   width:100%;
   height:2.5em;
   background:$lighter-orange;
   left:0;
   bottom:-54px;
   z-index:$z-above-all;
+  visibility: hidden;
   @include media($desktop-up) {
+    display:none;
+  }
+  @include transition(all $default-transition-speed ease-out);
+  &.behind-lightbox {
     display:none;
   }
   &.visible {
     bottom:0;
+    visibility: visible;
     @include transition(all $default-transition-speed ease-out);
   }
   a {

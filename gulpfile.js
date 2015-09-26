@@ -110,7 +110,7 @@ gulp.task('js-browserify', function() {
   return browserify('./source/js/index.js', { debug: true})
         .bundle()
         .pipe(source('bundle.js'))
-        //.pipe(streamify(uglify()))
+        .pipe(streamify(uglify()))
         .pipe(gulp.dest(path.js_dest));                   // where to put the files
 });
 
@@ -139,15 +139,15 @@ gulp.task('sass', function(){
         }))
         .pipe(header('/* Last Updated:' + gutils.date('mmm d, yyyy h:MM:ss TT')  + '*/\n')) // Add date top of the file
         .pipe(sourcemaps.write())
-        //.pipe(autoprefixer(                                 // complete css with correct vendor prefixes
-          //  'last 2 version',
-          //  '> 1%',
-        //    'ie 8',
-        //    'ie 9',
-        //    'ios 6',
-        //    'android 4'
-        //))
-        //.pipe(cssmin())                                      // minify css
+        .pipe(autoprefixer(                                 // complete css with correct vendor prefixes
+           'last 2 version',
+           '> 1%',
+           'ie 8',
+           'ie 9',
+           'ios 6',
+           'android 4'
+        ))
+        .pipe(cssmin())                                      // minify css
         .pipe(gulp.dest(path.sass_dest))                  //destination
         .pipe(connect.reload());
 });
@@ -405,7 +405,7 @@ gulp.task('responsive-imgs', function() {
         })
       ))
 
-      .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true,  use: [pngquant()] }))
+      .pipe(imagemin({ optimizationLevel: 1, progressive: true, interlaced: true,  use: [pngquant()] }))
       // .pipe(rename(function(dir,base,ext){                // append the filename with  '-sml' title before file extension
       //     var trunc = base.split('.')[0];
       //     return trunc + '-sml' + ext;
@@ -519,7 +519,7 @@ gulp.task('default', [
     'buildhtml',
     'build_fonts',
     //'js-uglify',
-    //'js-lint',
+    'js-lint',
     //'js-concat',
     'js-browserify',
     'js-copy-vendorscripts',

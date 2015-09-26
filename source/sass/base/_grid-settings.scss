@@ -15,6 +15,7 @@ $large-desktop-screen: em(1281); // 1281 px
 
 $large-mobile-up: new-breakpoint(min-width $large-mobile-screen 4);
 $tablet-up: new-breakpoint(min-width $tablet-screen 8);
+$tablet-only : new-breakpoint(min-width $tablet-screen max-width $desktop-screen);
 $large-tablet-up: new-breakpoint(min-width $tablet-screen 8);
 $desktop-up: new-breakpoint(min-width $desktop-screen 16);
 $large-screen-up: new-breakpoint(min-width $large-desktop-screen 16);

@@ -1,4 +1,4 @@
-figure {
+figure.feature-image {
   margin: 0;
 
   // make images span to the edge of the screen on mobile
@@ -7,6 +7,8 @@ figure {
   @include media($tablet-up) {
     width: 100%;
   }
+
+
 }
 
 // lazyload
@@ -19,7 +21,11 @@ figure {
     opacity: 1;
     transition: opacity 300ms;
 }
+.lazy {
+    display: none;
+}
 
+// img[data-sizes="auto"] { display: block; width: 100%; }
 
 //photoswipe gallery specific
 

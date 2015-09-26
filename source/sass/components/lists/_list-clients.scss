@@ -13,12 +13,12 @@ ul.list__clients {
     @include padding(0);
     @include span-columns(1);
     @include omega(3n);
-
+    margin-right: 7.5%;
+    width: calc(100% / 4);
 
     @include media($tablet-up) {
-      width: 72px;
+      width: 90px;
       @include omega-reset(3n); // Pa
-      @include omega(9n);
     }
 
     a:hover::after, a::after {

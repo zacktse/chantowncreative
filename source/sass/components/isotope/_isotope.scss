@@ -6,8 +6,16 @@
 }
 
 .masonry-grid {
-  max-width: 1200px;
-  min-height: 600px;
+  max-width: 1280px;
+  min-height: 900px;
+  width: 100%;
+  //margin: 0 auto;
+  figure {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    visibility: hidden;
+  }
 }
 
 /* clear fix */
@@ -20,40 +28,71 @@
 
 /* ---- .masonry-grid-item ---- */
 .grid-item figure{
-  //padding: 6px;
+    width: auto;
+    margin:0;
+
+    img{
+      width: 100%;
+      min-height: 200px;
+    }
 }
 
-.grid-item, .grid-sizer {
-  width: 100%;
-  padding-bottom:12px;
-  @include media($tablet-up) {
-    //width: 45%;
-    max-width: 200px;
+.isotope-hidden {
+    pointer-events: none;
+    z-index: 1;
   }
-  @include media($desktop-up) {
-    max-width: 450px;
-  }
-}
 
-.grid-item--width2 { width: 200px;
+// .grid-item, .grid-sizer {
+//   // width: 100%;
+//   // padding-bottom:12px;
+//   // @include media($tablet-up) {
+//   //   //width: 45%;
+//   //   max-width: 200px;
+//   // }
+//   // @include media($desktop-up) {
+//   //   max-width: 450px;
+//   // }
+// }
+//
+.grid-sizer {
+    width: 100%;
+    height: auto;
+    @include media($tablet-up) {
+      width:450px;
+    }
+    @include media($desktop-up) {
+      width: 20%;
+    }
 
-  @include media($tablet-up) {
-    //width: 45%;
-    max-width: 200px;
-  }
-  @include media($desktop-up) {
-    max-width: 450px;
-    width: 450px;
-  }
+
+
+
 }
-.grid-item--height2 {
-  height: 200px;
-  @include media($tablet-up) {
-    //width: 45%;
-    max-width: 200px;
-  }
-  @include media($desktop-up) {
-    max-width: 450px;
-    height: 400px;
-  }
+//
+// .grid-item--width2 { width: 200px;
+//
+//   @include media($tablet-up) {
+//     //width: 45%;
+//     max-width: 200px;
+//   }
+//   @include media($desktop-up) {
+//     max-width: 450px;
+//     width: 450px;
+//   }
+// }
+// .grid-item--height2 {
+//   height: 200px;
+//   @include media($tablet-up) {
+//     //width: 45%;
+//     max-width: 200px;
+//   }
+//   @include media($desktop-up) {
+//     max-width: 450px;
+//     height: 400px;
+//   }
+// }
+
+
+.masonry-grid figcaption {
+  display: none;
 }

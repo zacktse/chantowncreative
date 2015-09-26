@@ -9,12 +9,11 @@
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-
   -ms-flex-align: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
-
   align-items: center;
+
 }
 
 a.thumbnail-with-link__image {
@@ -31,4 +30,6 @@ a.thumbnail-with-link__image {
 .thumbnail-with-link__link {
   @include animated-link-underline();
   overflow: visible;
+  font-family: $joesfin;
+  font-weight: 600;
 }

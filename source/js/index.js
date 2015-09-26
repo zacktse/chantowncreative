@@ -1,12 +1,12 @@
 var $ = require('jquery');
 
-
+var lazyloading = require('./modules/lazyloading');
 var PhotoSwipe = require('./modules/photoswipe_gallery');
 var activePageHighlight = require('./modules/active_page_highlight');
 var equalheights = require('./modules/equal_heights');
 var back_to_top = require('./modules/back_to_top');
-//var isotope = require('./modules/isotope');
-var lazyloading = require('./modules/lazyloading');
+var isotope = require('./modules/isotope');
+var scroll = require('./modules/scroll');
 var dp = require('./modules/pixels');
 
 var StickyHeader = require('./modules/sticky-header');
