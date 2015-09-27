@@ -41,6 +41,10 @@ var gulp = require ('gulp'),                                //require gulp
     imageResize  = require('gulp-image-resize'),
     os           = require("os"),
     ftp          = require('vinyl-ftp'),
+    fs = require('fs'),
+    // foreach = require('gulp-foreach'),
+    // toJson = require('gulp-to-json'),
+    sizeOf = require('image-size'), // get image widths and heights by reading the image file
     ftp_details  = require('./ftp-details.json');
     // neat.with('source/sass/');   // set path to sass for bourbon neat
 
@@ -59,9 +63,15 @@ var path = {
     js_vendor_src  : 'source/js/vendor/*.js', // vendor js scripts
     js_dest        : 'build/assets/js', // where to put minified js
     js_vendor_dest : 'build/assets/js/vendor', // where to copy vendor js
-    resp_png_src   : ['source/img/**/*.png','!source/img/favicon/*.*','!source/img/vendor/*.*','!source/img/clients/*.*'],
-    resp_jpg_src   : ['source/img/**/*.jpg','!source/img/favicon/*.*','!source/img/vendor/*.*'],
-    img_src        : ['source/img/**/*.gif','source/img/**/*.svg', 'source/img/clients/*.png'], // images for the website assets
+    resp_png_src   : ['source/**/*.png','!source/img/favicon/*.*','!source/img/vendor/*.*','!source/img/clients/*.*'],
+    resp_jpg_src   : ['source/**/*.jpg','!source/img/favicon/*.*','!source/img/vendor/*.*'],
+    // resp_img_src: ['source/img/**/*.jpg','source/img/**/*.png','!source/img/favicon/*.*','!source/img/vendor/*.*'],
+
+    img_src        : ['source/img/**/*.gif','source/img/*.jpg', 'source/img/*.png','source/img/**/*.svg', 'source/img/clients/*.png'], // images for the website assets
+
+    gallery_images : ['source/img/gallery/**/*.jpg','source/img/gallery/**/*.png' ],
+    // images for the portfolio gallery
+
     img_dest       : 'build/assets/img', // where to build out images to
     fonts_src      : 'source/fonts/**/**.*', // where to grab fonts from
     fonts_dest     : 'build/assets/fonts', // where to place fonts
@@ -110,7 +120,7 @@ gulp.task('js-browserify', function() {
   return browserify('./source/js/index.js', { debug: true})
         .bundle()
         .pipe(source('bundle.js'))
-        .pipe(streamify(uglify()))
+        //.pipe(streamify(uglify()))
         .pipe(gulp.dest(path.js_dest));                   // where to put the files
 });
 
@@ -197,127 +207,19 @@ gulp.task('responsive-imgs', function() {
   // jpgs
   gulp.src(path.resp_jpg_src)
     .pipe(plumber())
-    .pipe(changed('./build/assets/img/'))
-    .pipe(gulp.dest('./build/assets/img/')) // copy full size images
-    .pipe(debug({title: 'image:'}))
-    // .pipe(parallel(
-    //   imageResize({ width : 640 }), os.cpus().length
-    // ))
+    .pipe(changed('./build/assets/'))
+    .pipe(gulp.dest('./build/assets/')) // copy full size images
+    .pipe(debug({title: 'processing .jpg image:'}))
+    // process JPGs
     .pipe(parallel(
       responsive(
-      {
-        '**/*.jpg' : [
-          {
-            width: 320,
-            rename: {
-              //path.dirname += "";
-              suffix: "_small"
-              //path.extname = ".md"
-            },
-            background: {r: 255, g: 255, b: 255, a: 255},
-            embed: true,
-            withoutEnlargement: false
-          },
-          {
-            width: 640,
-            rename: {
-              //path.dirname += "";
-              suffix: "_small@2x"
-              //path.extname = ".md"
-            },
-            background: {r: 255, g: 255, b: 255, a: 255},
-            embed: true,
-            withoutEnlargement: false
-          },
-          {
-            width: 650,
-            rename: {
-              //path.dirname += "";
-              suffix: "_medium"
-              //path.extname = ".md"
-            },
-            background: {r: 255, g: 255, b: 255, a: 255},
-            embed: true,
-            withoutEnlargement: false
-          },
-          {
-            width: 1300,
-            rename: {
-              //path.dirname += "";
-              suffix: "_medium@2x"
-              //path.extname = ".md"
-            },
-            background: {r: 255, g: 255, b: 255, a: 255},
-            embed: true,
-            withoutEnlargement: false
-          },
-          {
-            width: 940,
-            rename: {
-              //path.dirname += "";
-              suffix: "_large"
-              //path.extname = ".md"
-            },
-            background: {r: 255, g: 255, b: 255, a: 255},
-            embed: true,
-            withoutEnlargement: false
-          },
-          {
-            width: 1880,
-            rename: {
-              //path.dirname += "";
-              suffix: "_large@2x"
-              //path.extname = ".md"
-            },
-            background: {r: 255, g: 255, b: 255, a: 255},
-            embed: true,
-            withoutEnlargement: false
-          },
-          {
-            width: 1440,
-            rename: {
-              //path.dirname += "";
-              suffix: "_x-large"
-              //path.extname = ".md"
-            },
-            background: {r: 255, g: 255, b: 255, a: 255},
-            embed: true,
-            withoutEnlargement: false
-          },
-          {
-            width: 2880,
-            rename: {
-              //path.dirname += "";
-              suffix: "_x-large@2x"
-              //path.extname = ".md"
-            },
-            background: {r: 255, g: 255, b: 255, a: 255},
-            embed: true,
-            withoutEnlargement: false
-          }
-        ]
-      })
-    ))
-    .pipe(gulp.dest('./build/assets/img/'));
-
-    // pngs
-    gulp.src(path.resp_png_src)
-      .pipe(plumber())
-      .pipe(changed('./build/assets/img/'))
-      .pipe(gulp.dest('./build/assets/img/')) // copy full size images
-      .pipe(debug({title: 'image:'}))
-      // .pipe(parallel(
-      //   imageResize({ width : 640 }), os.cpus().length
-      // ))
-      .pipe(parallel(
-        responsive(
         {
-          '**/*.png' : [
+          '**/*.jpg' : [
             {
-              width: 320,
+              width: 400,
               rename: {
                 //path.dirname += "";
-                suffix: "_small"
+                suffix: "_w400"
                 //path.extname = ".md"
               },
               background: {r: 255, g: 255, b: 255, a: 255},
@@ -325,10 +227,10 @@ gulp.task('responsive-imgs', function() {
               withoutEnlargement: false
             },
             {
-              width: 640,
+              width: 600,
               rename: {
                 //path.dirname += "";
-                suffix: "_small@2x"
+                suffix: "_w600"
                 //path.extname = ".md"
               },
               background: {r: 255, g: 255, b: 255, a: 255},
@@ -336,10 +238,10 @@ gulp.task('responsive-imgs', function() {
               withoutEnlargement: false
             },
             {
-              width: 650,
+              width: 800,
               rename: {
                 //path.dirname += "";
-                suffix: "_medium"
+                suffix: "_w800"
                 //path.extname = ".md"
               },
               background: {r: 255, g: 255, b: 255, a: 255},
@@ -347,10 +249,10 @@ gulp.task('responsive-imgs', function() {
               withoutEnlargement: false
             },
             {
-              width: 1300,
+              width: 1000,
               rename: {
                 //path.dirname += "";
-                suffix: "_medium@2x"
+                suffix: "_w1000"
                 //path.extname = ".md"
               },
               background: {r: 255, g: 255, b: 255, a: 255},
@@ -358,10 +260,10 @@ gulp.task('responsive-imgs', function() {
               withoutEnlargement: false
             },
             {
-              width: 940,
+              width: 1500,
               rename: {
                 //path.dirname += "";
-                suffix: "_large"
+                suffix: "_w1500"
                 //path.extname = ".md"
               },
               background: {r: 255, g: 255, b: 255, a: 255},
@@ -369,10 +271,10 @@ gulp.task('responsive-imgs', function() {
               withoutEnlargement: false
             },
             {
-              width: 1880,
+              width: 2000,
               rename: {
                 //path.dirname += "";
-                suffix: "_large@2x"
+                suffix: "_w2000"
                 //path.extname = ".md"
               },
               background: {r: 255, g: 255, b: 255, a: 255},
@@ -380,42 +282,119 @@ gulp.task('responsive-imgs', function() {
               withoutEnlargement: false
             },
             {
-              width: 1440,
+              width: 2500,
               rename: {
                 //path.dirname += "";
-                suffix: "_x-large"
+                suffix: "_w2500"
                 //path.extname = ".md"
               },
               background: {r: 255, g: 255, b: 255, a: 255},
               embed: true,
               withoutEnlargement: false
             },
-            {
-              width: 2880,
-              rename: {
-                //path.dirname += "";
-                suffix: "_x-large@2x"
-                //path.extname = ".md"
-              },
-              background: {r: 255, g: 255, b: 255, a: 255},
-              embed: true,
-              withoutEnlargement: false
-            }
           ]
-        })
-      ))
+        })))
+      .pipe(imagemin({ optimizationLevel: 2, progressive: true, interlaced: true,  use: [pngquant()] }))
+      .pipe(gulp.dest('./build/assets/'));
 
-      .pipe(imagemin({ optimizationLevel: 1, progressive: true, interlaced: true,  use: [pngquant()] }))
-      // .pipe(rename(function(dir,base,ext){                // append the filename with  '-sml' title before file extension
-      //     var trunc = base.split('.')[0];
-      //     return trunc + '-sml' + ext;
-      // }))
-      .pipe(gulp.dest('./build/assets/img/'));
+  // process PNGs
+  gulp.src(path.resp_png_src)
+  .pipe(plumber())
+  .pipe(changed('./build/assets/'))
+  .pipe(gulp.dest('./build/assets/')) // copy full size images
+  .pipe(debug({title: 'processing .png image:'}))
+  // process JPGs
+  .pipe(parallel(
+    responsive(
+      {
+        '**/*.png' : [
+          {
+            width: 400,
+            rename: {
+              //path.dirname += "";
+              suffix: "_w400"
+              //path.extname = ".md"
+            },
+            background: {r: 255, g: 255, b: 255, a: 255},
+            embed: true,
+            withoutEnlargement: false
+          },
+          {
+            width: 600,
+            rename: {
+              //path.dirname += "";
+              suffix: "_w600"
+              //path.extname = ".md"
+            },
+            background: {r: 255, g: 255, b: 255, a: 255},
+            embed: true,
+            withoutEnlargement: false
+          },
+          {
+            width: 800,
+            rename: {
+              //path.dirname += "";
+              suffix: "_w800"
+              //path.extname = ".md"
+            },
+            background: {r: 255, g: 255, b: 255, a: 255},
+            embed: true,
+            withoutEnlargement: false
+          },
+          {
+            width: 1000,
+            rename: {
+              //path.dirname += "";
+              suffix: "_w1000"
+              //path.extname = ".md"
+            },
+            background: {r: 255, g: 255, b: 255, a: 255},
+            embed: true,
+            withoutEnlargement: false
+          },
+          {
+            width: 1500,
+            rename: {
+              //path.dirname += "";
+              suffix: "_w1500"
+              //path.extname = ".md"
+            },
+            background: {r: 255, g: 255, b: 255, a: 255},
+            embed: true,
+            withoutEnlargement: false
+          },
+          {
+            width: 2000,
+            rename: {
+              //path.dirname += "";
+              suffix: "_w2000"
+              //path.extname = ".md"
+            },
+            background: {r: 255, g: 255, b: 255, a: 255},
+            embed: true,
+            withoutEnlargement: false
+          },
+          {
+            width: 2500,
+            rename: {
+              //path.dirname += "";
+              suffix: "_w2500"
+              //path.extname = ".md"
+            },
+            background: {r: 255, g: 255, b: 255, a: 255},
+            embed: true,
+            withoutEnlargement: false
+          },
+        ]
+      })))
+    .pipe(imagemin({ optimizationLevel: 2, progressive: true, interlaced: true,  use: [pngquant()] }))
+    .pipe(gulp.dest('./build/assets/'));
 
-    // svgs + gifs
-    gulp.src(path.img_src)
-      .pipe(plumber())
-      .pipe(gulp.dest('./build/assets/img/'));
+
+  // svgs + gifs
+  gulp.src(path.img_src)
+    .pipe(plumber())
+    .pipe(gulp.dest('./build/assets/img/'));
 
 });
 
@@ -443,6 +422,29 @@ gulp.task('copy-favicon', function() {
 //     .pipe(gulp.dest('./build/'))
 //   .pipe(connect.reload());
 // });
+
+/*******************************************************************************
+## Build image Gallery JSON
+## creates the JSON file which contains information about the images in the gallery folder to use with the Photoswipe gallery implementation on the front end of the website
+##
+*******************************************************************************/
+gulp.task('build_gallery_json', function() {
+  // return gulp.src(path.gallery_images)
+  //   .pipe(plumber())
+  //   .pipe(foreach(function(stream, file){
+  //       //.pipe(sizeOf(file))
+  //       .pipe(debug({title: file}))
+  //   }));
+  gulp.src(path.gallery_images)
+    .pipe(require('gulp-filelist')('filelist.json'))
+    .pipe(gulp.dest('out'))
+    
+    // .pipe(toJson({
+    //   filename: 'gallery.json'
+    // strip: /^.+\/?\\?public\/?\\?/ //create just file names by removing everything from left of public/ folder
+
+});
+
 
 
 

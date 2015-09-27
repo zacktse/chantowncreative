@@ -11,10 +11,14 @@ footer {
     text-align: center;
     font-size: 12px;
     padding-top: 24px;
-    padding-bottom: 24px;
+    padding-bottom: 60px;
+
     background-color: whitesmoke;
     a {
       @include animated-link-underline();
+    }
+    @include media($desktop-up) {
+        padding-bottom: 24px;
     }
   }
 }

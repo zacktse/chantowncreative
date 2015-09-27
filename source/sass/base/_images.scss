@@ -13,17 +13,43 @@ figure.feature-image {
 
 // lazyload
 
-.lazyload,
-.lazyloading {
-    opacity: 0;
+// .lazyload,
+// .lazyloading {
+//     opacity: 0;
+// }
+// .lazyloaded {
+//     opacity: 1;
+//     transition: opacity 300ms;
+// }
+// .lazy {
+//     display: none;
+// }
+
+/*
+ * Responsively Lazy
+ * http://ivopetkov.com/b/lazy-load-responsive-images/
+ * Copyright 2015, Ivo Petkov
+ * Free to use under the MIT license.
+*/
+
+.responsively-lazy:not(img){
+    position:relative;
+    height:0;
 }
-.lazyloaded {
-    opacity: 1;
-    transition: opacity 300ms;
+
+.responsively-lazy:not(img) img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
-.lazy {
-    display: none;
+
+img.responsively-lazy{
+    width:100%;
+    height:0;
 }
+
 
 // img[data-sizes="auto"] { display: block; width: 100%; }
 

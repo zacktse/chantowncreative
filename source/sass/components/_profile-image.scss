@@ -24,18 +24,18 @@
 
    .images-wrapper {
     //  @include background(url('/assets/img/VickieChanHeadshot.jpg'), linear-gradient($side-image-background-top, $side-image-background-bottom), no-repeat $side-image-background-top scroll);
-     @include background(url('../img/VickieChanHeadshot_small@2x.jpg'));
+     @include background(url('../img/VickieChanHeadshot_w400.jpg'));
 
     //  background-color: $side-image-background-top;
-     background-size: contain;
-     background-position: center;
+     background-size:contain;
+     background-position: top left;
      background-repeat: no-repeat;
     //  border-bottom: $side-image-border;
      display: block;
      padding: 0;
      min-height: 260px;
      @include media($tablet-up) {
-       @include background(url('../img/VickieChanHeadshot_medium@2x.jpg'));
+       @include background(url('../img/VickieChanHeadshot_w1000.jpg'));
        @include span-columns(6);
        background-position: top center;
        background-size: contain;
@@ -44,7 +44,7 @@
      }
 
      @include media($desktop-up) {
-        @include background(url('../img/VickieChanHeadshot_medium@2x.jpg'));
+        @include background(url('../img/VickieChanHeadshot_w1000.jpg'));
         background-size: contain;
         background-position: top center;
         background-repeat: no-repeat;

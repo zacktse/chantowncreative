@@ -1,6 +1,7 @@
 var $ = require('jquery');
-
-var lazyloading = require('./modules/lazyloading');
+// var lazyloading = require('responsively-lazy');
+// //var lazyloading = require('./modules/lazyloading');
+// var Exports = require('./modules/exports');
 var PhotoSwipe = require('./modules/photoswipe_gallery');
 var activePageHighlight = require('./modules/active_page_highlight');
 var equalheights = require('./modules/equal_heights');

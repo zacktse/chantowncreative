@@ -6,13 +6,23 @@
 @@include('../templates/global/_header.tpl.html')
 <div id="js-content" class="page-container">
   <section class="content-main" role="main">
-    <img
-        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-        data-sizes="auto"
-        data-srcset="assets/img/CREATEWIDEish-BEST_small.jpg 175w,
-        assets/img/CREATEWIDEish-BEST_small@2x.jpg 350w,
-        assets/img/CREATEWIDEish-BEST_medium@2x.jpg 700w,
-        assets/img/CREATEWIDEish-BEST_large.jpg 1400w" class="lazyload full-width feature-image" />
+
+    <div class="responsively-lazy" style="padding-bottom: 53.875%;">
+      <img src="assets/img/CREATEWIDEish-BEST_w1500.jpg"
+       srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+      data-srcset="
+        assets/img/CREATEWIDEish-BEST_w400.jpg 400w,
+        assets/img/CREATEWIDEish-BEST_w600.jpg 600w,
+        assets/img/CREATEWIDEish-BEST_w800.jpg 800w,
+        assets/img/CREATEWIDEish-BEST_w1000.jpg 1000w,
+        assets/img/CREATEWIDEish-BEST_w1500.jpg 1500w,
+        assets/img/CREATEWIDEish-BEST_w2000.jpg 2000w"
+      class=" feature-image full-width"
+      alt="Picture of a horse with inks by Chantown Creative"
+      title="Create: Chantown Creative" />
+    </div>
+
+
     <div class="row">
 
         <h1 class="size-h1">Create</h1>
@@ -45,56 +55,33 @@
             <div class="grid-sizer"></div>
 
 
-            <!-- isotope item 1 -->
-            <figure class="item commercial" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-              <a href="http://chantown.com/newwebtest/assets/img/gallery/test/test1_medium@2x.jpg" itemprop="contentUrl" data-size="1200x800">
-                <img class="lazyload grid-sizer" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                 data-widths="[320, 480]"
-                 data-src="/assets/img/gallery/test/test1{width}.jpg"
-                 data-sizes="auto" itemprop="thumbnail" title="150315_0120" alt="" />
-              </a>
-              <figcaption itemprop="caption description">
-                 Image 1 caption here. <a href="#">this may contain links</a>
-                <span itemprop="copyrightHolder"> &copy; Chantown Creative</span>
+            <!--@@include('../templates/gallery/_gallery.tpl.html') -->
+
+            <!-- gallery template -->
+
+            {{#each images}}
+            <figure class="item {{category}}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+
+              <a href="{{desktopImage.src}}" data-mobile-link="{{mobileImage.src}}" itemprop="contentUrl" data-size="{{desktopImage.w}}x{{desktopImage.h}}" data-size-desktop="{{desktopImage.w}}x{{desktopImage.h}}"
+              data-size-mobile="{{mobileImage.w}}x{{mobileImage.h}}">
+
+                  <img class="responsively-lazy" src="{{desktopImage.src}}"
+                   srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                  data-srcset="
+                    {{srcImage}}_w400{{imageExtension}} 400w,
+                    {{srcImage}}_w600{{imageExtension}} 600w,
+                    {{srcImage}}_w800{{imageExtension}} 800w"
+                  alt="An image of a peice of art by Chantown Creative"
+                  title="{{escape title}} | {{year}}" itemprop="thumbnail"  />
+
+             </a>
+             <figcaption itemprop=\"caption description\">
+                {{escape title}} | {{year}} </br>
+                {{escape description}}
+                <span itemprop=\"copyrightHolder\"> &copy; Chantown Creative</span>
               </figcaption>
             </figure>
-
-
-            <!-- isotope item 2 -->
-            <figure class="item llustration" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-              <a href="http://chantown.com/newwebtest/assets/img/gallery/test/2014_BeggarInTheMorning_30_small_medium@2x.jpg" itemprop="contentUrl" data-size="1300x1294">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/assets/img/gallery/test/2014_BeggarInTheMorning_30_small_medium@2x.jpg"
-                data-srcset="/assets/img/gallery/test/2014_BeggarInTheMorning_30_small_small.jpg 320w,
-                             /assets/img/gallery/test/2014_BeggarInTheMorning_30_small_small@2x.jpg 600w,
-                             /assets/img/gallery/test/2014_BeggarInTheMorning_30_small_medium.jpg 960w"
-                class="lazyload grid-sizer" data-sizes="auto" itemprop="thumbnail" title="150315_0083" alt="" />
-              </a>
-              <figcaption itemprop="caption description">
-                Description for image 2 here.
-                <span itemprop="copyrightHolder"> &copy; Chantown Creative</span>
-              </figcaption>
-            </figure>
-
-            <!-- isotope item 3 -->
-            <figure class="item llustration" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-              <a href="http://chantown.com/newwebtest/assets/img/gallery/test/test2_medium@2x.jpg" itemprop="contentUrl" data-size="1200x800">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/assets/img/gallery/test/test2_medium@2x.jpg"
-                data-srcset="/assets/img/gallery/test/test2_small.jpg 220w,
-                             /assets/img/gallery/test/test2_small@2x.jpg 300w,
-                             /assets/img/gallery/test/test2_medium.jpg 600w"
-                class="lazyload grid-sizer" data-sizes="auto" itemprop="thumbnail" title="150315_0083" alt="" />
-              </a>
-              <figcaption itemprop="caption description">
-                Description for image 3 here.
-                <span itemprop="copyrightHolder"> &copy; Chantown Creative</span>
-              </figcaption>
-            </figure>
-
-
-
-
-
-
+            {{/each}}
 
 
         </div>
