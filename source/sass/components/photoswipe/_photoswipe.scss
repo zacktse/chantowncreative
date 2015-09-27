@@ -208,3 +208,12 @@
 	color: $pswp__error-text-color;
 	text-decoration: underline;
 }
+
+.image-copyright {
+	color: $medium-gray;
+	text-align: center;
+	font-size: 12px;
+	a {
+		@include animated-link-underline();
+	}
+}

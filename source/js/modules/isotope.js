@@ -220,6 +220,10 @@ var runPhotoswipe = function () {
         // PHOTOSWIPE GALLERY
          var pswpElement = $('.pswp')[0];
          var isotopeContainer = $('.masonry-grid');
+         var realViewportWidth; // create variable that will store real size of viewport
+         var useLargeImages = false;
+         var firstResize = true;
+         var imageSrcWillChange;
 
          isotopeContainer.on('click', 'a', function(e){
            e.preventDefault();
@@ -233,10 +237,16 @@ var runPhotoswipe = function () {
                  link = figure.children('a'),
                  caption = figure.find('figcaption'),
                  size = link.data('size').split('x'),
+                 mobileImgSrc = link.data('mobile-link');
+                 desktopSize = link.data('size-desktop').split('x'),
+                 mobileSize = link.data('size-mobile').split('x'),
                  data = {
                    src: link.attr('href'),
                    w: +size[0],
-                   h: +size[1]
+                   h: +size[1],
+                   mobile_src: mobileImgSrc,
+                   mobile_w: +mobileSize[0],
+                   mobile_h: +mobileSize[1]
                  };
 
              if (caption.length){
@@ -276,6 +286,67 @@ var runPhotoswipe = function () {
              $("header").find(".scrollmagic-pin-spacer").fadeIn(250);
              $(".back-to-top").removeClass("behind-lightbox");
            });
+
+           // beforeResize event fires each time size of gallery viewport updates
+           photoswipeInstance.listen('beforeResize', function() {
+                // gallery.viewportSize.x - width of PhotoSwipe viewport
+                // gallery.viewportSize.y - height of PhotoSwipe viewport
+                // window.devicePixelRatio - ratio between physical pixels and device independent pixels (Number)
+                //                          1 (regular display), 2 (@2x, retina) ...
+
+
+                // calculate real pixels when size changes
+                realViewportWidth = photoswipeInstance.viewportSize.x * window.devicePixelRatio;
+
+                // Code below is needed if you want image to switch dynamically on window.resize
+
+                // Find out if current images need to be changed
+                if(useLargeImages && realViewportWidth < 1000) {
+                    useLargeImages = false;
+                    imageSrcWillChange = true;
+                } else if(!useLargeImages && realViewportWidth >= 100) {
+                    useLargeImages = true;
+                    imageSrcWillChange = true;
+                }
+
+                // Invalidate items only when source is changed and when it's not the first update
+                if(imageSrcWillChange && !firstResize) {
+                    // invalidateCurrItems sets a flag on slides that are in DOM,
+                    // which will force update of content (image) on window.resize.
+                    photoswipeInstance.invalidateCurrItems();
+                }
+
+                if(firstResize) {
+                    firstResize = false;
+                }
+
+                imageSrcWillChange = false;
+
+            });
+
+           // function that decides whether to load mobile or desktop version of the full size image when clicking on one of the thumbnails
+
+           // the photoswipe gettingData event fires each time PhotoSwipe retrieves image source & size
+           photoswipeInstance.listen('gettingData', function(index, item) {
+                console.log(item);
+                // Set image source & size based on real viewport width
+                if( useLargeImages ) {
+                    item.src = item.src;
+                    item.w = item.w;
+                    item.h = item.h;
+                } else {
+                    item.src = item.mobile_src;
+                    item.w = item.mobile_w;
+                    item.h = item.mobile_h;
+                }
+
+                // It doesn't really matter what will you do here,
+                // as long as item.src, item.w and item.h have valid values.
+                //
+                // Just avoid http requests in this listener, as it fires quite often
+
+            });
+
           photoswipeInstance.init();
          });
        //}); // imagesloaded

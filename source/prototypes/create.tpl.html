@@ -40,7 +40,7 @@
         <!-- <button class="sort" data-sort="random">Shuffle</button> -->
         <button class="filter" data-filter="*">All</button>
         <button class="filter" data-filter=".commercial">Commercial</button>
-        <button class="filter" data-filter=".llustration">Illustration</button>
+        <button class="filter" data-filter=".illustration">Illustration</button>
         <button class="filter" data-filter=".mixed-media">Mixed media</button>
         <button class="filter" data-filter=".painting">Painting</button>
 
@@ -77,8 +77,8 @@
              </a>
              <figcaption itemprop=\"caption description\">
                 {{escape title}} | {{year}} </br>
-                {{escape description}}
-                <span itemprop=\"copyrightHolder\"> &copy; Chantown Creative</span>
+                {{escape description}}</br>
+                <span itemprop=\"copyrightHolder\" class="image-copyright"> &copy; Chantown Creative</span>
               </figcaption>
             </figure>
             {{/each}}
