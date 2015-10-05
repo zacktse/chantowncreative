@@ -110,7 +110,7 @@ var runPhotoswipe = function () {
             opacity: 1
           },
           transitionDuration: '.3s',
-          sortBy: 'random'
+          //sortBy: 'random'
           });
         // once images have loaded - run the layout script to put all images in masonry layout
         // imagesLoaded('.masonry-grid', function() {
