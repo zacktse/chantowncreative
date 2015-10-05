@@ -45,7 +45,8 @@ var gulp = require ('gulp'),                                //require gulp
     // foreach = require('gulp-foreach'),
     // toJson = require('gulp-to-json'),
     sizeOf = require('image-size'), // get image widths and heights by reading the image file
-    ftp_details  = require('./ftp-details.json');
+    ftp_details  = require('./ftp-details.json'),
+    browserSync = require('browser-sync').create();
     // neat.with('source/sass/');   // set path to sass for bourbon neat
 
 /*******************************************************************************
@@ -63,6 +64,8 @@ var path = {
     js_vendor_src  : 'source/js/vendor/*.js', // vendor js scripts
     js_dest        : 'build/assets/js', // where to put minified js
     js_vendor_dest : 'build/assets/js/vendor', // where to copy vendor js
+    js_json_src    : 'source/js/json/*.js', // json files
+    js_json_dest   : 'build/js/json', // json files destination in build folder
     resp_png_src   : ['source/**/*.png','!source/img/favicon/*.*','!source/img/vendor/*.*','!source/img/clients/*.*'],
     resp_jpg_src   : ['source/**/*.jpg','!source/img/favicon/*.*','!source/img/vendor/*.*'],
     // resp_img_src: ['source/img/**/*.jpg','source/img/**/*.png','!source/img/favicon/*.*','!source/img/vendor/*.*'],
@@ -77,6 +80,11 @@ var path = {
     fonts_dest     : 'build/assets/fonts', // where to place fonts
     favicon_src    : 'source/img/favicon/*.*' // 'dem favicons
 };
+
+
+
+
+
 
 /*******************************************************************************
 ## JS TASKS
@@ -126,11 +134,19 @@ gulp.task('js-browserify', function() {
 
 
 
-// copy vendor js to build folder
-gulp.task('js-copy-vendorscripts', function() {
+// copy  js to build folder
+gulp.task('js-copy-scripts', function() {
   gulp.src(path.js_vendor_src)
     .pipe(plumber())
 		.pipe(gulp.dest(path.js_vendor_dest));
+  gulp.src(path.js_json_src)
+    .pipe(plumber())
+    .pipe(gulp.dest(path.js_json_dest))
+});
+
+gulp.task('js-copy-json', function() {
+  gulp.src("./source/js/json/*.json")
+    .pipe(gulp.dest("build/assets/json/"))
 });
 
 /*******************************************************************************
@@ -161,6 +177,10 @@ gulp.task('sass', function(){
         .pipe(gulp.dest(path.sass_dest))                  //destination
         .pipe(connect.reload());
 });
+
+
+gulp.task('sass-watch', ['sass'], browserSync.reload);
+
 
 /*******************************************************************************
 ## Connect: setup a local server with live reload
@@ -438,7 +458,7 @@ gulp.task('build_gallery_json', function() {
   gulp.src(path.gallery_images)
     .pipe(require('gulp-filelist')('filelist.json'))
     .pipe(gulp.dest('out'))
-    
+
     // .pipe(toJson({
     //   filename: 'gallery.json'
     // strip: /^.+\/?\\?public\/?\\?/ //create just file names by removing everything from left of public/ folder
@@ -469,7 +489,14 @@ gulp.task('build_fonts', function() {
 gulp.task('watch', function(){
     // gulp.watch('source/js/**/*.js', ['js-lint', 'js-uglify', 'js-concat','js-copy-vendorscripts']);    //Watch Scripts
 
-    gulp.watch('source/js/**/*.js', ['js-browserify', 'js-copy-vendorscripts']);    //Watch Scripts
+    browserSync.init({
+  	  //proxy: {
+  			//host: "localhost",
+  			//port: 9000
+  		//}
+	 });
+
+    gulp.watch('source/js/**/*.js', ['js-watch']);    //Watch Scripts
 
     gulp.watch('source/sass/**/*.scss', ['sass']);                             //Watch Styles
     gulp.watch('source/prototypes/**/**/*.tpl.html', ['buildhtml']);              // Watch prototypes
@@ -477,7 +504,7 @@ gulp.task('watch', function(){
 
 });
 
-
+gulp.task('js-watch',['js-browserify', 'js-copy-scripts', 'js-copy-json'], browserSync.reload);
 
 /*******************************************************************************
 ##  DEPLOY TASKS
@@ -524,7 +551,8 @@ gulp.task('default', [
     'js-lint',
     //'js-concat',
     'js-browserify',
-    'js-copy-vendorscripts',
+    'js-copy-scripts',
+    'js-copy-json',
     //'js-uglify',
     'responsive-imgs',
     'copy-favicon',

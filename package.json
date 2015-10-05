@@ -6,7 +6,7 @@
   "description": "Chantown Creative Website",
   "main": "gulpfile.js",
   "devDependencies": {
-    "browser-sync": "^2.7.13",
+    "browser-sync": "^2.9.8",
     "browserify": "^11.0.1",
     "concurrent-transform": "^1.0.0",
     "fs": "0.0.2",

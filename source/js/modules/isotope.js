@@ -9,88 +9,22 @@ var PhotoSwipeUI_Default = require('../vendor/photoswipe-ui-default.min');
 responsivelyLazy = require('../vendor/responsively_lazy.min');
 
 
+function loadGalleryJSON(callback) {
 
+    var xobj = new XMLHttpRequest();
+        xobj.overrideMimeType("application/json");
+    xobj.open('GET', '/../assets/json/gallery_images.json', true);
+    xobj.onreadystatechange = function () {
+          if (xobj.readyState == 4 && xobj.status == "200") {
+            // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+            callback(xobj.responseText);
+          }
+    };
+    xobj.send(null);
+}
 
-var gallery_items = {
-  "images" : [
-       {
-          "title":"But Youll Cry",
-          "year":2015,
-          "category": "mixed-media painting",
-          "srcImage":"/assets/img/gallery/2015/ButYoullCry-FULL",
-          "imageExtension": ".jpg",
-          "mobileImage":{
-             "src":"/assets/img/gallery/2015/ButYoullCry-FULL_w800.jpg",
-             "w":800,
-             "h":1097
-          },
-          "desktopImage":{
-             "src":"/assets/img/gallery/2015/ButYoullCry-FULL_w2000.jpg",
-             "w":2000,
-             "h":2743
-          },
-          "description":"Mixed Media painting on vinyl record",
-          "alt":"An image of artwork by Chantown Creative"
-       },
-       {
-          "title":"Other Peoples Heartache",
-          "year":2015,
-          "category": "mixed-media painting",
-          "srcImage":"/assets/img/gallery/2015/OtherPeoplesHeartache-FULL",
-          "imageExtension":".jpg",
-          "mobileImage":{
-             "src":"/assets/img/gallery/2015/OtherPeoplesHeartache-FULL_w800.jpg",
-             "w":800,
-             "h":1098
-          },
-          "desktopImage":{
-             "src":"/assets/img/gallery/2015/OtherPeoplesHeartache-FULL_w2000.jpg",
-             "w":2000,
-             "h":2746
-          },
-          "description":"Mixed Media painting on vinyl record",
-          "alt":"An image of artwork by Chantown Creative"
-       },
-       {
-          "title":"Michaels Bear Trap",
-          "year":2015,
-          "category": "illustration",
-          "srcImage":"/assets/img/gallery/2015/MichaelsBearTrap",
-          "imageExtension": ".jpg",
-          "mobileImage":{
-             "src":"/assets/img/gallery/2015/MichaelsBearTrap_w800.jpg",
-             "w":800,
-             "h":530
-          },
-          "desktopImage":{
-             "src":"/assets/img/gallery/2015/MichaelsBearTrap_w2000.jpg",
-             "w":2000,
-             "h":1327
-          },
-          "description":"Illustration peice, pen and coloured ink",
-          "alt":"An image of artwork by Chantown Creative"
-       },
-       {
-          "title":"Leicester Fox",
-          "year":2014,
-          "category":"illustration",
-          "srcImage":"/assets/img/gallery/2014/LeicesterFoxCLEAN",
-          "imageExtension": ".jpg",
-          "mobileImage":{
-             "src":"/assets/img/gallery/2014/LeicesterFoxCLEAN_w800.jpg",
-             "w":800,
-             "h":556
-          },
-          "desktopImage":{
-             "src":"/assets/img/gallery/2014/LeicesterFoxCLEAN_w2000.jpg",
-             "w":2000,
-             "h":1391
-          },
-          "description":"Mixed Media paint on vinyl record",
-          "alt":"Image of artwork by Chantown Creative"
-       }
-     ]
-};
+var gallery_items = {};
+
 
 
 
@@ -304,7 +238,7 @@ var runPhotoswipe = function () {
                 if(useLargeImages && realViewportWidth < 1000) {
                     useLargeImages = false;
                     imageSrcWillChange = true;
-                } else if(!useLargeImages && realViewportWidth >= 100) {
+                } else if(!useLargeImages && realViewportWidth >= 1000) {
                     useLargeImages = true;
                     imageSrcWillChange = true;
                 }
@@ -314,6 +248,7 @@ var runPhotoswipe = function () {
                     // invalidateCurrItems sets a flag on slides that are in DOM,
                     // which will force update of content (image) on window.resize.
                     photoswipeInstance.invalidateCurrItems();
+                    // console.log('run resize photoswipe');
                 }
 
                 if(firstResize) {
@@ -328,7 +263,6 @@ var runPhotoswipe = function () {
 
            // the photoswipe gettingData event fires each time PhotoSwipe retrieves image source & size
            photoswipeInstance.listen('gettingData', function(index, item) {
-                console.log(item);
                 // Set image source & size based on real viewport width
                 if( useLargeImages ) {
                     item.src = item.src;
@@ -346,6 +280,7 @@ var runPhotoswipe = function () {
                 // Just avoid http requests in this listener, as it fires quite often
 
             });
+
 
           photoswipeInstance.init();
          });
@@ -375,6 +310,15 @@ if ( _portfolio_gallery.length > 0 ) {
     return variable.replace(/(['"])/g, '\\$1');
   });
 
+  // if placing the json file on an external server, could use this code.
+  // loadGalleryJSON(function(response) {
+  //   // Parse JSON string into object
+  //     gallery_items = JSON.parse(response);
+  //     buildGalleryHTML(gallery_items);
+  //     runPhotoswipe();
+  // });
+
+  gallery_items = require('../json/gallery_images');
   buildGalleryHTML(gallery_items);
   runPhotoswipe();
 

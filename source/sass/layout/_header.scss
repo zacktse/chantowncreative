@@ -106,8 +106,10 @@ header.main-header {
     margin-right: auto;
     @include hide-text;
     background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: 55% 60%;
+    background-size: 94%;
+    background-position: 12px 60%;
+    // background-size: 100%;
+    // background-position: 55% 60%;
     background-image: url(../img/ChantownCreative_LOGO_mobile.png);
     @include transition(all $default-transition-speed ease-out);
     @include media($tablet-up) {
