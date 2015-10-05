@@ -7,6 +7,9 @@ html {
   box-sizing: border-box;
   background-color: $lighter-orange;
   padding: 6px;
+  @include media ($desktop-up) {
+    padding: 9px;
+  }
   overflow-x: hidden;
   //overflow: hidden;
   //border: solid $page-border-width-mobile $lighter-orange;
@@ -50,8 +53,12 @@ body {
   //background-color: lightgreen;
   opacity: .99; // this is needed to set up a new z-index context
   z-index: $z-content;
+  @include media($tablet-up) {
+    width: 90%;
+    max-width: 1280px;
+  }
   @include media($desktop-up) {
-    width: 85%;
+    width: 76.5%;
     max-width: 1280px;
   }
 }
@@ -96,8 +103,9 @@ body {
     @include span-columns(4 of 8);
   }
   @include media($desktop-up) {
-    @include span-columns(8 of 16);
-    p { width: 100%; }
+    @include span-columns(7 of 16);
+    @include shift(1);
+    p { width: 85%; }
   }
 
 }
@@ -111,8 +119,9 @@ body {
       margin-top: 0;
     }
     @include media($desktop-up) {
-      @include span-columns(8 of 16);
-      p { width: 100%; }
+      @include span-columns(7 of 16);
+
+      p { width: 85%; }
 
     }
 

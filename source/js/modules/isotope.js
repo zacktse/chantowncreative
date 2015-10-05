@@ -281,6 +281,24 @@ var runPhotoswipe = function () {
 
             });
 
+           photoswipeInstance.listen('beforeChange', function() {
+            //  var nextImgWidth = $('.pswp__img').innerWidth();
+             //console.log( $('.pswp__img').innerWidth());
+
+           });
+
+           photoswipeInstance.listen('imageLoadComplete', function(index, item) {
+              // index - index of a slide that was loaded
+              // item - slide object
+              // console.log($('.pswp__img').innerWidth());
+              $('.pswp__caption__center').css("max-width", nextImgWidth);
+           });
+
+           photoswipeInstance.listen('resize', function() {
+            //  var nextImgWidth = $('.pswp__img').innerWidth();
+            //  $('.pswp__caption__center').css("max-width", nextImgWidth);
+           });
+
 
           photoswipeInstance.init();
          });

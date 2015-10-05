@@ -42,7 +42,7 @@ header.main-header {
   @include media ($horizontal-bar-mode) {
       min-height: $navigation-height-desktop;
       max-width: 1280px;
-      width: 85%;
+      width: 76.5%;
       margin: 0 auto;
       text-align: center;
       position: relative;
@@ -150,6 +150,8 @@ header.main-header {
       text-align: right;
       padding-top: 6px;
       max-height: 48px;
+      max-width: 90%;
+      margin: 0 auto;
     }
     @include media ($horizontal-bar-mode) {
       //@include span-columns(7 of 16);
@@ -199,8 +201,9 @@ header.main-header {
     }
     @include media($tablet-up) {
       margin-right: 16px;
-
     }
+
+
     @include media ($horizontal-bar-mode) {
 
       text-align: right;
@@ -210,8 +213,13 @@ header.main-header {
 
       @include animated-link-underline($chantown-gray);
 
-
     }
+  }
+
+  li.nav-link:last-child a {
+      @include media($tablet-up) {
+        margin-right: 0;
+      }
   }
 
   // .nav-link span.arrow {

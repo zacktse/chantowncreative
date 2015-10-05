@@ -49,6 +49,9 @@ button {
   //min-width: 220px;
   width: 100%;
   max-width: 260px;
+  @include media($tablet-up) {
+    max-width: 200px;
+  }
 	padding: 30px 60px;
 	display: inline-block;
 	/* margin: 15px 30px; */
