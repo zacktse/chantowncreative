@@ -1,7 +1,7 @@
 {
  "images" : [
       {
-         "title":"But Youll Cry",
+         "title":"But You'll Cry",
          "year":2015,
          "category": "mixed-media painting",
          "srcImage":"assets/img/gallery/2015/ButYoullCry-FULL",
@@ -16,11 +16,11 @@
             "w":2000,
             "h":2743
          },
-         "description":"Mixed Media painting on vinyl record",
-         "alt":"An image of artwork by Chantown Creative"
+         "description":"Mixed media painting on vinyl record",
+         "alt":"But You'll Cry vinyl painting by Vickie Chan"
       },
       {
-         "title":"Other Peoples Heartache",
+         "title":"Other People's Heartache",
          "year":2015,
          "category": "mixed-media painting",
          "srcImage":"assets/img/gallery/2015/OtherPeoplesHeartache-FULL",
@@ -35,11 +35,11 @@
             "w":2000,
             "h":2746
          },
-         "description":"Mixed Media painting on vinyl record",
-         "alt":"An image of artwork by Chantown Creative"
+         "description":"Mixed media painting on vinyl record",
+         "alt":"Other People's Heartache vinyl painting by Vickie Chan"
       },
       {
-         "title":"Michaels Bear Trap",
+         "title":"Michael's Bear Trap",
          "year":2015,
          "category": "illustration",
          "srcImage":"assets/img/gallery/2015/MichaelsBearTrap",
@@ -54,8 +54,8 @@
             "w":2000,
             "h":1327
          },
-         "description":"Illustration peice, pen and coloured ink",
-         "alt":"An image of artwork by Chantown Creative"
+         "description":"Ink illustration",
+         "alt":"Michael's Bear Trap illustration by Vickie Chan"
       },
       {
          "title":"Leicester Fox",
@@ -73,11 +73,11 @@
             "w":2000,
             "h":1391
          },
-         "description":"Mixed Media paint on vinyl record",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Ink illustration",
+         "alt":"Leicester Fox illustration by Vickie Chan"
       },
       {
-         "title":"Folkstone Crescent",
+         "title":"Folkestone Crescent",
          "year":2013,
          "category":"sketch",
          "srcImage":"assets/img/gallery/2013/FolkestoneCrescent",
@@ -92,8 +92,8 @@
             "w":2000,
             "h":1407
          },
-         "description":"Mixed Media paint on vinyl record",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Ink sketch",
+         "alt":"Folkestone Crescent sketch by Vickie Chan"
       },
       {
          "title":"Rice Wine Bottle (colour)",
@@ -111,8 +111,8 @@
             "w":2000,
             "h":2818
          },
-         "description":"Coloured ink on paper",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Ink illustration",
+         "alt":"Rice wine bottle ink illustration by Vickie Chan"
       },
       {
          "title":"Third St (black & white)",
@@ -130,13 +130,13 @@
             "w":2000,
             "h":2823
          },
-         "description":"Sketch on paper",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Ink sketch",
+         "alt":"Third St ink sketch by Vickie Chan"
       },
       {
          "title":"Maple Syrup",
          "year":2013,
-         "category":"sketch",
+         "category":"illustration",
          "srcImage":"assets/img/gallery/2013/MapleSyrup",
          "imageExtension": ".jpg",
          "mobileImage":{
@@ -149,8 +149,8 @@
             "w":2000,
             "h":2699
          },
-         "description":"Sketch on paper",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Ink illustration",
+         "alt":"Maple Syrup ink illustration by Vickie Chan"
       },
       {
          "title":"Rice Wine Bottle (black & white)",
@@ -168,8 +168,8 @@
             "w":2000,
             "h":3006
          },
-         "description":"Sketch on paper",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Ink sketch",
+         "alt":"Rice wine bottle ink sketch by Vickie Chan"
       },
       {
          "title":"Rice Wine Bottle (black & white)",
@@ -187,8 +187,8 @@
             "w":2000,
             "h":3006
          },
-         "description":"Sketch on paper",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Ink sketch",
+         "alt":"Rice wine bottle ink sketch by Vickie Chan"
       },
       {
          "title":"Hanalei",
@@ -206,11 +206,11 @@
             "w":2000,
             "h":1380
          },
-         "description":"Sketch on paper",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Ink sketch",
+         "alt":"Hanalei ink sketch by Vickie Chan"
       },
       {
-         "title":"Folkstone Lighthouse",
+         "title":"Folkestone Lighthouse",
          "year":2012,
          "category":"sketch",
          "srcImage":"assets/img/gallery/2012/FolkestoneLight20",
@@ -225,8 +225,8 @@
             "w":2000,
             "h":1404
          },
-         "description":"Sketch on paper",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Ink sketch",
+         "alt":"Folkestone Lighthouse ink sketch by Vickie Chan"
       },
       {
          "title":"Enoshima",
@@ -244,8 +244,8 @@
             "w":2000,
             "h":2933
          },
-         "description":"Sketch on paper",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Ink sketch",
+         "alt":"Enoshima ink sketch by Vickie Chan"
       },
       {
          "title":"Perhentian",
@@ -263,11 +263,11 @@
             "w":2000,
             "h":1461
          },
-         "description":"Sketch on paper",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Ink sketch",
+         "alt":"Perhentian ink sketch by Vickie Chan"
       },
       {
-         "title":"A letter to Elise",
+         "title":"A Letter to Elise",
          "year": 2011,
          "category":"painting",
          "srcImage":"assets/img/gallery/2011/ALetterToElise_30_small",
@@ -282,8 +282,8 @@
             "w":2000,
             "h":1985
          },
-         "description":"Oil on canvas",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Mixed media on canvas",
+         "alt":"A Letter to Elise painting by Vickie Chan"
       },
       {
          "title":"Mongkok Girls",
@@ -302,7 +302,7 @@
             "h":2747
          },
          "description":"Painting on vinyl record",
-         "alt":"Image of artwork by Chantown Creative"
+         "alt":"Mongkok Girls painting on vinyl by Vickie Chan"
       },
       {
          "title":"China Calling",
@@ -321,7 +321,7 @@
             "h":2747
          },
          "description":"Painting on vinyl record",
-         "alt":"Image of artwork by Chantown Creative"
+         "alt":"China Calling painting on vinyl by Vickie Chan"
       },
       {
          "title":"Hong Kong Garden",
@@ -340,7 +340,7 @@
             "h":2747
          },
          "description":"Painting on vinyl record",
-         "alt":"Image of artwork by Chantown Creative"
+         "alt":"Hong Kong Garden painting on vinyl by Vickie Chan"
       },
       {
          "title":"Haad Yuan",
@@ -358,8 +358,8 @@
             "w":2000,
             "h":2747
          },
-         "description":"Sketch on paper",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Ink sketch",
+         "alt":"Haad Yuan ink sketch by Vickie Chan"
       },
       {
          "title":"Rhyme and Rhythm",
@@ -377,8 +377,8 @@
             "w":2000,
             "h":2703
          },
-         "description":"Oil on Canvas",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Mixed media on canvas",
+         "alt":"Rhyme and Rhythm mixed media painting on canvas by Vickie Chan"
       },
       {
          "title":"Sailing on the Seven Seas",
@@ -396,8 +396,8 @@
             "w":2000,
             "h":2000
          },
-         "description":"Oil on Canvas",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Mixed media on canvas",
+         "alt":"Sailing on the Seven Seas mixed media painting on canvas by Vickie Chan"
       },
       {
          "title":"Something Scary",
@@ -415,11 +415,11 @@
             "w":2000,
             "h":1938
          },
-         "description":"Oil on Canvas",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Mixed media on canvas",
+         "alt":"Something Scary mixed media painting on canvas by Vickie Chan"
       },
       {
-         "title":"Born To Lose",
+         "title":"Born to Lose",
          "year": 2010,
          "category":"painting",
          "srcImage":"assets/img/gallery/2010/BornToLose_30_small",
@@ -434,13 +434,13 @@
             "w":2000,
             "h":1986
          },
-         "description":"Oil on Canvas",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Mixed media on canvas",
+         "alt":"Born to Lose mixed media painting on canvas by Vickie Chan"
       },
       {
-         "title":"Kokeshi doll",
+         "title":"Kokeshi Doll",
          "year": 2009,
-         "category":"illustration",
+         "category":"painting",
          "srcImage":"assets/img/gallery/2009/Kokeshi_12_small",
          "imageExtension": ".jpg",
          "mobileImage":{
@@ -453,8 +453,8 @@
             "w":2000,
             "h":2000
          },
-         "description":"Oil on Canvas",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Acylic and gold lead on wood",
+         "alt":"Kokeshi doll mixed media painting by Vickie Chan "
       },
       {
          "title":"Such Great Heights",
@@ -472,11 +472,11 @@
             "w":2000,
             "h":1995
          },
-         "description":"Oil on Canvas",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Mixed media on canvas",
+         "alt":"Such Great Heights mixed media painting on canvas by Vickie Chan"
       },
       {
-         "title":"Gville Yar",
+         "title":"Gville Yard",
          "year": 2008,
          "category":"sketch",
          "srcImage":"assets/img/gallery/2008/GvilleYard",
@@ -491,11 +491,11 @@
             "w":2000,
             "h":2166
          },
-         "description":"Sketch on paper",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Ink sketch",
+         "alt":"Gville Yard ink sketch by Vickie Chan"
       },
       {
-         "title":"Untitled | (Should I Stay)",
+         "title":"Untitled (Should I Stay)",
          "year": 2008,
          "category":"painting mixed-media",
          "srcImage":"assets/img/gallery/2008/Untitled_ShouldIStay_30_small",
@@ -510,8 +510,8 @@
             "w":2000,
             "h":1995
          },
-         "description":"Sketch on paper",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Mixed media on canvas",
+         "alt":"Untitled (Should I Stay)mixed media painting on canvas by Vickie Chan"
       },
       {
          "title":"Sever",
@@ -529,8 +529,8 @@
             "w":2000,
             "h":1995
          },
-         "description":"Sketch on paper",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Mixed media on canvas",
+         "alt":"Sever mixed media painting on canvas by Vickie Chan"
       },
       {
          "title":"War All The Time",
@@ -548,8 +548,8 @@
             "w":2000,
             "h":2000
          },
-         "description":"Sketch on paper",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Mixed media on canvas",
+         "alt":"War All The Time mixed media painting on canvas by Vickie Chan"
       },
       {
          "title":"Butterfly Heart",
@@ -567,13 +567,13 @@
             "w":2000,
             "h":2007
          },
-         "description":"Sketch on paper",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Ink and paint on wood",
+         "alt":"Butterfly Heart ink and paint on wood by Vickie Chan"
       },
       {
-         "title":"Road to nowhere",
+         "title":"Road to Nowhere",
          "year": 2007,
-         "category":"painting",
+         "category":"painting mixed-media",
          "srcImage":"assets/img/gallery/2007/RoadToNowhere_12_small",
          "imageExtension": ".jpg",
          "mobileImage":{
@@ -586,8 +586,8 @@
             "w":2000,
             "h":2003
          },
-         "description":"Painting",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Mixed media on canvas",
+         "alt":"Road to Nowhere mixed media painting on canvas by Vickie Chan"
       },
       {
          "title":"Round the Corner",
@@ -605,13 +605,13 @@
             "w":2000,
             "h":2013
          },
-         "description":"Painting",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Mixed media on canvas",
+         "alt":"Round the Corner mixed media painting on canvas by Vickie Chan"
       },
       {
          "title":"Lovecats",
          "year": 2007,
-         "category":"painting",
+         "category":"painting mixed-media",
          "srcImage":"assets/img/gallery/2007/Lovecats_10_small",
          "imageExtension": ".jpg",
          "mobileImage":{
@@ -624,8 +624,8 @@
             "w":2000,
             "h":1964
          },
-         "description":"Painting",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Mixed media on canvas",
+         "alt":"Lovecats mixed media painting on canvas by Vickie Chan"
       },
       {
          "title":"India",
@@ -643,13 +643,13 @@
             "w":2000,
             "h":2160
          },
-         "description":"Sketch on paper",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Ink sketch",
+         "alt":"India ink sketch by Vickie Chan"
       },
       {
          "title":"Ship Song",
          "year": 2006,
-         "category":"painting",
+         "category":"painting mixed-media",
          "srcImage":"assets/img/gallery/2006/ShipSong_30_small",
          "imageExtension": ".jpg",
          "mobileImage":{
@@ -662,8 +662,8 @@
             "w":2000,
             "h":2016
          },
-         "description":"Painting on canvas",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Mixed media on canvas",
+         "alt":"Ship Song mixed media painting on canvas by Vickie Chan"
       },
       {
          "title":"Three Summers Strong",
@@ -681,11 +681,11 @@
             "w":2000,
             "h":2008
          },
-         "description":"Painting on canvas",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Mixed media on canvas",
+         "alt":"Three Summers Strong mixed media painting on canvas by Vickie Chan"
       },
       {
-         "title":"True Colo| (u)rs",
+         "title":"True Colo(u)rs",
          "year": 2006,
          "category":"painting mixed-media",
          "srcImage":"assets/img/gallery/2006/TrueColors_30_small",
@@ -700,11 +700,11 @@
             "w":2000,
             "h":2000
          },
-         "description":"Painting on canvas",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Mixed media on canvas",
+         "alt":"True Colo(u)rs mixed media painting on canvas by Vickie Chan"
       },
       {
-         "title":"It's hard to know",
+         "title":"It's Hard to Know",
          "year": 2006,
          "category":"painting mixed-media",
          "srcImage":"assets/img/gallery/2006/ItsHardToKnow_20_small",
@@ -719,8 +719,8 @@
             "w":2000,
             "h":2022
          },
-         "description":"Painting on canvas",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Mixed media on canvas",
+         "alt":"It's Hard to Know mixed media painting on canvas by Vickie Chan"
       },
       {
          "title":"Colver Road",
@@ -738,8 +738,8 @@
             "w":2000,
             "h":2226
          },
-         "description":"Painting on canvas",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Ink sketch",
+         "alt":"Colver Road ink sketch by Vickie Chan"
       },
       {
          "title":"Stranger to Bluewater",
@@ -757,8 +757,8 @@
             "w":2000,
             "h":2012
          },
-         "description":"Painting on canvas",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Acrylic on canvas",
+         "alt":"Stranger to Bluewater painting on canvas by Vickie Chan"
       },
       {
          "title":"The Days Run Away",
@@ -776,8 +776,8 @@
             "w":2000,
             "h":2029
          },
-         "description":"Painting on canvas",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Mixed media on canvas",
+         "alt":"The Days Run Awaymixed media painting on canvas by Vickie Chan"
       },
       {
          "title":"Germany Tour",
@@ -795,8 +795,8 @@
             "w":2000,
             "h":2283
          },
-         "description":"Sketch on paper",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Ink sketch",
+         "alt":"Germany Tour ink sketch by Vickie Chan"
       },
       {
          "title":"Pine Cottage",
@@ -814,11 +814,12 @@
             "w":2000,
             "h":2032
          },
-         "description":"Screenprint and mixed media",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Mixed media screenprint",
+         "alt":"Pine Cottage mixed media screenprint by Vickie Chan
+"
       },
       {
-         "title":"Sky Station",
+         "title":"Skyy Station",
          "year": 2003,
          "category":"screenprint mixed-media",
          "srcImage":"assets/img/gallery/2003/SkyStation_10_small",
@@ -833,8 +834,9 @@
             "w":2000,
             "h":1985
          },
-         "description":"Screenprint and mixed media",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Mixed media screenprint",
+         "alt":"Skyy Station mixed media screenprint by Vickie Chan
+"
       },
       {
          "title":"St Saviour's",
@@ -852,8 +854,8 @@
             "w":2000,
             "h":2103
          },
-         "description":"Screenprint and mixed media",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Mixed media screenprint",
+         "alt":"St Saviour's mixed media screenprint by Vickie Chan"
       },
       {
          "title":"Leicester Shop",
@@ -871,13 +873,13 @@
             "w":2000,
             "h":2000
          },
-         "description":"Screenprint and mixed media",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Mixed media screenprint",
+         "alt":"Leicester Shop mixed media screenprint by Vickie Chan"
       },
       {
          "title":"A Mess",
          "year": 2003,
-         "category":"painting",
+         "category":"painting mixed-media",
          "srcImage":"assets/img/gallery/2003/A-mess_8_small",
          "imageExtension": ".jpg",
          "mobileImage":{
@@ -890,13 +892,13 @@
             "w":2000,
             "h":1983
          },
-         "description":"Paint on canvas",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Mixed media on canvas",
+         "alt":"A Mess mixed media painting on canvas by Vickie Chan"
       },
       {
          "title":"Fused",
          "year": 2003,
-         "category":"painting",
+         "category":"painting mixed-media",
          "srcImage":"assets/img/gallery/2003/Fused_8_small",
          "imageExtension": ".jpg",
          "mobileImage":{
@@ -909,13 +911,13 @@
             "w":2000,
             "h":2039
          },
-         "description":"Paint on canvas",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Mixed media on canvas",
+         "alt":"Fused mixed media painting on canvas by Vickie Chan"
       },
       {
          "title":"Left and Leaving",
          "year": 2003,
-         "category":"mixed-media",
+         "category":"painting mixed-media",
          "srcImage":"assets/img/gallery/2003/LeftandLeaving_8_small",
          "imageExtension": ".jpg",
          "mobileImage":{
@@ -928,8 +930,8 @@
             "w":2000,
             "h":2050
          },
-         "description":"Paint on canvas",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Mixed media on canvas",
+         "alt":"Left and Leaving mixed media painting on canvas by Vickie Chan"
       },
       {
          "title":"Me, Myself and I",
@@ -948,7 +950,7 @@
             "h":1474
          },
          "description":"Screenprint",
-         "alt":"Image of artwork by Chantown Creative"
+         "alt":"Me, Myself and I screenprint by Vickie Chan"
       },
       {
          "title":"雀仔",
@@ -966,8 +968,8 @@
             "w":2000,
             "h":2066
          },
-         "description":"Screenprint",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Ink sketch",
+         "alt":"雀仔 ink sketch by Vickie Chan"
       },
       {
          "title":"Chinatown Window, SF",
@@ -986,10 +988,10 @@
             "h":1402
          },
          "description":"Screenprint",
-         "alt":"Image of artwork by Chantown Creative"
+         "alt":"Chinatown Window, SF screenprint by Vickie Chan"
       },
       {
-         "title":"China rooftops",
+         "title":"China Rooftops",
          "year": 2002,
          "category":"sketch",
          "srcImage":"assets/img/gallery/2002/China",
@@ -1004,8 +1006,8 @@
             "w":2000,
             "h":2191
          },
-         "description":"Sketch",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Ink sketch",
+         "alt":"IChina Rooftops ink sketch by Vickie Chan"
       },
       {
          "title":"Birdcage",
@@ -1023,8 +1025,8 @@
             "w":2000,
             "h":2183
          },
-         "description":"Sketch",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Ink sketch",
+         "alt":"Birdcage ink sketch by Vickie Chan"
       },
       {
          "title":"Swimming Pool",
@@ -1042,8 +1044,8 @@
             "w":2000,
             "h":2091
          },
-         "description":"Mixed media",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Mixed media on canvas",
+         "alt":"Swimming Pool mixed media on canvas by Vickie Chan"
       },
       {
          "title":"Mahjong",
@@ -1062,7 +1064,7 @@
             "h":2038
          },
          "description":"Mixed media screenprint",
-         "alt":"Image of artwork by Chantown Creative"
+         "alt":"Mahjong mixed media screenprint by Vickie Chan"
       },
       {
          "title":"Tram Boy",
@@ -1081,7 +1083,7 @@
             "h":2042
          },
          "description":"Mixed media screenprint",
-         "alt":"Image of artwork by Chantown Creative"
+         "alt":"Tram Boy mixed media screenprint by Vickie Chan"
       },
       {
          "title":"General Kwan",
@@ -1100,10 +1102,10 @@
             "h":2000
          },
          "description":"Mixed media screenprint",
-         "alt":"Image of artwork by Chantown Creative"
+         "alt":"General Kwan mixed media screenprint by Vickie Chan"
       },
       {
-         "title":"Tian hau",
+         "title":"Tin Hau",
          "year": 2002,
          "category":"screenprint mixed-media",
          "srcImage":"assets/img/gallery/2002/TinHau_Colour_sequin_10",
@@ -1119,7 +1121,7 @@
             "h":1995
          },
          "description":"Mixed media screenprint",
-         "alt":"Image of artwork by Chantown Creative"
+         "alt":"Tin Hau mixed media screenprint by Vickie Chan"
       },
       {
          "title":"Market",
@@ -1138,10 +1140,10 @@
             "h":2000
          },
          "description":"Mixed media screenprint",
-         "alt":"Image of artwork by Chantown Creative"
+         "alt":"Market mixed media screenprint by Vickie Chan"
       },
       {
-         "title":"Everyone I See Is You",
+         "title":"Everyone I See is You",
          "year": 2002,
          "category":"painting mixed-media",
          "srcImage":"assets/img/gallery/2002/EveryoneISeeisYou",
@@ -1156,8 +1158,8 @@
             "w":2000,
             "h":2000
          },
-         "description":"Mixed Media Painting",
-         "alt":"Image of artwork by Chantown Creative"
+         "description":"Mixed media on canvas",
+         "alt":"Everyone I See is You mixed media painting on canvas by Vickie Chan"
       }
 
 
