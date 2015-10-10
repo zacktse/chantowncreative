@@ -217,3 +217,9 @@
 		@include animated-link-underline();
 	}
 }
+
+.pswp__caption__center {
+    max-width: 100%;
+		font-family: $joesfin;
+	  font-weight: 300;
+}
