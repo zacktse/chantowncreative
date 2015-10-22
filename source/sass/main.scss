@@ -23,12 +23,10 @@
 //@import "typography/icon-font/icon-font";
 @import "typography/typography";
 
+@import "base/datauri/_images";
 
-@import "base/icons";
 @import "base/buttons";
-@import "base/forms";
-@import "base/lists";
-@import "base/tables";
+
 @import "base/splats-bg";
 
 
@@ -36,8 +34,14 @@
 //  Layout
 //--------------------------------------------------------------------------
 @import "layout/base",
+
         "layout/header",
         "layout/footer";
+@import "base/forms";
+@import "base/icons";
+@import "base/lists";
+@import "base/tables";
+
 
 
 // Images

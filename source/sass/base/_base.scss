@@ -1,8 +1,24 @@
+// animations
+.come-in {
+  transform: translateY(150px);
+  animation: come-in 0.8s ease forwards;
+}
+.come-in:nth-child(odd) {
+  animation-duration: 0.6s; /* So they look staggered */
+}
+
+@keyframes come-in {
+  to { transform: translateY(0); }
+}
+
+
 
 @import "colors";
 @import "typography/google-web-fonts/google-web-fonts";
 @import "typography/modular-scale/modular-scale";
+@import "../../img/icons/sprites/css/sprites";
 @import "variables";
+@import "placeholders";
 @import "base/mixins";
 
 

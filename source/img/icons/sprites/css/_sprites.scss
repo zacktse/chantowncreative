@@ -1,0 +1,16 @@
+// credit for sprites goes to this article :
+//https://www.liquidlight.co.uk/blog/article/creating-svg-sprites-using-gulp-and-sass/
+
+$icons: (
+      sprite: (width: 400px, height: 400px, pngPath: '../../assets/img/sprites/sprite.png', svgPath: '../../assets/img/sprites/sprite.svg'),
+    bolt: (width: 30px, height: 30px, backgroundX: 0px, backgroundY: 0px),
+    bulb: (width: 30px, height: 30px, backgroundX: -40px, backgroundY: -40px),
+    etsy: (width: 30px, height: 30px, backgroundX: -80px, backgroundY: -80px),
+    etsyHover: (width: 30px, height: 30px, backgroundX: -120px, backgroundY: -120px),
+    facebook: (width: 30px, height: 30px, backgroundX: -160px, backgroundY: -160px),
+    facebookHover: (width: 30px, height: 30px, backgroundX: -200px, backgroundY: -200px),
+    pinterest: (width: 30px, height: 30px, backgroundX: -240px, backgroundY: -240px),
+    pinterestHover: (width: 30px, height: 30px, backgroundX: -280px, backgroundY: -280px),
+    twitter: (width: 30px, height: 30px, backgroundX: -320px, backgroundY: -320px),
+    twitterHover: (width: 30px, height: 30px, backgroundX: -360px, backgroundY: -360px),
+);

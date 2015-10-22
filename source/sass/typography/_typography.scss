@@ -57,7 +57,7 @@ h6 {
   font-family: $heading-font-family;
   font-size: $base-font-size;
   line-height: $heading-line-height;
-  margin: 0 0 $small-spacing;
+  margin: 0;
 }
 
 h1, .size-h1 {
@@ -148,14 +148,14 @@ p {
   font-family: $joesfin;
 /*   font-family: $fira;
 font-weight: 300; */
-  font-weight: 400;
+  font-weight: 300;
 
-  // @include media($desktop-up) {
-  //   @include font-size(22);
-  //   @include line-height(30);
-  //   @include padding(12, 0, 18, 0);
-  //   @include margin(0);
-  // }
+  @include media($desktop-up) {
+    @include font-size(20);
+    @include line-height(26);
+    @include padding(12, 0, 18, 0);
+    @include margin(0);
+  }
 }
 
 // paragraphs following headings (remove all top padding on the paragraphs)
@@ -173,8 +173,8 @@ h1 + p, h2 + p, h3 + p, h4 + p {
   @include margin(0);
   color: darken($base-font-color, 10%);
   @include media($desktop-up) {
-    @include font-size(20);
-    @include line-height(24);
+    @include font-size(24);
+    @include line-height(28);
     @include padding(0, 0, 16, 0);
     @include margin(0);
   }
@@ -350,7 +350,7 @@ blockquote {
 
   @include media($tablet-up){
     p {
-      max-width: 600px;
+      max-width: 740px;
       float: none;
       clear: both;
     }

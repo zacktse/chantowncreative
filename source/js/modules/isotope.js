@@ -1,6 +1,7 @@
 var $ = require('jquery');
 var Isotope = require('isotope-layout');
-require('isotope-cells-by-row');
+// require('isotope-cells-by-row');
+//require('isotope-cells-by-column');
 
 //require('isotope-masonry');
 var PhotoSwipe = require('photoswipe');
@@ -9,7 +10,6 @@ var PhotoSwipeUI_Default = require('../vendor/photoswipe-ui-default.min');
 //var _ = require('underscore');
 //var imagesLoaded = require('imagesloaded');
 responsivelyLazy = require('../vendor/responsively_lazy.min');
-
 
 function loadGalleryJSON(callback) {
 
@@ -27,6 +27,10 @@ function loadGalleryJSON(callback) {
 
 var gallery_items = {};
 
+// helper function to process json to escape ' and " use escape inside handlebars templates to run this on the output
+// Handlebars.registerHelper('escape', function(variable) {
+//   return variable.replace(/(['"])/g, '\\$1');
+// });
 
 var buildGalleryHTML = function(json) {
   var myJson = json,
@@ -62,13 +66,20 @@ var runPhotoswipe = function() {
 
   //imagesLoaded( _portfolio_gallery, function() {
 
-  var $image_gallery = new Isotope('.masonry-grid', {
+  var $image_gallery = new Isotope('.isotope-grid', {
     // masonry: {
     //   columnWidth: '.grid-sizer',
     //   //isFitWidth: true,
     //   gutter: 20
     // },
-    layoutMode: 'cellsByRow',
+    // layoutMode: 'cellsByRow',
+    // layoutMode: 'cellsByColumn',
+    // cellsByColumn: {
+    //   columnWidth: 240,
+    //   rowHeight: 240
+    // },
+    isFitWidth: true,
+    // containerStyle: null,
     /* masonry */
     hiddenStyle: {
       opacity: 0
@@ -99,9 +110,9 @@ var runPhotoswipe = function() {
   });
 
   // align the isotope layout every 500ms
-  window.setInterval(function() {
-    $image_gallery.arrange({})
-  }, 500);
+  // window.setInterval(function() {
+  //   $image_gallery.arrange({})
+  // }, 1000);
 
   // show the images once aligned
   _portfolio_gallery.find("figure").css("visibility", "visible");
@@ -113,13 +124,13 @@ var runPhotoswipe = function() {
     //$grid.filter(filter: filterValue,);
     $image_gallery.arrange({
       filter: filterValue,
-    })
+    });
   //responsivelyLazy.run()
   });
 
   // PHOTOSWIPE GALLERY
   var pswpElement = $('.pswp')[0];
-  var isotopeContainer = $('.masonry-grid');
+  var isotopeContainer = $('.isotope-grid');
   var realViewportWidth; // create variable that will store real size of viewport
   var useLargeImages = false;
   var firstResize = true;
@@ -157,6 +168,30 @@ var runPhotoswipe = function() {
 
     var options = {
       index: index,
+      shareButtons: [
+        {
+          id: 'pinterest',
+          label: 'Pin it',
+          url: 'http://www.pinterest.com/pin/create/button/?url={{url}}&media={{image_url}}&description={{text}}'
+        },
+        {
+          id: 'facebook',
+          label: 'Share on Facebook',
+          url: 'https://www.facebook.com/sharer/sharer.php?u={{url}}'
+        },
+        {
+          id: 'twitter',
+          label: 'Tweet',
+          url: 'https://twitter.com/intent/tweet?text={{text}}&url={{url}}'
+        }
+
+      // {
+      //   id: 'download',
+      //   label: 'Download image',
+      //   url: '{{raw_image_url}}',
+      //   download: false
+      // }
+      ],
       getThumbBoundsFn: function(index) {
         // See Options -> getThumbBoundsFn section of documentation for more info
         var thumbnail = self.find('img')[0], // find thumbnail
@@ -190,6 +225,7 @@ var runPhotoswipe = function() {
     photoswipeInstance.listen('initialZoomIn', function() {
       //console.log("opening photoSwipe... fading out the nav");
       $("header").find(".scrollmagic-pin-spacer").fadeOut(250);
+      $("#isotope-filters.pinned").fadeOut(250);
       $(".back-to-top").addClass("behind-lightbox");
     });
 
@@ -197,6 +233,7 @@ var runPhotoswipe = function() {
     photoswipeInstance.listen('close', function() {
       //console.log("closing photoSwipe");
       $("header").find(".scrollmagic-pin-spacer").fadeIn(250);
+      $("#isotope-filters.pinned").fadeIn(250);
       $(".back-to-top").removeClass("behind-lightbox");
     });
 
@@ -260,27 +297,24 @@ var runPhotoswipe = function() {
 
     });
 
-    photoswipeInstance.listen('beforeChange', function() {
-      //  var nextImgWidth = $('.pswp__img').innerWidth();
-      //console.log( $('.pswp__img').innerWidth());
-
-    });
-
-    photoswipeInstance.listen('imageLoadComplete', function(index, item) {
-      // // index - index of a slide that was loaded
-      // // item - slide object
-      // // console.log($('.pswp__img').innerWidth());
-      // var updateImgWidth = $('.pswp__img').innerWidth();
-      // $('.pswp__caption__center').css("max-width", nextImgWidth);
-    });
-
-    photoswipeInstance.listen('resize', function() {
-      //  var nextImgWidth = $('.pswp__img').innerWidth();
-      //  $('.pswp__caption__center').css("max-width", nextImgWidth);
-    });
-
-
-
+    // photoswipeInstance.listen('beforeChange', function() {
+    //   //  var nextImgWidth = $('.pswp__img').innerWidth();
+    //   //console.log( $('.pswp__img').innerWidth());
+    //
+    // });
+    //
+    // photoswipeInstance.listen('imageLoadComplete', function(index, item) {
+    //   // // index - index of a slide that was loaded
+    //   // // item - slide object
+    //   // // console.log($('.pswp__img').innerWidth());
+    //   // var updateImgWidth = $('.pswp__img').innerWidth();
+    //   // $('.pswp__caption__center').css("max-width", nextImgWidth);
+    // });
+    //
+    // photoswipeInstance.listen('resize', function() {
+    //   //  var nextImgWidth = $('.pswp__img').innerWidth();
+    //   //  $('.pswp__caption__center').css("max-width", nextImgWidth);
+    // });
 
     photoswipeInstance.init();
   });
@@ -305,10 +339,6 @@ var runPhotoswipe = function() {
 
 var _portfolio_gallery = $('#gallery_container');
 if (_portfolio_gallery.length > 0) {
-
-  Handlebars.registerHelper('escape', function(variable) {
-    return variable.replace(/(['"])/g, '\\$1');
-  });
 
   // if placing the json file on an external server, could use this code.
   // loadGalleryJSON(function(response) {

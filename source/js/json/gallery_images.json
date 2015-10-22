@@ -17,7 +17,8 @@
             "h":2743
          },
          "description":"Mixed media painting on vinyl record",
-         "alt":"But You'll Cry vinyl painting by Vickie Chan"
+         "alt":"But You'll Cry vinyl painting by Vickie Chan",
+         "layoutClass": "portrait"
       },
       {
          "title":"Other People's Heartache",
@@ -75,6 +76,120 @@
          },
          "description":"Ink illustration",
          "alt":"Leicester Fox illustration by Vickie Chan"
+      },
+      {
+         "title":"Ta Phrom (pink)",
+         "year":2014,
+         "category":"screenprint",
+         "srcImage":"assets/img/gallery/2014/TP2-10Pink_201412",
+         "imageExtension": ".jpg",
+         "mobileImage":{
+            "src":"assets/img/gallery/2014/TP2-10Pink_201412_w800.jpg",
+            "w":800,
+            "h":542
+         },
+         "desktopImage":{
+            "src":"assets/img/gallery/2014/TP2-10Pink_201412_w2000.jpg",
+            "w":2000,
+            "h":1355
+         },
+         "description":"screenprint",
+         "alt":"Ta Phrom (pink) Screenprint by Vickie Chan"
+      },
+      {
+         "title":"Angkor Wat, East Gate (orange, drawn over)",
+         "year":2014,
+         "category":"screenprint",
+         "srcImage":"assets/img/gallery/2014/AW5-10_AngkorWatEastGateOrangeDraw-201408",
+         "imageExtension": ".jpg",
+         "mobileImage":{
+            "src":"assets/img/gallery/2014/AW5-10_AngkorWatEastGateOrangeDraw-201408_w800.jpg",
+            "w":800,
+            "h":531
+         },
+         "desktopImage":{
+            "src":"assets/img/gallery/2014/AW5-10_AngkorWatEastGateOrangeDraw-201408_w2000.jpg",
+            "w":2000,
+            "h":1328
+         },
+         "description":"screenprint",
+         "alt":"Angkor Wat, East Gate (orange, drawn over) Screenprint by Vickie Chan"
+      },
+      {
+         "title":"Angkor Wat, East Gate (brown and yellow)",
+         "year":2014,
+         "category":"screenprint",
+         "srcImage":"assets/img/gallery/2014/AW4-10_EastGateBrownYellOverprint-201406",
+         "imageExtension": ".jpg",
+         "mobileImage":{
+            "src":"assets/img/gallery/2014/AW4-10_EastGateBrownYellOverprint-201406_w800.jpg",
+            "w":800,
+            "h":531
+         },
+         "desktopImage":{
+            "src":"assets/img/gallery/2014/AW4-10_EastGateBrownYellOverprint-201406_w2000.jpg",
+            "w":2000,
+            "h":1328
+         },
+         "description":"Screenprint",
+         "alt":"Angkor Wat, East Gate (brown and yellow) Screenprint by Vickie Chan"
+      },
+      {
+         "title":"Beggar in the Morning",
+         "year":2014,
+         "category":"painting mixed-media",
+         "srcImage":"assets/img/gallery/2014/BeggarInTheMorning_30_small",
+         "imageExtension": ".jpg",
+         "mobileImage":{
+            "src":"assets/img/gallery/2014/BeggarInTheMorning_30_small_w800.jpg",
+            "w":800,
+            "h":796
+         },
+         "desktopImage":{
+            "src":"assets/img/gallery/2014/BeggarInTheMorning_30_small_w2000.jpg",
+            "w":2000,
+            "h":1991
+         },
+         "description":"Painting",
+         "alt":"Beggar in the Morning painting by Vickie Chan"
+      },
+      {
+         "title":"Ta Phrom",
+         "year":2014,
+         "category":"illustration",
+         "srcImage":"assets/img/gallery/2014/TaPhrom",
+         "imageExtension": ".jpg",
+         "mobileImage":{
+            "src":"assets/img/gallery/2014/TaPhrom_w800.jpg",
+            "w":800,
+            "h":542
+         },
+         "desktopImage":{
+            "src":"assets/img/gallery/2014/TaPhrom_w2000.jpg",
+            "w":2000,
+            "h":1355
+         },
+         "description":"Illustration",
+         "alt":"Ta Phrom illustration by Vickie Chan"
+      },
+      {
+         "title":"Angkor Wat, East Gate",
+         "year":2014,
+         "category":"illustration",
+         "srcImage":"assets/img/gallery/2014/AngkorEastGate",
+         "imageExtension": ".jpg",
+         "mobileImage":{
+            "src":"assets/img/gallery/2014/AngkorEastGate_w800.jpg",
+            "w":800,
+            "h":527
+         },
+         "desktopImage":{
+            "src":"assets/img/gallery/2014/AngkorEastGate_w2000.jpg",
+            "w":2000,
+            "h":1317
+         },
+         "description":"Illustration",
+         "alt":"Angkor Wat, East Gate illustration by Vickie Chan"
       },
       {
          "title":"Folkestone Crescent",
@@ -815,8 +930,7 @@
             "h":2032
          },
          "description":"Mixed media screenprint",
-         "alt":"Pine Cottage mixed media screenprint by Vickie Chan
-"
+         "alt":"Pine Cottage mixed media screenprint by Vickie Chan"
       },
       {
          "title":"Skyy Station",
@@ -835,8 +949,7 @@
             "h":1985
          },
          "description":"Mixed media screenprint",
-         "alt":"Skyy Station mixed media screenprint by Vickie Chan
-"
+         "alt":"Skyy Station mixed media screenprint by Vickie Chan"
       },
       {
          "title":"St Saviour's",
@@ -1144,17 +1257,17 @@
       },
       {
          "title":"Everyone I See is You",
-         "year": 2002,
+         "year": 2001,
          "category":"painting mixed-media",
-         "srcImage":"assets/img/gallery/2002/EveryoneISeeisYou",
+         "srcImage":"assets/img/gallery/2001/EveryoneISeeisYou",
          "imageExtension": ".jpg",
          "mobileImage":{
-            "src":"assets/img/gallery/2002/EveryoneISeeisYou_w800.jpg",
+            "src":"assets/img/gallery/2001/EveryoneISeeisYou_w800.jpg",
             "w":800,
             "h":800
          },
          "desktopImage":{
-            "src":"assets/img/gallery/2002/EveryoneISeeisYou_w2000.jpg",
+            "src":"assets/img/gallery/2001/EveryoneISeeisYou_w2000.jpg",
             "w":2000,
             "h":2000
          },

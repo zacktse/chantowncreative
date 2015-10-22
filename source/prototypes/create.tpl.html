@@ -27,7 +27,7 @@
 
         <h1 class="size-h1">Create</h1>
 
-        <p class="leader">Vickie Chan, Director of Chantown Creative, is an artist and illustrator. In fact, her insight is one of our niche advantages, enabling us to have such a rounded and well-thought overview when it comes to our clients’ <a href="consult.html" class="underlined">creative communications projects</a>.
+        <p class="leader">Vickie Chan, Director of Chantown Creative, is an artist and illustrator. In fact, her insight is one of our niche advantages, enabling us to have such a rounded and well-thought overview when it comes to our clients’ <a href="consult.html" class="underlined">creative communications projects</a>.<br><br>
         <p>To view personal and commercial or commissioned works by her, simply click on one of the gallery filters below, or view all. </p>
 
 
@@ -50,9 +50,9 @@
       </div>
 
         <!-- isotope  -->
-        <div class="grid-sizer"></div>
-        <div id="gallery_container" class="gallery_container masonry-grid" itemscope itemtype="http://schema.org/ImageGallery">
 
+        <div id="gallery_container" class="gallery_container isotope-grid" itemscope itemtype="http://schema.org/ImageGallery">
+          <!-- <div class="grid-sizer"></div> -->
 
 
             <!--@@include('../templates/gallery/_gallery.tpl.html') -->
@@ -64,20 +64,26 @@
 
               <a href="{{desktopImage.src}}" data-mobile-link="{{mobileImage.src}}" itemprop="contentUrl" data-size="{{desktopImage.w}}x{{desktopImage.h}}" data-size-desktop="{{desktopImage.w}}x{{desktopImage.h}}"
               data-size-mobile="{{mobileImage.w}}x{{mobileImage.h}}">
+                  <div class="thumbnail">
+                    <!-- <img class="responsively-lazy {{layoutClass}}"
+                     srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                    data-srcset="
+                      {{srcImage}}_w400{{imageExtension}} 400w,
+                      {{srcImage}}_w600{{imageExtension}} 600w,
+                      {{srcImage}}_w800{{imageExtension}} 800w"
+                    alt="{{alt}}"
+                    title="{{title}} | {{year}}" itemprop="thumbnail"  /> -->
 
-                  <img class="responsively-lazy" src="{{desktopImage.src}}"
-                   srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                  data-srcset="
-                    {{srcImage}}_w400{{imageExtension}} 400w,
-                    {{srcImage}}_w600{{imageExtension}} 600w,
-                    {{srcImage}}_w800{{imageExtension}} 800w"
-                  alt="An image of a peice of art by Chantown Creative"
-                  title="{{escape title}} | {{year}}" itemprop="thumbnail"  />
+                    <img class=""
+                     src="{{srcImage}}_w400{{imageExtension}}"
+                    alt="{{alt}}"
+                    title="{{title}} | {{year}}" itemprop="thumbnail"  />
+                  </div>
 
              </a>
              <figcaption itemprop=\"caption description\">
-                {{escape title}} | {{year}} </br>
-                {{escape description}}</br>
+                {{title}} | {{year}} </br>
+                {{description}}</br>
                 <span itemprop=\"copyrightHolder\" class="image-copyright"> &copy; Vickie Chan</span>
               </figcaption>
             </figure>

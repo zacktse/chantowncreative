@@ -18,7 +18,6 @@ ul.list__clients {
 
     @include media($tablet-up) {
       width: 90px;
-      @include omega-reset(3n); // Pa
     }
 
     a:hover::after, a::after {

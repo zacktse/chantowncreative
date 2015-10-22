@@ -34,9 +34,10 @@ header.main-header {
   @include media($tablet-up) {
 
     //margin-top: 0;
-    margin-left: $page-border-width-desktop;
+    // margin-left: $page-border-width-desktop;
+    margin-left: 0;
     margin-right: $page-border-width-desktop;
-    min-height: $navigation-height-desktop;
+    min-height: 48px;
   }
 
   @include media ($horizontal-bar-mode) {
@@ -61,7 +62,7 @@ header.main-header {
     //background-color: $darker-orange;
 
     @include media($tablet-up) {
-      margin-left: -6px !important;
+      //margin-left: -6px !important;
     }
 
     // desktop styles for main navigation
@@ -69,9 +70,6 @@ header.main-header {
         min-height: 60px;
         margin-left: 0;
         background-color: transparent;
-        position: absolute;
-        top: 36px;
-        right: 0px;
 
     }
 
@@ -89,6 +87,11 @@ header.main-header {
     margin: 0 auto;
     height: 96px;
     z-index: $z-content;
+
+    @include media ($tablet-up) {
+      // max-width: 1280px;
+      // width: 76.5%;
+    }
     @include media ($horizontal-bar-mode) {
       margin-top: 0px;
       margin-left: 0;
@@ -110,7 +113,8 @@ header.main-header {
     background-position: 12px 60%;
     // background-size: 100%;
     // background-position: 55% 60%;
-    background-image: url(../img/ChantownCreative_LOGO_mobile.png);
+    // background-image: url(../img/ChantownCreative_LOGO_mobile.png);
+    background-image:$mobile-logo-datauri;
     @include transition(all $default-transition-speed ease-out);
     @include media($tablet-up) {
       background-position: 100% 100%;
@@ -120,7 +124,8 @@ header.main-header {
     }
 
     @include media($desktop-up) {
-      background-image: url(../img/ChantownCreative_LOGO_desktop.png);
+      // background-image: url(../img/ChantownCreative_LOGO_desktop.png);
+      background-image: $desktop-logo-datauri;
       background-position: top left;
       position: absolute;
       top: 26px;
@@ -148,22 +153,18 @@ header.main-header {
 
     @include media($tablet-up) {
       text-align: right;
-      padding-top: 6px;
+      padding-top: 7px;
       max-height: 48px;
       max-width: 90%;
       margin: 0 auto;
     }
     @include media ($horizontal-bar-mode) {
-      //@include span-columns(7 of 16);
-      //@include shift(9);
-      //padding-top: 54px;
-      float:right;
+      padding-top: 0;
       padding-left: 0;
       padding-right: 0;
-      padding-top:12px;
-      text-align: right;
-      max-height: 160px;
-      max-width: auto;
+      text-align: left;
+      max-height: 48px;
+      max-width: 100%;
     }
     &:after {
       content: '';
@@ -197,10 +198,10 @@ header.main-header {
     // padding-top:2px;
     letter-spacing: 1px;
     &:hover {
-      color: lighten($chantown-gray, 10);
+      color: black;
     }
     @include media($tablet-up) {
-      margin-right: 16px;
+      margin-right: 36px;
     }
 
 
@@ -208,8 +209,8 @@ header.main-header {
 
       text-align: right;
       line-height: 24px;
-      @include padding(12,12,0,12);
-      margin-bottom: 12px;
+      @include padding(15,12,10,12);
+      margin-right: 42px;
 
       @include animated-link-underline($chantown-gray);
 
@@ -274,21 +275,15 @@ header.main-header {
     }
   }
 
-
-
-  // &.header--hidden{
-  //   position: fixed;
-  //   top: -120px;
-  //   opacity: 0;
-  // }
-
 }
 
 
 
 nav.main-nav {
-  border-top: 1px solid $lighter-orange;
-  border-bottom: 1px solid $darker-orange;
+  // border-top: 1px solid $lighter-orange;
+  // border-bottom: 1px solid $darker-orange;
+  border-top: 1px solid $light-blue;
+  border-bottom: 1px solid $bright-blue;
   //margin-top: 12px;
   //margin-bottom: 12px;
 /*   margin-left: -6px; */
@@ -297,14 +292,14 @@ nav.main-nav {
   }
 
   @include media($desktop-up) {
-    border: 0;
+    //border: 0;
+    border-top: 1px solid $light-blue;
+    border-bottom: 3px solid $bright-blue;
   }
 }
 
 
 header.main-header .nav-link a {
-  /* border-top: solid 2px $lighter-orange;
-  border-bottom: solid 2px $lighter-orange; */
   font-weight: 600;
 }
 
@@ -347,12 +342,8 @@ header.main-header .nav-link a {
    .logo h1 {
      margin-bottom: 0;
    } */
-   header.main-header .nav-link a {
-     color: whitesmoke;
-   }
    header.main-header .nav-link a.active {
      color: $dark-gray;
-
    }
 
    header.main-header .nav-link a.active::after {

@@ -10,8 +10,8 @@ footer {
     color: $medium-gray;
     text-align: center;
     font-size: 12px;
-    padding-top: 24px;
-    padding-bottom: 60px;
+    padding-top: 30px;
+    padding-bottom: 80px;
 
     background-color: white;
     a {
@@ -31,15 +31,11 @@ footer {
   margin: 0 auto;
   margin-top: 0;
   font-family: $joesfin;
+  font-weight: 600;
   text-transform: uppercase;
-//  border-left: solid $page-border-width-mobile $lighter-orange;
-  //border-right: solid $page-border-width-mobile $lighter-orange;
   @include media($desktop-up) {
-  //  border-left: solid $page-border-width-desktop $lighter-orange;
-    //border-right: solid $page-border-width-desktop $lighter-orange;
       background-color: transparent;
       width: auto;
-
 
   }
   @include transition(all $default-transition-speed ease-out);
@@ -68,11 +64,28 @@ footer {
   @include media($desktop-up) {
       background-color: transparent;
       a {
-        font-weight: bold;
-        text-decoration: underline;
+        width: auto;
+        max-width:500px;
+        display: block;
+        margin: 0 auto;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        padding-left: 0;
+        padding-top: 42px;
+        padding-bottom:0;
+        color: $darker-orange;
+        letter-spacing: 2px;
+        word-spacing: 6px;
+        font-weight: 600;
+        border-bottom: 2px solid $bright-blue;
       }
       a:hover {
         text-decoration: none;
+        max-width:480px;
+        color: $dark-gray;
+        @include transition(all $default-transition-speed ease-out);
+
       }
   }
 
@@ -82,7 +95,7 @@ footer {
   position:fixed;
   bottom:0;
   width:100%;
-  height:2.5em;
+  height:48px;
   background:$lighter-orange;
   left:0;
   bottom:-54px;
@@ -104,7 +117,7 @@ footer {
     display: block;
     color: white;
     width: 100%;
-    height: 46px;
+    height: 48px;
     text-align: center;
 
     }
@@ -116,7 +129,7 @@ footer {
   position: relative;
   width: 20px;
   height: 20px;
-  padding-top: 20px;
+  padding-top: 22px;
 
   &:before {
     content: " ";
@@ -145,5 +158,34 @@ footer {
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
+  }
+}
+
+
+.icon-twitter {
+  @include sprite(twitter);
+  &:hover {
+    @include sprite(twitterHover, bg);
+  }
+}
+
+.icon-facebook {
+  @include sprite(facebook);
+  &:hover {
+    @include sprite(facebookHover, bg);
+  }
+}
+
+.icon-etsy {
+  @include sprite(etsy);
+  &:hover {
+    @include sprite(etsyHover, bg);
+  }
+}
+
+.icon-pinterest {
+  @include sprite(pinterest);
+  &:hover {
+    @include sprite(pinterestHover, bg);
   }
 }

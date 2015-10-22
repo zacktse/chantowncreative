@@ -1,7 +1,9 @@
 // base font size
 
+
 $base-font-size: 1em;
 $base-font-size-no-px: 16;
+$mq-base-font-size: 16px;
 
 // Typography global variables
 //$base-font-family: $helvetica;
@@ -10,8 +12,6 @@ $base-font-size-no-px: 16;
 $base-font-family: $sans-serif;
 $body-text-font: $joesfin;
 $heading-font-family: $joesfin; // from google web fonts scss
-
-
 
 //@debug ms-list($start, $end, $ms-base, $ms-ratio);
 // Font Sizes
@@ -23,7 +23,7 @@ $heading-line-height: 1.2;
 
 // spacing
 $base-spacing: $base-line-height * 1em;
-$small-spacing: $base-spacing / 2;
+$small-spacing: 0.1em;
 
 
 // Other Sizes
@@ -44,6 +44,12 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $l
 
 // transitions
 $default-transition-speed: 333ms;
+
+
+// sprites
+$ieSprite: '.lt-ie9' !default;
+$sprite: map-get($icons, sprite) !default;
+$baseFontSize: 16px !default;
 
 // z-index scale
 $z-behind-bg:     0;

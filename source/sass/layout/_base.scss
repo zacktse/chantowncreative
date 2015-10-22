@@ -86,7 +86,7 @@ body {
   @include padding(0,16,0,16);
   @include media($desktop-up) {
     padding: 0;
-
+    min-height: calc(100vh - 300px);
   }
 /*   @include pad(); */
 }
