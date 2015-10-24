@@ -132,12 +132,12 @@
             "h":1355
          },
          "description":"screenprint",
-         "alt":"Ta Phrom (pink) Screenprint by Vickie Chan"
+         "alt":"Ta Phrom (pink) screenprint by Vickie Chan"
       },
       {
          "title":"Angkor Wat, East Gate (orange, drawn over)",
          "year":2014,
-         "category":"screenprint",
+         "category":"screenprint mixed-media",
          "srcImage":"assets/img/gallery/2014/AW5-10_AngkorWatEastGateOrangeDraw-201408",
          "imageExtension": ".jpg",
          "mobileImage":{
@@ -151,7 +151,7 @@
             "h":1328
          },
          "description":"screenprint",
-         "alt":"Angkor Wat, East Gate (orange, drawn over) Screenprint by Vickie Chan"
+         "alt":"Angkor Wat, East Gate (orange, drawn over) screenprint by Vickie Chan"
       },
       {
          "title":"Angkor Wat, East Gate (brown and yellow)",
@@ -170,7 +170,7 @@
             "h":1328
          },
          "description":"Screenprint",
-         "alt":"Angkor Wat, East Gate (brown and yellow) Screenprint by Vickie Chan"
+         "alt":"Angkor Wat, East Gate (brown and yellow) screenprint by Vickie Chan"
       },
       {
          "title":"Beggar in the Morning",
@@ -194,7 +194,7 @@
       {
          "title":"Ta Phrom",
          "year":2014,
-         "category":"illustration",
+         "category":"sketch",
          "srcImage":"assets/img/gallery/2014/TaPhrom",
          "imageExtension": ".jpg",
          "mobileImage":{
@@ -207,13 +207,13 @@
             "w":2000,
             "h":1355
          },
-         "description":"Illustration",
-         "alt":"Ta Phrom illustration by Vickie Chan"
+         "description":"ink sketch",
+         "alt":"Ta Phrom sketch by Vickie Chan"
       },
       {
          "title":"Angkor Wat, East Gate",
          "year":2014,
-         "category":"illustration",
+         "category":"sketch",
          "srcImage":"assets/img/gallery/2014/AngkorEastGate",
          "imageExtension": ".jpg",
          "mobileImage":{
@@ -226,8 +226,8 @@
             "w":2000,
             "h":1317
          },
-         "description":"Illustration",
-         "alt":"Angkor Wat, East Gate illustration by Vickie Chan"
+         "description":"Ink sketch",
+         "alt":"Angkor Wat, East Gate sketch by Vickie Chan"
       },
       {
          "title":"Angkor Wat, East Gate",
@@ -283,7 +283,7 @@
             "w":2000,
             "h":2818
          },
-         "description":"Ink illustration",
+         "description":"Colour ink illustration",
          "alt":"Rice wine bottle ink illustration by Vickie Chan"
       },
       {
@@ -327,7 +327,7 @@
       {
          "title":"Rice Wine Bottle (black & white)",
          "year":2013,
-         "category":"sketch",
+         "category":"illustration",
          "srcImage":"assets/img/gallery/2013/RiceWineBottle",
          "imageExtension": ".jpg",
          "mobileImage":{
@@ -340,27 +340,8 @@
             "w":2000,
             "h":3006
          },
-         "description":"Ink sketch",
-         "alt":"Rice wine bottle ink sketch by Vickie Chan"
-      },
-      {
-         "title":"Rice Wine Bottle (black & white)",
-         "year":2012,
-         "category":"sketch",
-         "srcImage":"assets/img/gallery/2013/RiceWineBottle",
-         "imageExtension": ".jpg",
-         "mobileImage":{
-            "src":"assets/img/gallery/2013/RiceWineBottle_w800.jpg",
-            "w":800,
-            "h":1202
-         },
-         "desktopImage":{
-            "src":"assets/img/gallery/2013/RiceWineBottle_w2000.jpg",
-            "w":2000,
-            "h":3006
-         },
-         "description":"Ink sketch",
-         "alt":"Rice wine bottle ink sketch by Vickie Chan"
+         "description":"Illustration",
+         "alt":"Rice wine bottle ink illustration by Vickie Chan"
       },
       {
          "title":"Hanalei",
@@ -1125,7 +1106,7 @@
       {
          "title":"雀仔",
          "year": 2002,
-         "category":"screenprint",
+         "category":"sketch",
          "srcImage":"assets/img/gallery/2002/Birds",
          "imageExtension": ".jpg",
          "mobileImage":{
@@ -1144,7 +1125,7 @@
       {
          "title":"Chinatown Window, SF",
          "year": 2002,
-         "category":"screenprint",
+         "category":"screenprint illustration",
          "srcImage":"assets/img/gallery/2002/ChinatownWindow_print",
          "imageExtension": ".jpg",
          "mobileImage":{
