@@ -1,5 +1,43 @@
 {
  "images" : [
+         {
+          "title":"The Days Run Away (illustration)",
+          "year": 2015,
+          "category":"illustration",
+          "srcImage":"assets/img/gallery/2015/201506_TheDaysRunAway",
+          "imageExtension": ".jpg",
+          "mobileImage":{
+             "src":"assets/img/gallery/2015/201506_TheDaysRunAway_w800.jpg",
+             "w":800,
+             "h":1098
+          },
+          "desktopImage":{
+             "src":"assets/img/gallery/2015/201506_TheDaysRunAway_w2000.jpg",
+             "w":2000,
+             "h":2747
+          },
+          "description":"illustration",
+          "alt":"The Days Run Away illustration by Vickie Chan"
+       },
+       {
+         "title":"Angkor Wat Overprint",
+         "year":2015,
+         "category": "illustration commercial mixed-media screenprint",
+         "srcImage":"assets/img/gallery/2015/201501_AngkorWatFullBgrBlueYellowOverprint",
+         "imageExtension": ".jpg",
+         "mobileImage":{
+            "src":"assets/img/gallery/2015/ButYoullCry-FULL_w800.jpg",
+            "w":800,
+            "h":1097
+         },
+         "desktopImage":{
+            "src":"assets/img/gallery/2015/ButYoullCry-FULL_w2000.jpg",
+            "w":2000,
+            "h":2743
+         },
+         "description":"Screenprint on mixed media background",
+         "alt":"Angkor Wat screenprint by Vickie Chan"
+      },
       {
          "title":"But You'll Cry",
          "year":2015,
@@ -171,6 +209,25 @@
          },
          "description":"Illustration",
          "alt":"Ta Phrom illustration by Vickie Chan"
+      },
+      {
+         "title":"Angkor Wat, East Gate",
+         "year":2014,
+         "category":"illustration",
+         "srcImage":"assets/img/gallery/2014/AngkorEastGate",
+         "imageExtension": ".jpg",
+         "mobileImage":{
+            "src":"assets/img/gallery/2014/AngkorEastGate_w800.jpg",
+            "w":800,
+            "h":527
+         },
+         "desktopImage":{
+            "src":"assets/img/gallery/2014/AngkorEastGate_w2000.jpg",
+            "w":2000,
+            "h":1317
+         },
+         "description":"Illustration",
+         "alt":"Angkor Wat, East Gate illustration by Vickie Chan"
       },
       {
          "title":"Angkor Wat, East Gate",
