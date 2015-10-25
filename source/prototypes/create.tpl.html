@@ -7,17 +7,12 @@
 <div id="js-content" class="page-container">
   <section class="content-main" role="main">
 
-    <div class="responsively-lazy feature" style="padding-bottom: 53.875%;">
-      <img src="assets/img/pages/create_lightened_w1500.jpg"
-       srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-      data-srcset="
-        assets/img/pages/create_lightened_w400.jpg 400w,
-        assets/img/pages/create_lightened_w600.jpg 600w,
-        assets/img/pages/create_lightened_w800.jpg 800w,
-        assets/img/pages/create_lightened_w1000.jpg 1000w,
-        assets/img/pages/create_lightened_w1500.jpg 1500w,
-        assets/img/pages/create_lightened_w2000.jpg 2000w"
-      class=" feature-image full-width"
+    <div class="feature">
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+      data-src="assets/img/pages/create_lightened_w1500.jpg"
+      data-small="assets/img/pages/create_lightened_w600.jpg"
+      data-medium="assets/img/pages/create_lightened_w1000.jpg"
+      class="b-lazy feature-image full-width"
       alt="Picture of a horse with inks by Chantown Creative"
       title="Create: Chantown Creative" />
     </div>
@@ -38,7 +33,7 @@
 
       <div id="isotope-filters" class="row filter-btns">
         <!-- <button class="sort" data-sort="random">Shuffle</button> -->
-        <button class="filter" data-filter="*">All</button>
+        <button class="filter is-checked" data-filter="*">All</button>
         <button class="filter" data-filter=".commercial">Commercial</button>
         <button class="filter" data-filter=".illustration">Illustration</button>
         <button class="filter" data-filter=".mixed-media">Mixed media</button>
@@ -64,7 +59,7 @@
 
               <a href="{{desktopImage.src}}" data-mobile-link="{{mobileImage.src}}" itemprop="contentUrl" data-size="{{desktopImage.w}}x{{desktopImage.h}}" data-size-desktop="{{desktopImage.w}}x{{desktopImage.h}}"
               data-size-mobile="{{mobileImage.w}}x{{mobileImage.h}}">
-                  <div class="thumbnail">
+                  <div class="thumbnail b-lazy" data-src="{{srcImage}}_w400{{imageExtension}}">
                     <!-- <img class="responsively-lazy {{layoutClass}}"
                      srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                     data-srcset="

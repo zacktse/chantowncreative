@@ -9,7 +9,8 @@ var Handlebars = require('handlebars');
 var PhotoSwipeUI_Default = require('../vendor/photoswipe-ui-default.min');
 //var _ = require('underscore');
 //var imagesLoaded = require('imagesloaded');
-responsivelyLazy = require('../vendor/responsively_lazy.min');
+//responsivelyLazy = require('../vendor/responsively_lazy.min');
+
 
 function loadGalleryJSON(callback) {
 
@@ -104,9 +105,9 @@ var runPhotoswipe = function() {
   // console.log(Chantown);
   // update lazy load when isotope has re-arranged the images
   $image_gallery.on('arrangeComplete', function() {
-
-    //console.log("image filtering updated");
+    console.log("image filtering updated");
     //Chantown.responsiveLazy.run();
+    window.bLazy.revalidate();
   });
 
   // align the isotope layout every 500ms
@@ -125,7 +126,7 @@ var runPhotoswipe = function() {
     $image_gallery.arrange({
       filter: filterValue,
     });
-  //responsivelyLazy.run()
+
   });
 
   // PHOTOSWIPE GALLERY
@@ -334,6 +335,7 @@ var runPhotoswipe = function() {
   });
 
 }; // runPhotoswipe function
+
 
 
 

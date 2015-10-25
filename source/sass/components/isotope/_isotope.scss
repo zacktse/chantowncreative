@@ -1,12 +1,16 @@
 
 .filter-btns {
-  @include margin(30,0,60,0);
-  button{
-    @include margin(10,10,0,0);
+  @include margin(30, 0, 60, 0);
+  button {
+    @include margin(10, 10, 0, 0);
+    font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
     padding: 14px 1em 11px 1em;
-    font-weight: 600;
+    border: 1px solid #f93;
+  }
+  button.is-checked {
+  //  border-bottom: 4px solid #f93;
   }
 }
 
@@ -20,29 +24,25 @@
   figure {
     display: block;
     margin: 0;
-    margin-right: 48px;
-    margin-bottom: 48px;
-    width: 90px;
-    height: 90px;
+    margin-right:6px;
+    margin-bottom:6px;
     @include media($tablet-up) {
-      width: 120px;
-      height: 120px;
+      max-width: 120px;
+      max-height: 120px;
+      margin-right:4px;
+      margin-bottom:4px;
     }
-    @include media($desktop-up){
-      width: 200px;
-      height: 200px;
-      margin-right: 42px;
-      margin-bottom: 42px;
+    @include media($desktop-up) {
+      max-width: 230px;
+      max-height: 230px;
+      margin-right:2px;
+      margin-bottom:2px;
+      // margin-right: 42px;
+      // margin-bottom: 42px;
     }
-    // margin: 0 auto;
-    // visibility: hidden;
-    // margin-bottom: 16px;
   }
 }
 
-.isotope-grid:hover .item .thumbnail img {
-    // opacity: 0.4;
-}
 
 /* clear fix */
 .isotope-grid:after {
@@ -52,68 +52,51 @@
   @include clearfix;
 }
 
-/* ---- .masonry-grid-item ---- */
-.grid-item figure{
-    width: auto;
-}
-
 .isotope-hidden {
     pointer-events: none;
     z-index: 1;
   }
 
-// .grid-item, .grid-sizer {
-//   // width: 100%;
-//   // padding-bottom:12px;
-//   // @include media($tablet-up) {
-//   //   //width: 45%;
-//   //   max-width: 200px;
-//   // }
-//   // @include media($desktop-up) {
-//   //   max-width: 450px;
-//   // }
-// }
-//
 .grid-sizer {
-    width: 120px;
+    max-width: 120px;
     height: auto;
     @include media($tablet-up) {
-      width:120px;
+      max-width:120px;
     }
     @include media($desktop-up) {
-      width: 240px;
-      height: 240px;
+      max-width: 230px;
+      max-height: 230px;
     }
 }
 
-.item .thumbnail {
+.thumbnail {
   position: relative;
   overflow: hidden;
-  width: 120px;
-  height: 120px;
-  padding-right: 3px;
-  padding-bottom: 3px;
+  width: 130px;
+  height: 130px;
+  background-position: center center;
+	background-repeat: no-repeat;
+  background-size: cover;
+  //padding-right: 3px;
+  //padding-bottom: 3px;
   // border-radius: 50%;
-  object-fit: fill;
+  //object-fit: fill;
   @include media($tablet-up) {
-    width: 120px;
-    height: 120px;
+    max-width: 160px;
+    max-height: 160px;
+    width:160px;
+    height:160px;
   }
-  @include media($desktop-up){
-    width: 240px;
-    height: 240px;
+  @include media($desktop-up) {
+    max-width: 230px;
+    max-height: 230px;
+    width: 230px;
+    height: 230px;
   }
 }
 
 .item .thumbnail img {
-  height:100%;
-  width: 100%;
-  object-fit: fill;
-  @include transition(all $default-transition-speed ease-out);
-  &:hover {
-    transform: scale(1.05);
-    // opacity: 1 !important;
-  }
+  display: none;
 }
 
 .item .thumbnail img.portrait {
@@ -128,4 +111,20 @@
 
 #isotope-filters.pinned {
   z-index: $z-above-all;
+}
+
+
+
+// lazyload
+
+.b-lazy {
+    -webkit-transition: opacity 200ms ease-out;
+       -moz-transition: opacity 200ms ease-out;
+         -o-transition: opacity 200ms ease-out;
+            transition: opacity 200ms ease-out;
+             max-width: 100%;
+               opacity: 0;
+}
+.b-lazy.b-loaded {
+               opacity: 1;
 }

@@ -1,6 +1,44 @@
 {
  "images" : [
-         {
+        {
+          "title":"Surviving Hong Kong Series: Walking",
+          "year": 2015,
+          "category":"illustration",
+          "srcImage":"assets/img/gallery/2015/5SurvHK201510Walking",
+          "imageExtension": ".jpg",
+          "mobileImage":{
+             "src":"assets/img/gallery/2015/5SurvHK201510Walking_w800.jpg",
+             "w":800,
+             "h":1119
+          },
+          "desktopImage":{
+             "src":"assets/img/gallery/2015/5SurvHK201510Walking_w2000.jpg",
+             "w":2000,
+             "h":2797
+          },
+          "description":"illustration",
+          "alt":"Surviving Hong Kong: Walking illustration by Vickie Chan"
+        },
+        {
+          "title":"Surviving Hong Kong Series: Peripheral Vision",
+          "year": 2015,
+          "category":"illustration",
+          "srcImage":"assets/img/gallery/2015/3SurvHK201508PeripheralVision",
+          "imageExtension": ".jpg",
+          "mobileImage":{
+             "src":"assets/img/gallery/2015/3SurvHK201508PeripheralVision_w800.jpg",
+             "w":800,
+             "h":1048
+           },
+          "desktopImage":{
+             "src":"assets/img/gallery/2015/3SurvHK201508PeripheralVision_w2000.jpg",
+             "w":2000,
+             "h":2621
+          },
+          "description":"illustration",
+          "alt":"Surviving Hong Kong: Peripheral Vision illustration by Vickie Chan"
+        },
+        {
           "title":"The Days Run Away (illustration)",
           "year": 2015,
           "category":"illustration",
@@ -97,6 +135,44 @@
          "alt":"Michael's Bear Trap illustration by Vickie Chan"
       },
       {
+        "title":"Dozer screenprint (pink)",
+        "year":2015,
+        "category": "screenprint commercial illustration",
+        "srcImage":"assets/img/gallery/2015/201510_DozerPinkBrown",
+        "imageExtension": ".jpg",
+        "mobileImage":{
+           "src":"assets/img/gallery/2015/201510_DozerPinkBrown_w800.jpg",
+           "w":800,
+           "h":576
+        },
+        "desktopImage":{
+           "src":"assets/img/gallery/2015/201510_DozerPinkBrown_w2000.jpg",
+           "w":2000,
+           "h":1441
+        },
+        "description":"Embellished screenprint",
+        "alt":"Dozer embellished screenprint by Vickie Chan"
+      },
+      {
+         "title":"Dozer screenprint with forest (green)",
+         "year":2015,
+         "category": "screenprint mixed-media commercial illustration",
+         "srcImage":"assets/img/gallery/2015/201510_DBT6-8DeerPatBgrGreen+DkGreyDog_SMALL",
+         "imageExtension": ".jpg",
+         "mobileImage":{
+            "src":"assets/img/gallery/2015/201510_DBT6-8DeerPatBgrGreen+DkGreyDog_SMALL_w800.jpg",
+            "w":800,
+            "h":587
+         },
+         "desktopImage":{
+            "src":"assets/img/gallery/2015/201510_DBT6-8DeerPatBgrGreen+DkGreyDog_SMALL_w2000.jpg",
+            "w":2000,
+            "h":1469
+         },
+         "description":"Embellished screenprint",
+         "alt":"Dozer and forest screenprint by Vickie Chan"
+      },
+      {
          "title":"Leicester Fox",
          "year":2014,
          "category":"illustration",
@@ -116,18 +192,56 @@
          "alt":"Leicester Fox illustration by Vickie Chan"
       },
       {
+        "title":"Olly & Rachel",
+        "year":2015,
+        "category": "commercial",
+        "srcImage":"assets/img/gallery/2015/2015_OllyWeddingInvite_OL",
+        "imageExtension": ".jpg",
+        "mobileImage":{
+           "src":"assets/img/gallery/2015/2015_OllyWeddingInvite_OL_w800.jpg",
+           "w":800,
+           "h":1097
+        },
+        "desktopImage":{
+           "src":"assets/img/gallery/2015/2015_OllyWeddingInvite_OL_w2000.jpg",
+           "w":2000,
+           "h":2743
+        },
+        "description":"Olly & Rachel Wedding Card",
+        "alt":"Wedding invitations (Olly & Rachel) by Vickie Chan"
+      },
+      {
+         "title":"Sunshine Map",
+         "year":2014,
+         "category": "commercial",
+         "srcImage":"assets/img/gallery/2014/201410_EgyptSunshineMap",
+         "imageExtension": ".jpg",
+         "mobileImage":{
+            "src":"assets/img/gallery/2014/201410_EgyptSunshineMap_w800.jpg",
+            "w":800,
+            "h":378
+         },
+         "desktopImage":{
+            "src":"assets/img/gallery/2014/201410_EgyptSunshineMap_w2000.jpg",
+            "w":2000,
+            "h":947
+         },
+         "description":"Sunshine Map",
+         "alt":"Sunshine map graphic by Vickie Chan"
+      },
+      {
          "title":"Ta Phrom (pink)",
          "year":2014,
          "category":"screenprint",
-         "srcImage":"assets/img/gallery/2014/TP2-10Pink_201412",
+         "srcImage":"assets/img/gallery/2014/2014_TP2-10Pink_201412",
          "imageExtension": ".jpg",
          "mobileImage":{
-            "src":"assets/img/gallery/2014/TP2-10Pink_201412_w800.jpg",
+            "src":"assets/img/gallery/2014/2014_TP2-10Pink_201412_w800.jpg",
             "w":800,
             "h":542
          },
          "desktopImage":{
-            "src":"assets/img/gallery/2014/TP2-10Pink_201412_w2000.jpg",
+            "src":"assets/img/gallery/2014/2014_TP2-10Pink_201412_w2000.jpg",
             "w":2000,
             "h":1355
          },
@@ -230,6 +344,26 @@
          "alt":"Angkor Wat, East Gate sketch by Vickie Chan"
       },
       {
+         "title":"Ta Phrom embellished screenprint",
+         "year":2014,
+         "category": "mixed-media screenprint commercial illustration",
+         "srcImage":"assets/img/gallery/2014/201412_TP3TaPhromPinkDrawover",
+         "imageExtension": ".jpg",
+         "mobileImage":{
+            "src":"assets/img/gallery/2014/201412_TP3TaPhromPinkDrawover_w800.jpg",
+            "w":800,
+            "h":555
+         },
+         "desktopImage":{
+            "src":"assets/img/gallery/2014/201412_TP3TaPhromPinkDrawover_w2000.jpg",
+            "w":2000,
+            "h":1389
+         },
+         "description":"Embellished screenprint",
+         "alt":"Ta Phrom embellished screenprint by Vickie Chan"
+      },
+
+      {
          "title":"Angkor Wat, East Gate",
          "year":2014,
          "category":"illustration",
@@ -266,6 +400,25 @@
          },
          "description":"Ink sketch",
          "alt":"Folkestone Crescent sketch by Vickie Chan"
+      },
+      {
+         "title":"Third St (colour)",
+         "year":2013,
+         "category":"sketch",
+         "srcImage":"assets/img/gallery/2013/ThirdStColour",
+         "imageExtension": ".jpg",
+         "mobileImage":{
+            "src":"assets/img/gallery/2013/ThirdStColour_w800.jpg",
+            "w":800,
+            "h":1153
+         },
+         "desktopImage":{
+            "src":"assets/img/gallery/2013/ThirdStColour_w2000.jpg",
+            "w":2000,
+            "h":2883
+         },
+         "description":"Ink sketch",
+         "alt":"Third St (colour) sketch by Vickie Chan"
       },
       {
          "title":"Rice Wine Bottle (colour)",
@@ -382,6 +535,25 @@
          "alt":"Folkestone Lighthouse ink sketch by Vickie Chan"
       },
       {
+         "title":"Folkestone Bench",
+         "year":2012,
+         "category":"sketch",
+         "srcImage":"assets/img/gallery/2012/FolkestoneBench",
+         "imageExtension": ".jpg",
+         "mobileImage":{
+            "src":"assets/img/gallery/2012/FolkestoneBench_w800.jpg",
+            "w":800,
+            "h":561
+         },
+         "desktopImage":{
+            "src":"assets/img/gallery/2012/FolkestoneBench_w2000.jpg",
+            "w":2000,
+            "h":1404
+         },
+         "description":"Ink sketch",
+         "alt":"Folkestone Bench ink sketch by Vickie Chan"
+      },
+      {
          "title":"Enoshima",
          "year":2012,
          "category":"sketch",
@@ -400,6 +572,160 @@
          "description":"Ink sketch",
          "alt":"Enoshima ink sketch by Vickie Chan"
       },
+      {
+        "title":"68 Bus Web Banner",
+        "year":2011,
+        "category": "commercial illustration",
+        "srcImage":"assets/img/gallery/2011/2011_7_68MiraRadioMovingWebBanner",
+        "imageExtension": ".jpg",
+        "mobileImage":{
+           "src":"assets/img/gallery/2011/2011_7_68MiraRadioMovingWebBanner_w800.jpg",
+           "w":800,
+           "h":153
+        },
+        "desktopImage":{
+           "src":"assets/img/gallery/2011/2011_7_68MiraRadioMovingWebBanner_w2000.jpg",
+           "w":2000,
+           "h":382
+        },
+        "description":"Bus web banner",
+        "alt":"Bus web banner graphic by Vickie Chan"
+      },
+      {
+        "title":"68 Calendar",
+        "year":2011,
+        "category": "commercial illustration",
+        "srcImage":"assets/img/gallery/2011/2011_6_68PrintCalendarComposite",
+        "imageExtension": ".jpg",
+        "mobileImage":{
+           "src":"assets/img/gallery/2011/2011_6_68PrintCalendarComposite_w800.jpg",
+           "w":800,
+           "h":1098
+        },
+        "desktopImage":{
+           "src":"assets/img/gallery/2011/2011_6_68PrintCalendarComposite_w2000.jpg",
+           "w":2000,
+           "h":2745
+        },
+        "description":"68 calendar",
+        "alt":"68 calendar graphic by Vickie Chan"
+     },
+     {
+         "title":"68 Daily POP",
+         "year":2011,
+         "category": "commercial illustration",
+         "srcImage":"assets/img/gallery/2011/2011_5_68A1DailyPOPComposite",
+         "imageExtension": ".jpg",
+         "mobileImage":{
+            "src":"assets/img/gallery/2011/2011_5_68A1DailyPOPComposite_w800.jpg",
+            "w":800,
+            "h":594
+         },
+         "desktopImage":{
+            "src":"assets/img/gallery/2011/2011_5_68A1DailyPOPComposite_w2000.jpg",
+            "w":2000,
+            "h":1485
+         },
+         "description":"68 daily POP",
+         "alt":"68 daily POP graphic by Vickie Chan"
+      },
+      {
+       "title":"68 Launch Homepage",
+       "year":2011,
+       "category": "commercial illustration",
+       "srcImage":"assets/img/gallery/2011/2011_4_68MiraFront",
+       "imageExtension": ".jpg",
+       "mobileImage":{
+          "src":"assets/img/gallery/2011/2011_4_68MiraFront_w800.jpg",
+          "w":800,
+          "h":542
+       },
+       "desktopImage":{
+          "src":"assets/img/gallery/2011/2011_4_68MiraFront_w2000.jpg",
+          "w":2000,
+          "h":1357
+       },
+       "description":"68 Launch Homepage",
+       "alt":"68 launch homepage graphic by Vickie Chan"
+      },
+
+      {
+         "title":"68 Launch Weekly Wow",
+         "year":2011,
+         "category": "commercial illustration",
+         "srcImage":"assets/img/gallery/2011/2011_3_68MiraWeeklyWow",
+         "imageExtension": ".jpg",
+         "mobileImage":{
+            "src":"assets/img/gallery/2011/2011_3_68MiraWeeklyWow_w800.jpg",
+            "w":800,
+            "h":565
+         },
+         "desktopImage":{
+            "src":"assets/img/gallery/2011/2011_3_68MiraWeeklyWow_w2000.jpg",
+            "w":2000,
+            "h":1413
+         },
+         "description":"68 Launch Weekly Wow",
+         "alt":"68 Launch Weekly Wow graphic by Vickie Chan"
+      },
+      {
+         "title":"68 Calendar Front",
+         "year":2011,
+         "category": "commercial illustration",
+         "srcImage":"assets/img/gallery/2011/2011_2_68MiraCalendarFront",
+         "imageExtension": ".jpg",
+         "mobileImage":{
+            "src":"assets/img/gallery/2011/2011_2_68MiraCalendarFront_w800.jpg",
+            "w":800,
+            "h":612
+         },
+         "desktopImage":{
+            "src":"assets/img/gallery/2011/2011_2_68MiraCalendarFront_w2000.jpg",
+            "w":2000,
+            "h":1530
+         },
+         "description":"68 Calendar Front",
+         "alt":"68 Calendar Front graphic by Vickie Chan"
+      },
+      {
+         "title":"68 Bus Model",
+         "year":2011,
+         "category": "commercial illustration",
+         "srcImage":"assets/img/gallery/2011/2011_1a_68BusModel",
+         "imageExtension": ".jpg",
+         "mobileImage":{
+            "src":"assets/img/gallery/2011/2011_1a_68BusModel_w800.jpg",
+            "w":800,
+            "h":502
+         },
+         "desktopImage":{
+            "src":"assets/img/gallery/2011/2011_1a_68BusModel_w2000.jpg",
+            "w":2000,
+            "h":1256
+         },
+         "description":"68 Bus Model",
+         "alt":"68 Bus Model – graphics by Vickie Chan"
+      },
+      {
+         "title":"68 Bus",
+         "year":2011,
+         "category": "commercial illustration",
+         "srcImage":"assets/img/gallery/2011/2011_1_68Bus",
+         "imageExtension": ".jpg",
+         "mobileImage":{
+            "src":"assets/img/gallery/2011/2011_1_68Bus_w800.jpg",
+            "w":800,
+            "h":531
+         },
+         "desktopImage":{
+            "src":"assets/img/gallery/2011/2011_1_68Bus_w2000.jpg",
+            "w":2000,
+            "h":1327
+         },
+         "description":"68 Bus",
+         "alt":"68 Bus – graphics by Vickie Chan"
+      },
+
       {
          "title":"Perhentian",
          "year":2011,
@@ -590,6 +916,27 @@
          "description":"Mixed media on canvas",
          "alt":"Born to Lose mixed media painting on canvas by Vickie Chan"
       },
+
+      {
+           "title":"The Division (East and West)",
+           "year": 2010,
+           "category":"painting mixed-media",
+           "srcImage":"assets/img/gallery/2010/TheDivisionEWFULL",
+           "imageExtension": ".jpg",
+           "mobileImage":{
+              "src":"assets/img/gallery/2010/TheDivisionEWFULL_w800.jpg",
+              "w":800,
+              "h":1098
+           },
+           "desktopImage":{
+              "src":"assets/img/gallery/2010/TheDivisionEWFULL_w2000.jpg",
+              "w":2000,
+              "h":2747
+           },
+           "description":"Painting on vinyl record",
+           "alt":"The Division (East and West) painting on vinyl by Vickie Chan"
+        },
+
       {
          "title":"Kokeshi Doll",
          "year": 2009,
@@ -781,6 +1128,45 @@
          "alt":"Lovecats mixed media painting on canvas by Vickie Chan"
       },
       {
+         "title":"Lovecats",
+         "year": 2007,
+         "category":"painting mixed-media",
+         "srcImage":"assets/img/gallery/2007/Lovecats_10_small",
+         "imageExtension": ".jpg",
+         "mobileImage":{
+            "src":"assets/img/gallery/2007/Lovecats_10_small_w800.jpg",
+            "w":800,
+            "h":785
+         },
+         "desktopImage":{
+            "src":"assets/img/gallery/2007/Lovecats_10_small_w2000.jpg",
+            "w":2000,
+            "h":1964
+         },
+         "description":"Mixed media on canvas",
+         "alt":"Lovecats mixed media painting on canvas by Vickie Chan"
+      },
+      {
+         "title":"???????",
+         "year": 2007,
+         "category":"painting mixed-media",
+         "srcImage":"assets/img/gallery/2007/Tig_8_small",
+         "imageExtension": ".jpg",
+         "mobileImage":{
+            "src":"assets/img/gallery/2007/Tig_8_small_w800.jpg",
+            "w":800,
+            "h":793
+         },
+         "desktopImage":{
+            "src":"assets/img/gallery/2007/Tig_8_small_w2000.jpg",
+            "w":2000,
+            "h":1984
+         },
+         "description":"??????????",
+         "alt":"???????? painting on canvas by Vickie Chan"
+      },
+
+      {
          "title":"India",
          "year": 2006,
          "category":"sketch",
@@ -912,6 +1298,25 @@
          },
          "description":"Acrylic on canvas",
          "alt":"Stranger to Bluewater painting on canvas by Vickie Chan"
+      },
+      {
+         "title":"Wish You Were Here",
+         "year": 2004,
+         "category":"painting mixed-media",
+         "srcImage":"assets/img/gallery/2004/WishYouWereHere_20_small",
+         "imageExtension": ".jpg",
+         "mobileImage":{
+            "src":"assets/img/gallery/2004/WishYouWereHere_20_small_w800.jpg",
+            "w":800,
+            "h":816
+         },
+         "desktopImage":{
+            "src":"assets/img/gallery/2004/WishYouWereHere_20_small_w2000.jpg",
+            "w":2000,
+            "h":2041
+         },
+         "description":"Painting",
+         "alt":"Wish You Were Here painting by Vickie Chan"
       },
       {
          "title":"The Days Run Away",

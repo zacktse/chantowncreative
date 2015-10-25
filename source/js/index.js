@@ -17,6 +17,25 @@ var pixel_bg = new dp.DeadPixels();
 
 pixel_bg.initialize();
 
+Blazy = require('./vendor/blazy.min.js');
+
+window.bLazy = new Blazy({
+  selector: '.b-lazy', // all images
+  breakpoints: [
+    {
+      width: 420, // max-width
+      src: 'data-src-small'
+    },
+    {
+      width: 959, // max-width
+      src: 'data-src-medium'
+    },
+    {
+      width: 1440, // max-width
+      src: 'data-src-large'
+    }]
+});
+
 
 
 // execute photoswipe function if there is a gallery on the page
