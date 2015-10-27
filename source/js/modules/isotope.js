@@ -1,15 +1,9 @@
 var $ = require('jquery');
 var Isotope = require('isotope-layout');
-// require('isotope-cells-by-row');
-//require('isotope-cells-by-column');
-
-//require('isotope-masonry');
 var PhotoSwipe = require('photoswipe');
 var Handlebars = require('handlebars');
 var PhotoSwipeUI_Default = require('../vendor/photoswipe-ui-default.min');
-//var _ = require('underscore');
-//var imagesLoaded = require('imagesloaded');
-//responsivelyLazy = require('../vendor/responsively_lazy.min');
+
 
 
 function loadGalleryJSON(callback) {
@@ -68,17 +62,6 @@ var runPhotoswipe = function() {
   //imagesLoaded( _portfolio_gallery, function() {
 
   var $image_gallery = new Isotope('.isotope-grid', {
-    // masonry: {
-    //   columnWidth: '.grid-sizer',
-    //   //isFitWidth: true,
-    //   gutter: 20
-    // },
-    // layoutMode: 'cellsByRow',
-    // layoutMode: 'cellsByColumn',
-    // cellsByColumn: {
-    //   columnWidth: 240,
-    //   rowHeight: 240
-    // },
     isFitWidth: true,
     // containerStyle: null,
     /* masonry */
@@ -91,23 +74,20 @@ var runPhotoswipe = function() {
     transitionDuration: '.3s',
   //sortBy: 'random'
   });
-  // once images have loaded - run the layout script to put all images in masonry layout
-  // imagesLoaded('.masonry-grid', function() {
-  //  // layout Isotope after each image loads
-  //  $image_gallery.layout();
-  //  $image_gallery.arrange();
-  //  //console.log("images loaded");
-  // });
-  // $image_gallery.arrange();
-
-  //console.log($image_gallery);
 
   // console.log(Chantown);
   // update lazy load when isotope has re-arranged the images
   $image_gallery.on('arrangeComplete', function() {
     console.log("image filtering updated");
+    // console.log($("#gallery_container").offset().top);
+    // console.log($("#isotope-filters").height);
+    // var scrollToPosition = $("#gallery_container").offset().top + $("#isotope-filters").height;
     //Chantown.responsiveLazy.run();
     window.bLazy.revalidate();
+    // scroll to the top of the list of images when re-filtering
+    $('html, body').animate({
+      scrollTop: ($("#gallery_container").offset().top - $("#isotope-filters").height() - 36)
+    }, 250);
   });
 
   // align the isotope layout every 500ms
@@ -167,23 +147,33 @@ var runPhotoswipe = function() {
       return data;
     });
 
+    //var _social_media_html = '<ul class=\"social-icons\"><li><a href=\"https://www.pinterest.com/chantown/\" class=\"icon pinterest\" title=\"Pinterest\"><i class=\"icon-pinterest-gray\"></i></a></li><li><a href=\"https://www.facebook.com/sharer/sharer.php?u=" + getPageURLForShare() + "\" class=\"icon etsy\" title=\"Share on Facebook\"><i class=\"icon-facebook-gray\"></i></a></li><li><a href=\"https://twitter.com/hkchantown\" class=\"icon twitter\" title=\"Twitter\"><i class=\"icon-twitter-gray\"></i></a></li></ul>';
+
+    var getSharingHTML = function() {
+      var currentPage = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
+
+
+      return '<ul class=\"social-icons\"><li><a href=\"https://www.pinterest.com/chantown/\" class=\"icon pinterest\" title=\"Pinterest\"><i class=\"icon-pinterest-gray\"></i></a></li><li><a href=\"https://www.facebook.com/sharer/sharer.php?u=' + currentPage + '\" class=\"icon etsy\" title=\"Share on Facebook\"><i class=\"icon-facebook-gray\"></i></a></li><li><a href=\"https://twitter.com/intent/tweet?text=Chantown Creative: Portfolio&url=http://chantown.com/create.html\" class=\"icon twitter\" title=\"Twitter\"><i class=\"icon-twitter-gray\"></i></a></li></ul>';
+    }
+
+    var image_url_yo = photoswipeInstance.currItem.src || '';
     var options = {
       index: index,
       shareButtons: [
         {
           id: 'pinterest',
-          label: 'Pin it',
+          label: '<i class="icon-pinterest"></i> Pin it',
           url: 'http://www.pinterest.com/pin/create/button/?url={{url}}&media={{image_url}}&description={{text}}'
         },
         {
           id: 'facebook',
-          label: 'Share on Facebook',
+          label: '<i class="icon-facebook"></i> Share on Facebook',
           url: 'https://www.facebook.com/sharer/sharer.php?u={{url}}'
         },
         {
           id: 'twitter',
-          label: 'Tweet',
-          url: 'https://twitter.com/intent/tweet?text={{text}}&url={{url}}'
+          label: '<i class="icon-twitter"></i> Tweet',
+          url: 'https://twitter.com/intent/tweet?text={{text}}&url={{image_url}}'
         }
 
       // {
@@ -210,10 +200,37 @@ var runPhotoswipe = function() {
           captionEl.children[0].innerHTML = '';
           return false;
         }
+
         captionEl.children[0].innerHTML = item.title;
+        //captionEl.children[0].innerHTML += _social_media_html;
+        captionEl.children[0].innerHTML += getSharingHTML();
+        //captionEl.children[0].innerHTML += photoswipeInstance.currItem;
         captionEl.children[0].style.width = (item.w * item.fitRatio) + 'px';
         return true;
+      },
+      getImageURLForShare: function(shareButtonData) {
+        // `shareButtonData` - object from shareButtons array
+        //
+        // `pswp` is the gallery instance object,
+        // you should define it by yourself
+        //
+        return photoswipeInstance.currItem.src || '';
+      },
+      getPageURLForShare: function(shareButtonData) {
+        return photoswipeInstance.currItem.src || window.location.href;
+      },
+      getTextForShare: function(shareButtonData) {
+        var currTitle = $($.parseHTML(photoswipeInstance.currItem.title)).text();
+        return currTitle || '';
+      },
+
+      // Parse output of share links
+      parseShareButtonOut: function(shareButtonData, shareButtonOut) {
+        // `shareButtonData` - object from shareButtons array
+        // `shareButtonOut` - raw string of share link element
+        return shareButtonOut;
       }
+
     };
 
     var photoswipeInstance = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
@@ -230,7 +247,15 @@ var runPhotoswipe = function() {
       $(".back-to-top").addClass("behind-lightbox");
     });
 
-    // show sticky nav again once closing photoswipe
+    // show sticky filters again once closing photoswipe
+    photoswipeInstance.listen('initialZoomOutEnd', function() {
+      //console.log("closing photoSwipe");
+      $("header").find(".scrollmagic-pin-spacer").fadeIn(250);
+      $("#isotope-filters.pinned").fadeIn(250);
+      $(".back-to-top").removeClass("behind-lightbox");
+    });
+
+    // show sticky filters again once closing photoswipe
     photoswipeInstance.listen('close', function() {
       //console.log("closing photoSwipe");
       $("header").find(".scrollmagic-pin-spacer").fadeIn(250);

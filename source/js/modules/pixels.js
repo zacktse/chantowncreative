@@ -40,8 +40,8 @@ _.extend(exports.DeadPixels.prototype, {
         'pointer-events': 'none'
       });
       pixel.css('transform', 'rotate(' + _.random(360) + 'deg)');
-      _.delay(this.reposition, _.random(this.delay, this.delay * 1.25), i);
-      _.delay(pixel.addClass('on'), _.random(this.delay * 0.25, this.delay * 1.25), i);
+      //_.delay(this.reposition, _.random(this.delay, this.delay * 1.25), i);
+      pixel.addClass('on');
 
     }
 
@@ -64,16 +64,16 @@ _.extend(exports.DeadPixels.prototype, {
 
   reposition: function(i) {
     //this.pixels[i].removeClass('on');
-    _.delay(_.bind(function() {
-      this.pixels[i].css({
-        // left: _.random(100) + '%',
-        // top: _.random(100) + '%',
-        // 'background-color': this.random_color()
-      });
-
-    //   this.pixels[i].addClass('on');
-    //   _.delay(this.reposition, _.random(this.delay, this.delay * 4.25), i);
-    }, this), 100)
+    // _.delay(_.bind(function() {
+    //   this.pixels[i].css({
+    //     // left: _.random(100) + '%',
+    //     // top: _.random(100) + '%',
+    //     // 'background-color': this.random_color()
+    //   });
+    //
+    // //   this.pixels[i].addClass('on');
+    // //   _.delay(this.reposition, _.random(this.delay, this.delay * 4.25), i);
+    // }, this), 100)
   }
 
 

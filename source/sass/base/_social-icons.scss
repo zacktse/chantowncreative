@@ -15,16 +15,18 @@
   @include media($tablet-up) {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 5%;
     padding: 0;
-    // padding-top: 18px;
-    // padding-right: 20px;
+    margin-top: 36px;
+
   }
 
   @include media($desktop-up) {
     // display: none;
     // padding-top: 6px;
     z-index: $z-above-all;
+    right: 0;
+    margin-top: 48px;
   }
 
   li {
@@ -47,13 +49,58 @@
 
 }
 
-// .social-icons.footer {
-//   @include media($tablet-up) {
-//     display: none;
-// }
-// .social-icons.header {
-//   display: none;
-//   @include media($tablet-up) {
-//     display: block;
-//   }
-// }
+.icon-twitter {
+  @include sprite(twitter);
+  &:hover {
+    @include sprite(twitterHover, bg);
+  }
+}
+
+.icon-facebook {
+  @include sprite(facebook);
+  &:hover {
+    @include sprite(facebookHover, bg);
+  }
+}
+
+.icon-etsy {
+  @include sprite(etsy);
+  &:hover {
+    @include sprite(etsyHover, bg);
+  }
+}
+
+.icon-pinterest {
+  @include sprite(pinterest);
+  &:hover {
+    @include sprite(pinterestHover, bg);
+  }
+}
+
+.icon-twitter-gray {
+  @include sprite(twitter-gray);
+  &:hover {
+    @include sprite(twitterHover, bg);
+  }
+}
+
+.icon-facebook-gray {
+  @include sprite(facebook-gray);
+  &:hover {
+    @include sprite(facebookHover, bg);
+  }
+}
+
+.icon-etsy-gray {
+  @include sprite(etsy-gray);
+  &:hover {
+    @include sprite(etsyHover, bg);
+  }
+}
+
+.icon-pinterest-gray {
+  @include sprite(pinterest-gray);
+  &:hover {
+    @include sprite(pinterestHover, bg);
+  }
+}

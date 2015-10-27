@@ -7,7 +7,7 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     padding: 14px 1em 11px 1em;
-    border: 1px solid #f93;
+    //border: 1px solid #f93;
   }
   button.is-checked {
   //  border-bottom: 4px solid #f93;
@@ -24,23 +24,46 @@
   figure {
     display: block;
     margin: 0;
-    margin-right:6px;
-    margin-bottom:6px;
+    margin-bottom:12px;
+    //min-height: 130px;
+    overflow: hidden;
+    // @include span-columns(2 of 4);
+    $mob-width: calc(100% / 3.3 );
+    width: $mob-width;
+    min-height: 106px;
+    margin-right: 3%;
+
+    figure:nth-child(2n) {
+      margin-right: 0;
+    }
+
     @include media($tablet-up) {
-      max-width: 120px;
-      max-height: 120px;
+      max-width: 180px;
+      max-height: 180px;
+      height: 180px;
+      width: 180px;
       margin-right:4px;
       margin-bottom:4px;
+      figure:nth-child(4n) {
+        margin-right: 0;
+      }
     }
     @include media($desktop-up) {
-      max-width: 230px;
-      max-height: 230px;
-      margin-right:2px;
-      margin-bottom:2px;
+  
+      @include span-columns(4 of 16);
+      width: 240px;
+      height: 240px;
+      max-width: 240px;
+      max-height: 240px;
+      margin-right: 12px;
+      margin-bottom: 12px;
       // margin-right: 42px;
       // margin-bottom: 42px;
     }
   }
+
+
+
 }
 
 
@@ -57,23 +80,23 @@
     z-index: 1;
   }
 
-.grid-sizer {
-    max-width: 120px;
-    height: auto;
-    @include media($tablet-up) {
-      max-width:120px;
-    }
-    @include media($desktop-up) {
-      max-width: 230px;
-      max-height: 230px;
-    }
-}
+// .grid-sizer {
+//     max-width: 120px;
+//     height: auto;
+//     @include media($tablet-up) {
+//       max-width:120px;
+//     }
+//     @include media($desktop-up) {
+//       max-width: 230px;
+//       max-height: 230px;
+//     }
+// }
 
 .thumbnail {
   position: relative;
   overflow: hidden;
-  width: 130px;
-  height: 130px;
+  min-height: 106px;
+  width: 100%;
   background-position: center center;
 	background-repeat: no-repeat;
   background-size: cover;
@@ -82,16 +105,18 @@
   // border-radius: 50%;
   //object-fit: fill;
   @include media($tablet-up) {
-    max-width: 160px;
-    max-height: 160px;
-    width:160px;
-    height:160px;
+    max-width: 180px;
+    max-height: 180px;
+    width:100%;
+    height: 180px;
+    // height:160px;
   }
   @include media($desktop-up) {
-    max-width: 230px;
-    max-height: 230px;
-    width: 230px;
-    height: 230px;
+    width: 240px;
+    height: 240px;
+    max-width: 240px;
+    max-height: 240px;
+    // height: 230px;
   }
 }
 
@@ -99,10 +124,7 @@
   display: none;
 }
 
-.item .thumbnail img.portrait {
-  // width: 100%;
-  // height: auto;
-}
+
 
 .isotope-grid figcaption {
   display: none;
@@ -118,13 +140,47 @@
 // lazyload
 
 .b-lazy {
-    -webkit-transition: opacity 200ms ease-out;
-       -moz-transition: opacity 200ms ease-out;
-         -o-transition: opacity 200ms ease-out;
-            transition: opacity 200ms ease-out;
+    -webkit-transition: opacity 300ms ease-out;
+       -moz-transition: opacity 300ms ease-out;
+         -o-transition: opacity 300ms ease-out;
+            transition: opacity 300ms ease-out;
              max-width: 100%;
                opacity: 0;
 }
 .b-lazy.b-loaded {
                opacity: 1;
+}
+
+
+@keyframes come-in {
+  to { transform: translateY(0); }
+}
+
+
+.thumbnail.b-lazy.b-loaded {
+  transform: translateY(150px);
+  animation: come-in 0.8s ease forwards;
+}
+.thumbnail.b-lazy.b-loaded:nth-child(odd) {
+  animation-duration: 0.6s; /* So they look staggered */
+}
+
+@include media($desktop-up) {
+  .thumbnail.b-lazy.b-loaded {
+    transform: none;
+    animation: none;
+  }
+  .thumbnail.b-lazy.b-loaded:nth-child(odd) {
+    animation-duration: 0;
+  }
+}
+
+
+// animations
+.come-in {
+  transform: translateY(150px);
+  animation: come-in 0.8s ease forwards;
+}
+.come-in:nth-child(odd) {
+  animation-duration: 0.6s; /* So they look staggered */
 }

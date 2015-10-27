@@ -18,6 +18,9 @@
 
 a.thumbnail-with-link__image {
   @include span-columns(1);
+  @include media($desktop-up) {
+    max-width: 100px;
+  }
 }
 
 .thumbnail-with-link__link_wrap {

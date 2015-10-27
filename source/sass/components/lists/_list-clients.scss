@@ -1,7 +1,12 @@
+.clients-wrapper {
+  padding-top: 60px;
+}
+
 ul.list__clients {
   @include outer-container;
   @include margin(-24,-12,-12,-12);
   overflow: hidden;
+  padding-bottom: 60px;
   @include media($tablet-up) {
     margin-top: -24px;
     max-width: 800px;

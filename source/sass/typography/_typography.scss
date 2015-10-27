@@ -350,7 +350,6 @@ blockquote {
 
   @include media($tablet-up){
     p {
-      max-width: 740px;
       float: none;
       clear: both;
     }

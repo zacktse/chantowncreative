@@ -47,12 +47,12 @@
           "mobileImage":{
              "src":"assets/img/gallery/2015/201506_TheDaysRunAway_w800.jpg",
              "w":800,
-             "h":1098
+             "h":699
           },
           "desktopImage":{
              "src":"assets/img/gallery/2015/201506_TheDaysRunAway_w2000.jpg",
              "w":2000,
-             "h":2747
+             "h":1748
           },
           "description":"illustration",
           "alt":"The Days Run Away illustration by Vickie Chan"

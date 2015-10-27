@@ -70,6 +70,7 @@ header.main-header {
         min-height: 60px;
         margin-left: 0;
         background-color: transparent;
+        margin-bottom: 50px;
 
     }
 
@@ -89,8 +90,8 @@ header.main-header {
     z-index: $z-content;
 
     @include media ($tablet-up) {
-      // max-width: 1280px;
-      // width: 76.5%;
+      max-width: 1280px;
+      width: 90%;
     }
     @include media ($horizontal-bar-mode) {
       margin-top: 0px;
@@ -118,7 +119,7 @@ header.main-header {
     @include transition(all $default-transition-speed ease-out);
     @include media($tablet-up) {
       background-position: 100% 100%;
-      margin-left: 6px;
+      margin-left: -6px;
       max-height: 72px;
       width: 320px;
     }
@@ -130,7 +131,7 @@ header.main-header {
       position: absolute;
       top: 26px;
       width: 450px;
-      //margin-left: -6px;
+      margin-left: 6px;
       max-height: $navigation-height-desktop;
     }
     z-index: $z-above-nav;
@@ -152,7 +153,7 @@ header.main-header {
     text-align: justify;
 
     @include media($tablet-up) {
-      text-align: right;
+      text-align: left;
       padding-top: 7px;
       max-height: 48px;
       max-width: 90%;
@@ -202,6 +203,7 @@ header.main-header {
     }
     @include media($tablet-up) {
       margin-right: 36px;
+      line-height: 37px;
     }
 
 

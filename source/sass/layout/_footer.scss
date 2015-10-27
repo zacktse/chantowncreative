@@ -65,7 +65,7 @@ footer {
       background-color: transparent;
       a {
         width: auto;
-        max-width:500px;
+        max-width:470px;
         display: block;
         margin: 0 auto;
         font-size: 14px;
@@ -158,34 +158,5 @@ footer {
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
-  }
-}
-
-
-.icon-twitter {
-  @include sprite(twitter);
-  &:hover {
-    @include sprite(twitterHover, bg);
-  }
-}
-
-.icon-facebook {
-  @include sprite(facebook);
-  &:hover {
-    @include sprite(facebookHover, bg);
-  }
-}
-
-.icon-etsy {
-  @include sprite(etsy);
-  &:hover {
-    @include sprite(etsyHover, bg);
-  }
-}
-
-.icon-pinterest {
-  @include sprite(pinterest);
-  &:hover {
-    @include sprite(pinterestHover, bg);
   }
 }

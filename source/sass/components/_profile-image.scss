@@ -10,7 +10,6 @@
    $side-image-border: 1px solid darken(transparentize($side-image-background-bottom, 0.8), 30%);
    @include margin(0,0,18,0);
    background: transparent;
-
    @include media($tablet-up) {
      @include row(table);
      @include span-columns(8);
@@ -34,9 +33,11 @@
      display: block;
      padding: 0;
      min-height: 260px;
+     max-width: 140px;
+
      @include media($tablet-up) {
        @include background(url('../img/VickieChanHeadshot_w1000.jpg'));
-       @include span-columns(6);
+       width: 160px;
        background-position: top center;
        background-size: contain;
        background-repeat: no-repeat;
@@ -49,7 +50,8 @@
         background-position: top center;
         background-repeat: no-repeat;
         @include span-columns(4);
-        padding: 3em;
+        width: 160px;
+        padding: 2em;
      }
    }
 

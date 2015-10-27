@@ -222,4 +222,78 @@
     max-width: 100%;
 		font-family: $joesfin;
 	  font-weight: 300;
+		position: relative;
+}
+
+.pswp__share-tooltip a {
+	position: relative;
+	padding-left: 42px !important;
+	padding-right: 18px;
+}
+
+.pswp__share-tooltip a:hover {
+	background-color: #f60;
+}
+
+
+.pswp__share-tooltip a i {
+	position: absolute;
+	left: 6px;
+	top: 3px;
+}
+
+a.pswp__share--facebook:before {
+	display: none; // hide the up arrow
+}
+
+a.pswp__share--pinterest:before {
+	content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -12px;
+  right: 15px;
+  border: 6px solid transparent;
+  border-bottom-color: #FFF;
+  -webkit-pointer-events: none;
+  -moz-pointer-events: none;
+  pointer-events: none;
+}
+
+a.pswp__share--pinterest:hover {
+	color: #FFF;
+	&:before {
+		border-bottom-color: #f60;
+	}
+	.icon-pinterest {
+    @include sprite(pinterestHover);
+	}
+}
+a.pswp__share--facebook:hover {
+	color: #FFF;
+	.icon-facebook {
+    @include sprite(facebookHover);
+	}
+}
+a.pswp__share--twitter:hover {
+	color: #FFF;
+	.icon-twitter {
+    @include sprite(twitterHover);
+	}
+}
+
+
+.pswp__caption__center ul.social-icons {
+	list-style-type: none;
+	right: 0;
+	padding-bottom: 12px;
+	li:before { display: none; }
+	li a {
+		margin-left: 6px;
+		margin-right: 6px;
+	}
+	li a:hover {
+		background-color: transparent;
+	}
 }
