@@ -43,7 +43,7 @@
 
 // default link underlines
 
-@mixin animated-link-underline ($link-color: $darker-orange, $underline-color: $darker-orange, $hover-color: $chantown-gray ) {
+@mixin animated-link-underline ($link-color: $darker-orange, $underline-color: $darker-orange, $hover-color: $darker-orange ) {
   color: $link-color;
   position: relative;
   &:hover, &:focus, &:active {

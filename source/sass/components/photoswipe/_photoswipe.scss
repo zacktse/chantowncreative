@@ -238,8 +238,14 @@
 
 .pswp__share-tooltip a i {
 	position: absolute;
+	top: 10px;
 	left: 6px;
-	top: 3px;
+	@include media($desktop-up) {
+		left: 6px;
+		top: 3px;
+	}
+
+
 }
 
 a.pswp__share--facebook:before {
@@ -296,4 +302,15 @@ a.pswp__share--twitter:hover {
 	li a:hover {
 		background-color: transparent;
 	}
+}
+
+
+
+// never show the zoom in icon for photoswipe
+.pswp__button.pswp__button--zoom {
+	display: none !important;
+}
+
+.pswp--zoom-allowed .pswp__img {
+  cursor: default !important;
 }

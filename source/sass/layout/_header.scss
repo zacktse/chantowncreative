@@ -33,8 +33,6 @@ header.main-header {
 
   @include media($tablet-up) {
 
-    //margin-top: 0;
-    // margin-left: $page-border-width-desktop;
     margin-left: 0;
     margin-right: $page-border-width-desktop;
     min-height: 48px;
@@ -181,12 +179,19 @@ header.main-header {
     width: auto;
     display: inline-block;
     //padding-top: 2px;
+
+    @include media($tablet-up) {
+      padding-top: 4px;
+    }
+    @include media ($horizontal-bar-mode) {
+      padding-top: 0;
+    }
   }
 
   .nav-link a {
     // height: 38px;
     position: relative;
-    line-height: 38px;
+    line-height: 34px;
     display: inline-block;
     font-size: 14px;
     font-family: $joesfin;
@@ -203,7 +208,7 @@ header.main-header {
     }
     @include media($tablet-up) {
       margin-right: 36px;
-      line-height: 37px;
+      line-height: 30px;
     }
 
 
@@ -211,7 +216,7 @@ header.main-header {
 
       text-align: right;
       line-height: 24px;
-      @include padding(15,12,10,12);
+      @include padding(15, 12, 10, 6);
       margin-right: 42px;
 
       @include animated-link-underline($chantown-gray);
@@ -285,7 +290,7 @@ nav.main-nav {
   // border-top: 1px solid $lighter-orange;
   // border-bottom: 1px solid $darker-orange;
   border-top: 1px solid $light-blue;
-  border-bottom: 1px solid $bright-blue;
+  border-bottom: 2px solid $bright-blue;
   //margin-top: 12px;
   //margin-bottom: 12px;
 /*   margin-left: -6px; */

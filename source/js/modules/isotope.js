@@ -78,7 +78,7 @@ var runPhotoswipe = function() {
   // console.log(Chantown);
   // update lazy load when isotope has re-arranged the images
   $image_gallery.on('arrangeComplete', function() {
-    console.log("image filtering updated");
+    //console.log("image filtering updated");
     // console.log($("#gallery_container").offset().top);
     // console.log($("#isotope-filters").height);
     // var scrollToPosition = $("#gallery_container").offset().top + $("#isotope-filters").height;
@@ -153,12 +153,18 @@ var runPhotoswipe = function() {
       var currentPage = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
 
 
-      return '<ul class=\"social-icons\"><li><a href=\"https://www.pinterest.com/chantown/\" class=\"icon pinterest\" title=\"Pinterest\"><i class=\"icon-pinterest-gray\"></i></a></li><li><a href=\"https://www.facebook.com/sharer/sharer.php?u=' + currentPage + '\" class=\"icon etsy\" title=\"Share on Facebook\"><i class=\"icon-facebook-gray\"></i></a></li><li><a href=\"https://twitter.com/intent/tweet?text=Chantown Creative: Portfolio&url=http://chantown.com/create.html\" class=\"icon twitter\" title=\"Twitter\"><i class=\"icon-twitter-gray\"></i></a></li></ul>';
+      return '<ul class=\"social-icons\"><li><a id=\"pswp-pinterest-btn\" href=\"https://www.pinterest.com/chantown/\" class=\"icon pinterest\" title=\"Pinterest\"><i class=\"icon-pinterest-gray\"></i></a></li><li><a href=\"https://www.facebook.com/sharer/sharer.php?u=' + currentPage + '\" class=\"icon etsy\" title=\"Share on Facebook\"><i class=\"icon-facebook-gray\"></i></a></li><li><a href=\"https://twitter.com/intent/tweet?text=Chantown Creative: Portfolio&url=http://chantown.com/create.html\" class=\"icon twitter\" title=\"Twitter\"><i class=\"icon-twitter-gray\"></i></a></li></ul>';
     }
 
-    var image_url_yo = photoswipeInstance.currItem.src || '';
+    //var image_url_yo = photoswipeInstance.currItem.src || '';
     var options = {
       index: index,
+      zoomEl: false, // disable zoom in on images
+      maxSpreadZoom: 1,
+      getDoubleTapZoom: function(isMouseClick, item) {
+        return item.initialZoomLevel;
+      },
+      pinchToClose: false,
       shareButtons: [
         {
           id: 'pinterest',
@@ -173,7 +179,7 @@ var runPhotoswipe = function() {
         {
           id: 'twitter',
           label: '<i class="icon-twitter"></i> Tweet',
-          url: 'https://twitter.com/intent/tweet?text={{text}}&url={{image_url}}'
+          url: 'https://twitter.com/intent/tweet?text=Chantown Creative: Portfolio&url=http://chantown.com/create.html'
         }
 
       // {
@@ -220,7 +226,7 @@ var runPhotoswipe = function() {
         return photoswipeInstance.currItem.src || window.location.href;
       },
       getTextForShare: function(shareButtonData) {
-        var currTitle = $($.parseHTML(photoswipeInstance.currItem.title)).text();
+        var currTitle = $($.parseHTML(photoswipeInstance.currItem.title) || '').text();
         return currTitle || '';
       },
 
@@ -234,9 +240,6 @@ var runPhotoswipe = function() {
     };
 
     var photoswipeInstance = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
-    photoswipeInstance.listen('destroy', function() {
-      // trigger resize on isotope
-    });
 
 
     // hide sticky header navigation when photoswipe opens
@@ -315,6 +318,9 @@ var runPhotoswipe = function() {
         item.w = item.mobile_w;
         item.h = item.mobile_h;
       }
+      var _pinterestHTML = 'http://www.pinterest.com/pin/create/button/?url=' + window.location.href + '&media=' + item.src + '&description=Chantown Creative';
+      console.log("this bitch ran");
+      $('#pswp-pinterest-btn').attr("href", _pinterestHTML);
 
       // It doesn't really matter what will you do here,
       // as long as item.src, item.w and item.h have valid values.
