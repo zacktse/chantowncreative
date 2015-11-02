@@ -3,6 +3,7 @@ var Isotope = require('isotope-layout');
 var PhotoSwipe = require('photoswipe');
 var Handlebars = require('handlebars');
 var PhotoSwipeUI_Default = require('../vendor/photoswipe-ui-default.min');
+//var sb = require('./../vendor/share-button');
 
 
 
@@ -35,7 +36,7 @@ var buildGalleryHTML = function(json) {
     result = galleryTemplate(myJson);
 
   _$gallery_container.html(result);
-}
+};
 
 
 
@@ -148,13 +149,14 @@ var runPhotoswipe = function() {
     });
 
     //var _social_media_html = '<ul class=\"social-icons\"><li><a href=\"https://www.pinterest.com/chantown/\" class=\"icon pinterest\" title=\"Pinterest\"><i class=\"icon-pinterest-gray\"></i></a></li><li><a href=\"https://www.facebook.com/sharer/sharer.php?u=" + getPageURLForShare() + "\" class=\"icon etsy\" title=\"Share on Facebook\"><i class=\"icon-facebook-gray\"></i></a></li><li><a href=\"https://twitter.com/hkchantown\" class=\"icon twitter\" title=\"Twitter\"><i class=\"icon-twitter-gray\"></i></a></li></ul>';
-
+    var currentPage = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
     var getSharingHTML = function() {
-      var currentPage = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
+
+      return '<share-button></share-button>';
 
 
-      return '<ul class=\"social-icons\"><li><a id=\"pswp-pinterest-btn\" href=\"https://www.pinterest.com/chantown/\" class=\"icon pinterest\" title=\"Pinterest\"><i class=\"icon-pinterest-gray\"></i></a></li><li><a href=\"https://www.facebook.com/sharer/sharer.php?u=' + currentPage + '\" class=\"icon etsy\" title=\"Share on Facebook\"><i class=\"icon-facebook-gray\"></i></a></li><li><a href=\"https://twitter.com/intent/tweet?text=Chantown Creative: Portfolio&url=http://chantown.com/create.html\" class=\"icon twitter\" title=\"Twitter\"><i class=\"icon-twitter-gray\"></i></a></li></ul>';
-    }
+    // return '<ul class=\"social-icons\"><li><a id=\"pswp-pinterest-btn\" href=\"https://www.pinterest.com/chantown/\" class=\"icon pinterest\" title=\"Pinterest\"><i class=\"icon-pinterest-gray\"></i></a></li><li><a href=\"https://www.facebook.com/sharer/sharer.php?u=' + currentPage + '\" class=\"icon etsy\" title=\"Share on Facebook\"><i class=\"icon-facebook-gray\"></i></a></li><li><a href=\"https://twitter.com/intent/tweet?text=Chantown Creative: Portfolio&url=http://chantown.com/create.html\" class=\"icon twitter\" title=\"Twitter\"><i class=\"icon-twitter-gray\"></i></a></li></ul>';
+    };
 
     //var image_url_yo = photoswipeInstance.currItem.src || '';
     var options = {
@@ -169,12 +171,12 @@ var runPhotoswipe = function() {
         {
           id: 'pinterest',
           label: '<i class="icon-pinterest"></i> Pin it',
-          url: 'http://www.pinterest.com/pin/create/button/?url={{url}}&media={{image_url}}&description={{text}}'
+          url: 'http://www.pinterest.com/pin/create/button/?url=' + window.location.protocol + "//" + window.location.host + "/" + '{{url}}&media=' + window.location.protocol + "//" + window.location.host + "/" + '{{image_url}}&description={{text}}'
         },
         {
           id: 'facebook',
           label: '<i class="icon-facebook"></i> Share on Facebook',
-          url: 'https://www.facebook.com/sharer/sharer.php?u={{url}}'
+          url: 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.protocol + "//" + window.location.host + "/" + '{{url}}'
         },
         {
           id: 'twitter',
@@ -230,17 +232,80 @@ var runPhotoswipe = function() {
         return currTitle || '';
       },
 
+
       // Parse output of share links
       parseShareButtonOut: function(shareButtonData, shareButtonOut) {
         // `shareButtonData` - object from shareButtons array
         // `shareButtonOut` - raw string of share link element
+        //console.log(shareButtonOut);
         return shareButtonOut;
       }
 
     };
 
+
     var photoswipeInstance = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
 
+
+
+
+    var shareBtnOptions = function(imageObj) {
+      var artworkTitle = imageObj.title.split('|')[0];
+      console.log(artworkTitle);
+      var imageURL = window.location.protocol + "//" + window.location.host + "/" + imageObj.src;
+
+      return {
+        networks: {
+          googlePlus: {
+            enabled: false // Enable Google+. [Default: true]
+          },
+          twitter: {
+            enabled: true, // Enable Twitter. [Default: true]
+            url: imageURL, // the url you'd like to share to Twitter [Default: config.url]
+            description: artworkTitle + ' @hkchantown', // text to be shared alongside your link to Twitter [Default: config.description]
+          },
+          facebook: {
+            enabled: true, // Enable Facebook. [Default: true]
+            load_sdk: false, // Load the FB SDK. If false, it will default to Facebook's sharer.php implementation.
+            // NOTE: This will disable the ability to dynamically set values and rely directly on applicable Open Graph tags.
+            // [Default: true]
+            url: imageURL, // the url you'd like to share to Facebook [Default: config.url]
+            //  app_id:       // Facebook app id for tracking shares. if provided, will use the facebook API
+            title: artworkTitle + ' by Vickie Chan. http://chantown.com', // title to be shared alongside your link to Facebook [Default: config.title]
+            //caption:      // caption to be shared alongside your link to Facebook [Default: null]
+            //description:  // text to be shared alongside your link to Facebook [Default: config.description]
+            //
+            image: imageURL // image to be shared to Facebook [Default: config.image]
+          },
+          pinterest: {
+            enabled: true, // Enable Pinterest. [Default: true]
+            url: 'http://chantown.com', // the url you'd like to share to Pinterest [Default: config.url]
+            image: imageURL, // image to be shared to Pinterest [Default: config.image]
+            description: artworkTitle + ' by Vickie Chan. http://chantown.com' // text to be shared alongside your link to Pinterest [Default: config.description]
+          },
+          reddit: {
+            enabled: false // Enable Reddit. [Default: true]
+          },
+          linkedin: {
+            enabled: false
+          },
+          whatsapp: {
+            enabled: false
+          },
+          email: {
+            enabled: false // Enable Email. [Default: true]
+          //title:        // the subject of the email [Default: config.title]
+          //description:  // The body of the email [Default: config.description]
+          }
+        },
+        ui: {
+          flyout: 'middle left', // change the flyout direction of the shares. chose from `top left`, `top center`, `top right`, `bottom left`, `bottom right`, `bottom center`, `middle left`, or `middle right` [Default: `top center`]
+          button_font: false, // include the Lato font set from the Google Fonts API. [Default: `true`]
+          buttonText: 'Share', // change the text of the button, [Default: `Share`]
+          icon_font: false // include the minified Entypo font set. [Default: `true`]
+        },
+      };
+    };
 
     // hide sticky header navigation when photoswipe opens
     photoswipeInstance.listen('initialZoomIn', function() {
@@ -248,6 +313,9 @@ var runPhotoswipe = function() {
       $("header").find(".scrollmagic-pin-spacer").fadeOut(250);
       $("#isotope-filters.pinned").fadeOut(250);
       $(".back-to-top").addClass("behind-lightbox");
+
+
+
     });
 
     // show sticky filters again once closing photoswipe
@@ -319,8 +387,9 @@ var runPhotoswipe = function() {
         item.h = item.mobile_h;
       }
       var _pinterestHTML = 'http://www.pinterest.com/pin/create/button/?url=' + window.location.href + '&media=' + item.src + '&description=Chantown Creative';
-      console.log("this bitch ran");
+      //console.log("this bitch ran");
       $('#pswp-pinterest-btn').attr("href", _pinterestHTML);
+
 
       // It doesn't really matter what will you do here,
       // as long as item.src, item.w and item.h have valid values.
@@ -329,19 +398,31 @@ var runPhotoswipe = function() {
 
     });
 
+    photoswipeInstance.listen('preventDragEvent', function(e, isDown, preventObj) {
+      // e - original event
+      // isDown - true = drag start, false = drag release
+
+      // Line below will force e.preventDefault() on:
+      // touchstart/mousedown/pointerdown events
+      // as well as on:
+      // touchend/mouseup/pointerup events
+      preventObj.prevent = false;
+    });
+
     // photoswipeInstance.listen('beforeChange', function() {
     //   //  var nextImgWidth = $('.pswp__img').innerWidth();
     //   //console.log( $('.pswp__img').innerWidth());
     //
     // });
     //
-    // photoswipeInstance.listen('imageLoadComplete', function(index, item) {
-    //   // // index - index of a slide that was loaded
-    //   // // item - slide object
-    //   // // console.log($('.pswp__img').innerWidth());
-    //   // var updateImgWidth = $('.pswp__img').innerWidth();
-    //   // $('.pswp__caption__center').css("max-width", nextImgWidth);
-    // });
+    photoswipeInstance.listen('imageLoadComplete', function(index, item) {
+      // // index - index of a slide that was loaded
+      // // item - slide object
+      // // console.log($('.pswp__img').innerWidth());
+      // var updateImgWidth = $('.pswp__img').innerWidth();
+      // $('.pswp__caption__center').css("max-width", nextImgWidth);
+      var shareButton = new ShareButton(shareBtnOptions(item));
+    });
     //
     // photoswipeInstance.listen('resize', function() {
     //   //  var nextImgWidth = $('.pswp__img').innerWidth();

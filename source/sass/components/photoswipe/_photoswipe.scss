@@ -289,20 +289,26 @@ a.pswp__share--twitter:hover {
 	}
 }
 
-
-.pswp__caption__center ul.social-icons {
-	list-style-type: none;
-	right: 0;
-	padding-bottom: 12px;
-	li:before { display: none; }
-	li a {
-		margin-left: 6px;
-		margin-right: 6px;
-	}
-	li a:hover {
-		background-color: transparent;
-	}
+.pswp__caption__center {
+	position: relative;
+	padding: 12px 90px 12px 2px;
+	line-height: 18px;
+	// padding-right: 90px;
 }
+
+// .pswp__caption__center ul.social-icons {
+// 	list-style-type: none;
+// 	right: 0;
+// 	padding-bottom: 12px;
+// 	li:before { display: none; }
+// 	li a {
+// 		margin-left: 6px;
+// 		margin-right: 6px;
+// 	}
+// 	li a:hover {
+// 		background-color: transparent;
+// 	}
+// }
 
 
 

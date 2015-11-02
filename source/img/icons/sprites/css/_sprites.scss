@@ -2,7 +2,7 @@
 //https://www.liquidlight.co.uk/blog/article/creating-svg-sprites-using-gulp-and-sass/
 
 $icons: (
-      sprite: (width: 560px, height: 560px, pngPath: '../../assets/img/sprites/sprite.png', svgPath: '../../assets/img/sprites/sprite.svg'),
+      sprite: (width: 680px, height: 680px, pngPath: '../../assets/img/sprites/sprite.png', svgPath: '../../assets/img/sprites/sprite.svg'),
     bolt: (width: 30px, height: 30px, backgroundX: 0px, backgroundY: 0px),
     bulb: (width: 30px, height: 30px, backgroundX: -40px, backgroundY: -40px),
     etsy: (width: 30px, height: 30px, backgroundX: -80px, backgroundY: -80px),
@@ -14,7 +14,10 @@ $icons: (
     pinterest: (width: 30px, height: 30px, backgroundX: -320px, backgroundY: -320px),
     pinterest-gray: (width: 30px, height: 30px, backgroundX: -360px, backgroundY: -360px),
     pinterestHover: (width: 30px, height: 30px, backgroundX: -400px, backgroundY: -400px),
-    twitter: (width: 30px, height: 30px, backgroundX: -440px, backgroundY: -440px),
-    twitter-gray: (width: 30px, height: 30px, backgroundX: -480px, backgroundY: -480px),
-    twitterHover: (width: 30px, height: 30px, backgroundX: -520px, backgroundY: -520px),
+    tumblr: (width: 30px, height: 30px, backgroundX: -440px, backgroundY: -440px),
+    tumblr-gray: (width: 30px, height: 30px, backgroundX: -480px, backgroundY: -480px),
+    tumblrHover: (width: 30px, height: 30px, backgroundX: -520px, backgroundY: -520px),
+    twitter: (width: 30px, height: 30px, backgroundX: -560px, backgroundY: -560px),
+    twitter-gray: (width: 30px, height: 30px, backgroundX: -600px, backgroundY: -600px),
+    twitterHover: (width: 30px, height: 30px, backgroundX: -640px, backgroundY: -640px),
 );

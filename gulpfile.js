@@ -191,12 +191,35 @@ gulp.task('js-browserify', function() {
       title: "Size of JS before minifying: "
     }))
     // Add transformation tasks to the pipeline here.
-    .pipe(uglify())
+    .pipe(uglify(
+      {
+        options: {
+          compress: {
+            dead_code: true, // discard unreachable code
+            drop_debugger: true, // discard “debugger” statements
+            global_defs: { // global definitions
+              "DEBUG": false, // matters for some libraries
+            },
+            conditionals: true, // optimize if-s and conditional expressions
+            comparisons: true, // optimize comparisons
+            evaluate: true, // evaluate constant expressions
+            booleans: true, // optimize boolean expressions
+            loops: true, // optimize loops
+            unused: true, // drop unused variables/functions
+            hoist_funs: true, // hoist function declarations
+            hoist_vars: false, // hoist variable declarations
+            if_return: true, // optimize if-s followed by return/continue
+            join_vars: true, // join var declarations
+            warnings: true // warn about potentially dangerous optimizations/code
+          }
+        }
+      }))
     .pipe(size({
       title: "Size of JS after minifying: "
     }))
     .on('error', gutil.log)
     .pipe(sourcemaps.write('./'))
+
     .pipe(gulp.dest('./build/assets/js'));
 });
 
