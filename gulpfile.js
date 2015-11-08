@@ -36,6 +36,7 @@ var gulp = require('gulp'), //require gulp
   rename = require("gulp-rename"), // rename files
   jshint = require('gulp-jshint'), // check if js is ok
   cssmin = require('gulp-cssmin'), // minify the css files
+  shorthand = require('gulp-shorthand'), // convert CSS to shorthand
   stylish = require('jshint-stylish'), // make errors look good in shell
   responsive = require('gulp-responsive'), // used to resize images
   imagemin = require('gulp-imagemin'), // used to compress images
@@ -270,6 +271,7 @@ gulp.task('sass', function() {
     .pipe(combineMq({
       beautify: false
     }))
+    .pipe(shorthand())
     .pipe(cssmin()) // minify css
     .pipe(size({
       title: "Size of CSS after minifying: "

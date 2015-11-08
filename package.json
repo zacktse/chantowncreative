@@ -66,6 +66,7 @@
     "vinyl-transform": "^1.0.0"
   },
   "dependencies": {
+    "gulp-shorthand": "^1.1.0",
     "lazysizes": "^1.1.4"
   }
 }

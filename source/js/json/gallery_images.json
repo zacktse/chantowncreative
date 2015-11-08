@@ -64,12 +64,12 @@
          "srcImage":"assets/img/gallery/2015/201501_AngkorWatFullBgrBlueYellowOverprint",
          "imageExtension": ".jpg",
          "mobileImage":{
-            "src":"assets/img/gallery/2015/ButYoullCry-FULL_w800.jpg",
+            "src":"assets/img/gallery/2015/201501_AngkorWatFullBgrBlueYellowOverprint_w800.jpg",
             "w":800,
             "h":1097
          },
          "desktopImage":{
-            "src":"assets/img/gallery/2015/ButYoullCry-FULL_w2000.jpg",
+            "src":"assets/img/gallery/2015/201501_AngkorWatFullBgrBlueYellowOverprint_w2000.jpg",
             "w":2000,
             "h":2743
          },
@@ -200,12 +200,12 @@
         "mobileImage":{
            "src":"assets/img/gallery/2015/2015_OllyWeddingInvite_OL_w800.jpg",
            "w":800,
-           "h":1097
+           "h":829
         },
         "desktopImage":{
            "src":"assets/img/gallery/2015/2015_OllyWeddingInvite_OL_w2000.jpg",
            "w":2000,
-           "h":2743
+           "h":2074
         },
         "description":"Wedding card",
         "alt":"Wedding invitations (Olly & Rachel) by Vickie Chan"
@@ -223,8 +223,8 @@
          },
          "desktopImage":{
             "src":"assets/img/gallery/2014/201410_EgyptSunshineMap_w2000.jpg",
-            "w":2000,
-            "h":947
+            "w":1000,
+            "h":473
          },
          "description":"Sunshine Map",
          "alt":"Sunshine map graphic by Vickie Chan"
@@ -361,26 +361,6 @@
          },
          "description":"Embellished screenprint",
          "alt":"Ta Phrom embellished screenprint by Vickie Chan"
-      },
-
-      {
-         "title":"Angkor Wat, East Gate",
-         "year":2014,
-         "category":"illustration",
-         "srcImage":"assets/img/gallery/2014/AngkorEastGate",
-         "imageExtension": ".jpg",
-         "mobileImage":{
-            "src":"assets/img/gallery/2014/AngkorEastGate_w800.jpg",
-            "w":800,
-            "h":527
-         },
-         "desktopImage":{
-            "src":"assets/img/gallery/2014/AngkorEastGate_w2000.jpg",
-            "w":2000,
-            "h":1317
-         },
-         "description":"Illustration",
-         "alt":"Angkor Wat, East Gate illustration by Vickie Chan"
       },
       {
          "title":"Folkestone Crescent",
@@ -580,13 +560,13 @@
         "imageExtension": ".jpg",
         "mobileImage":{
            "src":"assets/img/gallery/2011/2011_7_68MiraRadioMovingWebBanner_w800.jpg",
-           "w":800,
-           "h":153
+           "w":400,
+           "h":76
         },
         "desktopImage":{
-           "src":"assets/img/gallery/2011/2011_7_68MiraRadioMovingWebBanner_w2000.jpg",
-           "w":2000,
-           "h":382
+           "src":"assets/img/gallery/2011/2011_7_68MiraRadioMovingWebBanner_w800.jpg",
+           "w":800,
+           "h":153
         },
         "description":"Commercial illlustration",
         "alt":"Bus web banner graphic by Vickie Chan"
@@ -835,7 +815,7 @@
          "desktopImage":{
             "src":"assets/img/gallery/2010/Haadyuan_w2000.jpg",
             "w":2000,
-            "h":2747
+            "h":1328
          },
          "description":"Ink sketch",
          "alt":"Haad Yuan ink sketch by Vickie Chan"
