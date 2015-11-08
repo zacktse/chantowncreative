@@ -3,7 +3,7 @@
         {
           "title":"Surviving Hong Kong Series: Walking",
           "year": 2015,
-          "category":"illustration",
+          "category":"Illustration",
           "srcImage":"assets/img/gallery/2015/5SurvHK201510Walking",
           "imageExtension": ".jpg",
           "mobileImage":{
@@ -16,13 +16,13 @@
              "w":2000,
              "h":2797
           },
-          "description":"illustration",
+          "description":"Illustration",
           "alt":"Surviving Hong Kong: Walking illustration by Vickie Chan"
         },
         {
           "title":"Surviving Hong Kong Series: Peripheral Vision",
           "year": 2015,
-          "category":"illustration",
+          "category":"Illustration",
           "srcImage":"assets/img/gallery/2015/3SurvHK201508PeripheralVision",
           "imageExtension": ".jpg",
           "mobileImage":{
@@ -35,13 +35,13 @@
              "w":2000,
              "h":2621
           },
-          "description":"illustration",
+          "description":"Illustration",
           "alt":"Surviving Hong Kong: Peripheral Vision illustration by Vickie Chan"
         },
         {
           "title":"The Days Run Away (illustration)",
           "year": 2015,
-          "category":"illustration",
+          "category":"Illustration",
           "srcImage":"assets/img/gallery/2015/201506_TheDaysRunAway",
           "imageExtension": ".jpg",
           "mobileImage":{
@@ -54,7 +54,7 @@
              "w":2000,
              "h":1748
           },
-          "description":"illustration",
+          "description":"Illustration",
           "alt":"The Days Run Away illustration by Vickie Chan"
        },
        {
@@ -207,7 +207,7 @@
            "w":2000,
            "h":2743
         },
-        "description":"Olly & Rachel Wedding Card",
+        "description":"Wedding card",
         "alt":"Wedding invitations (Olly & Rachel) by Vickie Chan"
       },
       {
@@ -423,7 +423,7 @@
       {
          "title":"Rice Wine Bottle (colour)",
          "year":2013,
-         "category":"illustration",
+         "category":"Ink illustration",
          "srcImage":"assets/img/gallery/2013/RiceWineBottleColour",
          "imageExtension": ".jpg",
          "mobileImage":{
@@ -480,7 +480,7 @@
       {
          "title":"Rice Wine Bottle (black & white)",
          "year":2013,
-         "category":"illustration",
+         "category":"Ink illustration",
          "srcImage":"assets/img/gallery/2013/RiceWineBottle",
          "imageExtension": ".jpg",
          "mobileImage":{
@@ -573,9 +573,9 @@
          "alt":"Enoshima ink sketch by Vickie Chan"
       },
       {
-        "title":"68 Bus Web Banner",
+        "title":"68 Bus web banner",
         "year":2011,
-        "category": "commercial illustration",
+        "category": "Commercial illustration",
         "srcImage":"assets/img/gallery/2011/2011_7_68MiraRadioMovingWebBanner",
         "imageExtension": ".jpg",
         "mobileImage":{
@@ -588,7 +588,7 @@
            "w":2000,
            "h":382
         },
-        "description":"Bus web banner",
+        "description":"Commercial illlustration",
         "alt":"Bus web banner graphic by Vickie Chan"
       },
       {
@@ -607,7 +607,7 @@
            "w":2000,
            "h":2745
         },
-        "description":"68 calendar",
+        "description":"Commercial illustration",
         "alt":"68 calendar graphic by Vickie Chan"
      },
      {
@@ -626,7 +626,7 @@
             "w":2000,
             "h":1485
          },
-         "description":"68 daily POP",
+         "description":"Commercial illustration",
          "alt":"68 daily POP graphic by Vickie Chan"
       },
       {
@@ -645,7 +645,7 @@
           "w":2000,
           "h":1357
        },
-       "description":"68 Launch Homepage",
+       "description":"Commercial illustration",
        "alt":"68 launch homepage graphic by Vickie Chan"
       },
 
@@ -665,7 +665,7 @@
             "w":2000,
             "h":1413
          },
-         "description":"68 Launch Weekly Wow",
+         "description":"Commercial illustration",
          "alt":"68 Launch Weekly Wow graphic by Vickie Chan"
       },
       {
@@ -684,7 +684,7 @@
             "w":2000,
             "h":1530
          },
-         "description":"68 Calendar Front",
+         "description":"Commercial illustration",
          "alt":"68 Calendar Front graphic by Vickie Chan"
       },
       {
@@ -703,7 +703,7 @@
             "w":2000,
             "h":1256
          },
-         "description":"68 Bus Model",
+         "description":"Model of bus with commercial illlustration",
          "alt":"68 Bus Model – graphics by Vickie Chan"
       },
       {
@@ -722,7 +722,7 @@
             "w":2000,
             "h":1327
          },
-         "description":"68 Bus",
+         "description":"Commercial illustration",
          "alt":"68 Bus – graphics by Vickie Chan"
       },
 
@@ -1128,26 +1128,7 @@
          "alt":"Lovecats mixed media painting on canvas by Vickie Chan"
       },
       {
-         "title":"Lovecats",
-         "year": 2007,
-         "category":"painting mixed-media",
-         "srcImage":"assets/img/gallery/2007/Lovecats_10_small",
-         "imageExtension": ".jpg",
-         "mobileImage":{
-            "src":"assets/img/gallery/2007/Lovecats_10_small_w800.jpg",
-            "w":800,
-            "h":785
-         },
-         "desktopImage":{
-            "src":"assets/img/gallery/2007/Lovecats_10_small_w2000.jpg",
-            "w":2000,
-            "h":1964
-         },
-         "description":"Mixed media on canvas",
-         "alt":"Lovecats mixed media painting on canvas by Vickie Chan"
-      },
-      {
-         "title":"???????",
+         "title":"Untitled (Tigger)",
          "year": 2007,
          "category":"painting mixed-media",
          "srcImage":"assets/img/gallery/2007/Tig_8_small",
@@ -1162,8 +1143,8 @@
             "w":2000,
             "h":1984
          },
-         "description":"??????????",
-         "alt":"???????? painting on canvas by Vickie Chan"
+         "description":"Painting on canvas",
+         "alt":"Untitled (Tigger) painting on canvas by Vickie Chan"
       },
 
       {
@@ -1315,7 +1296,7 @@
             "w":2000,
             "h":2041
          },
-         "description":"Painting",
+         "description":"Mixed media on canvas",
          "alt":"Wish You Were Here painting by Vickie Chan"
       },
       {
@@ -1372,7 +1353,7 @@
             "w":2000,
             "h":2032
          },
-         "description":"Mixed media screenprint",
+         "description":"Embellished screenprint",
          "alt":"Pine Cottage mixed media screenprint by Vickie Chan"
       },
       {
@@ -1391,7 +1372,7 @@
             "w":2000,
             "h":1985
          },
-         "description":"Mixed media screenprint",
+         "description":"Embellished screenprint",
          "alt":"Skyy Station mixed media screenprint by Vickie Chan"
       },
       {
@@ -1410,7 +1391,7 @@
             "w":2000,
             "h":2103
          },
-         "description":"Mixed media screenprint",
+         "description":"Embellished screenprint",
          "alt":"St Saviour's mixed media screenprint by Vickie Chan"
       },
       {
@@ -1429,7 +1410,7 @@
             "w":2000,
             "h":2000
          },
-         "description":"Mixed media screenprint",
+         "description":"Embellished screenprint",
          "alt":"Leicester Shop mixed media screenprint by Vickie Chan"
       },
       {
@@ -1619,7 +1600,7 @@
             "w":2000,
             "h":2038
          },
-         "description":"Mixed media screenprint",
+         "description":"Embellished mixed media screenprint",
          "alt":"Mahjong mixed media screenprint by Vickie Chan"
       },
       {
@@ -1638,7 +1619,7 @@
             "w":2000,
             "h":2042
          },
-         "description":"Mixed media screenprint",
+         "description":"Embellished mixed media screenprint",
          "alt":"Tram Boy mixed media screenprint by Vickie Chan"
       },
       {
@@ -1657,7 +1638,7 @@
             "w":2000,
             "h":2000
          },
-         "description":"Mixed media screenprint",
+         "description":"Embellished mixed media screenprint",
          "alt":"General Kwan mixed media screenprint by Vickie Chan"
       },
       {
@@ -1676,7 +1657,7 @@
             "w":2000,
             "h":1995
          },
-         "description":"Mixed media screenprint",
+         "description":"Embellished mixed media screenprint",
          "alt":"Tin Hau mixed media screenprint by Vickie Chan"
       },
       {
@@ -1695,7 +1676,7 @@
             "w":2000,
             "h":2000
          },
-         "description":"Mixed media screenprint",
+         "description":"Embellished mixed media screenprint",
          "alt":"Market mixed media screenprint by Vickie Chan"
       },
       {
