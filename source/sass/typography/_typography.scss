@@ -58,6 +58,8 @@ h6 {
   font-size: $base-font-size;
   line-height: $heading-line-height;
   margin: 0;
+  &::-moz-selection,
+  &::selection { background-color: $darker-orange; color: white;}
 }
 
 h1, .size-h1 {
@@ -156,6 +158,8 @@ font-weight: 300; */
     @include padding(12, 0, 18, 0);
     @include margin(0);
   }
+  &::-moz-selection,
+  &::selection { background-color: $darker-orange; color: white;}
 }
 
 // paragraphs following headings (remove all top padding on the paragraphs)

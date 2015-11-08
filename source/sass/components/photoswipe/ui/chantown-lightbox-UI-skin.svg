@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-137 227 264 88" enable-background="new -137 227 264 88" xml:space="preserve">
+<g id="Layer_2">
+	<rect x="-150" y="207" display="none" stroke="#000000" stroke-miterlimit="10" width="334" height="128"/>
+	<path fill="#FFFFFF" d="M-66.1,295.9c-0.7,0-1.3,0.3-1.7,0.7l-6.4-3.2c0-0.1,0-0.2,0-0.4s0-0.3,0-0.4l6.4-3.2
+		c0.4,0.4,1,0.7,1.7,0.7c1.3,0,2.4-1.1,2.4-2.4s-1.1-2.4-2.4-2.4s-2.4,1.1-2.4,2.4c0,0.1,0,0.3,0,0.4l-6.4,3.2
+		c-0.4-0.4-1-0.7-1.7-0.7c-1.3,0-2.4,1.1-2.4,2.4s1.1,2.4,2.4,2.4c0.7,0,1.3-0.3,1.7-0.7l6.4,3.2c0,0.1,0,0.2,0,0.4
+		c0,1.3,1.1,2.4,2.4,2.4s2.4-1.1,2.4-2.4S-64.8,295.9-66.1,295.9z"/>
+</g>
+<g id="Layer_1">
+	<title>default-skin 2</title>
+	<g>
+		<g>
+			<g>
+				<path id="Shape_1_" fill="#FFFFFF" d="M-124,256v-5h2v3h3v2H-124z M-124,242h5v2h-3v3h-2V242z M-106,242v5h-2v-3h-3v-2H-106z
+					 M-106,256h-5v-2h3v-3h2V256z"/>
+			</g>
+			<g>
+				<path fill="#FFFFFF" d="M-75,251v5h-2v-3h-3v-2H-75z M-75,247h-5v-2h3v-3h2V247z M-67,247v-5h2v3h3v2H-67z M-67,251h5v2h-3v3h-2
+					V251z"/>
+			</g>
+			<path fill="#FFFFFF" d="M-116.4,293l-5.7-5.7l1.4-1.4l5.7,5.7l5.7-5.7l1.4,1.4l-5.7,5.7l5.7,5.7l-1.4,1.4l-5.7-5.7l-5.7,5.7
+				l-1.4-1.4L-116.4,293z"/>
+			<path fill="#FFFFFF" d="M-25.2,292l-1.8-1.5l3-3.5h-10v-2h10l-3-3.5l1.8-1.5l5.2,6L-25.2,292z"/>
+			<path fill="#FFFFFF" d="M15.2,292l1.8-1.5l-3-3.5h10v-2H14l3-3.5l-1.8-1.5l-5.2,6L15.2,292z"/>
+			<g>
+				<path id="Rectangle-11" fill="#FFFFFF" d="M24,255.5l-3.2-3.2l-1.4,1.4l3.2,3.2L24,255.5z"/>
+				<path id="Oval-1" fill="none" stroke="#FFFFFF" stroke-width="1.5" d="M15.5,254c3,0,5.5-2.5,5.5-5.5s-2.5-5.5-5.5-5.5
+					s-5.5,2.5-5.5,5.5S12.5,254,15.5,254z"/>
+				<path fill="#FFFFFF" d="M13,248h5v1h-5V248z"/>
+			</g>
+			<g>
+				<path fill="#FFFFFF" d="M-20,255.5l-1.4,1.4l-3.2-3.2l1.4-1.4L-20,255.5z"/>
+				<path fill="none" stroke="#FFFFFF" stroke-width="1.5" d="M-28.5,254c3,0,5.5-2.5,5.5-5.5s-2.5-5.5-5.5-5.5s-5.5,2.5-5.5,5.5
+					S-31.5,254-28.5,254z"/>
+				<path fill="#FFFFFF" d="M-31,248h5v1h-5V248z"/>
+				<path fill="#FFFFFF" d="M-28,246l-0.1,5l-1,0l0.1-5L-28,246z"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

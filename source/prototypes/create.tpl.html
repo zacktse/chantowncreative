@@ -33,7 +33,7 @@
     </div>
 
 
-    <div class="row">
+    <div class="row" class="filter-btns-container">
 
       <div id="isotope-filters" class="row filter-btns">
         <!-- <button class="sort" data-sort="random">Shuffle</button> -->
@@ -42,14 +42,12 @@
         <button class="filter" data-filter=".illustration">Illustration</button>
         <button class="filter" data-filter=".mixed-media">Mixed media</button>
         <button class="filter" data-filter=".painting">Painting</button>
-
         <button class="filter" data-filter=".screenprint">Screenprint</button>
-
         <button class="filter" data-filter=".sketch">Sketch</button>
       </div>
 
         <!-- isotope  -->
-
+      <div class="filters-container">
         <div id="gallery_container" class="gallery_container isotope-grid" itemscope itemtype="http://schema.org/ImageGallery">
           <!-- <div class="grid-sizer"></div> -->
 
@@ -64,14 +62,6 @@
               <a href="{{desktopImage.src}}" data-mobile-link="{{mobileImage.src}}" itemprop="contentUrl" data-size="{{desktopImage.w}}x{{desktopImage.h}}" data-size-desktop="{{desktopImage.w}}x{{desktopImage.h}}"
               data-size-mobile="{{mobileImage.w}}x{{mobileImage.h}}">
                   <div class="thumbnail b-lazy" data-src="{{srcImage}}_w400{{imageExtension}}">
-                    <!-- <img class="responsively-lazy {{layoutClass}}"
-                     srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                    data-srcset="
-                      {{srcImage}}_w400{{imageExtension}} 400w,
-                      {{srcImage}}_w600{{imageExtension}} 600w,
-                      {{srcImage}}_w800{{imageExtension}} 800w"
-                    alt="{{alt}}"
-                    title="{{title}} | {{year}}" itemprop="thumbnail"  /> -->
 
                     <img class=""
                      src="{{srcImage}}_w400{{imageExtension}}"
@@ -90,6 +80,8 @@
 
 
         </div>
+      </div>
+
     </div>
 
     <!-- Root element of PhotoSwipe. Must have class pswp. -->

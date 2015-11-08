@@ -1,4 +1,6 @@
 .left-profile-image {
+   background: transparent;
+
    $base-line-height: 1.5em !default;
    $action-color: #477DCA !default;
    $dark-gray: #333 !default;
@@ -9,74 +11,79 @@
    $side-image-content-background: #F9F9F9;
    $side-image-border: 1px solid darken(transparentize($side-image-background-bottom, 0.8), 30%);
    @include margin(0,0,18,0);
-   background: transparent;
    @include media($tablet-up) {
+     clear: both;
+
      @include row(table);
      @include span-columns(8);
      @include padding(34,0,26,0);
-     clear: both;
    }
    @include media($desktop-up) {
       @include span-columns(16);
    }
+   @include reset-display();
 
 
    .images-wrapper {
-    //  @include background(url('/assets/img/VickieChanHeadshot.jpg'), linear-gradient($side-image-background-top, $side-image-background-bottom), no-repeat $side-image-background-top scroll);
-     @include background(url('../img/VickieChanHeadshot_w400.jpg'));
+    display             : block;
+    clear               : both;
+    max-width           : 100%;
+    min-height          : 260px;
+    margin              : 0 20%;
+    padding             : 0;
 
-    //  background-color: $side-image-background-top;
-     background-size:contain;
-     background-position: top left;
-     background-repeat: no-repeat;
-    //  border-bottom: $side-image-border;
-     display: block;
-     padding: 0;
-     min-height: 260px;
-     max-width: 140px;
+    @include background(url('../img/VickieChanHeadshot_w400.jpg'));
+    background-size   : contain;
+    background-repeat  : no-repeat;
+    background-position: top center;
+    // @include background(url('/assets/img/VickieChanHeadshot.jpg'), linear-gradient($side-image-background-top, $side-image-background-bottom), no-repeat $side-image-background-top scroll);
+
 
      @include media($tablet-up) {
-       @include background(url('../img/VickieChanHeadshot_w1000.jpg'));
        width: 160px;
+       margin: 0;
+       background-repeat: no-repeat;
        background-position: top center;
        background-size: contain;
-       background-repeat: no-repeat;
+       clear :none;
+       @include span-columns(2);
+
+       @include background(url('../img/VickieChanHeadshot_w1000.jpg'));
       //  border-right: $side-image-border;
      }
-
      @include media($desktop-up) {
-        @include background(url('../img/VickieChanHeadshot_w1000.jpg'));
-        background-size: contain;
-        background-position: top center;
-        background-repeat: no-repeat;
-        @include span-columns(4);
         width: 160px;
         padding: 2em;
+
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: contain;
+
+        @include background(url('../img/VickieChanHeadshot_w1000.jpg'));
+        @include span-columns(4);
      }
    }
 
    .side-image-content {
-     @include span-columns(12);
      padding: 0;
 
+     width: 100%;
      @include media($tablet-up) {
-       @include span-columns(8);
+       @include span-columns(4);
      }
-
      @include media($desktop-up) {
        @include span-columns(8);
      }
 
      h2 {
        padding-top: 0;
+
        @include media($desktop-up) {
-         padding-top: 0;
          margin-top: 0;
+         padding-top: 0;
        }
      }
 
      p { width: 100%; }
    }
-
-   @include reset-display();
 }

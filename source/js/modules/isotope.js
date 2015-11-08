@@ -159,6 +159,9 @@ var runPhotoswipe = function() {
     };
 
     //var image_url_yo = photoswipeInstance.currItem.src || '';
+    /* TODO:
+      make sure to remove newwebtest from the URL when switching to the live folder
+    */
     var options = {
       index: index,
       zoomEl: false, // disable zoom in on images
@@ -171,12 +174,12 @@ var runPhotoswipe = function() {
         {
           id: 'pinterest',
           label: '<i class="icon-pinterest"></i> Pin it',
-          url: 'http://www.pinterest.com/pin/create/button/?url=' + window.location.protocol + "//" + window.location.host + "/" + '{{url}}&media=' + window.location.protocol + "//" + window.location.host + "/" + '{{image_url}}&description={{text}}'
+          url: 'http://www.pinterest.com/pin/create/button/?url=' + window.location.protocol + "//" + window.location.host + "/newwebtest/ + '{{url}}&media=' + window.location.protocol + " //" + window.location.host + "/" + '{{image_url}}&description={{text}}'
         },
         {
           id: 'facebook',
           label: '<i class="icon-facebook"></i> Share on Facebook',
-          url: 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.protocol + "//" + window.location.host + "/" + '{{url}}'
+          url: 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.protocol + "//" + window.location.host + "/newwebtest/" + '{{url}}'
         },
         {
           id: 'twitter',
@@ -248,12 +251,11 @@ var runPhotoswipe = function() {
 
 
 
-
+    // TODO: convert this to use the live url on launch
     var shareBtnOptions = function(imageObj) {
       var artworkTitle = imageObj.title.split('|')[0];
       console.log(artworkTitle);
-      var imageURL = window.location.protocol + "//" + window.location.host + "/" + imageObj.src;
-
+      var imageURL = window.location.protocol + "//" + window.location.host + "/newwebtest/" + imageObj.src;
       return {
         networks: {
           googlePlus: {
@@ -301,7 +303,7 @@ var runPhotoswipe = function() {
         ui: {
           flyout: 'middle left', // change the flyout direction of the shares. chose from `top left`, `top center`, `top right`, `bottom left`, `bottom right`, `bottom center`, `middle left`, or `middle right` [Default: `top center`]
           button_font: false, // include the Lato font set from the Google Fonts API. [Default: `true`]
-          buttonText: 'Share', // change the text of the button, [Default: `Share`]
+          buttonText: ' ', // change the text of the button, [Default: `Share`]
           icon_font: false // include the minified Entypo font set. [Default: `true`]
         },
       };

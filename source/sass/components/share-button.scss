@@ -3,13 +3,14 @@ share-button {
   display: block;
   position: absolute;
   bottom: 26px;
+  height: 44px;
   right: 0;
   font-size: 12px;
   line-height: 16px;
   color: rgba(204, 204, 204, 0.8);
   background: transparent;
-  padding: 14px 12px 12px 30px;
-  border: 1px solid rgba(51,51,51,0.8);
+  padding: 17px 12px 13px 34px;
+  //border: 1px solid rgba(51,51,51,0.5);
   //border-radius: 5px;
   /*font-family: Lato, sans-serif;*/
   font-weight: 600;
@@ -23,16 +24,30 @@ share-button {
 }
 share-button:hover {
   color: white;
-  background: #f93;
+  background: $darker-orange;
+  &:before {
+    opacity: 1;
+    transition: all .2s;
+  }
 }
 share-button:before {
   position: absolute;
   line-height: 1em;
-  left: 0.9em;
-  width: 1em;
-  height: 1em;
+  //left: 0.9em;
+  left: 2px;
+  top: 0px;
+  padding: 17px 0 13px 0;
+  // width: 1em;
+  // height: 1em;
   content: ' ';
-  background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2020%2020%22%20style%3D%22fill%3A%45454%3B%22%20height%3D%22%22%20width%3D%22%22%3E%20%3Cpath%20d%3D%22M15%2015H2V6h2.595s.69-.896%202.17-2H1c-.553%200-1%20.45-1%201v11c0%20.553.447%201%201%201h15c.553%200%201-.447%201-1v-3.746L15%2013.9V15zm-1.64-6.95v3.55L20%206.4l-6.64-5v3.132C5.3%204.532%205.3%2012.5%205.3%2012.5c2.282-3.748%203.686-4.45%208.06-4.45z%22%2F%3E%3C%2Fsvg%3E") no-repeat;
+  background-image: url(../img/ui/chantown-lightbox-UI-skin.svg);
+  background-position: -44px -44px;
+  background-size: 264px 88px;
+  width: 44px;
+  height: 44px;
+  opacity: .6;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
 }
 share-button .sb-social {
   position: absolute;
@@ -203,10 +218,10 @@ share-button .sb-social ul li.disabled {
   display: none;
 }
 share-button .sb-social ul li:hover:before {
-  opacity: 0;
+  //opacity: 0;
 }
 share-button .sb-social ul li:hover:after {
-  opacity: 0.5;
+  //opacity: 0.5;
 }
 share-button .sb-social ul li:before,
 share-button .sb-social ul li:after {

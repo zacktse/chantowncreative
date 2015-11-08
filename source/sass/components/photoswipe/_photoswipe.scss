@@ -6,7 +6,7 @@
 
 // PhotoSwipe uses Autoprefixer, so vendor prefixed are added automatically when needed.
 
-@import "default-skin/default-skin";
+@import "ui/chantown";
 
 
 /* pswp = photoswipe */
@@ -291,9 +291,12 @@ a.pswp__share--twitter:hover {
 
 .pswp__caption__center {
 	position: relative;
-	padding: 12px 90px 12px 2px;
+	padding: 12px 90px 6px 10px;
 	line-height: 18px;
 	// padding-right: 90px;
+	@include media($tablet-up) {
+		padding: 12px 90px 12px 2px;
+	}
 }
 
 // .pswp__caption__center ul.social-icons {

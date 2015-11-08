@@ -79,7 +79,7 @@ var path = {
   resp_jpg_src: ['source/**/*.jpg', '!source/img/favicon/*.*', '!source/img/vendor/*.*'],
   // resp_img_src: ['source/img/**/*.jpg','source/img/**/*.png','!source/img/favicon/*.*','!source/img/vendor/*.*'],
 
-  img_src: ['source/img/**/*.gif', 'source/img/*.jpg', 'source/img/*.png', 'source/img/**/*.svg', 'source/img/clients/*.png'], // images for the website assets
+  img_src: ['source/img/**/*.gif', 'source/img/*.jpg', 'source/img/*.png', 'source/img/**/*.svg', 'source/img/clients/*.png', 'source/sass/components/photoswipe/**/*.png', 'source/sass/components/photoswipe/**/*.svg'], // images for the website assets
 
   gallery_images: ['source/img/gallery/**/*.jpg', 'source/img/gallery/**/*.png'],
   // images for the portfolio gallery
@@ -461,14 +461,15 @@ gulp.task('responsive-imgs', function() {
     .pipe(gulp.dest('./build/assets/'));
 
 
+});
 
-  // svgs + gifs
+
+gulp.task('copy-static-img-assets', function() {
+  // svgs, pngs + gifs
   gulp.src(path.img_src)
     .pipe(plumber())
     .pipe(gulp.dest('./build/assets/img/'));
-
 });
-
 
 gulp.task('copy-favicon', function() {
   // favicon sheet
@@ -706,6 +707,7 @@ gulp.task('deploy-to-staging', function() {
 
 gulp.task('default', [
   'buildhtml',
+  'copy-static-img-assets',
   // 'iconify',
   'build_fonts',
   //'js-uglify',
