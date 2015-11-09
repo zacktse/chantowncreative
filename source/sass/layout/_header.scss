@@ -129,7 +129,7 @@ header.main-header {
       position: absolute;
       top: 26px;
       width: 450px;
-      margin-left: 6px;
+      margin-left: 8px;
       max-height: $navigation-height-desktop;
     }
     z-index: $z-above-nav;
@@ -213,10 +213,9 @@ header.main-header {
 
 
     @include media ($horizontal-bar-mode) {
-
       text-align: right;
       line-height: 24px;
-      @include padding(15, 12, 10, 6);
+      @include padding(15, 16, 10, 16);
       margin-right: 42px;
 
       @include animated-link-underline($chantown-gray);
@@ -264,9 +263,9 @@ header.main-header {
     transform: translateY(3px);
 
     @include media($desktop-up) {
-      -webkit-transform: translateY(-2px);
-      -moz-transform: translateY(-2px);
-      transform: translateY(-2px);
+      -webkit-transform: translateY(-1px);
+      -moz-transform: translateY(-1px);
+      transform: translateY(-1px);
     }
 
   }
@@ -276,9 +275,9 @@ header.main-header {
     -moz-transform: translateY(3px);
     transform: translateY(3px);
     @include media($desktop-up) {
-      -webkit-transform: translateY(-2px);
-      -moz-transform: translateY(-2px);
-      transform: translateY(-2px) ;
+      -webkit-transform: translateY(-1px);
+      -moz-transform: translateY(-1px);
+      transform: translateY(-1px) ;
     }
   }
 

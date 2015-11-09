@@ -271,7 +271,7 @@ gulp.task('sass', function() {
     .pipe(combineMq({
       beautify: false
     }))
-    .pipe(shorthand())
+    //.pipe(shorthand())  // removed becuase it was breaking shit
     .pipe(cssmin()) // minify css
     .pipe(size({
       title: "Size of CSS after minifying: "

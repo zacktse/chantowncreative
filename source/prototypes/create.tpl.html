@@ -11,10 +11,11 @@
   <section class="content-main" role="main">
     <div class="row">
       <div class="feature">
-        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+        @@include('../templates/preloader/_preloader.tpl.html')
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
         data-src="assets/img/pages/create_lightened_w1500.jpg"
-        data-small="assets/img/pages/create_lightened_w600.jpg"
-        data-medium="assets/img/pages/create_lightened_w1000.jpg"
+        data-src-small="assets/img/pages/create_lightened_w600.jpg"
+        data-src-medium="assets/img/pages/create_lightened_w1000.jpg"
         class="b-lazy feature-image full-width"
         alt="Picture of a horse with inks by Chantown Creative"
         title="Create: Chantown Creative" />
@@ -49,30 +50,26 @@
         <!-- isotope  -->
       <div class="filters-container">
         <div id="gallery_container" class="gallery_container isotope-grid" itemscope itemtype="http://schema.org/ImageGallery">
-          <!-- <div class="grid-sizer"></div> -->
-
-
-            <!--@@include('../templates/gallery/_gallery.tpl.html') -->
 
             <!-- gallery template -->
 
-            {{#each images}}
-            <figure class="item {{category}}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            {{#each image in images}}
+            <figure class="item {{image.category}}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 
-              <a href="{{desktopImage.src}}" data-mobile-link="{{mobileImage.src}}" itemprop="contentUrl" data-size="{{desktopImage.w}}x{{desktopImage.h}}" data-size-desktop="{{desktopImage.w}}x{{desktopImage.h}}"
-              data-size-mobile="{{mobileImage.w}}x{{mobileImage.h}}">
-                  <div class="thumbnail b-lazy" data-src="{{srcImage}}_w400{{imageExtension}}">
+              <a href="{{image.desktopImage.src}}" data-mobile-link="{{image.mobileImage.src}}" itemprop="contentUrl" data-size="{{image.desktopImage.w}}x{{image.desktopImage.h}}" data-size-desktop="{{image.desktopImage.w}}x{{image.desktopImage.h}}"
+              data-size-mobile="{{image.mobileImage.w}}x{{image.mobileImage.h}}">
+                  <div class="thumbnail b-lazy" data-src="{{image.srcImage}}_w800{{image.imageExtension}}" data-src-small="{{image.srcImage}}_w400{{image.imageExtension}}"
+                  data-src-medium="{{image.srcImage}}_w600{{image.imageExtension}}">
 
-                    <img class=""
-                     src="{{srcImage}}_w400{{imageExtension}}"
-                    alt="{{alt}}"
-                    title="{{title}} | {{year}}" itemprop="thumbnail"  />
+                    <img {{#thumbnailSrc this}}{{/thumbnailSrc}}
+                    alt="{{image.alt}}"
+                    title="{{image.title}} | {{image.year}}" itemprop="thumbnail"  />
                   </div>
 
              </a>
              <figcaption itemprop=\"caption description\">
-                {{title}} | {{year}} </br>
-                {{description}}</br>
+                {{image.title}} | {{image.year}} </br>
+                {{image.description}}</br>
                 <span itemprop=\"copyrightHolder\" class="image-copyright"> &copy; Vickie Chan</span>
               </figcaption>
             </figure>

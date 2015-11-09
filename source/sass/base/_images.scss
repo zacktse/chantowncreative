@@ -1,83 +1,5 @@
-// figure.feature-image {
-//   margin: 0;
-//
-//   // make images span to the edge of the screen on mobile
-//   width: calc(100% + 32px);
-//   margin-left: -16px;
-//   @include media($tablet-up) {
-//     width: 50%;
-//   }
-// }
-
-// lazyload
-
-// .lazyload,
-// .lazyloading {
-//     opacity: 0;
-// }
-// .lazyloaded {
-//     opacity: 1;
-//     transition: opacity 300ms;
-// }
-// .lazy {
-//     display: none;
-// }
-
-/*
- * Responsively Lazy
- * http://ivopetkov.com/b/lazy-load-responsive-images/
- * Copyright 2015, Ivo Petkov
- * Free to use under the MIT license.
-*/
-
-// .responsively-lazy:not(img){
-//     position:relative;
-//     height:0;
-// }
-//
-// .responsively-lazy:not(img) img{
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-// }
-//
-// img.responsively-lazy{
-//     //width:100%;
-//     //height:0;
-// }
-//
-// .responsively-lazy.feature {
-//   margin-bottom: 18px;
-// }
-
-// img[data-sizes="auto"] { display: block; width: 100%; }
-
-// //photoswipe gallery specific
-//
-// .my-gallery {
-//   figcaption {
-//     display: none;
-//   }
-// }
-
-// .feature-image {
-//   padding-top: 0px;
-//   //margin-bottom: 18px;
-//   width: 100%;
-//   width: calc(100% + 30px);
-//   z-index: $z-content;
-// }
-
-//
-// .lost-for-words {
-//   max-width: 400px;
-//   margin: 0 auto;
-// }
-
-
 .feature {
+  position: relative;
   margin-top:24px;
   margin-bottom: 30px;
   @include media($tablet-up) {
@@ -94,5 +16,16 @@
     margin-top: 0;
     margin-bottom: 54px;
     @include clearfix();
+  }
+}
+
+.feature .b-lazy {
+  max-height: 200px;
+  @include media($tablet-up) {
+    max-height: 320px;
+  }
+  @include media($desktop-up) {
+    max-height: 388px;
+
   }
 }

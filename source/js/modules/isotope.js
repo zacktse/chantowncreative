@@ -28,6 +28,19 @@ var gallery_items = {};
 //   return variable.replace(/(['"])/g, '\\$1');
 // });
 
+
+Handlebars.registerHelper('thumbnailSrc', function(image) {
+  var hasCustomThumb = Handlebars.escapeExpression(image.hasCustomThumbnail),
+    customThumbSrc = Handlebars.escapeExpression(image.customThumbImage);
+
+  if (hasCustomThumb) {
+    return new Handlebars.SafeString("src='" + customThumbSrc + "'");
+  } else {
+    return new Handlebars.SafeString("src='" + image.srcImage + "_w800" + image.imageExtension + "'");
+  }
+
+});
+
 var buildGalleryHTML = function(json) {
   var myJson = json,
     _$gallery_container = $("#gallery_container"),
@@ -155,7 +168,7 @@ var runPhotoswipe = function() {
       return '<share-button></share-button>';
 
 
-    // return '<ul class=\"social-icons\"><li><a id=\"pswp-pinterest-btn\" href=\"https://www.pinterest.com/chantown/\" class=\"icon pinterest\" title=\"Pinterest\"><i class=\"icon-pinterest-gray\"></i></a></li><li><a href=\"https://www.facebook.com/sharer/sharer.php?u=' + currentPage + '\" class=\"icon etsy\" title=\"Share on Facebook\"><i class=\"icon-facebook-gray\"></i></a></li><li><a href=\"https://twitter.com/intent/tweet?text=Chantown Creative: Portfolio&url=http://chantown.com/create.html\" class=\"icon twitter\" title=\"Twitter\"><i class=\"icon-twitter-gray\"></i></a></li></ul>';
+
     };
 
     //var image_url_yo = photoswipeInstance.currItem.src || '';

@@ -30,8 +30,13 @@ window.bLazy = new Blazy({
     {
       width: 1440, // max-width
       src: 'data-src-large'
-    }]
-});
+    }],
+  successClass: 'b-loaded',
+  success: function(ele) {
+    ele.parentNode.classList.add("loaded");
+  }
+}
+);
 
 
 

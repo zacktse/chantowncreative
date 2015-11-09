@@ -28,8 +28,8 @@
     display             : block;
     clear               : both;
     max-width           : 100%;
-    min-height          : 260px;
-    margin              : 0 20%;
+    min-height          : 160px;
+    margin              : 0 25%;
     padding             : 0;
 
     @include background(url('../img/VickieChanHeadshot_w400.jpg'));
@@ -42,24 +42,25 @@
      @include media($tablet-up) {
        width: 160px;
        margin: 0;
+       margin-top: 30px;
+       @include background(url('../img/VickieChanHeadshot_w1000.jpg'));
        background-repeat: no-repeat;
        background-position: top center;
        background-size: contain;
        clear :none;
        @include span-columns(2);
 
-       @include background(url('../img/VickieChanHeadshot_w1000.jpg'));
       //  border-right: $side-image-border;
      }
      @include media($desktop-up) {
         width: 160px;
         padding: 2em;
+        @include background(url('../img/VickieChanHeadshot_w1000.jpg'));
 
         background-repeat: no-repeat;
         background-position: top center;
         background-size: contain;
 
-        @include background(url('../img/VickieChanHeadshot_w1000.jpg'));
         @include span-columns(4);
      }
    }
