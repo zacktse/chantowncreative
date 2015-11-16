@@ -452,7 +452,7 @@ gulp.task('responsive-imgs', function() {
             },
           ]
         }, {
-          strictMatchImages: false
+          errorOnUnusedImage: false
         })))
     .pipe(imagemin({
       optimizationLevel: 2,

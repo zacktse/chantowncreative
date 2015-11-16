@@ -137,7 +137,7 @@
       {
         "title":"Dozer screenprint (pink)",
         "year":2015,
-        "category": "screenprint commercial illustration"
+        "category": "screenprint commercial illustration",
         "srcImage":"assets/img/gallery/2015/201510_DozerPinkBrown",
         "imageExtension": ".jpg",
         "mobileImage":{
@@ -194,7 +194,7 @@
       {
         "title":"Olly & Rachel",
         "year":2015,
-        "category": "commercial"
+        "category": "commercial",
         "srcImage":"assets/img/gallery/2015/2015_OllyWeddingInvite_OL",
         "imageExtension": ".jpg",
         "mobileImage":{
@@ -575,7 +575,7 @@
       {
         "title":"68 Calendar",
         "year":2011,
-        "category": "commercial illustration"
+        "category": "commercial illustration",
         "srcImage":"assets/img/gallery/2011/2011_6_68PrintCalendarComposite",
         "imageExtension": ".jpg",
         "mobileImage":{
@@ -613,7 +613,7 @@
       {
        "title":"68 Launch Homepage",
        "year":2011,
-       "category": "commercial illustration"
+       "category": "commercial illustration",
        "srcImage":"assets/img/gallery/2011/2011_4_68MiraFront",
        "imageExtension": ".jpg",
        "mobileImage":{

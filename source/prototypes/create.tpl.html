@@ -53,26 +53,35 @@
 
             <!-- gallery template -->
 
-            {{#each image in images}}
-            <figure class="item {{image.category}}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            {{#each images}}
+              <figure class="item {{category}}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 
-              <a href="{{image.desktopImage.src}}" data-mobile-link="{{image.mobileImage.src}}" itemprop="contentUrl" data-size="{{image.desktopImage.w}}x{{image.desktopImage.h}}" data-size-desktop="{{image.desktopImage.w}}x{{image.desktopImage.h}}"
-              data-size-mobile="{{image.mobileImage.w}}x{{image.mobileImage.h}}">
-                  <div class="thumbnail b-lazy" data-src="{{image.srcImage}}_w800{{image.imageExtension}}" data-src-small="{{image.srcImage}}_w400{{image.imageExtension}}"
-                  data-src-medium="{{image.srcImage}}_w600{{image.imageExtension}}">
+                <a href="{{desktopImage.src}}" data-mobile-link="{{mobileImage.src}}" itemprop="contentUrl" data-size="{{image.desktopImage.w}}x{{desktopImage.h}}" data-size-desktop="{{desktopImage.w}}x{{desktopImage.h}}"
+                data-size-mobile="{{mobileImage.w}}x{{mobileImage.h}}">
 
-                    <img {{#thumbnailSrc this}}{{/thumbnailSrc}}
-                    alt="{{image.alt}}"
-                    title="{{image.title}} | {{image.year}}" itemprop="thumbnail"  />
-                  </div>
+                    {{#if customThumbImage}}
+                      <div class="thumbnail b-lazy" data-src="{{customThumbImage}}" data-src-small="{{customThumbImage}}"
+                      data-src-medium="{{customThumbImage}}">
+                        <img src="{{customThumbImage}}"
+                        alt="{{alt}}"
+                        title="{{title}} | {{year}}" itemprop="thumbnail"  />
+                    {{else}}
+                      <div class="thumbnail b-lazy" data-src="{{srcImage}}_w800{{imageExtension}}" data-src-small="{{srcImage}}_w400{{imageExtension}}"
+                      data-src-medium="{{srcImage}}_w600{{imageExtension}}">
+                        <img src="{{srcImage}}_w400{{imageExtension}}"
+                        alt="{{alt}}"
+                        title="{{title}} | {{year}}" itemprop="thumbnail"  />
+                    {{/if}}
 
-             </a>
-             <figcaption itemprop=\"caption description\">
-                {{image.title}} | {{image.year}} </br>
-                {{image.description}}</br>
-                <span itemprop=\"copyrightHolder\" class="image-copyright"> &copy; Vickie Chan</span>
-              </figcaption>
-            </figure>
+                    </div>
+
+               </a>
+               <figcaption itemprop=\"caption description\">
+                  {{title}} | {{year}} </br>
+                  {{description}}</br>
+                  <span itemprop=\"copyrightHolder\" class="image-copyright"> &copy; Vickie Chan</span>
+                </figcaption>
+              </figure>
             {{/each}}
 
 
