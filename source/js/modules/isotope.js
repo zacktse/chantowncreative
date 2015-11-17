@@ -1,5 +1,6 @@
 var $ = require('jquery');
 var Isotope = require('isotope-layout');
+//var Isotope = require('../vendor/isotope.pkgd.min.js');
 var PhotoSwipe = require('photoswipe');
 var Handlebars = require('handlebars');
 var PhotoSwipeUI_Default = require('../vendor/photoswipe-ui-default.min');
@@ -47,7 +48,7 @@ var buildGalleryHTML = function(json) {
     unCompiledGalleryHtml = _$gallery_container.html(),
     galleryTemplate = Handlebars.compile(unCompiledGalleryHtml),
     result = galleryTemplate(myJson);
-  console.log("ran buildGalleryHTML");
+  //console.log("ran buildGalleryHTML");
   _$gallery_container.html(result);
 };
 
@@ -267,7 +268,7 @@ var runPhotoswipe = function() {
     // TODO: convert this to use the live url on launch
     var shareBtnOptions = function(imageObj) {
       var artworkTitle = imageObj.title.split('|')[0];
-      console.log(artworkTitle);
+      //console.log(artworkTitle);
       var imageURL = window.location.protocol + "//" + window.location.host + "/newwebtest/" + imageObj.src;
       return {
         networks: {
@@ -473,7 +474,8 @@ if (_portfolio_gallery.length > 0) {
   //     buildGalleryHTML(gallery_items);
   //     runPhotoswipe();
   // });
-  console.log("on create page");
+  //console.log("on create page");
+  ShareButton = require('../vendor/share-button.js')
 
   gallery_items = require('../json/gallery_images');
   buildGalleryHTML(gallery_items);

@@ -1,6 +1,4 @@
 var $ = require('jquery');
-var visible = require('./modules/visible');
-var activePageHighlight = require('./modules/active_page_highlight');
 var equalheights = require('./modules/equal_heights');
 var back_to_top = require('./modules/back_to_top');
 var isotope = require('./modules/isotope');
@@ -9,15 +7,11 @@ var dp = require('./modules/pixels');
 var StickyHeader = require('./modules/sticky-header');
 var pixel_bg = new dp.DeadPixels();
 
-
-
-
-pixel_bg.initialize();
-
 Blazy = require('./vendor/blazy.min.js');
 
 window.bLazy = new Blazy({
   selector: '.b-lazy', // all images
+  offset: 200,
   breakpoints: [
     {
       width: 420, // max-width
@@ -37,6 +31,10 @@ window.bLazy = new Blazy({
   }
 }
 );
+
+
+pixel_bg.initialize();
+
 
 
 

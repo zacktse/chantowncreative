@@ -53,7 +53,8 @@
       //  border-right: $side-image-border;
      }
      @include media($desktop-up) {
-        width: 160px;
+        width: 240px;
+        height: 240px;
         padding: 2em;
         @include background(url('../img/VickieChanHeadshot_w1000.jpg'));
 
@@ -61,7 +62,7 @@
         background-position: top center;
         background-size: contain;
 
-        @include span-columns(4);
+        @include span-columns(6);
      }
    }
 
@@ -70,10 +71,11 @@
 
      width: 100%;
      @include media($tablet-up) {
-       @include span-columns(4);
+       @include span-columns(5);
      }
      @include media($desktop-up) {
-       @include span-columns(8);
+       @include span-columns(9);
+       //@include shift(1);
      }
 
      h2 {

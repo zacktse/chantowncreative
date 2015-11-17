@@ -29,7 +29,6 @@ var gulp = require('gulp'), //require gulp
   plumber = require('gulp-plumber'), //require plumber
   connect = require('gulp-connect'), // local server // initialise server
   livereload = require('gulp-livereload'), // livereload
-  browserSync = require('browser-sync').create(),
   embedlr = require("gulp-embedlr"), // embed livereload snippet in html pages
   autoprefixer = require('gulp-autoprefixer'), // sets missing browserprefixes
   concat = require('gulp-concat'), // concatinate js
@@ -52,6 +51,7 @@ var gulp = require('gulp'), //require gulp
   iconify = require('gulp-iconify'),
   // foreach = require('gulp-foreach'),
   // toJson = require('gulp-to-json'),
+  handlebars = require('gulp-compile-handlebars'), // used to pre-compile the handlebars tempate for the portfolio gallery 
   sizeOf = require('image-size'), // get image widths and heights by reading the image file
   size = require('gulp-size'), // used to output size of files in terminal
   ftp_details = require('./ftp-details.json'),
@@ -185,9 +185,9 @@ gulp.task('js-browserify', function() {
   return b.bundle()
     .pipe(source('app.js'))
     .pipe(buffer())
-    .pipe(sourcemaps.init({
-      loadMaps: true
-    }))
+    // .pipe(sourcemaps.init({
+    //   loadMaps: true
+    // }))
     .pipe(size({
       title: "Size of JS before minifying: "
     }))
@@ -219,7 +219,7 @@ gulp.task('js-browserify', function() {
       title: "Size of JS after minifying: "
     }))
     .on('error', gutil.log)
-    .pipe(sourcemaps.write('./'))
+    //.pipe(sourcemaps.write('./'))
 
     .pipe(gulp.dest('./build/assets/js'));
 });

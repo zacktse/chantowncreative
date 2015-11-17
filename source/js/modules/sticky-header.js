@@ -5,9 +5,9 @@ var ScrollMagic = require('scrollmagic');
 // var gsap = require("gsap");
 
 var wWidth = window.innerWidth;
-console.log("document innerWidth is: " + wWidth);
+//console.log("document innerWidth is: " + wWidth);
 if ( (wWidth < 960) ) {
-  console.log("on mobile");
+  //console.log("on mobile");
   var controller = new ScrollMagic.Controller({
     globalSceneOptions: {
       triggerHook: "onLeave"

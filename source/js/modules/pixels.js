@@ -21,7 +21,7 @@ _.extend(exports.DeadPixels.prototype, {
     this.$el = $('.body-pixels-container');
     this.pixels = [];
     if (this.window_width > 960) {
-      this.pixelCount = 160;
+      this.pixelCount = 140;
     }
     for (var i = 0; i < this.pixelCount; i++) {
       var pixel = $("<div class='pixel'>");

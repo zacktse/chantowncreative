@@ -11,12 +11,15 @@
   <section class="content-main" role="main">
     <div class="row">
       <div class="feature">
-        @@include('../templates/preloader/_preloader.tpl.html')
-        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-        data-src="assets/img/pages/create_lightened_w1500.jpg"
+        <!-- @@include('../templates/preloader/_preloader.tpl.html') -->
+        <!-- <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+        data-src="assets/img/pages/create_lightened_w1000.jpg"
         data-src-small="assets/img/pages/create_lightened_w600.jpg"
-        data-src-medium="assets/img/pages/create_lightened_w1000.jpg"
         class="b-lazy feature-image full-width"
+        alt="Picture of a horse with inks by Chantown Creative"
+        title="Create: Chantown Creative" /> -->
+        <img src="assets/img/pages/create_lightened_w1000.jpg"
+        class="feature-image full-width"
         alt="Picture of a horse with inks by Chantown Creative"
         title="Create: Chantown Creative" />
       </div>
@@ -26,8 +29,8 @@
 
         <h1 class="size-h1 hide-text">Create</h1>
 
-        <p class="leader">Vickie Chan, Director of Chantown Creative, is an artist and illustrator. In fact, her creative insight is part of what gives us such a rounded and well-thought overview when it comes to our clients <a href="consult.html" class="underlined">creative communications projects</a>.<br><br>
-        
+        <p class="leader"><a href="./contact.html#vc-bio" class="underlined">Vickie Chan</a>, Director of Chantown Creative, is an artist and illustrator. In fact, her creative insight is part of what gives us such a rounded and well-thought overview when it comes to our clients <a href="consult.html" class="underlined">creative communications projects</a>.<br><br>
+
         <p>You can also learn some life hacks from her series, Surviving Hong Kong, where Chan explains and complains, one drawing at a time. Find it on <a class="underlined" href="http://survivinghongkong.tumblr.com" title="Surviving Hong Kong on Tumblr">Tumblr</a> and <a class="underlined" href="https://instagram.com/SurvivingHK/" title="Surviving Hong Kong on Instagram">Instagram</a>.</p>
         <p>To view personal and commercial works, simply click on one of the gallery filters below. Some works are available for purchase.</p>
 
@@ -57,24 +60,23 @@
             {{#each images}}
               <figure class="item {{category}}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 
-                <a href="{{desktopImage.src}}" data-mobile-link="{{mobileImage.src}}" itemprop="contentUrl" data-size="{{image.desktopImage.w}}x{{desktopImage.h}}" data-size-desktop="{{desktopImage.w}}x{{desktopImage.h}}"
+                <a href="{{desktopImage.src}}" data-mobile-link="{{mobileImage.src}}" itemprop="contentUrl" data-size="{{desktopImage.w}}x{{desktopImage.h}}" data-size-desktop="{{desktopImage.w}}x{{desktopImage.h}}"
                 data-size-mobile="{{mobileImage.w}}x{{mobileImage.h}}">
 
-                    {{#if customThumbImage}}
-                      <div class="thumbnail b-lazy" data-src="{{customThumbImage}}" data-src-small="{{customThumbImage}}"
-                      data-src-medium="{{customThumbImage}}">
-                        <img src="{{customThumbImage}}"
-                        alt="{{alt}}"
-                        title="{{title}} | {{year}}" itemprop="thumbnail"  />
-                    {{else}}
-                      <div class="thumbnail b-lazy" data-src="{{srcImage}}_w800{{imageExtension}}" data-src-small="{{srcImage}}_w400{{imageExtension}}"
-                      data-src-medium="{{srcImage}}_w600{{imageExtension}}">
-                        <img src="{{srcImage}}_w400{{imageExtension}}"
-                        alt="{{alt}}"
-                        title="{{title}} | {{year}}" itemprop="thumbnail"  />
-                    {{/if}}
-
-                    </div>
+                {{#if customThumbImage}}
+                  <div class="thumbnail b-lazy" data-src="{{customThumbImage}}">
+                    <img src="{{customThumbImage}}"
+                    alt="{{alt}}"
+                    title="{{title}} | {{year}}" itemprop="thumbnail"  />
+                  </div>
+                {{else}}
+                  <div class="thumbnail b-lazy" data-src="{{srcImage}}_w800{{imageExtension}}" data-src-small="{{srcImage}}_w400{{imageExtension}}"
+                  data-src-medium="{{srcImage}}_w600{{imageExtension}}">
+                    <img src="{{srcImage}}_w400{{imageExtension}}"
+                    alt="{{alt}}"
+                    title="{{title}} | {{year}}" itemprop="thumbnail"  />
+                  </div>
+                {{/if}}
 
                </a>
                <figcaption itemprop=\"caption description\">
