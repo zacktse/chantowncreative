@@ -1,23 +1,64 @@
 .filter-btns-container, .filters-container {
   @include media($desktop-up) {
     text-align: center;
+    padding-top: 38px;
+    clear: both;
   }
 }
 
+
+.filters-container {
+
+  @include media($desktop-up) {
+    padding-top: 38px;
+    clear: both;
+    text-align: center;
+  }
+}
+
+// .scrollmagic-pin-spacer > .pinned + .filters-container {
+//   @include media($desktop-up) {
+//     padding-top: 60px;
+//   }
+// }
+
 .filter-btns {
   @include margin(30, 0, 60, 0);
+  @include media($tablet-up) {
+    //@extend .__text;
+  }
+  @include media($desktop-up) {
+    text-align:center;
+  }
+
   button {
-    @include margin(10, 10, 0, 0);
+    @include margin(12, 10, 0, 0);
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
     padding: 14px 1em 11px 1em;
+
     //border: 1px solid #f93;
+
+  }
+  button:last-child {
+    margin-right: 0;
   }
   button.is-checked {
   //  border-bottom: 4px solid #f93;
   }
+  //@include transition(all $default-transition-speed ease-out);
+
+  &.pinned {
+    @include transition(all $default-transition-speed ease-out);
+
+  }
+
 }
+
+// .filter-btns.pinned {
+//
+// }
 
 .isotope-grid {
   max-width: 1280px;
@@ -52,6 +93,8 @@
       figure:nth-child(4n) {
         margin-right: 0;
       }
+
+      //@extend .__text;
     }
     @include media($desktop-up) {
 
@@ -62,6 +105,8 @@
       max-height: 240px;
       margin-right: 12px;
       margin-bottom: 12px;
+      margin: 1%;
+
       // margin-right: 42px;
       // margin-bottom: 42px;
     }
@@ -137,7 +182,10 @@
 
 
 #isotope-filters.pinned {
-  z-index: $z-above-all;
+  z-index: $z-above-all !important;
+  position: fixed;
+  margin: auto;
+  top: 52px !important;
 }
 
 

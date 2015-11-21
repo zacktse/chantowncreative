@@ -33,3 +33,8 @@
 .no-pad-bottom {
   padding-bottom: 0;
 }
+
+.clearfix {
+  clear:both;
+  @include clearfix();
+}

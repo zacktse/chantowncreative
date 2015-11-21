@@ -33,9 +33,21 @@ footer {
   font-family: $joesfin;
   font-weight: 600;
   text-transform: uppercase;
+  clear: both;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  @include media ($tablet-up) {
+    margin-top: 48px;
+  }
   @include media($desktop-up) {
       background-color: transparent;
       width: auto;
+      height: 48px;
+      border-top: 1px solid $light-blue;
+      border-bottom: 2px solid $bright-blue;
+      margin-top: 60px;
+      padding-top:12px;
+      padding-bottom: 6px;
 
   }
   @include transition(all $default-transition-speed ease-out);
@@ -45,8 +57,9 @@ footer {
     text-align: center;
     color: $dark-gray;
     font-size: 14px;
-    padding-top:12px;
-    padding-bottom: 6px;
+    font-weight: 600;
+
+
     line-height: 1.5em;
 
   }
@@ -63,6 +76,7 @@ footer {
   }
   @include media($desktop-up) {
       background-color: transparent;
+
       a {
         width: auto;
         max-width:470px;
@@ -72,13 +86,13 @@ footer {
         line-height: 16px;
         text-align: center;
         padding-left: 0;
-        padding-top: 42px;
+        padding-top: 6px;
         padding-bottom:0;
         color: $darker-orange;
         letter-spacing: 2px;
         word-spacing: 6px;
         font-weight: 600;
-        border-bottom: 2px solid $bright-blue;
+        //border-bottom: 2px solid $bright-blue;
       }
       a:hover {
         text-decoration: none;

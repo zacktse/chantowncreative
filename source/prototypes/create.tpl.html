@@ -25,7 +25,7 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row __text clearfix">
 
         <h1 class="size-h1 hide-text">Create</h1>
 
@@ -37,59 +37,61 @@
 
     </div>
 
+    <div class="row clearfix">
+      <div class="row clearfix" class="filter-btns-container">
 
-    <div class="row" class="filter-btns-container">
-
-      <div id="isotope-filters" class="row filter-btns">
-        <!-- <button class="sort" data-sort="random">Shuffle</button> -->
-        <button class="filter is-checked" data-filter="*">All</button>
-        <button class="filter" data-filter=".commercial">Commercial</button>
-        <button class="filter" data-filter=".illustration">Illustration</button>
-        <button class="filter" data-filter=".mixed-media">Mixed media</button>
-        <button class="filter" data-filter=".painting">Painting</button>
-        <button class="filter" data-filter=".screenprint">Screenprint</button>
-        <button class="filter" data-filter=".sketch">Sketch</button>
-      </div>
-
-        <!-- isotope  -->
-      <div class="filters-container">
-        <div id="gallery_container" class="gallery_container isotope-grid" itemscope itemtype="http://schema.org/ImageGallery">
-
-            <!-- gallery template -->
-
-            {{#each images}}
-              <figure class="item {{category}}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-
-                <a href="{{desktopImage.src}}" data-mobile-link="{{mobileImage.src}}" itemprop="contentUrl" data-size="{{desktopImage.w}}x{{desktopImage.h}}" data-size-desktop="{{desktopImage.w}}x{{desktopImage.h}}"
-                data-size-mobile="{{mobileImage.w}}x{{mobileImage.h}}">
-
-                {{#if customThumbImage}}
-                  <div class="thumbnail b-lazy" data-src="{{customThumbImage}}">
-                    <img src="{{customThumbImage}}"
-                    alt="{{alt}}"
-                    title="{{title}} | {{year}}" itemprop="thumbnail"  />
-                  </div>
-                {{else}}
-                  <div class="thumbnail b-lazy" data-src="{{srcImage}}_w800{{imageExtension}}" data-src-small="{{srcImage}}_w400{{imageExtension}}"
-                  data-src-medium="{{srcImage}}_w600{{imageExtension}}">
-                    <img src="{{srcImage}}_w400{{imageExtension}}"
-                    alt="{{alt}}"
-                    title="{{title}} | {{year}}" itemprop="thumbnail"  />
-                  </div>
-                {{/if}}
-
-               </a>
-               <figcaption itemprop=\"caption description\">
-                  {{title}} | {{year}} </br>
-                  {{description}}</br>
-                  <span itemprop=\"copyrightHolder\" class="image-copyright"> &copy; Vickie Chan</span>
-                </figcaption>
-              </figure>
-            {{/each}}
-
-
+        <div id="isotope-filters" class="row filter-btns">
+          <!-- <button class="sort" data-sort="random">Shuffle</button> -->
+          <button class="filter is-checked" data-filter="*">All</button>
+          <button class="filter" data-filter=".commercial">Commercial</button>
+          <button class="filter" data-filter=".illustration">Illustration</button>
+          <button class="filter" data-filter=".mixed-media">Mixed media</button>
+          <button class="filter" data-filter=".painting">Painting</button>
+          <button class="filter" data-filter=".screenprint">Screenprint</button>
+          <button class="filter" data-filter=".sketch">Sketch</button>
         </div>
-      </div>
+
+          <!-- isotope  -->
+        <div class="filters-container ">
+          <div id="gallery_container" class="gallery_container isotope-grid" itemscope itemtype="http://schema.org/ImageGallery">
+
+              <!-- gallery template -->
+
+              {{#each images}}
+                <figure class="item {{category}}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+
+                  <a href="{{desktopImage.src}}" data-mobile-link="{{mobileImage.src}}" itemprop="contentUrl" data-size="{{desktopImage.w}}x{{desktopImage.h}}" data-size-desktop="{{desktopImage.w}}x{{desktopImage.h}}"
+                  data-size-mobile="{{mobileImage.w}}x{{mobileImage.h}}">
+
+                  {{#if customThumbImage}}
+                    <div class="thumbnail b-lazy" data-src="{{customThumbImage}}">
+                      <img src="{{customThumbImage}}"
+                      alt="{{alt}}"
+                      title="{{title}} | {{year}}" itemprop="thumbnail"  />
+                    </div>
+                  {{else}}
+                    <div class="thumbnail b-lazy" data-src="{{srcImage}}_w800{{imageExtension}}" data-src-small="{{srcImage}}_w400{{imageExtension}}"
+                    data-src-medium="{{srcImage}}_w600{{imageExtension}}">
+                      <img src="{{srcImage}}_w400{{imageExtension}}"
+                      alt="{{alt}}"
+                      title="{{title}} | {{year}}" itemprop="thumbnail"  />
+                    </div>
+                  {{/if}}
+
+                 </a>
+                 <figcaption itemprop=\"caption description\">
+                    {{title}} | {{year}} </br>
+                    {{description}}</br>
+                    <span itemprop=\"copyrightHolder\" class="image-copyright"> &copy; Vickie Chan</span>
+                  </figcaption>
+                </figure>
+              {{/each}}
+
+
+          </div>
+        </div>
+
+    </div>
 
     </div>
 

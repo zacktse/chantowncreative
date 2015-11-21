@@ -51,7 +51,7 @@ var gulp = require('gulp'), //require gulp
   iconify = require('gulp-iconify'),
   // foreach = require('gulp-foreach'),
   // toJson = require('gulp-to-json'),
-  handlebars = require('gulp-compile-handlebars'), // used to pre-compile the handlebars tempate for the portfolio gallery 
+  handlebars = require('gulp-compile-handlebars'), // used to pre-compile the handlebars tempate for the portfolio gallery
   sizeOf = require('image-size'), // get image widths and heights by reading the image file
   size = require('gulp-size'), // used to output size of files in terminal
   ftp_details = require('./ftp-details.json'),
@@ -653,10 +653,7 @@ gulp.task('watch', function() {
   // gulp.watch('source/js/**/*.js', ['js-lint', 'js-uglify', 'js-concat','js-copy-vendorscripts']);    //Watch Scripts
 
   browserSync.init({
-    //proxy: {
-    //host: "localhost",
-    //port: 9000
-    //}
+
   });
 
   gulp.watch('source/js/**/*.js', ['js-watch']); //Watch Scripts

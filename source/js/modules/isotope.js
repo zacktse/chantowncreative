@@ -1,9 +1,11 @@
 var $ = require('jquery');
 var Isotope = require('isotope-layout');
 //var Isotope = require('../vendor/isotope.pkgd.min.js');
+//var Isotope = require('isotope-fit-columns');
+
 var PhotoSwipe = require('photoswipe');
 var Handlebars = require('handlebars');
-var PhotoSwipeUI_Default = require('../vendor/photoswipe-ui-default.min');
+var PhotoSwipeUI_Default = require('../vendor/photoswipe-ui-default.min.js');
 //var sb = require('./../vendor/share-button');
 
 
@@ -87,6 +89,7 @@ var runPhotoswipe = function() {
       opacity: 1
     },
     transitionDuration: '.3s',
+  //  layoutMode: 'fitColumns'
   //sortBy: 'random'
   });
 
@@ -101,8 +104,8 @@ var runPhotoswipe = function() {
     window.bLazy.revalidate();
     // scroll to the top of the list of images when re-filtering
     $('html, body').animate({
-      scrollTop: ($("#gallery_container").offset().top - $("#isotope-filters").height() - 36)
-    }, 250);
+      scrollTop: ($("#gallery_container").offset().top - $("#isotope-filters").height() - 60)
+    }, 300);
   });
 
   // align the isotope layout every 500ms

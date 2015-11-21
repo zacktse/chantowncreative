@@ -35,6 +35,21 @@ body {
   @include row();
 }
 
+.__text {
+
+  @include media($tablet-up) {
+    margin-right: 1.75782%;
+    width: 87.28027%;
+    margin-left: 6.35986%;
+  }
+  @include media($desktop-up) {
+    @include span-columns(14 of 16);
+    @include shift(1);
+    clear: both;
+    @include clearfix();
+  }
+}
+
 .page-border-top {
   height:$page-border-width-mobile;
   width: 100%;
@@ -71,6 +86,8 @@ body {
   min-height: 100%;
   min-width: 100%;
   pointer-events: none; // to improve performance of the div that contains the pixels
+  z-index: 0;
+  opacity: .999;
 }
 .body-pixels-container {
     position: relative;

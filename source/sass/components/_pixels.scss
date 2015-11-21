@@ -1,18 +1,47 @@
+
+@keyframes flickerAnimation {
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-o-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+%animate-flicker {
+   -webkit-animation: flickerAnimation 18s infinite;
+   -moz-animation: flickerAnimation 18s infinite;
+   -o-animation: flickerAnimation 18s infinite;
+    animation: flickerAnimation 18s infinite;
+}
+
 .pixel {
     z-index: $z-behind-bg;
-    -webkit-transition: all 2s ease-in-out;
-    -moz-transition: all 2s ease-in-out;
-    -ms-transition: all 2s ease-in-out;
-    transition: all 2s ease-in-out;
+    -webkit-transition: opacity 24s ease-in-out;
+    -moz-transition: opacity 24s ease-in-out;
+    -ms-transition: opacity 24s ease-in-out;
+    transition: opacity 24s ease-in-out;
     position: absolute;
     opacity: 0;
     pointer-events: none;
 }
 .pixel.on {
 
-  -webkit-transition: all 2s ease-in-out;
-  -moz-transition: all 2s ease-in-out;
-  -ms-transition: all 2s ease-in-out;
-  transition: all 2s ease-in-out;
+  -webkit-transition: opacity 24s ease-in-out;
+  -moz-transition: opacity 24s ease-in-out;
+  -ms-transition: opacity 24s ease-in-out;
+  transition: opacity 24s ease-in-out;
   opacity: 1;
+  //@extend %animate-flicker;
 }

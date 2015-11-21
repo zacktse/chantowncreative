@@ -12,14 +12,16 @@ _.extend(exports.DeadPixels.prototype, {
   //  sat:83,
   //  value:75,
   colors: ['#FF5000', '#0078AE', '#F65097'],
-  delay: 250,
+  delay: 10250,
   initialize: function(_pixel_container) {
+    this.pixels = [];
+    this.$el = $('.body-pixels-container');
     _.bindAll(this, 'random_color', 'reposition');
 
     //  this.$el = $('.logo-wrapper');
     //  this.$el = $(_pixel_container);
-    this.$el = $('.body-pixels-container');
-    this.pixels = [];
+
+
     if (this.window_width > 960) {
       this.pixelCount = 140;
     }
@@ -40,7 +42,7 @@ _.extend(exports.DeadPixels.prototype, {
         'pointer-events': 'none'
       });
       pixel.css('transform', 'rotate(' + _.random(360) + 'deg)');
-      //_.delay(this.reposition, _.random(this.delay, this.delay * 1.25), i);
+      _.delay(this.reposition, _.random(this.delay * 3, this.delay * 5.25), i);
       pixel.addClass('on');
 
     }
@@ -63,17 +65,20 @@ _.extend(exports.DeadPixels.prototype, {
   //  },
 
   reposition: function(i) {
-    //this.pixels[i].removeClass('on');
-    // _.delay(_.bind(function() {
-    //   this.pixels[i].css({
-    //     // left: _.random(100) + '%',
-    //     // top: _.random(100) + '%',
-    //     // 'background-color': this.random_color()
-    //   });
-    //
-    // //   this.pixels[i].addClass('on');
-    // //   _.delay(this.reposition, _.random(this.delay, this.delay * 4.25), i);
-    // }, this), 100)
+    //if (this.pixels[i]) {
+    this.pixels[i].removeClass('on');
+
+    _.delay(_.bind(function() {
+      this.pixels[i].css({
+        left: _.random(100) + '%',
+        top: _.random(100) + '%',
+        'background-color': this.random_color()
+      });
+
+      this.pixels[i].addClass('on');
+      _.delay(this.reposition, _.random(this.delay * 1, this.delay * 10), i);
+    }, this), 30000)
+  //}
   }
 
 

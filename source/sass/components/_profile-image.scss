@@ -40,15 +40,15 @@
 
 
      @include media($tablet-up) {
-       width: 160px;
+       width: 200px;
        margin: 0;
-       margin-top: 30px;
+       margin-top: 60px;
        @include background(url('../img/VickieChanHeadshot_w1000.jpg'));
        background-repeat: no-repeat;
        background-position: top center;
        background-size: contain;
        clear :none;
-       @include span-columns(2);
+       @include span-columns(3);
 
       //  border-right: $side-image-border;
      }
@@ -56,6 +56,7 @@
         width: 240px;
         height: 240px;
         padding: 2em;
+        margin-top: 64px;
         @include background(url('../img/VickieChanHeadshot_w1000.jpg'));
 
         background-repeat: no-repeat;
@@ -74,7 +75,7 @@
        @include span-columns(5);
      }
      @include media($desktop-up) {
-       @include span-columns(9);
+       @include span-columns(10);
        //@include shift(1);
      }
 

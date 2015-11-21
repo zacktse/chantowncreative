@@ -19,7 +19,8 @@ ol {
 }
 
 
-.content-main ul {
+.content-main ul, .content-main ol {
+  margin-bottom: 18px;
   list-style-type: none;
   @include font-size(18);
   @include line-height(23);
@@ -27,9 +28,19 @@ ol {
   @include margin(6, 0, 6, 0);
   list-style-position: inside;
   padding-left: 6px;
-  @include media($desktop-up) {
+
+  @include media($tablet-up) {
     @include font-size(20);
-    @include line-height(25);
+    @include line-height(30);
+  }
+  @include media($desktop-up) {
+    margin-bottom: 38px;
+    //@include font-size(20);
+    //@include line-height(25);
+    @include font-size(24);
+    @include line-height(36);
+    padding-left: 18px;
+  //  @include padding(12, 0, 18, 0);
   }
 }
 

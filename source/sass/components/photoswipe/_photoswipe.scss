@@ -297,6 +297,9 @@ a.pswp__share--twitter:hover {
 	@include media($tablet-up) {
 		padding: 12px 90px 12px 2px;
 	}
+	@include media($desktop-up) {
+		font-size: 14px;
+	}
 }
 
 // .pswp__caption__center ul.social-icons {

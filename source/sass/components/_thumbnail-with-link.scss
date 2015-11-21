@@ -13,6 +13,10 @@
   -webkit-align-items: center;
   -webkit-box-align: center;
   align-items: center;
+  @include media($desktop-up) {
+      @include margin(38,0,38,0);
+
+  }
 
 }
 
@@ -20,6 +24,7 @@ a.thumbnail-with-link__image {
   @include span-columns(1);
   @include media($desktop-up) {
     max-width: 100px;
+
   }
 }
 
@@ -35,4 +40,25 @@ a.thumbnail-with-link__image {
   overflow: visible;
   font-family: $joesfin;
   font-weight: 600;
+  @include font-size(18);
+  @include line-height(23);
+  @include padding(12, 0, 18, 0);
+  @include margin(0);
+  font-family: $joesfin;
+
+
+  @include media($tablet-up) {
+    @include font-size(20);
+    @include line-height(27);
+    @include padding(14, 0, 20, 0);
+  }
+
+  @include media($desktop-up) {
+    @include font-size(24);
+    @include line-height(32);
+    @include padding(12, 0, 18, 0);
+    @include margin(0);
+  }
+  &::-moz-selection,
+  &::selection { background-color: $darker-orange; color: white;}
 }
