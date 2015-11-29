@@ -1,7 +1,7 @@
 var $ = require('jquery');
 var Isotope = require('isotope-layout');
 //var Isotope = require('../vendor/isotope.pkgd.min.js');
-//var Isotope = require('isotope-fit-columns');
+//var IsotopeCols = require('isotope-fit-columns');
 
 var PhotoSwipe = require('photoswipe');
 var Handlebars = require('handlebars');
@@ -79,8 +79,17 @@ var runPhotoswipe = function() {
   //imagesLoaded( _portfolio_gallery, function() {
 
   var $image_gallery = new Isotope('.isotope-grid', {
-    isFitWidth: true,
+    //isFitWidth: true,
     // containerStyle: null,
+    layoutMode: 'masonry',
+    percentPosition: true,
+    masonry: {
+      columnWidth: '.item'
+    },
+    // layoutMode: 'fitColumns',
+    itemSelector: '.item',
+    resizesContainer: false,
+    transitionDuration: '.3s',
     /* masonry */
     hiddenStyle: {
       opacity: 0
@@ -88,8 +97,13 @@ var runPhotoswipe = function() {
     visibleStyle: {
       opacity: 1
     },
-    transitionDuration: '.3s',
-  //  layoutMode: 'fitColumns'
+
+
+  // containerStyle: {
+  //   "max-width": "960px",
+  //   "overflow": "hidden",
+  //   "clear": "both"
+  // }
   //sortBy: 'random'
   });
 
@@ -470,6 +484,18 @@ var runPhotoswipe = function() {
 var _portfolio_gallery = $('#gallery_container');
 if (_portfolio_gallery.length > 0) {
 
+  // load isotope js
+  // $.getScript("../assets/js/vendor/isotope.pkgd.min.js")
+  //   .done(function() {
+
+
+  ShareButton = require('../vendor/share-button.js');
+
+  gallery_items = require('../json/gallery_images');
+  buildGalleryHTML(gallery_items);
+  runPhotoswipe();
+  // });
+
   // if placing the json file on an external server, could use this code.
   // loadGalleryJSON(function(response) {
   //   // Parse JSON string into object
@@ -478,10 +504,6 @@ if (_portfolio_gallery.length > 0) {
   //     runPhotoswipe();
   // });
   //console.log("on create page");
-  ShareButton = require('../vendor/share-button.js')
 
-  gallery_items = require('../json/gallery_images');
-  buildGalleryHTML(gallery_items);
-  runPhotoswipe();
 
 }

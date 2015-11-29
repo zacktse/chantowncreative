@@ -13,6 +13,7 @@
     padding-top: 38px;
     clear: both;
     text-align: center;
+    max-width: 1280px;
   }
 }
 
@@ -99,13 +100,16 @@
     @include media($desktop-up) {
 
       @include span-columns(4 of 16);
+      box-sizing: border-box;
       width: 240px;
       height: 240px;
       max-width: 240px;
       max-height: 240px;
       margin-right: 12px;
       margin-bottom: 12px;
-      margin: 1%;
+      //margin: 1%;
+      margin: 0;
+      border: 3px solid white;
 
       // margin-right: 42px;
       // margin-bottom: 42px;
