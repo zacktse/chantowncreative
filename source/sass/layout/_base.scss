@@ -43,8 +43,8 @@ body {
     margin-left: 6.35986%;
   }
   @include media($desktop-up) {
-    @include span-columns(12 of 16);
-    @include shift(2);
+    @include span-columns(14 of 16);
+    @include shift(1);
     clear: both;
     @include clearfix();
   }
