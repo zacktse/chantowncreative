@@ -39,6 +39,12 @@ $h4-margin-bottom: 0;
 // eg. h1 {margin: 2*$h1-line 0;}
 // The grid will stay aligned
 
+// tweak main font color on desktop to be darker
+@include media($desktop-up) {
+  $chantown-gray: darken(#5d5d5d, 18%);
+}
+
+
 body {
   @include font-feature-settings("kern", "liga", "pnum");
   -webkit-font-smoothing: antialiased;
@@ -58,7 +64,7 @@ h5,
 h6 {
   font-family: $heading-font-family;
   font-size: $base-font-size;
-  font-weight: 300;
+  font-weight: 600;
   line-height: $heading-line-height;
   margin: 0;
   color: lighten($headings-color, 0.7);
@@ -79,14 +85,16 @@ h1, .size-h1 {
     @include font-size(40);
     @include line-height(45);
     //@include padding(38, 0, 38, 0);
-    @include padding(38, 0, 19, 0);
+    @include padding(38, 0, 0, 0);
   }
 
   @include media ($desktop-up) {
-    @include font-size(46);
-    @include line-height(50);
+    // @include font-size(46);
+    // @include line-height(50);
+    @include font-size(36);
+    @include line-height(45);
     //@include padding(38, 0, 38, 0);
-    @include padding(38, 0, 19, 0);
+    @include padding(38, 0, 0, 0);
 
   }
 }
@@ -104,14 +112,14 @@ h2, .size-h2 {
     @include font-size(32);
     @include line-height(40);
     //@include padding(38, 0, 38, 0);
-    @include padding(36, 0, 15, 0);
+    @include padding(36, 0, 0, 0);
   }
 
   @include media ($desktop-up) {
-    @include font-size(36);
-    @include line-height(45);
+    @include font-size(32);
+    @include line-height(40);
     //@include padding(38, 0, 30, 0);
-    @include padding(38, 0, 15, 0);
+    @include padding(38, 0, 0, 0);
   }
 }
 
@@ -128,7 +136,7 @@ h3, .size-h3 {
     @include font-size(24);
     @include line-height(30);
     //@include padding(38, 0, 38, 0);
-    @include padding(25, 0, 13, 0);
+    @include padding(25, 0, 0, 0);
 
   }
 
@@ -136,7 +144,7 @@ h3, .size-h3 {
     @include font-size(28);
     @include line-height(35);
     //@include padding(25, 0, 25, 0);
-    @include padding(25, 0, 13, 0);
+    @include padding(25, 0, 0, 0);
 
   }
 }
@@ -158,7 +166,7 @@ h4, .size-h4 {
   @include media($desktop-up) {
     @include font-size(24);
     @include line-height(32);
-    @include padding(12, 0, 18, 0);
+    @include padding(12, 0, 0, 0);
     @include margin(0);
   }
 
@@ -198,8 +206,8 @@ font-weight: 300; */
   }
 
   @include media($desktop-up) {
-    @include font-size(24);
-    @include line-height(32);
+    @include font-size(20);
+    @include line-height(27);
     @include padding(12, 0, 18, 0);
     @include margin(0);
   }
@@ -235,7 +243,7 @@ h1 + p, h2 + p, h3 + p, h4 + p {
     @include margin(0);
   }
 }
-// 
+//
 // h1 + p.leader {
 //   padding-top: 0;
 // }

@@ -43,8 +43,8 @@ body {
     margin-left: 6.35986%;
   }
   @include media($desktop-up) {
-    @include span-columns(14 of 16);
-    @include shift(1);
+    @include span-columns(12 of 16);
+    @include shift(2);
     clear: both;
     @include clearfix();
   }
@@ -114,6 +114,14 @@ body {
   width: 100%;
 }
 
+.cta-block {
+  @include media($desktop-up) {
+    padding-top: 37px;
+    clear: both;
+  }
+
+}
+
 .home-cta-block-left-col {
   //padding:16px;
   //box-shadow: inset 0 1px 0 rgba(255,255,255,0.1), 0 2px 2px rgba(0,0,0,0.05), 0 0 4px 1px rgba(0,0,0,0.05);
@@ -123,7 +131,7 @@ body {
   @include media($desktop-up) {
     @include span-columns(7 of 16);
     @include shift(1);
-    p { padding-right: 18px; }
+    p { padding-right: 18px; padding-left: 60px;}
   }
 
 }
@@ -139,7 +147,7 @@ body {
     @include media($desktop-up) {
       @include span-columns(7 of 16);
 
-      p { padding-left: 18px; }
+      p { padding-left: 18px; padding-right: 60px;}
 
     }
 
