@@ -265,7 +265,7 @@ $sprite: map-get($icons, sprite) !default;
 
 	// Add ie fallback
 	@include ie-sprite($icon, $type);
-
+  // @include transition(color $default-transition-speed ease-out);
 }
 
 

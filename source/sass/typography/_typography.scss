@@ -40,9 +40,9 @@ $h4-margin-bottom: 0;
 // The grid will stay aligned
 
 // tweak main font color on desktop to be darker
-@include media($desktop-up) {
-  $chantown-gray: darken(#5d5d5d, 18%);
-}
+ @include media($desktop-up) {
+   $chantown-gray: #444;
+ }
 
 
 body {

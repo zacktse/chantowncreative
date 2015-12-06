@@ -4,7 +4,7 @@
 // $column: 90px;
 // $gutter: 30px;
 $grid-columns: 4; // 4 cols on mobile by default
-$max-width: 1280; // default max width
+$max-width: 1280; // default max width (this should be in px but it's not here)
 
 // Breakpoints
 $large-mobile-screen: em(481); // 481px

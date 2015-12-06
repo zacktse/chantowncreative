@@ -51,7 +51,7 @@
   //@include transition(all $default-transition-speed ease-out);
 
   &.pinned {
-    @include transition(all $default-transition-speed ease-out);
+    //@include transition(all $default-transition-speed ease-out);
 
   }
 
