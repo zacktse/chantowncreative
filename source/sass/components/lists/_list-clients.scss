@@ -1,5 +1,8 @@
 .clients-wrapper {
   padding-top: 60px;
+  @include media($desktop-up) {
+    padding-top: 0;
+  }
 }
 
 ul.list__clients {
