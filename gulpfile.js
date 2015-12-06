@@ -668,6 +668,23 @@ gulp.task('watch', function() {
 gulp.task('js-watch', ['js-browserify', 'js-copy-scripts', 'js-copy-json'], browserSync.reload);
 
 
+
+/*******************************************************************************
+##  Minify image assets
+##  minifies the images in assets/img
+*******************************************************************************/
+
+gulp.task('minify-images', function() {
+  return gulp.src(['./build/assets/img/**/*.png', './build/assets/img/**/*.jpg'])
+    .pipe(imagemin({
+      optimizationLevel: 3,
+      progressive: true,
+      interlaced: true,
+    //use: [pngquant()]
+    }))
+    .pipe(gulp.dest('./build/assets/img/'));
+});
+
 /*******************************************************************************
 ##  Minify HTML
 ##  minifies the html pages - before uploading to production
@@ -693,8 +710,8 @@ gulp.task('minify-html', function() {
 
 // deploy to production - www.chantown.com/
 
-// minify built html first, then ftp files to the live server in the root directory
-gulp.task('deploy-to-production', ['minify-html', 'deploy-files-to-production']);
+// minify images and built html first, then ftp files to the live server in the root directory
+gulp.task('deploy-to-production', ['minify-images', 'minify-html', 'deploy-files-to-production']);
 
 
 gulp.task('deploy-files-to-production', function() {
