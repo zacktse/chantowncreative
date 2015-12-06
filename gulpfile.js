@@ -56,6 +56,7 @@ var gulp = require('gulp'), //require gulp
   size = require('gulp-size'), // used to output size of files in terminal
   ftp_details = require('./ftp-details.json'),
   combineMq = require('gulp-combine-mq'),
+  minifyHTML = require('gulp-minify-html'), // compress static html files
   browserSync = require('browser-sync').create();
   // neat.with('source/sass/');   // set path to sass for bourbon neat
 
@@ -666,12 +667,64 @@ gulp.task('watch', function() {
 
 gulp.task('js-watch', ['js-browserify', 'js-copy-scripts', 'js-copy-json'], browserSync.reload);
 
+
+/*******************************************************************************
+##  Minify HTML
+##  minifies the html pages - before uploading to production
+*******************************************************************************/
+
+gulp.task('minify-html', function() {
+  var opts = {
+    conditionals: true,
+    spare: true
+  };
+
+  return gulp.src('./build/**/*.html')
+    .pipe(minifyHTML(opts))
+    .pipe(gulp.dest('./build/'));
+});
+
+
+
 /*******************************************************************************
 ##  DEPLOY TASKS
 ##  upload and sync files to live or staging environments...
 *******************************************************************************/
 
+// deploy to production - www.chantown.com/
 
+// minify built html first, then ftp files to the live server in the root directory
+gulp.task('deploy-to-production', ['minify-html', 'deploy-files-to-production']);
+
+
+gulp.task('deploy-files-to-production', function() {
+  var conn = ftp.create({
+    host: ftp_details.host,
+    user: ftp_details.user,
+    password: ftp_details.password,
+    parallel: 10,
+    log: gutils.log
+  });
+  var globs = [
+    'build/**/**'
+  ];
+
+  // using base = '.' will transfer everything to /public_html correctly
+  // turn off buffering in gulp.src for best performance
+
+  return gulp.src(globs, {
+    base: './build/',
+    buffer: false
+  })
+    .pipe(plumber())
+    .pipe(conn.newer('./chantown.com/')) // only upload newer files
+    .pipe(conn.dest('./chantown.com/'));
+});
+
+
+
+
+// deploy to staging - www.chantown.com/newwebtest/
 gulp.task('deploy-to-staging', function() {
   var conn = ftp.create({
     host: ftp_details.host,
