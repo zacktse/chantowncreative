@@ -102,6 +102,20 @@
   }
 }
 
+.icon-instagram {
+  @include sprite(instagram);
+  &:hover {
+    @include sprite(instagramHover, bg);
+  }
+}
+
+.icon-instagram-gray {
+  @include sprite(instagram-gray);
+  &:hover {
+    @include sprite(instagramHover, bg);
+  }
+}
+
 .icon-facebook-gray {
   @include sprite(facebook-gray);
   &:hover {

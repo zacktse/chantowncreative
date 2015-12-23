@@ -298,9 +298,11 @@ p a {
   font-weight: 600;
   // color: $lighter-orange;
   color: $darker-orange;
-  &.underlined{ @include animated-link-underline(); }
+  &.underlined{ @include animated-link-underline();}
 }
 
+a.underlined{ @include animated-link-underline(); font-family: $joesfin;}
+a.underlined.black { color: $chantown-gray;}
 
 p.centered {
   text-align: center;

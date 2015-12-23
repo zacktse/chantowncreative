@@ -1,7 +1,7 @@
 /*==============================================================================
 ##  Chantown Creative website - July 2015
 ##
-##  Based on, and borrowed heavily from, a combination of the UAL gulpfile (private repo)
+##  Based on, and borrowed from, a combination of the UAL gulpfile (private repo)
 ##  and https://github.com/thesherps/gulp.bourbon.boilerplate
 ##
 ##
@@ -16,6 +16,7 @@ var gulp = require('gulp'), //require gulp
   gutils = require('gulp-util'), // gulp utilities (date)
   templator = require('gulp-file-include'), // used to build preototype files from multiple includes
   browserify = require('browserify'),
+  //exorcist = require('exorcist'), // separates out the js map for browserify to an external file
   source = require('vinyl-source-stream'),
   buffer = require('vinyl-buffer'),
   sourcemaps = require('gulp-sourcemaps'),
@@ -180,14 +181,14 @@ gulp.task('js-browserify', function() {
   // set up the browserify instance on a task basis
   var b = browserify({
     entries: './source/js/index.js',
-    debug: true
+    debug: false // set this to false to disable source maps
   });
 
   return b.bundle()
     .pipe(source('app.js'))
     .pipe(buffer())
     // .pipe(sourcemaps.init({
-    //   loadMaps: true
+    //   loadMaps: false
     // }))
     .pipe(size({
       title: "Size of JS before minifying: "
@@ -355,22 +356,22 @@ gulp.task('responsive-imgs', function() {
               embed: true,
               withoutEnlargement: false
             },
-            {
-              width: 600,
-              rename: {
-                //path.dirname += "";
-                suffix: "_w600"
-              //path.extname = ".md"
-              },
-              background: {
-                r: 255,
-                g: 255,
-                b: 255,
-                a: 255
-              },
-              embed: true,
-              withoutEnlargement: false
-            },
+            // {
+            //   width: 600,
+            //   rename: {
+            //     //path.dirname += "";
+            //     suffix: "_w600"
+            //   //path.extname = ".md"
+            //   },
+            //   background: {
+            //     r: 255,
+            //     g: 255,
+            //     b: 255,
+            //     a: 255
+            //   },
+            //   embed: true,
+            //   withoutEnlargement: false
+            // },
             {
               width: 800,
               rename: {
@@ -403,22 +404,22 @@ gulp.task('responsive-imgs', function() {
               embed: true,
               withoutEnlargement: false
             },
-            {
-              width: 1500,
-              rename: {
-                //path.dirname += "";
-                suffix: "_w1500"
-              //path.extname = ".md"
-              },
-              background: {
-                r: 255,
-                g: 255,
-                b: 255,
-                a: 255
-              },
-              embed: true,
-              withoutEnlargement: false
-            },
+            // {
+            //   width: 1500,
+            //   rename: {
+            //     //path.dirname += "";
+            //     suffix: "_w1500"
+            //   //path.extname = ".md"
+            //   },
+            //   background: {
+            //     r: 255,
+            //     g: 255,
+            //     b: 255,
+            //     a: 255
+            //   },
+            //   embed: true,
+            //   withoutEnlargement: false
+            // },
             {
               width: 2000,
               rename: {
@@ -434,23 +435,23 @@ gulp.task('responsive-imgs', function() {
               },
               embed: true,
               withoutEnlargement: false
-            },
-            {
-              width: 2500,
-              rename: {
-                //path.dirname += "";
-                suffix: "_w2500"
-              //path.extname = ".md"
-              },
-              background: {
-                r: 255,
-                g: 255,
-                b: 255,
-                a: 255
-              },
-              embed: true,
-              withoutEnlargement: false
-            },
+            }
+          // {
+          //   width: 2500,
+          //   rename: {
+          //     //path.dirname += "";
+          //     suffix: "_w2500"
+          //   //path.extname = ".md"
+          //   },
+          //   background: {
+          //     r: 255,
+          //     g: 255,
+          //     b: 255,
+          //     a: 255
+          //   },
+          //   embed: true,
+          //   withoutEnlargement: false
+          // },
           ]
         }, {
           errorOnUnusedImage: false
@@ -678,7 +679,7 @@ gulp.task('minify-images', function() {
   return gulp.src(['./build/assets/img/**/*.png', './build/assets/img/**/*.jpg'])
     .pipe(imagemin({
       optimizationLevel: 3,
-      progressive: true,
+      progressive: false,
       interlaced: true,
     //use: [pngquant()]
     }))

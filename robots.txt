@@ -1,3 +1,4 @@
-# robotstxt.org/
+User-Agent: *
+Disallow:
 
-User-agent: *
+Sitemap: http://chantown.com/sitemap.xml
