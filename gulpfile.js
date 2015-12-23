@@ -124,7 +124,8 @@ gulp.task('js-uglify', function() {
       return trunc + '.min' + ext;
     }))
     .pipe(size({
-      title: "Size of JS after minifying: "
+      title: "Size of JS after minifying and gzip: ",
+      gzip: true
     }))
     .pipe(gulp.dest(path.js_dest)); // where to put the files
 });
@@ -218,7 +219,8 @@ gulp.task('js-browserify', function() {
         }
       }))
     .pipe(size({
-      title: "Size of JS after minifying: "
+      title: "Size of JS after minifying and gzip: ",
+      gzip: true
     }))
     .on('error', gutil.log)
     //.pipe(sourcemaps.write('./'))
@@ -276,7 +278,8 @@ gulp.task('sass', function() {
     //.pipe(shorthand())  // removed becuase it was breaking shit
     .pipe(cssmin()) // minify css
     .pipe(size({
-      title: "Size of CSS after minifying: "
+      title: "Size of CSS after minifying and gzip: ",
+      gzip: true
     }))
     .pipe(gulp.dest(path.sass_dest)) //destination
     .pipe(connect.reload());

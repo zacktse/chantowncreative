@@ -1,9 +1,11 @@
 var $ = require('jquery');
+
+
 var Isotope = require('isotope-layout');
 //var Isotope = require('../vendor/isotope.pkgd.min.js');
-//var IsotopeCols = require('isotope-fit-columns');
-
-var PhotoSwipe = require('photoswipe');
+// //var IsotopeCols = require('isotope-fit-columns');
+//
+var PhotoSwipe = require('../vendor/photoswipe.min.js');
 var Handlebars = require('handlebars');
 var PhotoSwipeUI_Default = require('../vendor/photoswipe-ui-default.min.js');
 //var sb = require('./../vendor/share-button');
