@@ -1,5 +1,5 @@
 # ChantownCreative.com
-Theme files for chantown.com - the homepage for Chantown Creative.
+Theme files for chantown.com - a mobile-first, static homepage for Chantown Creative.
 Design:  Vickie Chan
 Development: Pete Richardson
 
