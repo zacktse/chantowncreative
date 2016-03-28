@@ -1,4 +1,4 @@
-# ChantownCreative.com
+# Chantown.com
 Theme files for chantown.com - a mobile-first, static homepage for Chantown Creative.
 
 - Design:  Vickie Chan
