@@ -19,8 +19,11 @@ Dependencies - you will need to have node.js and gulp installed to run batch, bu
 3. run "gulp"
 4. start workin' 
 
-## Batch resize images
 
+## Updating gallery 
+
+
+## Batch resize images
 
 1. 
 
