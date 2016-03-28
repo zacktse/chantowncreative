@@ -7,8 +7,8 @@ Theme files for chantown.com - a mobile-first, static homepage for Chantown Crea
 
 
 ## Chantown.com Build Details
-Based on HTML5 boilerplate, Bourbon, Neat, Bitters, mustache templating
-Includes - Gulp tasks, templating, livereload, auto resizing images using gulp-responsive-images, auto build / deploy
+Based on HTML5 boilerplate, Bourbon, Neat, Bitters, mustache templating, modular JS using browserify
+Includes - Gulp tasks, templating, livereload (BrowserSync), Auto generation, minification and resizing of images using gulp-responsive-images, auto build / deploy
 
 Dependencies - you will need to have node.js and gulp installed to run batch, build and deploy tasks listed below.
 
