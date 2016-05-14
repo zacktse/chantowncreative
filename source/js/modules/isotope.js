@@ -52,7 +52,7 @@ var buildGalleryHTML = function(json) {
     unCompiledGalleryHtml = _$gallery_container.html(),
     galleryTemplate = Handlebars.compile(unCompiledGalleryHtml),
     result = galleryTemplate(myJson);
-  //console.log("ran buildGalleryHTML");
+  console.log("ran buildGalleryHTML");
   _$gallery_container.html(result);
 };
 
@@ -284,7 +284,7 @@ var runPhotoswipe = function() {
 
 
 
-    // TODO: convert this to use the live url on launch
+
     var shareBtnOptions = function(imageObj) {
       var artworkTitle = imageObj.title.split('|')[0];
       //console.log(artworkTitle);

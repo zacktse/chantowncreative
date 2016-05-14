@@ -616,22 +616,22 @@ gulp.task('copy-sprites', function() {
 ## creates the JSON file which contains information about the images in the gallery folder to use with the Photoswipe gallery implementation on the front end of the website
 ##
 *******************************************************************************/
-gulp.task('build_gallery_json', function() {
-  // return gulp.src(path.gallery_images)
-  //   .pipe(plumber())
-  //   .pipe(foreach(function(stream, file){
-  //       //.pipe(sizeOf(file))
-  //       .pipe(debug({title: file}))
-  //   }));
-  gulp.src(path.gallery_images)
-    .pipe(require('gulp-filelist')('filelist.json'))
-    .pipe(gulp.dest('out'));
-
-    // .pipe(toJson({
-    //   filename: 'gallery.json'
-    // strip: /^.+\/?\\?public\/?\\?/ //create just file names by removing everything from left of public/ folder
-
-});
+// gulp.task('build_gallery_json', function() {
+//   // return gulp.src(path.gallery_images)
+//   //   .pipe(plumber())
+//   //   .pipe(foreach(function(stream, file){
+//   //       //.pipe(sizeOf(file))
+//   //       .pipe(debug({title: file}))
+//   //   }));
+//   gulp.src(path.gallery_images)
+//     .pipe(require('gulp-filelist')('filelist.json'))
+//     .pipe(gulp.dest('out'));
+//
+//     // .pipe(toJson({
+//     //   filename: 'gallery.json'
+//     // strip: /^.+\/?\\?public\/?\\?/ //create just file names by removing everything from left of public/ folder
+//
+// });
 
 
 

@@ -1,20 +1,20 @@
 {
- "images" : [
+  "images" : [
              {
          "title":"River Khwae",
          "year":2016,
          "category":"sketch",
-         "srcImage":"assets/img/gallery/2016/",
+         "srcImage":"assets/img/gallery/2016/201603_RiverKhwae_small",
          "imageExtension": ".jpg",
          "mobileImage":{
-            "src":"assets/img/gallery/2016/",
+            "src":"assets/img/gallery/2016/201603_RiverKhwae_small_w800.jpg",
             "w":800,
-            "h":542
+            "h":553
          },
          "desktopImage":{
-            "src":"assets/img/gallery/2016",
+            "src":"assets/img/gallery/2016/201603_RiverKhwae_small_w2000.jpg",
             "w":2000,
-            "h":1355
+            "h":1383
          },
          "description":"Ink sketch",
          "alt":"River Khwae sketch by Vickie Chan"
@@ -23,17 +23,17 @@
            "title":"Death Cab for Cutie poster",
            "year": 2016,
            "category":"commercial",
-           "srcImage":"assets/img/gallery/2016/",
+           "srcImage":"assets/img/gallery/2016/201603_Deathcab",
            "imageExtension": ".jpg",
            "mobileImage":{
-              "src":"assets/img/gallery/2016/.jpg",
+              "src":"assets/img/gallery/2016/201603_Deathcab_w800.jpg",
               "w":800,
-              "h":1142
+              "h":1135
            },
            "desktopImage":{
-              "src":"assets/img/gallery/2016/.jpg",
+              "src":"assets/img/gallery/2016/201603_Deathcab_w2000.jpg",
               "w":2000,
-              "h":2857
+              "h":2838
            },
            "description":"Commercial graphic design",
            "alt":"Death Cab for Cutie poster by Vickie Chan"
@@ -42,17 +42,17 @@
            "title":"Surviving Hong Kong Series: Opening a Pack of Calbees",
            "year": 2016,
            "category":"illustration",
-           "srcImage":"assets/img/gallery/2016/",
+           "srcImage":"assets/img/gallery/2016/15SurvHK20160223Calbees",
            "imageExtension": ".jpg",
            "mobileImage":{
-              "src":"assets/img/gallery/2016/.jpg",
+              "src":"assets/img/gallery/2016/15SurvHK20160223Calbees_w800.jpg",
               "w":800,
-              "h":1142
+              "h":1010
            },
            "desktopImage":{
-              "src":"assets/img/gallery/2016/.jpg",
+              "src":"assets/img/gallery/2016/15SurvHK20160223Calbees_w2000.jpg",
               "w":2000,
-              "h":2857
+              "h":2525
            },
            "description":"Illustration",
            "alt":"Surviving Hong Kong: Opening a Pack of Calbees illustration by Vickie Chan"
@@ -61,17 +61,17 @@
            "title":"Surviving Hong Kong Series: Lift Etiquette",
            "year": 2016,
            "category":"illustration",
-           "srcImage":"assets/img/gallery/2016/",
+           "srcImage":"assets/img/gallery/2016/14SurvHK20160218Lift",
            "imageExtension": ".jpg",
            "mobileImage":{
-              "src":"assets/img/gallery/2016/.jpg",
+              "src":"assets/img/gallery/2016/14SurvHK20160218Lift_w800.jpg",
               "w":800,
-              "h":1142
+              "h":1025
            },
            "desktopImage":{
-              "src":"assets/img/gallery/2016/.jpg",
+              "src":"assets/img/gallery/2016/14SurvHK20160218Lift_w2000.jpg",
               "w":2000,
-              "h":2857
+              "h":2564
            },
            "description":"Illustration",
            "alt":"Surviving Hong Kong: Lift Etiquette illustration by Vickie Chan"
@@ -80,17 +80,17 @@
            "title":"Surviving Hong Kong Series: Cinema-going",
            "year": 2016,
            "category":"illustration",
-           "srcImage":"assets/img/gallery/2016/",
+           "srcImage":"assets/img/gallery/2016/13SurvHK20160214Cinema",
            "imageExtension": ".jpg",
            "mobileImage":{
-              "src":"assets/img/gallery/2016/.jpg",
+              "src":"assets/img/gallery/2016/13SurvHK20160214Cinema_w800.jpg",
               "w":800,
-              "h":1142
+              "h":1047
            },
            "desktopImage":{
-              "src":"assets/img/gallery/2016/.jpg",
+              "src":"assets/img/gallery/2016/13SurvHK20160214Cinema_w2000.jpg",
               "w":2000,
-              "h":2857
+              "h":2618
            },
            "description":"Illustration",
            "alt":"Surviving Hong Kong: Cinema-going illustration by Vickie Chan"
@@ -99,17 +99,17 @@
            "title":"Year of the Monkey Lai See (利是) envelopes",
            "year": 2016,
            "category":"illustration screenprint",
-           "srcImage":"assets/img/gallery/2016/",
+           "srcImage":"assets/img/gallery/2016/201601CNYLaiSeeALL",
            "imageExtension": ".jpg",
            "mobileImage":{
-              "src":"assets/img/gallery/2016/.jpg",
+              "src":"assets/img/gallery/2016/201601CNYLaiSeeALL_w800.jpg",
               "w":800,
-              "h":1142
+              "h":725
            },
            "desktopImage":{
-              "src":"assets/img/gallery/2016/.jpg",
+              "src":"assets/img/gallery/2016/201601CNYLaiSeeALL_w2000.jpg",
               "w":2000,
-              "h":2857
+              "h":1812
            },
            "description":"Commercial illustration",
            "alt":"Chinese New Year lai see envelopes illustrated and screenprinted by Vickie Chan"
@@ -118,17 +118,17 @@
            "title":"Surviving Hong Kong Series: Toilets",
            "year": 2016,
            "category":"illustration",
-           "srcImage":"assets/img/gallery/2016/",
+           "srcImage":"assets/img/gallery/2016/12SurvHK2016012Toilets",
            "imageExtension": ".jpg",
            "mobileImage":{
-              "src":"assets/img/gallery/2016/.jpg",
+              "src":"assets/img/gallery/2016/12SurvHK2016012Toilets_w800.jpg",
               "w":800,
-              "h":1142
+              "h":1089
            },
            "desktopImage":{
-              "src":"assets/img/gallery/2016/.jpg",
+              "src":"assets/img/gallery/2016/12SurvHK2016012Toilets_2000.jpg",
               "w":2000,
-              "h":2857
+              "h":2723
            },
            "description":"Illustration",
            "alt":"Surviving Hong Kong: Toilets illustration by Vickie Chan"
@@ -137,17 +137,17 @@
            "title":"Surviving Hong Kong Series: Got Milk?",
            "year": 2015,
            "category":"illustration",
-           "srcImage":"assets/img/gallery/2015/",
+           "srcImage":"assets/img/gallery/2015/11SurvHK201512GotMilk",
            "imageExtension": ".jpg",
            "mobileImage":{
-              "src":"assets/img/gallery/2015/.jpg",
+              "src":"assets/img/gallery/2015/11SurvHK201512GotMilk_w800.jpg",
               "w":800,
-              "h":1142
+              "h":1076
            },
            "desktopImage":{
-              "src":"assets/img/gallery/2015/.jpg",
+              "src":"assets/img/gallery/2015/11SurvHK201512GotMilk_w2000.jpg",
               "w":2000,
-              "h":2857
+              "h":2690
            },
            "description":"Illustration",
            "alt":"Surviving Hong Kong: Got Milk? illustration by Vickie Chan"
@@ -156,17 +156,17 @@
            "title":"Surviving Hong Kong Series: Water Dispenser (small)",
            "year": 2015,
            "category":"illustration",
-           "srcImage":"assets/img/gallery/2015/",
+           "srcImage":"assets/img/gallery/2015/10SurvHK201512WaterHotSmall",
            "imageExtension": ".jpg",
            "mobileImage":{
-              "src":"assets/img/gallery/2015/.jpg",
+              "src":"assets/img/gallery/2015/10SurvHK201512WaterHotSmall_w800.jpg",
               "w":800,
-              "h":1142
+              "h":1066
            },
            "desktopImage":{
-              "src":"assets/img/gallery/2015/.jpg",
+              "src":"assets/img/gallery/2015/10SurvHK201512WaterHotSmall_w2000.jpg",
               "w":2000,
-              "h":2857
+              "h":2667
            },
            "description":"Illustration",
            "alt":"Surviving Hong Kong: Water Dispenser (small) illustration by Vickie Chan"
@@ -346,17 +346,17 @@
          "title":"Existentialism on Prom Night",
          "year": 2015,
          "category":"painting mixed-media",
-         "srcImage":"assets/img/gallery/2015/",
+         "srcImage":"assets/img/gallery/2015/2015_ExistentialismOnPromNight_20",
          "imageExtension": ".jpg",
          "mobileImage":{
-            "src":"assets/img/gallery/2015.jpg",
+            "src":"assets/img/gallery/2105/2015_ExistentialismOnPromNight_20_w800.jpg",
             "w":800,
-            "h":798
+            "h":800
          },
          "desktopImage":{
-            "src":"assets/img/gallery/2015.jpg",
+            "src":"assets/img/gallery/2015/2015_ExistentialismOnPromNight_20_w2000.jpg",
             "w":2000,
-            "h":1995
+            "h":2000
          },
          "description":"Mixed media on canvas",
          "alt":"Existentialism on Prom Night mixed media painting on canvas by Vickie Chan"
@@ -1207,17 +1207,17 @@
          "title":"Such Great Heights (12 inch)",
          "year": 2009,
          "category":"painting mixed medium",
-         "srcImage":"assets/img/gallery/2009/",
+         "srcImage":"assets/img/gallery/2009/2009_SuchGreatHeights-WithoutYou_12",
          "imageExtension": ".jpg",
          "mobileImage":{
-            "src":"assets/img/gallery/2009/.jpg",
+            "src":"assets/img/gallery/2009/2009_SuchGreatHeights-WithoutYou_12_w800.jpg",
             "w":800,
-            "h":800
+            "h":802
          },
          "desktopImage":{
-            "src":"assets/img/gallery/2009/.jpg",
+            "src":"assets/img/gallery/2009/2009_SuchGreatHeights-WithoutYou_12_w2000.jpg",
             "w":2000,
-            "h":2000
+            "h":2005
          },
          "description":"Mixed media on wood",
          "alt":"Such Great Heights (12) mixed media painting by Vickie Chan "
