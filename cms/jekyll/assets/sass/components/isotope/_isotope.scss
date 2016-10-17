@@ -1,0 +1,243 @@
+.filter-btns-container, .filters-container {
+  @include media($desktop-up) {
+    text-align: center;
+    padding-top: 38px;
+    clear: both;
+  }
+}
+
+
+.filters-container {
+
+  @include media($desktop-up) {
+    padding-top: 38px;
+    clear: both;
+    text-align: center;
+    max-width: 1280px;
+  }
+}
+
+// .scrollmagic-pin-spacer > .pinned + .filters-container {
+//   @include media($desktop-up) {
+//     padding-top: 60px;
+//   }
+// }
+
+.filter-btns {
+  @include margin(30, 0, 60, 0);
+  @include media($tablet-up) {
+    //@extend .__text;
+  }
+  @include media($desktop-up) {
+    text-align:center;
+  }
+
+  button {
+    @include margin(12, 10, 0, 0);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 14px 1em 11px 1em;
+
+    //border: 1px solid #f93;
+
+  }
+  button:last-child {
+    margin-right: 0;
+  }
+  button.is-checked {
+  //  border-bottom: 4px solid #f93;
+  }
+  //@include transition(all $default-transition-speed ease-out);
+
+  &.pinned {
+    //@include transition(all $default-transition-speed ease-out);
+
+  }
+
+}
+
+// .filter-btns.pinned {
+//
+// }
+
+.isotope-grid {
+  max-width: 1280px;
+  min-height: 900px;
+  display: block;
+  clear:both;
+  // width: 100%;
+  //margin: 0 auto;
+  figure {
+    display: block;
+    margin: 0;
+    margin-bottom:12px;
+    //min-height: 130px;
+    overflow: hidden;
+    // @include span-columns(2 of 4);
+    $mob-width: calc(100% / 3.3 );
+    width: $mob-width;
+    min-height: 106px;
+    margin-right: 3%;
+
+    figure:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    @include media($tablet-up) {
+      max-width: 180px;
+      max-height: 180px;
+      height: 180px;
+      width: 180px;
+      margin-right:4px;
+      margin-bottom:4px;
+      figure:nth-child(4n) {
+        margin-right: 0;
+      }
+
+      //@extend .__text;
+    }
+    @include media($desktop-up) {
+
+      @include span-columns(4 of 16);
+      box-sizing: border-box;
+      width: 240px;
+      height: 240px;
+      max-width: 240px;
+      max-height: 240px;
+      margin-right: 12px;
+      margin-bottom: 12px;
+      //margin: 1%;
+      margin: 0;
+      border: 3px solid white;
+
+      // margin-right: 42px;
+      // margin-bottom: 42px;
+    }
+  }
+
+
+
+}
+
+
+/* clear fix */
+.isotope-grid:after {
+  content: '';
+  display: block;
+  clear: both;
+  @include clearfix;
+}
+
+.isotope-hidden {
+    pointer-events: none;
+    z-index: 1;
+  }
+
+// .grid-sizer {
+//     max-width: 120px;
+//     height: auto;
+//     @include media($tablet-up) {
+//       max-width:120px;
+//     }
+//     @include media($desktop-up) {
+//       max-width: 230px;
+//       max-height: 230px;
+//     }
+// }
+
+.thumbnail {
+  position: relative;
+  overflow: hidden;
+  min-height: 106px;
+  width: 100%;
+  background-position: center center;
+	background-repeat: no-repeat;
+  background-size: cover;
+  //padding-right: 3px;
+  //padding-bottom: 3px;
+  // border-radius: 50%;
+  //object-fit: fill;
+  @include media($tablet-up) {
+    max-width: 180px;
+    max-height: 180px;
+    width:100%;
+    height: 180px;
+    // height:160px;
+  }
+  @include media($desktop-up) {
+    width: 240px;
+    height: 240px;
+    max-width: 240px;
+    max-height: 240px;
+    // height: 230px;
+  }
+}
+
+.item .thumbnail img {
+  display: none;
+}
+
+
+
+.isotope-grid figcaption {
+  display: none;
+}
+
+
+#isotope-filters.pinned {
+  z-index: $z-above-all !important;
+  position: fixed;
+  margin: auto;
+  top: 52px !important;
+}
+
+
+
+// lazyload
+
+.b-lazy {
+    -webkit-transition: opacity 300ms ease-out;
+       -moz-transition: opacity 300ms ease-out;
+         -o-transition: opacity 300ms ease-out;
+            transition: opacity 300ms ease-out;
+             max-width: 100%;
+               opacity: 0;
+}
+.b-lazy.b-loaded {
+               opacity: 1;
+}
+
+
+@keyframes come-in {
+  to { transform: translateY(0); }
+}
+
+
+.thumbnail.b-lazy.b-loaded {
+  transform: translateY(150px);
+  animation: come-in 0.8s ease forwards;
+}
+.thumbnail.b-lazy.b-loaded:nth-child(odd) {
+  animation-duration: 0.6s; /* So they look staggered */
+}
+
+@include media($desktop-up) {
+  .thumbnail.b-lazy.b-loaded {
+    transform: none;
+    animation: none;
+  }
+  .thumbnail.b-lazy.b-loaded:nth-child(odd) {
+    animation-duration: 0;
+  }
+}
+
+
+// animations
+.come-in {
+  transform: translateY(150px);
+  animation: come-in 0.8s ease forwards;
+}
+.come-in:nth-child(odd) {
+  animation-duration: 0.6s; /* So they look staggered */
+}

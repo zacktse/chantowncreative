@@ -1,0 +1,178 @@
+
+
+// modular scale settings
+$ms-base:  1em      ;
+$ms-ratio: $golden  ;
+$ms-range: 1.1   20em,
+           1.333 60em;
+$ms-fluid: true     ;
+
+body {
+  @include font-feature-settings("kern", "liga", "pnum");
+  -webkit-font-smoothing: antialiased;
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: 300;
+  line-height: $base-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-size: $base-font-size;
+  line-height: $heading-line-height;
+  margin: 0 0 $small-spacing;
+  @include row();
+}
+
+h1, .size-h1 {
+  @include font-size(30);
+  @include line-height(34);
+  @include padding(14, 0, 12, 0);
+  @include margin(0);
+
+  @include media ($tablet-up) {
+    @include font-size(36);
+    @include line-height(40);
+  }
+}
+
+h2, .size-h2 {
+  @include font-size(24);
+  @include line-height(30);
+  @include padding(26, 0, 12, 0);
+  @include margin(0);
+
+  @include media($tablet-up) {
+    @include font-size(28);
+    @include line-height(34);
+  }
+}
+
+h3, .size-h3 {
+  @include font-size(22);
+  @include line-height(28);
+  @include padding(16, 0, 10, 0);
+  @include margin(0);
+
+  @include media ($tablet-up) {
+    @include font-size(21);
+    @include line-height(26);
+
+  }
+}
+
+h4, .size-h4 {
+  @include font-size(18);
+  @include line-height(22);
+  @include padding(12, 0, 0, 0);
+  @include margin(0);
+}
+
+h5, .size-h5 {
+  @include font-size(16);
+}
+
+h6, .size-h6 {
+  @include font-size(14);
+}
+
+p {
+  @include font-size(16);
+  @include line-height(24);
+  @include padding(12, 0, 18, 0);
+  @include margin(0);
+}
+
+// additional paragraph styles
+.leader {
+  @include font-size(20);
+  @include line-height(30);
+  @include padding(24, 0, 12, 0);
+  @include margin(0);
+  color: darken($base-font-color, 5%);
+}
+
+.small {
+  @include font-size(14);
+  @include line-height(21);
+  @include padding(8, 0, 14, 0);
+  @include margin(0);
+}
+
+.para-uppercase {
+  @include font-size(12);
+  @include line-height(18);
+  @include padding(8, 0, 14, 0);
+  @include margin(0);
+  text-transform: uppercase;
+}
+
+strong, b,{
+  font-weight: bold;
+}
+
+em {
+  font-style:italic;
+}
+
+
+
+a {
+  color: $dark-gray;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.1s linear;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: darken($dark-gray, 20%);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+p a {
+  @include link-bottom-border();
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: $base-spacing 0;
+}
+
+mark {
+  background: opacify(yellow, 0.4);
+  color: #000;
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+
+
+// main-content typography
+
+.content-main {
+  @include media($desktop-up) {
+    p {
+      @include span-columns(9);
+      clear: both;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 24px;
+  line-height: $base-line-height;
+  &%default-ul {
+    list-style-type: square;
+    margin-bottom: $small-spacing;
+    padding-left: $base-spacing;
+  }
+
+  &%default-ol {
+    list-style-type: decimal;
+    margin-bottom: $small-spacing;
+    padding-left: $base-spacing;
+  }
+}
+
+
+.content-main ul, .content-main ol {
+  margin-bottom: 18px;
+  list-style-type: none;
+  @include font-size(18);
+  @include line-height(23);
+  font-family: $joesfin;
+  @include margin(6, 0, 6, 0);
+  list-style-position: inside;
+  padding-left: 6px;
+
+  @include media($tablet-up) {
+    @include font-size(20);
+    @include line-height(30);
+  }
+  @include media($desktop-up) {
+    margin-bottom: 38px;
+    //@include font-size(20);
+    //@include line-height(25);
+    @include font-size(24);
+    @include line-height(36);
+    padding-left: 18px;
+  //  @include padding(12, 0, 18, 0);
+  }
+}
+
+.content-main ul li a {
+  @include animated-link-underline();
+  font-weight: 600;
+  color: $chantown-gray;
+}
+
+.content-main ul li {
+  margin-bottom: 3px;
+}
+
+.content-main ul li::before {
+    content: "• ";
+    float: left;
+    color: $darker-orange;
+    padding-right: 6px;
+    height: 100%;
+    min-height: 24px;
+}
+.content-main ol {
+  list-style-type: decimal;
+  margin-bottom: $small-spacing;
+  padding-left: $base-spacing;
+  @include font-size(18);
+  @include line-height(23);
+  font-family: $joesfin;
+  @include margin(12, 0, 18, 0);
+  list-style-position: inside;
+}
+dl {
+  margin-bottom: $small-spacing;
+
+  dt {
+    font-weight: bold;
+    margin-top: $small-spacing;
+  }
+
+  dd {
+    margin: 0;
+  }
+}

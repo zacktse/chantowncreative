@@ -1,0 +1,48 @@
+---
+portfolioImage:
+- sys:
+    id: 2pR5UDBtXqYsCA60KYeeAw
+  title: 'Surviving HK: Opening a Pack of Calbees'
+  textDescription: Illustration
+  altText: 'Surviving Hong Kong: opening a Pack of Calbees illustration by Vickie
+    Chan'
+  year: 2016
+  categories:
+  - illustration
+  category: illustration
+  image:
+    title: 'Surviving HK: Calbees main image'
+    url: "//images.contentful.com/nsozihf13xb6/16LhpjsC4uYaoa4a0QWA0Y/fc0bb2ec87b2ea2bf2bad6b022b5f636/15SurvHK20160223Calbees.jpg"
+  thumbnail:
+    title: 'Surviving HK: calbees thumbnail'
+    url: "//images.contentful.com/nsozihf13xb6/3VPrviOXmEQ26S2wYO8eIO/d44bdb9d6ff4e9e8b168426172a9f450/15SurvHK20160223Calbees.jpg"
+- sys:
+    id: 2ud2SahcFCUs2OAYeKeOu8
+  title: Death Cab For Cutie Poster
+  textDescription: Commercial graphic design
+  altText: Death Cab for Cutie poster by Vickie Chan
+  year: 2016
+  categories:
+  - commercial
+  category: commercial
+  image:
+    title: 201603 Deathcab
+    url: "//images.contentful.com/nsozihf13xb6/6uXuepMG5yA8kqUUYesaqW/74c05a8461cd314f37b9c9782b367ee8/201603_Deathcab.jpg"
+  thumbnail:
+    title: deathcab_thumb
+    url: "//images.contentful.com/nsozihf13xb6/4j68DXsrriKiwAQQui00MW/30f3f6b1e6aac72892060c650c726aaa/201603_Deathcab.jpg"
+- sys:
+    id: 5rv45Lf1YcuiMcIMq4aE6W
+  title: River Khwae
+  textDescription: Ink sketch
+  altText: River Khwae sketch by Vickie Chan
+  year: 2016
+  categories:
+  - sketch
+  category: sketch
+  image:
+    title: River Kwai Main Image
+    url: "//images.contentful.com/nsozihf13xb6/5GcMnUrxS0Qc6IEyaMaOGm/fd67eea71eb760aaf61a1ccd4a800cfc/201603_RiverKhwae_small.jpg"
+  thumbnail:
+    title: River Khwae Thumbnail
+    url: "//images.contentful.com/nsozihf13xb6/1b13jwGdz44yeYCEWMOoMa/85f10488ff0bf0a5ff371cb4ff9a26a9/201603_RiverKhwae_small.jpg"

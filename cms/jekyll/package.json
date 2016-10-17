@@ -1,0 +1,36 @@
+{
+  "name": "chantowncreative",
+  "version": "1.0.0",
+  "description": "homepage for chantown creative, built with jekyll",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denovo/chantowncreative.git"
+  },
+  "keywords": [
+    "jekyll",
+    "netlify",
+    "chantown",
+    "creative",
+    "gulp",
+    "browser-sync"
+  ],
+  "author": "Pete Richardson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/denovo/chantowncreative/issues"
+  },
+  "homepage": "https://github.com/denovo/chantowncreative#readme",
+  "devDependencies": {
+    "browser-sync": "^2.14.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-shell": "^0.5.2",
+    "lodash": "^4.15.0",
+    "node-bourbon": "^4.2.8",
+    "node-neat": "^1.7.2"
+  }
+}
