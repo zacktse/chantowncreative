@@ -144,40 +144,6 @@ gulp.task('js-concat', function() {
 
 
 
-// js concat and require modules and minify JS (using browserify and uglify)
-// gulp.task('js-browserify', function() {
-//   return browserify('./source/js/index.js', {
-//     debug: true
-//   })
-//     .bundle()
-//     .pipe(source('bundle.js'))
-//     .pipe(size({
-//       title: "Size of JS before minifying: "
-//     }))
-//
-//     .pipe(gulp.dest(path.js_dest)) // where to put the files
-//     .pipe(size({
-//       title: "Size of JS after minifying: "
-//     }))
-//
-//
-// //.pipe(streamify(uglify()))
-// });
-
-
-// gulp.task('js-browserify', function() {
-//   var browserified = transform(function(filename) {
-//     var b = browserify(filename);
-//     return b.bundle();
-//   });
-//
-//   return gulp.src(['./source/js/index.js'])
-//     .pipe(browserified)
-//     .pipe(uglify())
-//     .pipe(gulp.dest('build/assets/js'));
-// });
-
-
 gulp.task('js-browserify', function() {
   // set up the browserify instance on a task basis
   var b = browserify({
