@@ -32,7 +32,7 @@
     margin              : 0 25%;
     padding             : 0;
 
-    @include background(url('../img/VickieChanHeadshot_w400.jpg'));
+    @include background(url('http://res.cloudinary.com/chantown/image/upload/c_scale,w_300/v1477752421/page-images/VickieChanHeadshot_t02d2r.jpg'));
     background-size   : contain;
     background-repeat  : no-repeat;
     background-position: top center;
@@ -44,7 +44,7 @@
        margin: 0;
       //  margin-top: 60px;
        margin-top: 0;
-       @include background(url('../img/VickieChanHeadshot_w1000.jpg'));
+       @include background(url('http://res.cloudinary.com/chantown/image/upload/c_scale,w_400/v1477752421/page-images/VickieChanHeadshot_t02d2r.jpg'));
        background-repeat: no-repeat;
        background-position: top center;
        background-size: contain;
@@ -60,7 +60,7 @@
         padding: 2em;
         margin-top: 64px;
         margin-top: 0;
-        @include background(url('../img/VickieChanHeadshot_w1000.jpg'));
+        @include background(url('http://res.cloudinary.com/chantown/image/upload/c_scale,w_480/v1477752421/page-images/VickieChanHeadshot_t02d2r.jpg'));
 
         background-repeat: no-repeat;
         background-position: top center;
