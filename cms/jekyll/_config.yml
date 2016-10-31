@@ -37,9 +37,10 @@ exclude:
   - gulpfile.js
 
 # Plugin settings
-gems:
-  - jekyll-feed
-  - jekyll-sitemap
+gems: [jekyll-admin, jekyll-feed, jekyll-sitemap]
+  # - jekyll-feed
+  # - jekyll-sitemap
+  #
 
 
 

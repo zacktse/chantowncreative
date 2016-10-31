@@ -325,22 +325,7 @@ gulp.task('responsive-imgs', function() {
               embed: true,
               withoutEnlargement: false
             },
-            // {
-            //   width: 600,
-            //   rename: {
-            //     //path.dirname += "";
-            //     suffix: "_w600"
-            //   //path.extname = ".md"
-            //   },
-            //   background: {
-            //     r: 255,
-            //     g: 255,
-            //     b: 255,
-            //     a: 255
-            //   },
-            //   embed: true,
-            //   withoutEnlargement: false
-            // },
+
             {
               width: 800,
               rename: {
@@ -373,22 +358,7 @@ gulp.task('responsive-imgs', function() {
               embed: true,
               withoutEnlargement: false
             },
-            // {
-            //   width: 1500,
-            //   rename: {
-            //     //path.dirname += "";
-            //     suffix: "_w1500"
-            //   //path.extname = ".md"
-            //   },
-            //   background: {
-            //     r: 255,
-            //     g: 255,
-            //     b: 255,
-            //     a: 255
-            //   },
-            //   embed: true,
-            //   withoutEnlargement: false
-            // },
+
             {
               width: 2000,
               rename: {
@@ -405,22 +375,7 @@ gulp.task('responsive-imgs', function() {
               embed: true,
               withoutEnlargement: false
             }
-          // {
-          //   width: 2500,
-          //   rename: {
-          //     //path.dirname += "";
-          //     suffix: "_w2500"
-          //   //path.extname = ".md"
-          //   },
-          //   background: {
-          //     r: 255,
-          //     g: 255,
-          //     b: 255,
-          //     a: 255
-          //   },
-          //   embed: true,
-          //   withoutEnlargement: false
-          // },
+        
           ]
         }, {
           errorOnUnusedImage: false

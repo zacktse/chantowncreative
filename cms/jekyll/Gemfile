@@ -1,6 +1,7 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gem 'jekyll'
+gem 'jekyll-admin'
 gem 'jekyll-feed'
 gem 'jekyll-sitemap'
 
