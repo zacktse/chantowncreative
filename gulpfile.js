@@ -325,7 +325,22 @@ gulp.task('responsive-imgs', function() {
               embed: true,
               withoutEnlargement: false
             },
-
+            {
+              width: 600,
+              rename: {
+                //path.dirname += "";
+                suffix: "_w600"
+              //path.extname = ".md"
+              },
+              background: {
+                r: 255,
+                g: 255,
+                b: 255,
+                a: 255
+              },
+              embed: true,
+              withoutEnlargement: false
+            },
             {
               width: 800,
               rename: {
@@ -375,7 +390,7 @@ gulp.task('responsive-imgs', function() {
               embed: true,
               withoutEnlargement: false
             }
-        
+
           ]
         }, {
           errorOnUnusedImage: false

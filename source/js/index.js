@@ -31,8 +31,6 @@ window.bLazy = new Blazy({
   }
 }
 );
-
-
 pixel_bg.initialize();
 
 

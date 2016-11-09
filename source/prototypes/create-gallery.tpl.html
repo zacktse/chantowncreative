@@ -68,25 +68,45 @@
         <!-- gallery template -->
 
         {{#each images}}
+
+
           <figure class="item {{category}}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 
             <a href="{{desktopImage.src}}" data-mobile-link="{{mobileImage.src}}" itemprop="contentUrl" data-size="{{desktopImage.w}}x{{desktopImage.h}}" data-size-desktop="{{desktopImage.w}}x{{desktopImage.h}}"
             data-size-mobile="{{mobileImage.w}}x{{mobileImage.h}}">
-
-            {{#if customThumbImage}}
-              <div class='thumbnail {{#ifGreaterThanSix @index}}b-lazy{{else}}b-lazy show-at-start{{/ifGreaterThanSix}}' data-src="{{customThumbImage}}">
-                <img src="{{customThumbImage}}"
-                alt="{{alt}}"
-                title="{{title}} | {{year}}" itemprop="thumbnail"  />
-              </div>
+            <!-- ifGreaterThanEight is used to apply markup to lazy loading all gallery images apart from the first eight -->
+            {{#ifGreaterThanEight @index}}
+              <!-- lazyloaded images  -->
+              {{#if customThumbImage}}
+                <div class='thumbnail b-lazy' data-src="{{customThumbImage}}">
+                  <img src="{{customThumbImage}}"
+                  alt="{{alt}}"
+                  title="{{title}} | {{year}}" itemprop="thumbnail"  />
+                </div>
+              {{else}}
+                <div class='thumbnail b-lazy' data-src="{{srcImage}}_w800{{imageExtension}}" data-src-small="{{srcImage}}_w400{{imageExtension}}"
+                data-src-medium="{{srcImage}}_w600{{imageExtension}}">
+                  <img src="{{srcImage}}_w400{{imageExtension}}"
+                  alt="{{alt}}"
+                  title="{{title}} | {{year}}" itemprop="thumbnail"  />
+                </div>
+              {{/if}}
             {{else}}
-              <div class='thumbnail {{#ifGreaterThanSix @index}}b-lazy{{else}}b-lazy show-at-start{{/ifGreaterThanSix}}' data-src="{{srcImage}}_w800{{imageExtension}}" data-src-small="{{srcImage}}_w400{{imageExtension}}"
-              data-src-medium="{{srcImage}}_w600{{imageExtension}}">
-                <img src="{{srcImage}}_w400{{imageExtension}}"
-                alt="{{alt}}"
-                title="{{title}} | {{year}}" itemprop="thumbnail"  />
-              </div>
-            {{/if}}
+              <!-- images that will not be lazy loaded -->
+              {{#if customThumbImage}}
+                <div class='thumbnail' style="background-image:url({{customThumbImage}})">
+                  <img src="{{customThumbImage}}"
+                  alt="{{alt}}"
+                  title="{{title}} | {{year}}" itemprop="thumbnail"  />
+                </div>
+              {{else}}
+                <div class='thumbnail show-at-start' style="background-image: url({{srcImage}}_w600{{imageExtension}})">
+                  <img src="{{srcImage}}_w400{{imageExtension}}"
+                  alt="{{alt}}"
+                  title="{{title}} | {{year}}" itemprop="thumbnail"  />
+                </div>
+              {{/if}}
+            {{/ifGreaterThanEight}}
 
            </a>
            <figcaption itemprop=\"caption description\">

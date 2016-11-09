@@ -6,7 +6,7 @@ exports.DeadPixels = function(_pixel_container) {};
 
 _.extend(exports.DeadPixels.prototype, {
   //  pixelCount:30,
-  pixelCount: 90,
+  pixelCount: 60,
   //pixelCount: 90,
   window_width: window.innerWidth,
   //  sat:83,
@@ -30,7 +30,7 @@ _.extend(exports.DeadPixels.prototype, {
       this.pixels.push(pixel);
       this.$el.prepend(pixel);
 
-      var dim = _.random(1, 3);
+      var dim = _.random(1, 2);
       pixel.css({
         'left': _.random(100) + '%',
         'top': _.random(95) + '%',

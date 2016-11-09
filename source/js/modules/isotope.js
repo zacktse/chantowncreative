@@ -46,14 +46,27 @@ var gallery_items = {};
 //
 // });
 
+
+// helper function to check if variable is greater than 8
+// -- used in the template so as not to add lazyloading to the first
+// -- eight images in the gallery to improve perceived performance
+Handlebars.registerHelper('ifGreaterThanEight', function(index, options) {
+  // handlebars index is zero based
+  if(index > 7){
+      return options.fn(this);
+   } else {
+      return options.inverse(this);
+   }
+
+});
+
 var buildGalleryHTML = function(json) {
   var myJson = json,
     _$gallery_container = $("#gallery_container"),
     unCompiledGalleryHtml = _$gallery_container.html(),
     galleryTemplate = Handlebars.compile(unCompiledGalleryHtml),
     result = galleryTemplate(myJson);
-  console.log("ran buildGalleryHTML");
-  _$gallery_container.html(result);
+    _$gallery_container.html(result);
 };
 
 
@@ -80,18 +93,18 @@ var runPhotoswipe = function() {
 
   //imagesLoaded( _portfolio_gallery, function() {
 
-  var $image_gallery = new Isotope('.isotope-grid', {
-    //isFitWidth: true,
-    // containerStyle: null,
-    layoutMode: 'masonry',
-    percentPosition: true,
+  var isotope_gallery = new Isotope('.isotope-grid', {
+    //percentPosition: true,
     masonry: {
-      columnWidth: '.item'
+      columnWidth: '.item',
+      //columnWidth:160,
+      // fitWidth: true,
+      gutter: 10
     },
-    // layoutMode: 'fitColumns',
     itemSelector: '.item',
-    resizesContainer: false,
     transitionDuration: '.3s',
+    stagger: '0.03s',
+
     /* masonry */
     hiddenStyle: {
       opacity: 0
@@ -99,34 +112,44 @@ var runPhotoswipe = function() {
     visibleStyle: {
       opacity: 1
     },
-
-
-  // containerStyle: {
-  //   "max-width": "960px",
-  //   "overflow": "hidden",
-  //   "clear": "both"
-  // }
-  //sortBy: 'random'
   });
-
   // console.log(Chantown);
-  // update lazy load when isotope has re-arranged the images
-  $image_gallery.on('arrangeComplete', function() {
-    //console.log("image filtering updated");
-    // console.log($("#gallery_container").offset().top);
-    // console.log($("#isotope-filters").height);
-    // var scrollToPosition = $("#gallery_container").offset().top + $("#isotope-filters").height;
-    //Chantown.responsiveLazy.run();
+  // re-run lazy load when isotope has re-arranged the images to load any that have been shuffled into the viewport
+  isotope_gallery.on('arrangeComplete', function() {
     window.bLazy.revalidate();
     // scroll to the top of the list of images when re-filtering
     $('html, body').animate({
       scrollTop: ($("#gallery_container").offset().top - $("#isotope-filters").height() - 60)
     }, 300);
+
+    console.log('arrangeComplete ran');
+    // calcEdges();
   });
 
+  function onArrange() {
+    console.log('arrange done');
+  }
+  // bind event listener
+  isotope_gallery.on( 'arrangeComplete', onArrange );
+
+  isotope_gallery.on( 'layoutComplete', function( laidOutItems ) {
+    // console.log('layout complete');
+    // console.log('laidOutItems')
+    // console.log(laidOutItems);
+    // console.log('get filtered items:');
+    // var filteredElems = isotope_gallery.getFilteredItemElements();
+    filteredElems = isotope_gallery.getFilteredItemElements();
+
+    // console.log(filteredElems);
+    // console.log(filteredElems[3].getBoundingClientRect());
+    // console.log(filteredElems[4].getBoundingClientRect());
+    // console.log(filteredElems[5].getBoundingClientRect());
+    getFurthestRightXCoord(filteredElems);
+    //calcEdges();
+  } )
   // align the isotope layout every 500ms
   // window.setInterval(function() {
-  //   $image_gallery.arrange({})
+  //   isotope_gallery.arrange({})
   // }, 1000);
 
   // show the images once aligned
@@ -137,7 +160,7 @@ var runPhotoswipe = function() {
     var filterValue = $(this).attr('data-filter');
 
     //$grid.filter(filter: filterValue,);
-    $image_gallery.arrange({
+    isotope_gallery.arrange({
       filter: filterValue,
     });
 
@@ -192,9 +215,7 @@ var runPhotoswipe = function() {
     };
 
     //var image_url_yo = photoswipeInstance.currItem.src || '';
-    /* TODO:
-      make sure to remove newwebtest from the URL when switching to the live folder
-    */
+
     var options = {
       index: index,
       zoomEl: false, // disable zoom in on images
@@ -495,6 +516,7 @@ if (_portfolio_gallery.length > 0) {
 
   gallery_items = require('../json/gallery_images');
   buildGalleryHTML(gallery_items);
+
   runPhotoswipe();
   // });
 
@@ -507,5 +529,68 @@ if (_portfolio_gallery.length > 0) {
   // });
   //console.log("on create page");
 
+
+}
+
+
+// function getLargestValue ()
+// {
+//
+// }
+
+function getRightEdgeX(elem) {
+  return elem.getBoundingClientRect().right;
+}
+
+function calcGalleryLeftMargin(imgX, containerX) {
+  return Math.floor(( (containerX - imgX) / 2 ) - 8);
+}
+
+
+function getFurthestRightXCoord(array) {
+  // set counter to zero
+  // for each item in the array
+  // get it's clientBoundRect
+  // get the right value
+  // if that value is higher or equal to the last, set as new highest number
+  var largestValue = 0; // start from zero
+  for (var i = 0; i < array.length; i++) {
+    var r = getRightEdgeX(array[i]);
+    console.log("r is: ", r, " largestValue is: ", largestValue);
+    if (r > largestValue) {
+      console.log('setting new largest val to : ', r);
+      largestValue = r;
+    }
+
+  }
+
+  console.log("largest X value is: ", largestValue);
+
+  var galleryContainerRightX = document.getElementById('gallery_container').getBoundingClientRect().right;
+
+  console.log("the gallery container right x pos : ", galleryContainerRightX);
+  //
+  console.log('set the left margin to: ', calcGalleryLeftMargin(largestValue, galleryContainerRightX));
+  //
+  var gallery_wrap = document.querySelector('.gallery-wrap');
+  gallery_wrap.style.marginLeft = calcGalleryLeftMargin(largestValue,galleryContainerRightX) + "px";
+
+}
+
+
+function calcEdges() {
+  console.log('this ran!');
+  var galleryItemsInDOM = document.querySelectorAll('figure.item');
+  for (var i = 0; i < 10; i++) {
+    console.log(galleryItemsInDOM[i].getBoundingClientRect());
+  }
+  // var furthestRight = getRightMostCornerPosition();
+
+  // var gallery_image2 = $('figure.item:nth-child(2n)');
+  // var gallery_image3 = $('figure.item:nth-child(3n)');
+  // var gallery_image4 = $('figure.item:nth-child(4n)');
+  // gallery_image2.css("border", "solid 2px red");
+  // gallery_image3.css("border", "solid 2px yellow");
+  // gallery_image4.css("border", "solid 2px purple");
 
 }
