@@ -74,13 +74,13 @@
             data-size-mobile="{{mobileImage.w}}x{{mobileImage.h}}">
 
             {{#if customThumbImage}}
-              <div class='thumbnail {{#ifGreaterThanSix @index}}b-lazy{{else}}b-lazy show-at-start{{/ifGreaterThanSix}}' data-src="{{customThumbImage}}">
+              <div class='thumbnail {{#ifGreaterThanEight @index}}b-lazy{{else}}b-lazy show-at-start{{/ifGreaterThanEight}}' data-src="{{customThumbImage}}">
                 <img src="{{customThumbImage}}"
                 alt="{{alt}}"
                 title="{{title}} | {{year}}" itemprop="thumbnail"  />
               </div>
             {{else}}
-              <div class='thumbnail {{#ifGreaterThanSix @index}}b-lazy{{else}}b-lazy show-at-start{{/ifGreaterThanSix}}' data-src="{{srcImage}}_w800{{imageExtension}}" data-src-small="{{srcImage}}_w400{{imageExtension}}"
+              <div class='thumbnail {{#ifGreaterThanEight @index}}b-lazy{{else}}b-lazy show-at-start{{/ifGreaterThanEight}}' data-src="{{srcImage}}_w800{{imageExtension}}" data-src-small="{{srcImage}}_w400{{imageExtension}}"
               data-src-medium="{{srcImage}}_w600{{imageExtension}}">
                 <img src="{{srcImage}}_w400{{imageExtension}}"
                 alt="{{alt}}"

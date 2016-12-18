@@ -59,6 +59,7 @@
 // image gallery / isotope below
 .gallery-wrap {
   text-align: center;
+  margin: 0 auto;
   // fix left margin centering alignment at breakpoints
   // margin-left: 2%;
   //
@@ -79,11 +80,11 @@
   margin: 0 auto;
   display: block;
   clear:both;
-  background-color: green;
+  // background-color: green;
   // width: 100%;
   //margin: 0 auto;
   figure {
-    // background-color: lightgreen;
+    background-color: #f3f3f3;
     display: block;
     margin: 0 auto;
     // margin-bottom:10px;

@@ -91,13 +91,13 @@ var runPhotoswipe = function() {
   };
 
 
-  //imagesLoaded( _portfolio_gallery, function() {
+  // imagesLoaded( _portfolio_gallery, function() {
 
   var isotope_gallery = new Isotope('.isotope-grid', {
-    //percentPosition: true,
+    // percentPosition: true,
     masonry: {
       columnWidth: '.item',
-      //columnWidth:160,
+      // columnWidth:160,
       // fitWidth: true,
       gutter: 10
     },
@@ -113,40 +113,70 @@ var runPhotoswipe = function() {
       opacity: 1
     },
   });
-  // console.log(Chantown);
-  // re-run lazy load when isotope has re-arranged the images to load any that have been shuffled into the viewport
-  isotope_gallery.on('arrangeComplete', function() {
-    window.bLazy.revalidate();
-    // scroll to the top of the list of images when re-filtering
-    $('html, body').animate({
-      scrollTop: ($("#gallery_container").offset().top - $("#isotope-filters").height() - 60)
-    }, 300);
 
-    console.log('arrangeComplete ran');
-    // calcEdges();
+
+
+  // var filteredElems = isotope_gallery.getFilteredItemElements();
+  // var firstEightElems = filteredElems.slice(0,7);
+  // getFurthestRightXCoord(firstEightElems);
+
+  // window.onresize = function() {
+  //   var filteredElems = isotope_gallery.getFilteredItemElements();
+  //   var firstEightElems = filteredElems.slice(0,7);
+  //   getFurthestRightXCoord(firstEightElems);
+  // };
+
+
+
+
+  var timeout = false, // holder for timeout id
+      delay = 200 // delay after event is "complete" to run callback
+
+  // window.resize callback function
+  function getDimensions() {
+    var filteredElems = isotope_gallery.getFilteredItemElements();
+    var firstEightElems = filteredElems.slice(0,7);
+    getFurthestRightXCoord(firstEightElems);
+    console.log('get dimensions ran');
+  }
+
+  // window.resize event listener
+  window.addEventListener('resize', function() {
+      // clear the timeout
+    clearTimeout(timeout);
+    // start timing for event "completion"
+    timeout = setTimeout(getDimensions, delay);
   });
 
+  getDimensions();
+
+
+
+  // console.log(Chantown);
+  // re-run lazy load when isotope has re-arranged the images to load any that have been shuffled into the viewport
+  // isotope_gallery.on('arrangeComplete', function() {
+  //
+  //
+  //   // calcEdges();
+  // });
+
   function onArrange() {
-    console.log('arrange done');
+    window.bLazy.revalidate();
+    // scroll to the top of the list of images when re-filtering
+    // $('html, body').animate({
+    //   scrollTop: ($("#gallery_container").offset().top - $("#isotope-filters").height() - 60)
+    // }, 300);
   }
   // bind event listener
   isotope_gallery.on( 'arrangeComplete', onArrange );
 
   isotope_gallery.on( 'layoutComplete', function( laidOutItems ) {
-    // console.log('layout complete');
-    // console.log('laidOutItems')
-    // console.log(laidOutItems);
-    // console.log('get filtered items:');
-    // var filteredElems = isotope_gallery.getFilteredItemElements();
-    filteredElems = isotope_gallery.getFilteredItemElements();
 
-    // console.log(filteredElems);
-    // console.log(filteredElems[3].getBoundingClientRect());
-    // console.log(filteredElems[4].getBoundingClientRect());
-    // console.log(filteredElems[5].getBoundingClientRect());
-    getFurthestRightXCoord(filteredElems);
+    // var filteredElems = isotope_gallery.getFilteredItemElements();
+    // var firstEightElems = filteredElems.slice(0,7);
+    // getFurthestRightXCoord(firstEightElems);
     //calcEdges();
-  } )
+  } );
   // align the isotope layout every 500ms
   // window.setInterval(function() {
   //   isotope_gallery.arrange({})
@@ -207,14 +237,8 @@ var runPhotoswipe = function() {
     //var _social_media_html = '<ul class=\"social-icons\"><li><a href=\"https://www.pinterest.com/chantown/\" class=\"icon pinterest\" title=\"Pinterest\"><i class=\"icon-pinterest-gray\"></i></a></li><li><a href=\"https://www.facebook.com/sharer/sharer.php?u=" + getPageURLForShare() + "\" class=\"icon etsy\" title=\"Share on Facebook\"><i class=\"icon-facebook-gray\"></i></a></li><li><a href=\"https://twitter.com/hkchantown\" class=\"icon twitter\" title=\"Twitter\"><i class=\"icon-twitter-gray\"></i></a></li></ul>';
     var currentPage = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
     var getSharingHTML = function() {
-
       return '<share-button></share-button>';
-
-
-
     };
-
-    //var image_url_yo = photoswipeInstance.currItem.src || '';
 
     var options = {
       index: index,
@@ -241,12 +265,6 @@ var runPhotoswipe = function() {
           url: 'https://twitter.com/intent/tweet?text=Chantown Creative: Portfolio&url=http://chantown.com/create.html'
         }
 
-      // {
-      //   id: 'download',
-      //   label: 'Download image',
-      //   url: '{{raw_image_url}}',
-      //   download: false
-      // }
       ],
       getThumbBoundsFn: function(index) {
         // See Options -> getThumbBoundsFn section of documentation for more info
@@ -507,18 +525,14 @@ var runPhotoswipe = function() {
 var _portfolio_gallery = $('#gallery_container');
 if (_portfolio_gallery.length > 0) {
 
-  // load isotope js
-  // $.getScript("../assets/js/vendor/isotope.pkgd.min.js")
-  //   .done(function() {
-
-
   ShareButton = require('../vendor/share-button.js');
 
   gallery_items = require('../json/gallery_images');
   buildGalleryHTML(gallery_items);
 
   runPhotoswipe();
-  // });
+
+
 
   // if placing the json file on an external server, could use this code.
   // loadGalleryJSON(function(response) {
@@ -527,23 +541,18 @@ if (_portfolio_gallery.length > 0) {
   //     buildGalleryHTML(gallery_items);
   //     runPhotoswipe();
   // });
-  //console.log("on create page");
 
 
 }
 
-
-// function getLargestValue ()
-// {
-//
-// }
 
 function getRightEdgeX(elem) {
   return elem.getBoundingClientRect().right;
 }
 
 function calcGalleryLeftMargin(imgX, containerX) {
-  return Math.floor(( (containerX - imgX) / 2 ) - 8);
+  var result = (containerX - imgX) / 2 ;
+  return Math.round(result);
 }
 
 
@@ -556,24 +565,25 @@ function getFurthestRightXCoord(array) {
   var largestValue = 0; // start from zero
   for (var i = 0; i < array.length; i++) {
     var r = getRightEdgeX(array[i]);
-    console.log("r is: ", r, " largestValue is: ", largestValue);
     if (r > largestValue) {
-      console.log('setting new largest val to : ', r);
       largestValue = r;
     }
-
   }
 
-  console.log("largest X value is: ", largestValue);
-
+  console.log("largest right x val = ", largestValue);
   var galleryContainerRightX = document.getElementById('gallery_container').getBoundingClientRect().right;
+  var galleryContainerLeftX = document.getElementById('gallery_container').getBoundingClientRect().left;
 
+  console.log("the gallery container left x pos : ", galleryContainerLeftX);
   console.log("the gallery container right x pos : ", galleryContainerRightX);
-  //
-  console.log('set the left margin to: ', calcGalleryLeftMargin(largestValue, galleryContainerRightX));
-  //
+
+console.log("the width should be resized to ", (largestValue - galleryContainerLeftX))
+  // console.log('set the left margin to: ', calcGalleryLeftMargin(largestValue, galleryContainerRightX));
   var gallery_wrap = document.querySelector('.gallery-wrap');
-  gallery_wrap.style.marginLeft = calcGalleryLeftMargin(largestValue,galleryContainerRightX) + "px";
+
+
+  // gallery_wrap.style.marginLeft = calcGalleryLeftMargin(largestValue,galleryContainerRightX) + "px";
+  gallery_wrap.style.width = (largestValue - galleryContainerLeftX) + "px";
 
 }
 
@@ -584,13 +594,4 @@ function calcEdges() {
   for (var i = 0; i < 10; i++) {
     console.log(galleryItemsInDOM[i].getBoundingClientRect());
   }
-  // var furthestRight = getRightMostCornerPosition();
-
-  // var gallery_image2 = $('figure.item:nth-child(2n)');
-  // var gallery_image3 = $('figure.item:nth-child(3n)');
-  // var gallery_image4 = $('figure.item:nth-child(4n)');
-  // gallery_image2.css("border", "solid 2px red");
-  // gallery_image3.css("border", "solid 2px yellow");
-  // gallery_image4.css("border", "solid 2px purple");
-
 }
