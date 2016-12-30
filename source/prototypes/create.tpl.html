@@ -69,33 +69,22 @@
 
         {{#each images}}
           <figure class="item {{category}}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-
-            <a href="{{desktopImage.src}}" data-mobile-link="{{mobileImage.src}}" itemprop="contentUrl" data-size="{{desktopImage.w}}x{{desktopImage.h}}" data-size-desktop="{{desktopImage.w}}x{{desktopImage.h}}"
-            data-size-mobile="{{mobileImage.w}}x{{mobileImage.h}}">
-
-            {{#if customThumbImage}}
-              <div class='thumbnail {{#ifGreaterThanEight @index}}b-lazy{{else}}b-lazy show-at-start{{/ifGreaterThanEight}}' data-src="{{customThumbImage}}">
-                <img src="{{customThumbImage}}"
+            <a href="{{desktopImage.src}}" data-mobile-link="{{mobileImage.src}}" itemprop="contentUrl" data-size="{{desktopImage.width}}x{{desktopImage.height}}" data-size-desktop="{{desktopImage.width}}x{{desktopImage.height}}"
+            data-size-mobile="{{mobileImage.width}}x{{mobileImage.height}}">
+              <div class='thumbnail {{#ifGreaterThanEight @index}}b-lazy{{else}}b-lazy show-at-start{{/ifGreaterThanEight}}' data-src="{{mobileImage.src}}" data-src-small="{{srcImage}}"
+              data-src-medium="{{mobileImage.src}}">
+                <img src="{{srcImage}}"
                 alt="{{alt}}"
-                title="{{title}} | {{year}}" itemprop="thumbnail"  />
+                title="{{title}} | {{displayYearOnly year}}" itemprop="thumbnail"  />
               </div>
-            {{else}}
-              <div class='thumbnail {{#ifGreaterThanEight @index}}b-lazy{{else}}b-lazy show-at-start{{/ifGreaterThanEight}}' data-src="{{srcImage}}_w800{{imageExtension}}" data-src-small="{{srcImage}}_w400{{imageExtension}}"
-              data-src-medium="{{srcImage}}_w600{{imageExtension}}">
-                <img src="{{srcImage}}_w400{{imageExtension}}"
-                alt="{{alt}}"
-                title="{{title}} | {{year}}" itemprop="thumbnail"  />
-              </div>
-            {{/if}}
-
-           </a>
-           <figcaption itemprop=\"caption description\">
-              {{title}} | {{year}} </br>
+            </a>
+            <figcaption itemprop=\"caption description\">
+              {{title}} | {{displayYearOnly year}} </br>
               {{description}}</br>
               <span itemprop=\"copyrightHolder\" class="image-copyright"> &copy; Vickie Chan</span>
             </figcaption>
           </figure>
-      {{/each}}
+        {{/each}}
     </div>
   </div>
 

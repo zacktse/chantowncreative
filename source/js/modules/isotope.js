@@ -12,19 +12,21 @@ var PhotoSwipeUI_Default = require('../vendor/photoswipe-ui-default.min.js');
 
 
 
-function loadGalleryJSON(callback) {
 
-  var xobj = new XMLHttpRequest();
-  xobj.overrideMimeType("application/json");
-  xobj.open('GET', '/../assets/json/gallery_images.json', true);
-  xobj.onreadystatechange = function() {
-    if (xobj.readyState == 4 && xobj.status == "200") {
-      // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-      callback(xobj.responseText);
-    }
-  };
-  xobj.send(null);
-}
+
+// function loadGalleryJSON(callback) {
+//
+//   var xobj = new XMLHttpRequest();
+//   xobj.overrideMimeType("application/json");
+//   xobj.open('GET', '/../assets/json/portfolioImages.json', true);
+//   xobj.onreadystatechange = function() {
+//     if (xobj.readyState == 4 && xobj.status == "200") {
+//       // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+//       callback(xobj.responseText);
+//     }
+//   };
+//   xobj.send(null);
+// }
 
 var gallery_items = {};
 
@@ -47,27 +49,7 @@ var gallery_items = {};
 // });
 
 
-// helper function to check if variable is greater than 8
-// -- used in the template so as not to add lazyloading to the first
-// -- eight images in the gallery to improve perceived performance
-Handlebars.registerHelper('ifGreaterThanEight', function(index, options) {
-  // handlebars index is zero based
-  if(index > 7){
-      return options.fn(this);
-   } else {
-      return options.inverse(this);
-   }
 
-});
-
-var buildGalleryHTML = function(json) {
-  var myJson = json,
-    _$gallery_container = $("#gallery_container"),
-    unCompiledGalleryHtml = _$gallery_container.html(),
-    galleryTemplate = Handlebars.compile(unCompiledGalleryHtml),
-    result = galleryTemplate(myJson);
-    _$gallery_container.html(result);
-};
 
 
 
@@ -102,8 +84,8 @@ var runPhotoswipe = function() {
       gutter: 10
     },
     itemSelector: '.item',
-    transitionDuration: '.3s',
-    stagger: '0.03s',
+    transitionDuration: '.2s',
+    stagger: '0.02s',
 
     /* masonry */
     hiddenStyle: {
@@ -521,13 +503,39 @@ var runPhotoswipe = function() {
 
 
 
+// helper function to check if variable is greater than 8
+// -- used in the template so as not to add lazyloading to the first
+// -- eight images in the gallery to improve perceived performance
+Handlebars.registerHelper('ifGreaterThanEight', function(index, options) {
+  // handlebars index is zero based
+  if(index > 7){
+      return options.fn(this);
+   } else {
+      return options.inverse(this);
+   }
+});
+
+Handlebars.registerHelper('displayYearOnly', function(theDate) {
+  var year = theDate.slice(0,4);
+  return year;
+});
+
+var buildGalleryHTML = function(json) {
+  var myJson = json,
+    _$gallery_container = $("#gallery_container"),
+    unCompiledGalleryHtml = _$gallery_container.html(),
+    galleryTemplate = Handlebars.compile(unCompiledGalleryHtml),
+    result = galleryTemplate(myJson);
+    _$gallery_container.html(result);
+};
+
 
 var _portfolio_gallery = $('#gallery_container');
 if (_portfolio_gallery.length > 0) {
 
   ShareButton = require('../vendor/share-button.js');
 
-  gallery_items = require('../json/gallery_images');
+  gallery_items = require('../json/portfolioImages');
   buildGalleryHTML(gallery_items);
 
   runPhotoswipe();
