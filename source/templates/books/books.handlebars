@@ -1,0 +1,15 @@
+<!-- books template -->
+{{#each books}}
+  <div class="thumbnail-with-link">
+    <a href="{{url}}" class="thumbnail-with-link__image">
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+      data-src="{{image}}"
+      class="b-lazy"
+      alt="{{alt}}"
+      title="{{title}}" />
+    </a>
+    <div class="thumbnail-with-link__link_wrap">
+      <a href="{{url}}" class="underlined thumbnail-with-link__link" target="_blank">What Will You Create Drawing with the 3Doodler®</a>
+    </div>
+  </div>
+{{/each}}

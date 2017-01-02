@@ -16,7 +16,6 @@ var gulp = require('gulp'), //require gulp
   gutils = require('gulp-util'), // gulp utilities (date)
   templator = require('gulp-file-include'), // used to build preototype files from multiple includes
   browserify = require('browserify'),
-  //exorcist = require('exorcist'), // separates out the js map for browserify to an external file
   source = require('vinyl-source-stream'),
   buffer = require('vinyl-buffer'),
   sourcemaps = require('gulp-sourcemaps'),
@@ -50,15 +49,14 @@ var gulp = require('gulp'), //require gulp
   ftp = require('vinyl-ftp'),
   fs = require('fs'),
   iconify = require('gulp-iconify'),
-  // foreach = require('gulp-foreach'),
-  // toJson = require('gulp-to-json'),
   handlebars = require('gulp-compile-handlebars'), // used to pre-compile the handlebars tempate for the portfolio gallery
   sizeOf = require('image-size'), // get image widths and heights by reading the image file
   size = require('gulp-size'), // used to output size of files in terminal
   ftp_details = require('./ftp-details.json'),
   combineMq = require('gulp-combine-mq'),
   minifyHTML = require('gulp-minify-html'), // compress static html files
-  browserSync = require('browser-sync').create();
+  browserSync = require('browser-sync').create(),
+  runSequence = require('run-sequence');
   // neat.with('source/sass/');   // set path to sass for bourbon neat
 
 /*******************************************************************************
@@ -548,31 +546,6 @@ gulp.task('copy-sprites', function() {
 
 
 /*******************************************************************************
-## Build image Gallery JSON
-## creates the JSON file which contains information about the images in the gallery folder to use with the Photoswipe gallery implementation on the front end of the website
-##
-*******************************************************************************/
-// gulp.task('build_gallery_json', function() {
-//   // return gulp.src(path.gallery_images)
-//   //   .pipe(plumber())
-//   //   .pipe(foreach(function(stream, file){
-//   //       //.pipe(sizeOf(file))
-//   //       .pipe(debug({title: file}))
-//   //   }));
-//   gulp.src(path.gallery_images)
-//     .pipe(require('gulp-filelist')('filelist.json'))
-//     .pipe(gulp.dest('out'));
-//
-//     // .pipe(toJson({
-//     //   filename: 'gallery.json'
-//     // strip: /^.+\/?\\?public\/?\\?/ //create just file names by removing everything from left of public/ folder
-//
-// });
-
-
-
-
-/*******************************************************************************
 ## fonts
 ## sends fonts to the build folder
 ##
@@ -581,6 +554,126 @@ gulp.task('build_fonts', function() {
   gulp.src(path.fonts_src)
     .pipe(plumber())
     .pipe(gulp.dest(path.fonts_dest));
+});
+
+
+
+
+/*******************************************************************************
+## fetchFromDatoCMS
+## Get Data from dato CMS by exec shell script
+## (this function creates portfolioImages.json file which is used to generate gallery html)
+##
+*******************************************************************************/
+var exec = require('child_process').exec;
+
+
+gulp.task('fetchFromDatoCMS', function (cb) {
+  return exec('./node_modules/.bin/dato dump --token=a4754214d83c6ab0c00aaf348884dca174756847ef99fb7459', function (err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+  });
+})
+
+/*******************************************************************************
+## Compile Gallery
+## generates html for the gallery section by accessing the json data
+## from datoCMS (portfolioImages.json) and running it through a handlebars template
+##
+*******************************************************************************/
+
+gulp.task('compileGallery', function () {
+
+    var templateData = require ('./source/js/json/portfolioImages.json');
+    var options = {
+        helpers : {
+            capitals : function(str){
+                return str.toUpperCase();
+            },
+            ifGreaterThanEight : function(index, options) {
+              // handlebars index is zero based
+              if(index > 7){
+                  return options.fn(this);
+              } else {
+                  return options.inverse(this);
+              }
+            },
+            getYearFromDate : function(theDate) {
+              var year = theDate.slice(0,4);
+              return year;
+            }
+        }
+    };
+
+    return gulp.src('source/templates/gallery/gallery.handlebars')
+      .pipe(handlebars(templateData, options))
+      .pipe(rename('_galleryInner.html'))
+      .pipe(gulp.dest('source/prototypes/'));
+});
+
+/*******************************************************************************
+## Compile Books
+## generates html for the books section by accessing the json data
+## from datoCMS (books.json) and running it through a handlebars template
+*******************************************************************************/
+
+gulp.task('compileBooks', function () {
+
+    var templateData = require ('./source/js/json/books.json');
+    var options = {
+    };
+
+    return gulp.src('source/templates/books/books.handlebars')
+      .pipe(handlebars(templateData, options))
+      .pipe(rename('_bookLinks.html'))
+      .pipe(gulp.dest('source/prototypes/'));
+});
+
+/*******************************************************************************
+## Compile Clients
+## generates html for the books section by accessing the json data
+## from datoCMS (clients.json) and running it through a handlebars template
+*******************************************************************************/
+
+gulp.task('compileClients', function () {
+
+    var templateData = require ('./source/js/json/clients.json');
+    var options = {
+    };
+
+    return gulp.src('source/templates/clients/clients.handlebars')
+      .pipe(handlebars(templateData, options))
+      .pipe(rename('_clientImages.html'))
+      .pipe(gulp.dest('source/prototypes/'));
+});
+
+
+
+/*******************************************************************************
+## BuildFromDato
+## get data from DatoCMS, then compile the handlbars templates to HTML with it
+********************************************************************************/
+gulp.task('buildFromDato', function(callback) {
+  runSequence('fetchFromDatoCMS',
+              ['compileGallery','compileClients','compileBooks'],
+              callback);
+});
+//
+//
+// gulp.series('fetchFromDatoCMS', 'compileGallery', function(done) {
+//   console.log("gallery image data loaded from Dato CMS and galleryHTML compiled");
+// }));
+
+
+/*******************************************************************************
+## Build HTML Templates
+## get gallery data from DatoCMS, then compile all html templates
+********************************************************************************/
+gulp.task('buildHtmlTemplates', function(callback) {
+  runSequence('buildFromDato',
+              'buildhtml',
+              callback);
 });
 
 
@@ -597,9 +690,9 @@ gulp.task('watch', function() {
 
   });
 
-  gulp.watch('source/js/**/*.js', ['js-watch']); //Watch Scripts
+  gulp.watch('source/js/**/*.js', ['js-watch']); // Watch Scripts
 
-  gulp.watch('source/sass/**/*.scss', ['sass']); //Watch Styles
+  gulp.watch('source/sass/**/*.scss', ['sass']); // Watch Styles
   gulp.watch('source/prototypes/**/**/*.tpl.html', ['buildhtml']); // Watch prototypes
   gulp.watch('source/templates/**/**/*.tpl.html', ['buildhtml']); // Watch templates
 
@@ -715,7 +808,7 @@ gulp.task('deploy-to-staging', function() {
 *******************************************************************************/
 
 gulp.task('default', [
-  'buildhtml',
+  'buildHtmlTemplates',
   'copy-static-img-assets',
   // 'iconify',
   'build_fonts',
@@ -725,7 +818,7 @@ gulp.task('default', [
   'js-browserify',
   'js-copy-scripts',
   'js-copy-json',
-  'responsive-imgs',
+  // 'responsive-imgs',
   'copy-favicon',
   'copy-sprites',
   'sass',

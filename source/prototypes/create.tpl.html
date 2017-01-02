@@ -65,26 +65,8 @@
     <div id="gallery_container" class="gallery_container isotope-grid" itemscope itemtype="http://schema.org/ImageGallery">
         <div class="grid-sizer"></div>
         <div class="gutter-sizer"></div>
-        <!-- gallery template -->
-
-        {{#each images}}
-          <figure class="item {{category}}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <a href="{{desktopImage.src}}" data-mobile-link="{{mobileImage.src}}" itemprop="contentUrl" data-size="{{desktopImage.width}}x{{desktopImage.height}}" data-size-desktop="{{desktopImage.width}}x{{desktopImage.height}}"
-            data-size-mobile="{{mobileImage.width}}x{{mobileImage.height}}">
-              <div class='thumbnail {{#ifGreaterThanEight @index}}b-lazy{{else}}b-lazy show-at-start{{/ifGreaterThanEight}}' data-src="{{mobileImage.src}}" data-src-small="{{srcImage}}"
-              data-src-medium="{{mobileImage.src}}">
-                <img src="{{srcImage}}"
-                alt="{{alt}}"
-                title="{{title}} | {{displayYearOnly year}}" itemprop="thumbnail"  />
-              </div>
-            </a>
-            <figcaption itemprop=\"caption description\">
-              {{title}} | {{displayYearOnly year}} </br>
-              {{description}}</br>
-              <span itemprop=\"copyrightHolder\" class="image-copyright"> &copy; Vickie Chan</span>
-            </figcaption>
-          </figure>
-        {{/each}}
+        <!-- Include gallery data -->
+        @@include('_galleryInner.html')
     </div>
   </div>
 

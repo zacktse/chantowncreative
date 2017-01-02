@@ -515,7 +515,7 @@ Handlebars.registerHelper('ifGreaterThanEight', function(index, options) {
    }
 });
 
-Handlebars.registerHelper('displayYearOnly', function(theDate) {
+Handlebars.registerHelper('getYearFromDate', function(theDate) {
   var year = theDate.slice(0,4);
   return year;
 });

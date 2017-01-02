@@ -1,32 +1,6 @@
-// dato.config.js
-
-// module.exports = (dato, root, i18n) => {
-//   // within a 'content' directory...
-//   root.directory('./content', dir => {
-//
-//     // dump the global DatoCMS site setting into a 'site.yml' file
-//     dir.createDataFile(
-//       'site.yml',
-//       'yaml',
-//       dato.site.toMap()
-//     );
-//
-//     // for each Item Type present in the DatoCMS backend...
-//     dato.itemTypes.forEach(itemType => {
-//
-//       // dump the items in the collection into a YAML file
-//       dir.createDataFile(
-//         `${itemType.apiKey}.yml`,
-//         'yaml',
-//         dato.itemsOfType(itemType).map(item => item.toMap())
-//       );
-//     });
-//   });
-// };
-
 module.exports = (dato, root, i18n) => {
 
-  let buildPaddedJson = (images) => {
+  let buildPaddedGalleryJson = (images) => {
     let imagesArray = images.map(item => {
       return {
         title: item.title,
@@ -51,10 +25,46 @@ module.exports = (dato, root, i18n) => {
     return {
       "images" : imagesArray
       }
-  }
+  };
+
+  let buildPaddedClientsJson = (images) => {
+    let clientsArray = images.map(item => {
+      return {
+        title: item.title,
+        image: item.image.url({ w: 400, fm: 'jpg' }),
+        description: item.image.title,
+        alt: item.image.alt,
+      };
+    });
+
+    return {
+      "clients" : clientsArray
+    }
+  };
+
+  let buildPaddedBooksJson = (items) => {
+    let booksArray = items.map(item => {
+      return {
+        title: item.title,
+        image: item.thumbnail.url({ w: 200, fm: 'jpg' }),
+        description: item.thumbnail.title,
+        alt: item.thumbnail.alt,
+        url: item.externalLink
+      };
+    });
+
+    return {
+      "books" : booksArray
+    }
+  };
 
   dato.portfolioImages
-    root.createDataFile('source/js/json/portfolioImages.json', 'json', buildPaddedJson(dato.portfolioImages));
+    root.createDataFile('source/js/json/portfolioImages.json', 'json', buildPaddedGalleryJson(dato.portfolioImages));
 
+  dato.clients
+    root.createDataFile('source/js/json/clients.json', 'json', buildPaddedClientsJson(dato.clients));
+
+  dato.books
+    root.createDataFile('source/js/json/books.json', 'json', buildPaddedBooksJson(dato.books));
 
 };
