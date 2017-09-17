@@ -48,20 +48,20 @@ jobs:
       - run:
           name: Install npm wee
           command: npm install
-      - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-          paths:
-            - node_modules
+
       - run:
           name: Install gulp
           command: npm install gulp -g
 
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
 
       run tests:
-      - run:
-          name: build the site
-          command: gulp build
+          - run:
+              name: Install npm wee
+              command: npm install
+          - run:
+              name: Install gulp
+              command: npm install gulp -g
+              
+          - run:
+              name: build the site
+              command: gulp build
