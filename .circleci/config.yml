@@ -61,7 +61,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      run tests!
+      run tests:
       - run:
           name: build the site
           command: gulp build
