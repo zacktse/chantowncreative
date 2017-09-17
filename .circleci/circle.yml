@@ -48,10 +48,12 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run:
-        - npm install
-        - npm install gulp -g
-        - gulp build
+        - run:
+          - npm install
+        - run:
+          - npm install gulp -g
+        - run:
+          - gulp build
 
       - save_cache:
           paths:
