@@ -1,0 +1,61 @@
+# machine:
+#   node:
+#     version: 0.10.22
+#
+# dependencies:
+#   override:
+#     # if your project uses Yarn as package manager, replace "npm install" with "yarn"
+#     - npm install
+#     - npm install gulp -g
+# test:
+#   override:
+#     # runs tasks to grab data from DatoCMS, compile SCSS, JS and create a built site from the handlebars templates
+#     - gulp build
+# deployment:
+#   staging:
+#     branch: master
+#     commands:
+#       # task that sends the site to chantown.com/newwebtest
+#       - gulp deploy-to-staging
+#
+
+
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:7.10
+
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/mongo:3.4.4
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run:
+        - npm install
+        - npm install gulp -g
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      # run tests!
+      - run: gulp build
