@@ -6,6 +6,7 @@ dependencies:
   override:
     # if your project uses Yarn as package manager, replace "npm install" with "yarn"
     - npm install
+    - npm install gulp -g
 test:
   override:
     # runs tasks to grab data from DatoCMS, compile SCSS, JS and create a built site from the handlebars templates
