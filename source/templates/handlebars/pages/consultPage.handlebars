@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="feature">
+    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+    data-src="{{{featuredImage.desktopUrl}}}"
+    data-src-small="{{{featuredImage.mobileUrl}}}"
+    class="b-lazy feature-image full-width"
+    alt="{{{featuredImage.alt}}}"
+    title="{{{featuredImage.title}}}" />
+  </div>
+</div>
+
+<div class="row __text">
+  <h1 class="size-h1"> {{{h1}}} </h1>
+  <p class="leader"> {{{leader}}} </p>
+  {{{content1}}}
+</div>
+<div class="row __text">
+<br>
+{{{content2}}}
+    <!-- Include book links -->
+    @@include('../widgets/_bookLinks.html')
+    <br>
+</div>
+
+<div class="row __text clients-wrapper">
+  {{{clientText}}}
+  <div class="row ">
+    <ul class="list__clients">
+      <!-- Include book links -->
+      @@include('../widgets/_clientImages.html')
+    </ul>
+
+  </div>
+</div>

@@ -606,10 +606,10 @@ gulp.task('compileGallery', function () {
         }
     };
 
-    return gulp.src('source/templates/gallery/gallery.handlebars')
+    return gulp.src('source/templates/handlebars/gallery/gallery.handlebars')
       .pipe(handlebars(templateData, options))
       .pipe(rename('_galleryInner.html'))
-      .pipe(gulp.dest('source/prototypes/'));
+      .pipe(gulp.dest('source/prototypes/partials/widgets'));
 });
 
 /*******************************************************************************
@@ -624,10 +624,10 @@ gulp.task('compileBooks', function () {
     var options = {
     };
 
-    return gulp.src('source/templates/books/books.handlebars')
+    return gulp.src('source/templates/handlebars/books/books.handlebars')
       .pipe(handlebars(templateData, options))
       .pipe(rename('_bookLinks.html'))
-      .pipe(gulp.dest('source/prototypes/'));
+      .pipe(gulp.dest('source/prototypes/partials/widgets'));
 });
 
 /*******************************************************************************
@@ -642,14 +642,92 @@ gulp.task('compileClients', function () {
     var options = {
     };
 
-    return gulp.src('source/templates/clients/clients.handlebars')
+    return gulp.src('source/templates/handlebars/clients/clients.handlebars')
       .pipe(handlebars(templateData, options))
       .pipe(rename('_clientImages.html'))
-      .pipe(gulp.dest('source/prototypes/'));
+      .pipe(gulp.dest('source/prototypes/partials/widgets'));
 });
 
 
+/*******************************************************************************
+## Compile Homepage
+## generates html for the homepage by accessing the json data
+## from datoCMS (homePage.json) and running it through the handlebars template
+##
+*******************************************************************************/
 
+gulp.task('compileHomepage', function () {
+
+    var templateData = require ('./source/js/json/homePage.json');
+    var options = {
+      noEscape: true
+    };
+
+    return gulp.src('source/templates/handlebars/pages/homePage.handlebars')
+      .pipe(handlebars(templateData, options))
+      .pipe(rename('_home.html'))
+      .pipe(gulp.dest('source/prototypes/partials/page-content/'));
+});
+
+/*******************************************************************************
+## Compile ConsultPage
+## generates html for the consult Page by accessing the json data
+## from datoCMS (consultPage.json) and running it through the handlebars template
+##
+*******************************************************************************/
+
+gulp.task('compileConsultPage', function () {
+
+    var templateData = require ('./source/js/json/consultPage.json');
+    var options = {
+      noEscape: true
+    };
+
+    return gulp.src('source/templates/handlebars/pages/consultPage.handlebars')
+      .pipe(handlebars(templateData, options))
+      .pipe(rename('_consult.html'))
+      .pipe(gulp.dest('source/prototypes/partials/page-content/'));
+});
+
+/*******************************************************************************
+## Compile CreatePage
+## generates html for the create Page by accessing the json data
+## from datoCMS (createPage.json) and running it through the handlebars template
+##
+*******************************************************************************/
+
+gulp.task('compileCreatePage', function () {
+
+    var templateData = require ('./source/js/json/createPage.json');
+    var options = {
+      noEscape: true
+    };
+
+    return gulp.src('source/templates/handlebars/pages/createPage.handlebars')
+      .pipe(handlebars(templateData, options))
+      .pipe(rename('_create.html'))
+      .pipe(gulp.dest('source/prototypes/partials/page-content/'));
+});
+
+/*******************************************************************************
+## Compile ContactPage
+## generates html for the contact Page by accessing the json data
+## from datoCMS (contactPage.json) and running it through the handlebars template
+##
+*******************************************************************************/
+
+gulp.task('compileContactPage', function () {
+
+    var templateData = require ('./source/js/json/contactPage.json');
+    var options = {
+      noEscape: true
+    };
+
+    return gulp.src('source/templates/handlebars/pages/contactPage.handlebars')
+      .pipe(handlebars(templateData, options))
+      .pipe(rename('_contact.html'))
+      .pipe(gulp.dest('source/prototypes/partials/page-content/'));
+});
 /*******************************************************************************
 ## BuildFromDato
 ## get data from DatoCMS, then compile the handlbars templates to HTML with it
@@ -657,6 +735,7 @@ gulp.task('compileClients', function () {
 gulp.task('buildFromDato', function(callback) {
   runSequence('fetchFromDatoCMS',
               ['compileGallery','compileClients','compileBooks'],
+              ['compileContactPage', 'compileHomepage', 'compileCreatePage', 'compileConsultPage'],
               callback);
 });
 //

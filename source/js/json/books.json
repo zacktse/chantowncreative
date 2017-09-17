@@ -2,17 +2,17 @@
   "books": [
     {
       "title": "What Will You Create Drawing with the 3Doodler®",
-      "image": "https://dato-images.imgix.net/159/1483130382-3doodlerwwyccover-jpg?auto=format&ch=DPR%2CWidth&fm=jpg&w=200",
+      "image": "https://www.datocms-assets.com/159/1483130382-3doodlerwwyccover-jpg?fm=jpg&w=200",
       "description": "What Will You Create Drawing with the 3Doodler®",
       "alt": "What Will You Create Drawing with the 3Doodler® book cover",
       "url": "http://www.michaels.com/what-will-you-create-drawing-with-the-3doodler-book/10457913.html?productsource=PDPZ1"
     },
     {
       "title": "The Other Hundred Entrepreneurs",
-      "image": "https://dato-images.imgix.net/159/1483130788-theotherhundredcover-jpg?auto=format&ch=DPR%2CWidth&fm=jpg&w=200",
+      "image": "https://www.datocms-assets.com/159/1483130788-theotherhundredcover-jpg?fm=jpg&w=200",
       "description": "The Other Hundred Entrepreneurs",
       "alt": "The Other Hundred Entrepreneurs book cover",
-      "url": "http://www.michaels.com/what-will-you-create-drawing-with-the-3doodler-book/10457913.html?productsource=PDPZ1"
+      "url": "http://www.amazon.com/The-Other-Hundred-Entrepreneurs-Stories/dp/1780747128"
     }
   ]
 }

@@ -1,54 +1,31 @@
 module.exports = (dato, root, i18n) => {
 
   let buildPaddedGalleryJson = (images) => {
-    // let imagesArray = images.map(item => {
-    //   return {
-    //     title: item.title,
-    //     year: item.year,
-    //     category: item.category,
-    //     srcImage: item.image.url({ w: 400, fm: 'jpg' }),
-    //     mobileImage: {
-    //       src: item.image.url({ w: 800, fm: 'jpg' }),
-    //       width: 800,
-    //       height: parseInt(800 / item.image.width * item.image.height)
-    //     },
-    //     desktopImage: {
-    //       src: item.image.url({ w: 2000, fm: 'jpg' }),
-    //       width: 2000,
-    //       height: parseInt(2000 / item.image.width * item.image.height)
-    //     },
-    //     description: item.image.title,
-    //     alt: item.image.alt,
-    //     showInPortfolio: item.showInPortfolio
-    //   };
-    // });
-
-    let imagesArray = [];
-
-    images.forEach(item => {
-      imagesArray.push({
-          title: item.title,
-          year: item.year,
-          category: item.category,
-          srcImage: item.image.url({ w: 400, fm: 'jpg' }),
-          mobileImage: {
-            src: item.image.url({ w: 800, fm: 'jpg' }),
-            width: 800,
-            height: parseInt(800 / item.image.width * item.image.height)
-          },
-          desktopImage: {
-            src: item.image.url({ w: 2000, fm: 'jpg' }),
-            width: 2000,
-            height: parseInt(2000 / item.image.width * item.image.height)
-          },
-          description: item.image.title,
-          alt: item.image.alt,
-          showInPortfolio: item.showInPortfolio
-        });
+    let imagesArray = images.map(item => {
+      return {
+        title: item.title,
+        year: item.year,
+        category: item.category,
+        srcImage: item.image.url({ w: 400, fm: 'jpg' }),
+        mobileImage: {
+          src: item.image.url({ w: 800, fm: 'jpg' }),
+          width: 800,
+          height: parseInt(800 / item.image.width * item.image.height)
+        },
+        desktopImage: {
+          src: item.image.url({ w: 2000, fm: 'jpg' }),
+          width: 2000,
+          height: parseInt(2000 / item.image.width * item.image.height)
+        },
+        description: item.image.title,
+        alt: item.image.alt,
+        showInPortfolio: item.showInPortfolio
+      };
     });
+
     return {
       "images" : imagesArray
-    }
+      }
   };
 
   let buildPaddedClientsJson = (images) => {
@@ -156,27 +133,26 @@ module.exports = (dato, root, i18n) => {
     return pageData
   };
 
+  root.createDataFile('source/js/json/portfolioImages.json', 'json', buildPaddedGalleryJson(dato.gallery_image));
+  // dato.gallery
+  //   root.createDataFile('source/js/json/portfolioImages.json', 'json', buildPaddedGalleryJson(dato.gallery));
 
-
-  dato.artworks
-    root.createDataFile('source/js/json/portfolioImages.json', 'json', buildPaddedGalleryJson(dato.artworks));
-
-  dato.clients
-    root.createDataFile('source/js/json/clients.json', 'json', buildPaddedClientsJson(dato.clients));
-
-  dato.books
-    root.createDataFile('source/js/json/books.json', 'json', buildPaddedBooksJson(dato.books));
-
-  dato.homePage
-    root.createDataFile('source/js/json/homePage.json', 'json', buildHomePageJson(dato.homePage) );
-
-  dato.consultPage
-    root.createDataFile('source/js/json/consultPage.json', 'json', buildConsultPageJson(dato.consultPage) );
-
-  dato.createPage
-    root.createDataFile('source/js/json/createPage.json', 'json', buildCreatePageJson(dato.createPage) );
-
-  dato.contactPage
-    root.createDataFile('source/js/json/contactPage.json', 'json', buildContactPageJson(dato.contactPage) );
+  // dato.clients
+  //   root.createDataFile('source/js/json/clients.json', 'json', buildPaddedClientsJson(dato.clients));
+  //
+  // dato.books
+  //   root.createDataFile('source/js/json/books.json', 'json', buildPaddedBooksJson(dato.books));
+  //
+  // dato.homePage
+  //   root.createDataFile('source/js/json/homePage.json', 'json', buildHomePageJson(dato.homePage) );
+  //
+  // dato.consultPage
+  //   root.createDataFile('source/js/json/consultPage.json', 'json', buildConsultPageJson(dato.consultPage) );
+  //
+  // dato.createPage
+  //   root.createDataFile('source/js/json/createPage.json', 'json', buildCreatePageJson(dato.createPage) );
+  //
+  // dato.contactPage
+  //   root.createDataFile('source/js/json/contactPage.json', 'json', buildContactPageJson(dato.contactPage) );
 
 };
