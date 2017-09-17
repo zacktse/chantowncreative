@@ -2,12 +2,17 @@ machine:
   node:
     version: 0.10.22
 
+dependencies:
+  override:
+    # if your project uses Yarn as package manager, replace "npm install" with "yarn"
+    - npm install
+test:
+  override:
+    # runs tasks to grab data from DatoCMS, compile SCSS, JS and create a built site from the handlebars templates
+    - gulp build
 deployment:
   staging:
     branch: master
     commands:
-      - ./deploy_staging.sh
-  # production:
-  #   branch: production
-  #   commands:
-  #     - ./deploy_prod.sh
+      # task that sends the site to chantown.com/newwebtest
+      - gulp deploy-to-staging

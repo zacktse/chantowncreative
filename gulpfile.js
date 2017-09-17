@@ -882,6 +882,31 @@ gulp.task('deploy-to-staging', function() {
 
 
 /*******************************************************************************
+##  GULP Build
+##  Build the site ready for deployment
+*******************************************************************************/
+
+gulp.task('build', [
+  'buildHtmlTemplates',
+  'copy-static-img-assets',
+  // 'iconify',
+  'build_fonts',
+  //'js-uglify',
+  //'js-lint',
+  //'js-concat',
+  'js-browserify',
+  'js-copy-scripts',
+  'js-copy-json',
+  // 'responsive-imgs',
+  'copy-favicon',
+  'copy-sprites',
+  'sass']);
+
+
+
+
+
+/*******************************************************************************
 ##  GULP TASKS
 ##  Go Gulp Go! // "gulp" or "gulp scripts" etc...
 *******************************************************************************/

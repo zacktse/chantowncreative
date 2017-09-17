@@ -20,6 +20,25 @@
       "showInPortfolio": null
     },
     {
+      "title": "Year of the Monkey Lai See (利是) envelopes",
+      "year": "2016-01-01T00:00:00.000Z",
+      "category": "illustration screenprint",
+      "srcImage": "https://www.datocms-assets.com/159/1483119654-201601cnylaiseeall-jpg?fm=jpg&w=400",
+      "mobileImage": {
+        "src": "https://www.datocms-assets.com/159/1483119654-201601cnylaiseeall-jpg?fm=jpg&w=800",
+        "width": 800,
+        "height": 725
+      },
+      "desktopImage": {
+        "src": "https://www.datocms-assets.com/159/1483119654-201601cnylaiseeall-jpg?fm=jpg&w=2000",
+        "width": 2000,
+        "height": 1812
+      },
+      "description": null,
+      "alt": null,
+      "showInPortfolio": true
+    },
+    {
       "title": "Death Cab for Cutie poster",
       "year": "2016-05-16T00:00:00.000Z",
       "category": "commercial",
@@ -113,25 +132,6 @@
       "description": null,
       "alt": null,
       "showInPortfolio": null
-    },
-    {
-      "title": "Year of the Monkey Lai See (利是) envelopes",
-      "year": "2016-01-01T00:00:00.000Z",
-      "category": "illustration screenprint",
-      "srcImage": "https://www.datocms-assets.com/159/1483119654-201601cnylaiseeall-jpg?fm=jpg&w=400",
-      "mobileImage": {
-        "src": "https://www.datocms-assets.com/159/1483119654-201601cnylaiseeall-jpg?fm=jpg&w=800",
-        "width": 800,
-        "height": 725
-      },
-      "desktopImage": {
-        "src": "https://www.datocms-assets.com/159/1483119654-201601cnylaiseeall-jpg?fm=jpg&w=2000",
-        "width": 2000,
-        "height": 1812
-      },
-      "description": null,
-      "alt": null,
-      "showInPortfolio": true
     },
     {
       "title": "Surviving Hong Kong: Toilets",

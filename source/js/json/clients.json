@@ -1,6 +1,12 @@
 {
   "clients": [
     {
+      "title": "Golin",
+      "image": "https://www.datocms-assets.com/159/1483129647-golin-logo-png?fm=jpg&w=400",
+      "description": "Golin",
+      "alt": "Golin logo"
+    },
+    {
       "title": "3Doodler",
       "image": "https://www.datocms-assets.com/159/1483128293-3doodler-logo-png?fm=jpg&w=400",
       "description": "3doodler",
@@ -59,12 +65,6 @@
       "image": "https://www.datocms-assets.com/159/1483129262-hoplun-png?fm=jpg&w=400",
       "description": "HopLun",
       "alt": "HopLun Logo"
-    },
-    {
-      "title": "Golin",
-      "image": "https://www.datocms-assets.com/159/1483129647-golin-logo-png?fm=jpg&w=400",
-      "description": "Golin",
-      "alt": "Golin logo"
     },
     {
       "title": "HKTDC",
