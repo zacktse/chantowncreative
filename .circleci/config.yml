@@ -50,9 +50,7 @@ jobs:
 
         - run:
           - npm install
-        - run:
           - npm install gulp -g
-        - run:
           - gulp build
 
       - save_cache:
