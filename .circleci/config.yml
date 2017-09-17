@@ -34,6 +34,9 @@ jobs:
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
+          name: prcess ticks
+          command: npm install -g process-nextick-args
+      - run:
           name: Install npm wee
           command: npm install
       - run:
