@@ -1,0 +1,13 @@
+machine:
+  node:
+    version: 0.10.22
+
+deployment:
+  staging:
+    branch: master
+    commands:
+      - ./deploy_staging.sh
+  # production:
+  #   branch: production
+  #   commands:
+  #     - ./deploy_prod.sh

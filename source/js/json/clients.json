@@ -65,6 +65,18 @@
       "image": "https://www.datocms-assets.com/159/1483129647-golin-logo-png?fm=jpg&w=400",
       "description": "Golin",
       "alt": "Golin logo"
+    },
+    {
+      "title": "HKTDC",
+      "image": "https://www.datocms-assets.com/159/1505652632-hktdc-hkmb-logo.png?fm=jpg&w=400",
+      "description": null,
+      "alt": null
+    },
+    {
+      "title": "CultureSmart",
+      "image": "https://www.datocms-assets.com/159/1505652658-culturesmartlogo.png?fm=jpg&w=400",
+      "description": null,
+      "alt": null
     }
   ]
 }
