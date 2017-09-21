@@ -1,8 +1,0 @@
-// credit for sprites goes to this article :
-//https://www.liquidlight.co.uk/blog/article/creating-svg-sprites-using-gulp-and-sass/
-
-$icons: (
-      sprite: (width: {{spriteWidth}}px, height: {{spriteHeight}}px, pngPath: '../../assets/img/sprites/sprite.png', svgPath: '../../assets/img/sprites/sprite.svg'),
-{{#shapes}}
-    {{base}}: (width: {{width.inner}}px, height: {{height.inner}}px, backgroundX: {{position.absolute.x}}px, backgroundY: {{position.absolute.y}}px),
-{{/shapes}});
