@@ -66,7 +66,7 @@ var gulp = require('gulp'), //require gulp
 if (process.env.NODE_ENV == 'PRODUCTION' || process.env.NODE_ENV == 'STAGING') {
 
   var ftp_details = {
-    "host": process.env.NODE_ENV,
+    "host": process.env.FTP_HOST,
     "user": process.env.FTP_USER,
     "password": process.env.FTP_PASSWORD,
     "parallel": 5,
