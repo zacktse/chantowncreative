@@ -52,12 +52,32 @@ var gulp = require('gulp'), //require gulp
   handlebars = require('gulp-compile-handlebars'), // used to pre-compile the handlebars tempate for the portfolio gallery
   sizeOf = require('image-size'), // get image widths and heights by reading the image file
   size = require('gulp-size'), // used to output size of files in terminal
-  ftp_details = require('./ftp-details.json'), // used locally
+
   combineMq = require('gulp-combine-mq'),
   minifyHTML = require('gulp-minify-html'), // compress static html files
   browserSync = require('browser-sync').create(),
   runSequence = require('run-sequence');
   // neat.with('source/sass/');   // set path to sass for bourbon neat
+
+
+
+
+// get FTP details locally or from ENVIRONMENT Vars inside Netlify or Circle CI
+if (process.env.NODE_ENV == 'PRODUCTION' || process.env.NODE_ENV == 'STAGING') {
+
+  var ftp_details = {
+    "host": process.env.NODE_ENV,
+    "user": process.env.FTP_USER,
+    "password": process.env.FTP_PASSWORD,
+    "parallel": 5,
+    "log": "gutils.log"
+  };
+
+} else {
+  // local development environment
+  var ftp_details = require('./ftp-details.json'), // grab local FTP settings file that's not tracked in git
+}
+
 
 /*******************************************************************************
 ## PATHS Source & Destination (RELATIVE TO ROOT FOLDER)
@@ -886,8 +906,6 @@ gulp.task('deploy-files-to-production', function() {
     .pipe(conn.newer('./chantown.com/')) // only upload newer files
     .pipe(conn.dest('./chantown.com/'));
 });
-
-
 
 
 // deploy to staging - www.chantown.com/newwebtest/
