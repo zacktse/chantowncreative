@@ -20,6 +20,25 @@
       "showInPortfolio": true
     },
     {
+      "title": "Surviving Hong Kong Series: Railings",
+      "year": "2015-09-01T00:00:00.000Z",
+      "category": "illustration",
+      "srcImage": "https://www.datocms-assets.com/159/1506170230-1survhk201508railings.jpg?fm=jpg&w=400",
+      "mobileImage": {
+        "src": "https://www.datocms-assets.com/159/1506170230-1survhk201508railings.jpg?fm=jpg&w=800",
+        "width": 800,
+        "height": 902
+      },
+      "desktopImage": {
+        "src": "https://www.datocms-assets.com/159/1506170230-1survhk201508railings.jpg?fm=jpg&w=2000",
+        "width": 2000,
+        "height": 2255
+      },
+      "description": "Illustration",
+      "alt": "Surviving Hong Kong: Railings illustration by Vickie Chan",
+      "showInPortfolio": true
+    },
+    {
       "title": "Angkor Wat Overprint",
       "year": "2015-09-01T00:00:00.000Z",
       "category": "illustration commercial mixed-media screenprint",
@@ -93,6 +112,44 @@
       },
       "description": "Commercial illustration",
       "alt": "68 Bus – graphics by Vickie Chan",
+      "showInPortfolio": true
+    },
+    {
+      "title": "Sailing on the Seven Seas",
+      "year": "2010-09-23T00:00:00.000Z",
+      "category": "painting mixed-media",
+      "srcImage": "https://www.datocms-assets.com/159/1506175304-sailingonthesevenseas_20_small.jpg?fm=jpg&w=400",
+      "mobileImage": {
+        "src": "https://www.datocms-assets.com/159/1506175304-sailingonthesevenseas_20_small.jpg?fm=jpg&w=800",
+        "width": 800,
+        "height": 800
+      },
+      "desktopImage": {
+        "src": "https://www.datocms-assets.com/159/1506175304-sailingonthesevenseas_20_small.jpg?fm=jpg&w=2000",
+        "width": 2000,
+        "height": 2000
+      },
+      "description": "Mixed media on canvas",
+      "alt": "Sailing on the Seven Seas mixed media painting on canvas by Vickie Chan",
+      "showInPortfolio": true
+    },
+    {
+      "title": "Butterfly Heart",
+      "year": "2007-09-23T00:00:00.000Z",
+      "category": "illustration",
+      "srcImage": "https://www.datocms-assets.com/159/1506176139-butterflyheart_12_small.jpg?fm=jpg&w=400",
+      "mobileImage": {
+        "src": "https://www.datocms-assets.com/159/1506176139-butterflyheart_12_small.jpg?fm=jpg&w=800",
+        "width": 800,
+        "height": 803
+      },
+      "desktopImage": {
+        "src": "https://www.datocms-assets.com/159/1506176139-butterflyheart_12_small.jpg?fm=jpg&w=2000",
+        "width": 2000,
+        "height": 2007
+      },
+      "description": "Ink and paint on wood",
+      "alt": "Butterfly Heart ink and paint on wood by Vickie Chan",
       "showInPortfolio": true
     },
     {
