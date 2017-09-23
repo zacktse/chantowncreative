@@ -75,7 +75,7 @@ if (process.env.NODE_ENV == 'PRODUCTION' || process.env.NODE_ENV == 'STAGING') {
 
 } else {
   // local development environment
-  var ftp_details = require('./ftp-details.json'), // grab local FTP settings file that's not tracked in git
+  var ftp_details = require('./ftp-details.json'); // grab local FTP settings file that's not tracked in git
 }
 
 
