@@ -1,0 +1,21 @@
+<!-- Portfolio template -->
+{{#each images}}
+  {{#if showInPortfolio}}
+    <figure class="item {{category}}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="{{desktopImage.src}}" data-mobile-link="{{mobileImage.src}}" itemprop="contentUrl" data-size="{{desktopImage.width}}x{{desktopImage.height}}" data-size-desktop="{{desktopImage.width}}x{{desktopImage.height}}"
+      data-size-mobile="{{mobileImage.width}}x{{mobileImage.height}}">
+        <div class='thumbnail {{#ifGreaterThanEight @index}}b-lazy{{else}}b-lazy show-at-start{{/ifGreaterThanEight}}' data-src="{{mobileImage.src}}" data-src-small="{{srcImage}}"
+        data-src-medium="{{mobileImage.src}}">
+          <img src="{{srcImage}}"
+          alt="{{alt}}"
+          title="{{title}} | {{getYearFromDate year}}" itemprop="thumbnail"  />
+        </div>
+      </a>
+      <figcaption itemprop=\"caption description\">
+        {{title}} | {{getYearFromDate year}} </br>
+        {{description}}</br>
+        <span itemprop=\"copyrightHolder\" class="image-copyright"> &copy; Vickie Chan</span>
+      </figcaption>
+    </figure>
+  {{/if}}
+{{/each}}

@@ -1,0 +1,102 @@
+@@include('../templates/global/_html-head.tpl.html', {
+    "page_title": "Create: Chantown Creative",
+    "body_classes": "create"
+  }))
+
+@@include('../templates/global/_header_create.tpl.html')
+
+
+
+<div id="js-content" class="page-container">
+  <section class="content-main" role="main">
+
+
+    @@include('./partials/page-content/_create.html')
+
+    <div class="row clearfix">
+      <div class="row clearfix" class="filter-btns-container">
+
+        <div id="isotope-filters" class="row filter-btns">
+          <!-- <button class="sort" data-sort="random">Shuffle</button> -->
+          <button class="filter is-checked" data-filter="*">All</button>
+          <button class="filter" data-filter=".commercial">Commercial</button>
+          <button class="filter" data-filter=".illustration">Illustration</button>
+          <button class="filter" data-filter=".mixed-media">Mixed media</button>
+          <button class="filter" data-filter=".painting">Painting</button>
+          <button class="filter" data-filter=".screenprint">Screenprint</button>
+          <button class="filter" data-filter=".sketch">Sketch</button>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </section>
+
+  <!-- isotope  -->
+
+  <div class="gallery-wrap">
+    <div id="gallery_container" class="gallery_container isotope-grid" itemscope itemtype="http://schema.org/ImageGallery">
+        <div class="grid-sizer"></div>
+        <div class="gutter-sizer"></div>
+        <!-- Include gallery data -->
+        @@include('partials/widgets/_galleryInner.html')
+    </div>
+  </div>
+
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+      <!-- Background of PhotoSwipe.
+           It's a separate element as animating opacity is faster than rgba(). -->
+      <div class="pswp__bg"></div>
+      <!-- Slides wrapper with overflow:hidden. -->
+      <div class="pswp__scroll-wrap">
+          <!-- Container that holds slides.
+              PhotoSwipe keeps only 3 of them in the DOM to save memory.
+              Don't modify these 3 pswp__item elements, data is added later on. -->
+          <div class="pswp__container">
+              <div class="pswp__item"></div>
+              <div class="pswp__item"></div>
+              <div class="pswp__item"></div>
+          </div>
+          <div class="pswp__ui pswp__ui--hidden">
+              <div class="pswp__top-bar">
+
+                  <div class="pswp__counter"></div>
+                  <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                  <button class="pswp__button pswp__button--share" title="Share"></button>
+                  <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                  <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                  <div class="pswp__preloader">
+                      <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                          <div class="pswp__preloader__donut"></div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                  <div class="pswp__share-tooltip"></div>
+              </div>
+              <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+              </button>
+              <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+              </button>
+              <div class="pswp__caption">
+                  <div class="pswp__caption__center"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+</div>
+
+
+
+
+
+@@include('../templates/global/_html-footer.tpl.html')

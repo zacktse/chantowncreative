@@ -404,7 +404,6 @@ gulp.task('responsive-imgs', function() {
 
 });
 
-
 gulp.task('copy-static-img-assets', function() {
   // svgs, pngs + gifs
   gulp.src(path.img_src)
@@ -577,13 +576,51 @@ gulp.task('fetchFromDatoCMS', function (cb) {
 })
 
 /*******************************************************************************
-## Compile Gallery
-## generates html for the gallery section by accessing the json data
+## Compile Portfolio
+## generates html for the portfolio section which appears on the create.html page by accessing the json data
 ## from datoCMS (portfolioImages.json) and running it through a handlebars template
 ##
 *******************************************************************************/
 
-gulp.task('compileGallery', function () {
+gulp.task('compilePortfolio', function () {
+
+    var templateData = require ('./source/js/json/portfolioImages.json');
+    var options = {
+        helpers : {
+            capitals : function(str){
+                return str.toUpperCase();
+            },
+            ifGreaterThanEight : function(index, options) {
+              // handlebars index is zero based
+              if(index > 7){
+                  return options.fn(this);
+              } else {
+                  return options.inverse(this);
+              }
+            },
+            getYearFromDate : function(theDate) {
+              var year = theDate.slice(0,4);
+              return year;
+            }
+        }
+    };
+
+    return gulp.src('source/templates/handlebars/portfolio/portfolio.handlebars')
+      .pipe(handlebars(templateData, options))
+      .pipe(rename('_portfolioInner.html'))
+      .pipe(gulp.dest('source/prototypes/partials/widgets'));
+});
+
+
+
+/*******************************************************************************
+## Compile Full Gallery
+## generates html for the hidden full gallery section by accessing the json data
+## from datoCMS (portfolioImages.json) and running it through a handlebars template
+##
+*******************************************************************************/
+
+gulp.task('compileFullGallery', function () {
 
     var templateData = require ('./source/js/json/portfolioImages.json');
     var options = {
@@ -608,7 +645,7 @@ gulp.task('compileGallery', function () {
 
     return gulp.src('source/templates/handlebars/gallery/gallery.handlebars')
       .pipe(handlebars(templateData, options))
-      .pipe(rename('_galleryInner.html'))
+      .pipe(rename('_fullGalleryInner.html'))
       .pipe(gulp.dest('source/prototypes/partials/widgets'));
 });
 
@@ -734,7 +771,7 @@ gulp.task('compileContactPage', function () {
 ********************************************************************************/
 gulp.task('buildFromDato', function(callback) {
   runSequence('fetchFromDatoCMS',
-              ['compileGallery','compileClients','compileBooks'],
+              ['compilePortfolio','compileFullGallery','compileClients','compileBooks'],
               ['compileContactPage', 'compileHomepage', 'compileCreatePage', 'compileConsultPage'],
               callback);
 });

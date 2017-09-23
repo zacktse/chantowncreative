@@ -1,5 +1,38 @@
 module.exports = (dato, root, i18n) => {
 
+  let buildPaddedPortfolioJson = (images) => {
+
+    let imagesArray = [];
+
+    images.forEach(item => {
+      if(item.portfolio) {
+        imagesArray.push({
+            title: item.title,
+            year: item.year,
+            category: item.category,
+            srcImage: item.image.url({ w: 400, fm: 'jpg' }),
+            mobileImage: {
+              src: item.image.url({ w: 800, fm: 'jpg' }),
+              width: 800,
+              height: parseInt(800 / item.image.width * item.image.height)
+            },
+            desktopImage: {
+              src: item.image.url({ w: 2000, fm: 'jpg' }),
+              width: 2000,
+              height: parseInt(2000 / item.image.width * item.image.height)
+            },
+            description: item.description,
+            alt: item.image.alt,
+            showInPortfolio: item.portfolio
+          });
+      }
+
+    });
+    return {
+      "images" : imagesArray
+    }
+  };
+
   let buildPaddedGalleryJson = (images) => {
 
     let imagesArray = [];
@@ -20,9 +53,9 @@ module.exports = (dato, root, i18n) => {
             width: 2000,
             height: parseInt(2000 / item.image.width * item.image.height)
           },
-          description: item.image.title,
+          description: item.description,
           alt: item.image.alt,
-          showInPortfolio: item.showInPortfolio
+          showInPortfolio: item.portfolio
         });
     });
     return {
@@ -138,7 +171,10 @@ module.exports = (dato, root, i18n) => {
 
 
   dato.artworks
-    root.createDataFile('source/js/json/portfolioImages.json', 'json', buildPaddedGalleryJson(dato.artworks));
+    root.createDataFile('source/js/json/portfolioImages.json', 'json', buildPaddedPortfolioJson(dato.artworks));
+
+  dato.artworks
+    root.createDataFile('source/js/json/fullGalleryImages.json', 'json', buildPaddedGalleryJson(dato.artworks));
 
   dato.clients
     root.createDataFile('source/js/json/clients.json', 'json', buildPaddedClientsJson(dato.clients));

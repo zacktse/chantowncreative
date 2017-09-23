@@ -1,25 +1,6 @@
 {
   "images": [
     {
-      "title": "River Khwae",
-      "year": "2016-07-19T00:00:00.000Z",
-      "category": "sketch",
-      "srcImage": "https://www.datocms-assets.com/159/1482185522-201603_RiverKhwae_small.jpg?fm=jpg&w=400",
-      "mobileImage": {
-        "src": "https://www.datocms-assets.com/159/1482185522-201603_RiverKhwae_small.jpg?fm=jpg&w=800",
-        "width": 800,
-        "height": 553
-      },
-      "desktopImage": {
-        "src": "https://www.datocms-assets.com/159/1482185522-201603_RiverKhwae_small.jpg?fm=jpg&w=2000",
-        "width": 2000,
-        "height": 1383
-      },
-      "description": null,
-      "alt": null,
-      "showInPortfolio": null
-    },
-    {
       "title": "Year of the Monkey Lai See (利是) envelopes",
       "year": "2016-01-01T00:00:00.000Z",
       "category": "illustration screenprint",
@@ -34,28 +15,28 @@
         "width": 2000,
         "height": 1812
       },
-      "description": null,
-      "alt": null,
+      "description": "Screenprint of illustration",
+      "alt": "Chinese New Year lai see envelopes illustrated and screenprinted by Vickie Chan",
       "showInPortfolio": true
     },
     {
-      "title": "Death Cab for Cutie poster",
-      "year": "2016-05-16T00:00:00.000Z",
-      "category": "commercial",
-      "srcImage": "https://www.datocms-assets.com/159/1482185625-201603_Deathcab.jpg?fm=jpg&w=400",
+      "title": "Angkor Wat Overprint",
+      "year": "2015-09-01T00:00:00.000Z",
+      "category": "illustration commercial mixed-media screenprint",
+      "srcImage": "https://www.datocms-assets.com/159/1506170602-201501_angkorwatfullbgrblueyellowoverprint.jpg?fm=jpg&w=400",
       "mobileImage": {
-        "src": "https://www.datocms-assets.com/159/1482185625-201603_Deathcab.jpg?fm=jpg&w=800",
+        "src": "https://www.datocms-assets.com/159/1506170602-201501_angkorwatfullbgrblueyellowoverprint.jpg?fm=jpg&w=800",
         "width": 800,
-        "height": 1135
+        "height": 587
       },
       "desktopImage": {
-        "src": "https://www.datocms-assets.com/159/1482185625-201603_Deathcab.jpg?fm=jpg&w=2000",
+        "src": "https://www.datocms-assets.com/159/1506170602-201501_angkorwatfullbgrblueyellowoverprint.jpg?fm=jpg&w=2000",
         "width": 2000,
-        "height": 2838
+        "height": 1469
       },
-      "description": null,
-      "alt": null,
-      "showInPortfolio": null
+      "description": "Screenprint on mixed media background",
+      "alt": "Angkor Wat screenprint by Vickie Chan",
+      "showInPortfolio": true
     },
     {
       "title": "But You'll Cry",
@@ -72,104 +53,85 @@
         "width": 2000,
         "height": 2743
       },
-      "description": "But You'll Cry",
+      "description": "Mixed media painting on vinyl record ",
       "alt": "But You'll Cry vinyl painting by Vickie Chan",
-      "showInPortfolio": null
+      "showInPortfolio": true
     },
     {
-      "title": "Surviving Hong Kong Series: Lift Etiquette",
-      "year": "2016-10-10T00:00:00.000Z",
+      "title": "Leicester Fox",
+      "year": "2015-09-01T00:00:00.000Z",
       "category": "illustration",
-      "srcImage": "https://www.datocms-assets.com/159/1482185787-14SurvHK20160218Lift.jpg?fm=jpg&w=400",
+      "srcImage": "https://www.datocms-assets.com/159/1506171823-leicesterfoxclean.jpg?fm=jpg&w=400",
       "mobileImage": {
-        "src": "https://www.datocms-assets.com/159/1482185787-14SurvHK20160218Lift.jpg?fm=jpg&w=800",
+        "src": "https://www.datocms-assets.com/159/1506171823-leicesterfoxclean.jpg?fm=jpg&w=800",
         "width": 800,
-        "height": 1025
+        "height": 556
       },
       "desktopImage": {
-        "src": "https://www.datocms-assets.com/159/1482185787-14SurvHK20160218Lift.jpg?fm=jpg&w=2000",
+        "src": "https://www.datocms-assets.com/159/1506171823-leicesterfoxclean.jpg?fm=jpg&w=2000",
         "width": 2000,
-        "height": 2564
+        "height": 1391
       },
-      "description": "",
-      "alt": "Surviving Hong Kong: Lift Etiquette illustration by Vickie Chan",
-      "showInPortfolio": null
+      "description": "Ink Illustration",
+      "alt": "Leicester Fox illustration by Vickie Chan",
+      "showInPortfolio": true
     },
     {
-      "title": "Surviving Hong Kong Series: Opening a Pack of Calbees",
-      "year": "2016-10-11T00:00:00.000Z",
-      "category": "illustration",
-      "srcImage": "https://www.datocms-assets.com/159/1482185704-15SurvHK20160223Calbees.jpg?fm=jpg&w=400",
+      "title": "68 Bus",
+      "year": "2011-09-23T00:00:00.000Z",
+      "category": "commercial illustration",
+      "srcImage": "https://www.datocms-assets.com/159/1506174596-2011_1_68bus.jpg?fm=jpg&w=400",
       "mobileImage": {
-        "src": "https://www.datocms-assets.com/159/1482185704-15SurvHK20160223Calbees.jpg?fm=jpg&w=800",
+        "src": "https://www.datocms-assets.com/159/1506174596-2011_1_68bus.jpg?fm=jpg&w=800",
         "width": 800,
-        "height": 1010
+        "height": 531
       },
       "desktopImage": {
-        "src": "https://www.datocms-assets.com/159/1482185704-15SurvHK20160223Calbees.jpg?fm=jpg&w=2000",
+        "src": "https://www.datocms-assets.com/159/1506174596-2011_1_68bus.jpg?fm=jpg&w=2000",
         "width": 2000,
-        "height": 2525
+        "height": 1327
       },
-      "description": "Illustration",
-      "alt": "Surviving Hong Kong: Opening a Pack of Calbees illustration by Vickie Chan",
-      "showInPortfolio": null
+      "description": "Commercial illustration",
+      "alt": "68 Bus – graphics by Vickie Chan",
+      "showInPortfolio": true
     },
     {
-      "title": "Surviving Hong Kong Series: Cinema-going",
-      "year": "2016-02-17T00:00:00.000Z",
-      "category": " illustration",
-      "srcImage": "https://www.datocms-assets.com/159/1483119156-13survhk20160214cinema-jpg?fm=jpg&w=400",
+      "title": "Swimming Pool",
+      "year": "2002-09-23T00:00:00.000Z",
+      "category": "mixed-media",
+      "srcImage": "https://www.datocms-assets.com/159/1506179361-swimmingpool_8.jpg?fm=jpg&w=400",
       "mobileImage": {
-        "src": "https://www.datocms-assets.com/159/1483119156-13survhk20160214cinema-jpg?fm=jpg&w=800",
+        "src": "https://www.datocms-assets.com/159/1506179361-swimmingpool_8.jpg?fm=jpg&w=800",
         "width": 800,
-        "height": 1047
+        "height": 836
       },
       "desktopImage": {
-        "src": "https://www.datocms-assets.com/159/1483119156-13survhk20160214cinema-jpg?fm=jpg&w=2000",
+        "src": "https://www.datocms-assets.com/159/1506179361-swimmingpool_8.jpg?fm=jpg&w=2000",
         "width": 2000,
-        "height": 2618
+        "height": 2091
       },
-      "description": null,
-      "alt": null,
-      "showInPortfolio": null
+      "description": "Mixed media on canvas",
+      "alt": "Swimming Pool mixed media on canvas by Vickie Chan",
+      "showInPortfolio": true
     },
     {
-      "title": "Surviving Hong Kong: Toilets",
-      "year": "2016-02-16T00:00:00.000Z",
-      "category": "Illustration",
-      "srcImage": "https://www.datocms-assets.com/159/1483120156-12survhk2016012toilets-jpg?fm=jpg&w=400",
+      "title": "Everyone I See is You",
+      "year": "2001-09-23T00:00:00.000Z",
+      "category": "painting mixed-media",
+      "srcImage": "https://www.datocms-assets.com/159/1506179864-everyoneiseeisyou.jpg?fm=jpg&w=400",
       "mobileImage": {
-        "src": "https://www.datocms-assets.com/159/1483120156-12survhk2016012toilets-jpg?fm=jpg&w=800",
+        "src": "https://www.datocms-assets.com/159/1506179864-everyoneiseeisyou.jpg?fm=jpg&w=800",
         "width": 800,
-        "height": 1089
+        "height": 800
       },
       "desktopImage": {
-        "src": "https://www.datocms-assets.com/159/1483120156-12survhk2016012toilets-jpg?fm=jpg&w=2000",
+        "src": "https://www.datocms-assets.com/159/1506179864-everyoneiseeisyou.jpg?fm=jpg&w=2000",
         "width": 2000,
-        "height": 2723
+        "height": 2000
       },
-      "description": null,
-      "alt": null,
-      "showInPortfolio": null
-    },
-    {
-      "title": "Surviving Hong Kong: Got Milk?",
-      "year": "2015-11-17T00:00:00.000Z",
-      "category": "Illustration",
-      "srcImage": "https://www.datocms-assets.com/159/1483120659-11survhk201512gotmilk-jpg?fm=jpg&w=400",
-      "mobileImage": {
-        "src": "https://www.datocms-assets.com/159/1483120659-11survhk201512gotmilk-jpg?fm=jpg&w=800",
-        "width": 800,
-        "height": 1076
-      },
-      "desktopImage": {
-        "src": "https://www.datocms-assets.com/159/1483120659-11survhk201512gotmilk-jpg?fm=jpg&w=2000",
-        "width": 2000,
-        "height": 2690
-      },
-      "description": null,
-      "alt": null,
-      "showInPortfolio": null
+      "description": "Mixed media on canvas",
+      "alt": "Everyone I See is You mixed media painting on canvas by Vickie Chan",
+      "showInPortfolio": true
     }
   ]
 }
