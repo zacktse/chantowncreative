@@ -5,6 +5,7 @@ var isotope = require('./modules/isotope');
 var scroll = require('./modules/scroll');
 var dp = require('./modules/pixels');
 var StickyHeader = require('./modules/sticky-header');
+// var Instafeed = require("./modules/instafeed.min");
 var pixel_bg = new dp.DeadPixels();
 
 Blazy = require('./vendor/blazy.min.js');
@@ -40,3 +41,11 @@ pixel_bg.initialize();
 if (document.querySelector('.my-gallery') !== null) {
   PhotoSwipe.initPhotoSwipeFromDOM('.my-gallery');
 }
+
+
+// if (document.getElementById('instafeed') ) {
+//     var feed = new Instafeed({
+//         accessToken: '5667361962.1677ed0.939ab53a59ef4ecdb67d5c69f25cbd15'
+//     });
+//     feed.run();
+// }

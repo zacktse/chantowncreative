@@ -726,6 +726,19 @@ gulp.task('compileHomepage', function () {
       .pipe(gulp.dest('source/prototypes/partials/page-content/'));
 });
 
+gulp.task('compileHomepagev2', function () {
+
+    var templateData = require ('./source/js/json/homePage.json');
+    var options = {
+      noEscape: true
+    };
+
+    return gulp.src('source/templates/handlebars/pages/homePage_v2.handlebars')
+      .pipe(handlebars(templateData, options))
+      .pipe(rename('_home_v2.html'))
+      .pipe(gulp.dest('source/prototypes/partials/page-content/'));
+});
+
 /*******************************************************************************
 ## Compile ConsultPage
 ## generates html for the consult Page by accessing the json data
@@ -792,7 +805,7 @@ gulp.task('compileContactPage', function () {
 gulp.task('buildFromDato', function(callback) {
   runSequence('fetchFromDatoCMS',
               ['compilePortfolio','compileFullGallery','compileClients','compileBooks'],
-              ['compileContactPage', 'compileHomepage', 'compileCreatePage', 'compileConsultPage'],
+              ['compileContactPage', 'compileHomepage', 'compileHomepagev2', 'compileCreatePage', 'compileConsultPage'],
               callback);
 });
 //
