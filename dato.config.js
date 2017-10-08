@@ -149,8 +149,15 @@ module.exports = (dato, root, i18n) => {
   };
 
   let buildContactPageJson = (p) => {
+
     let pageData =
     {
+      featuredImage: {
+        mobileUrl: p.featuredImage.url({w: 600, fm: 'jpg'}),
+        desktopUrl: p.featuredImage.url({w: 1000, fm: 'jpg'}),
+        title: p.featuredImage.title,
+        alt: p.featuredImage.alt
+      },
       h1: p.h1,
       leader: p.leaderText,
       content: p.contentText,
