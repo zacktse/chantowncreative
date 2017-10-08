@@ -1,0 +1,209 @@
+@@include('../templates/global/_html-head.tpl.html', {
+    "page_title": "Chantown Creative"
+  }))
+
+<!-- @@include('../templates/global/_header_homepage.tpl.html') -->
+
+
+
+<!-- facebook open graph tags -->
+<meta property="og:url"                content="http://www.chantown.com/" />
+<meta property="og:title"              content="Chantown Creative" />
+<meta property="og:description"        content="A creative communications agency that can help you with a wide range of copywriting, editing and custom publishing services." />
+<meta property="og:image"              content="assets/img/pages/create_lightened_w1500.jpg" />
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebSite">
+  <!--[if lt IE 8]>
+           <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+       <![endif]-->
+  <!-- Google Tag Manager -->
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-M28F3G"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-M28F3G');</script>
+  <!-- End Google Tag Manager -->
+
+<div class='full-height-wrapper'>
+   <canvas class="uk-position-top" style="position: absolute; top: 0;height: 100%; opacity:.6; z-index: 1;" color-swarm="" h="4/5" ></canvas>
+</div>
+
+<header id="global-header" class="main-header" role="banner">
+  <div class="header-content">
+    <div class="logo-wrapper">
+      <a href="home.html" class="logo">
+        <h1>Chantown Creative</h1>
+      </a>
+    </div>
+
+  <ul class="social-icons header m-hide">
+
+  <li>
+    <a href="https://twitter.com/hkchantown" class="icon twitter" title="Twitter" alt="Chantown Creative on Twitter" target="_blank"><i class="icon-twitter"></i></a>
+  </li>
+  <li>
+    <a href="https://www.pinterest.com/chantown/" class="icon pinterest" alt="Chantown Creative on Pinterest" title="Pinterest" target="_blank"><i class="icon-pinterest"></i></a>
+  </li>
+  <li>
+    <a href="http://bit.ly/Etsychan" class="icon etsy" alt="Chantown Creative on Etsy" title="Etsy" target="_blank"><i class="icon-etsy"></i></a>
+  </li>
+  <li>
+    <a href="https://www.instagram.com/survivinghk/" class="icon instagram" title="Surviving Hong Kong on Instagram" alt="Surviving Hong Kong on Instagram" target="_blank"><i class="icon-instagram" ></i></a>
+  </li>
+
+</ul>
+
+  </div>
+
+  <div id="js-global-nav" class="navigation-wrapper">
+
+    <!-- <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a> -->
+    <nav role="navigation" class="main-nav">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+       <li class="nav-link block">
+           <a id="home-link" href="home.html" class="underlined active">
+             <div class="icon-home-wrapper d-t-hide">
+               <div class="icon-home"></div>
+             </div>
+             <span class="m-hide">Home</span>
+             <!-- <span class="arrow"></span> -->
+          </a>
+        </li>
+        <li class="nav-link block"><a href="consult.html">Consult</a></li>
+        <li class="nav-link block"><a href="create.html">Create</a></li>
+        <li class="nav-link block"><a href="contact.html">Contact </a></li>
+      </ul>
+    </nav>
+  </div>
+
+</header>
+
+
+
+
+<!-- end homepage test header -->
+
+
+<div id="js-content" class="page-container">
+  <section class="content-main" role="main">
+      @@include('./partials/page-content/_home.html')
+  </section>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- test pixels JS -->
+<script>
+(function(win, doc, $){
+
+
+win.colorSwarm = function(canvas) {
+
+    var ctx;
+    var circles;
+    var tick = 0;
+    var numCircles = 300;
+    var h = eval(canvas.getAttribute('h') || '2/3');
+
+
+  // returns a random color from an array of possible colour values (colors array)
+    let randomColor = function() {
+      let colors = ['#FF5000', '#0078AE', '#F65097'];
+      return colors[Math.floor(Math.random() * colors.length)]
+    };
+
+    var resize = window.resize = function() {
+        canvas.height = $(canvas).parent().outerHeight() * h;
+        canvas.width = window.innerWidth;
+    };
+
+    $(function() {
+        ctx = canvas.getContext('2d');
+        resize();
+
+        circles = [];
+
+        for (var i=0; i<numCircles; i++) {
+            var x = Math.random()*canvas.width;
+            var y = Math.random()*canvas.height;
+            var c = new Circle(x, y, canvas.width, canvas.height);
+            c.draw();
+            circles.push(c);
+        }
+
+        var loop = function() {
+            window.requestAnimFrame(loop);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (var i=0; i<circles.length; i++) {
+            circles[i].frame();
+            }
+        };
+
+        window.requestAnimFrame = function(){
+            return window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
+            window.oRequestAnimationFrame ||
+            window.msRequestAnimationFrame ||
+            function(a) { window.setTimeout(a,1E3/60); };
+        }();
+
+        loop();
+    });
+
+
+
+
+
+
+
+    var Circle = function(x, y) {
+        this.pos = [ x, y ];
+        this.r = (1.2*Math.random())+0.15;
+        this.c = randomColor();
+        this.v = [
+            (Math.random()-0.5)*0.01,
+            (Math.random()-0.5)*0.02
+        ];
+    };
+
+    Circle.prototype.getBound = function(i) {
+        return i ? canvas.height : canvas.width;
+    };
+
+    var i;
+    Circle.prototype.frame = function() {
+        for (i=0; i<2; i++) {
+            if (this.pos[i] > this.getBound(i)-10) { this.v[i] *= -1; }
+            else if (this.pos[i] < 10) { this.v[i] *= -1; }
+            this.pos[i] += this.v[i]*10;
+        }
+
+        this.draw();
+    };
+
+    Circle.prototype.draw = function() {
+        ctx.fillStyle = this.c;
+        ctx.beginPath();
+        ctx.arc(this.pos[0], this.pos[1], this.r, 0, 2 * Math.PI, false);
+        ctx.fill();
+    };
+}
+
+$(function() {
+    $('canvas[color-swarm]').each(function() {
+        colorSwarm(this);
+    });
+})
+
+
+
+})(window, document, jQuery);
+
+</script>
+
+@@include('../templates/global/_html-footer.tpl.html')
