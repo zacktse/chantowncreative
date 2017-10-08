@@ -104,7 +104,7 @@ h2, .size-h2 {
   @include font-size(20);
   @include line-height(26);
   // @include padding(26, 0, 12, 0);
-  @include padding(18, 0, 9, 0);
+  @include padding(18, 0, 0, 0);
 
   @include margin(0);
 
@@ -154,13 +154,13 @@ h4, .size-h4 {
   @include font-size(18);
   @include line-height(23);
   //@include padding(16, 0, 10, 0);
-  @include padding(12, 0, 18, 0);
+  @include padding(12, 0, 0, 0);
   @include margin(0);
 
   @include media($tablet-up) {
     @include font-size(20);
     @include line-height(27);
-    @include padding(14, 0, 20, 0);
+    @include padding(14, 0, 0, 0);
   }
 
   @include media($desktop-up) {
@@ -239,7 +239,7 @@ h1 + p, h2 + p, h3 + p, h4 + p {
   @include media($desktop-up) {
     @include font-size(30);
     @include line-height(38);
-    @include padding(30, 0, 30, 0);
+    @include padding(6, 0, 30, 0);
     @include margin(0);
   }
 }

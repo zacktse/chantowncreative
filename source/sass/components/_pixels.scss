@@ -20,28 +20,28 @@
   100% { opacity:1; }
 }
 %animate-flicker {
-   -webkit-animation: flickerAnimation 18s infinite;
-   -moz-animation: flickerAnimation 18s infinite;
-   -o-animation: flickerAnimation 18s infinite;
-    animation: flickerAnimation 18s infinite;
+   -webkit-animation: flickerAnimation 24s infinite;
+   -moz-animation: flickerAnimation 24s infinite;
+   -o-animation: flickerAnimation 24s infinite;
+    animation: flickerAnimation 24s infinite;
 }
 
 .pixel {
     z-index: $z-behind-bg;
-    -webkit-transition: opacity 24s ease-in-out;
-    -moz-transition: opacity 24s ease-in-out;
-    -ms-transition: opacity 24s ease-in-out;
-    transition: opacity 24s ease-in-out;
+    -webkit-transition: opacity 12s ease-in-out;
+    -moz-transition: opacity 12s ease-in-out;
+    -ms-transition: opacity 12s ease-in-out;
+    transition: opacity 12s ease-in-out;
     position: absolute;
     opacity: 0;
     pointer-events: none;
 }
 .pixel.on {
 
-  -webkit-transition: opacity 24s ease-in-out;
-  -moz-transition: opacity 24s ease-in-out;
-  -ms-transition: opacity 24s ease-in-out;
-  transition: opacity 24s ease-in-out;
+  -webkit-transition: opacity 12s ease-in-out;
+  -moz-transition: opacity 12s ease-in-out;
+  -ms-transition: opacity 12s ease-in-out;
+  transition: opacity 12s ease-in-out;
   opacity: 1;
-  //@extend %animate-flicker;
+  @extend %animate-flicker;
 }

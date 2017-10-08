@@ -32,9 +32,8 @@ window.bLazy = new Blazy({
   }
 }
 );
+
 pixel_bg.initialize();
-
-
 
 
 // execute photoswipe function if there is a gallery on the page
