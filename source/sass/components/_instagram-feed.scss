@@ -1,0 +1,8 @@
+.snapwidget-widget { min-height: 400px; }
+
+
+@include media($desktop-up) {
+
+.snapwidget-widget {min-height: 800px; }
+
+}
