@@ -226,22 +226,26 @@ h1 + p, h2 + p, h3 + p, h4 + p {
 
   @include font-size(20);
   @include line-height(24);
-  @include padding(6, 0, 12, 0);
+  @include padding(6, 0, 0, 0);
   @include margin(0);
   color: darken($base-font-color, 10%);
 
   @include media($tablet-up) {
     @include font-size(26);
     @include line-height(32);
-    @include padding(12, 0, 18, 0);
+    @include padding(12, 0, 0, 0);
   }
 
   @include media($desktop-up) {
     @include font-size(30);
     @include line-height(38);
-    @include padding(6, 0, 30, 0);
+    @include padding(6, 0, 0, 0);
     @include margin(0);
   }
+}
+
+.leader + p {
+    padding-top: 3;
 }
 //
 // h1 + p.leader {

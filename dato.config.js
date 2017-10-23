@@ -104,10 +104,31 @@ module.exports = (dato, root, i18n) => {
           alt: p.featuredImage.alt
       },
       h1: p.h1,
-      leader: p.leaderText,
-      main: p.mainContentHtml,
-      link1: p.link1,
-      link2: p.link2
+      studioChantownLogo: {
+        mobileUrl: p.studioChantownLogo.url({w:300, fm: 'png'}),
+        desktopUrl: p.studioChantownLogo.url({w:600, fm: 'png'}),
+        alt: p.studioChantownLogo.alt
+      },
+      studioChantownTitle: p.studioChantownSectionTitle,
+      studioChantownLeaderText: p.studioChantownLeaderText,
+      studioChantownBodyCopy: p.studioChantownBodyCopy,
+      studioChantownMoreLink: p.studioChantownMoreLink,
+      chantownCreativeLogo: {
+        mobileUrl: p.chantownCreativeLogo.url({w:300, fm: 'png'}),
+        desktopUrl: p.chantownCreativeLogo.url({w:600, fm: 'png'}),
+        alt: p.chantownCreativeLogo.alt
+      },
+      chantownCreativeTitle: p.chantownCreativeSectionTitle,
+      chantownCreativeLeaderText: p.chantownCreativeLeaderText,
+      chantownCreativeBodyCopy: p.chantownCreativeBodyText,
+      chantownCreativeMoreLink: p.chantownCreativeMoreLink,
+      contactSectionTitle: p.contactSectionTitle,
+      contactImage: {
+        mobileUrl: p.contactImage.url({w:600, fm: 'png'}),
+        desktopUrl: p.contactImage.url({w:600, fm: 'png'}),
+        alt: p.contactImage.alt
+      },
+      contactSectionBodyCopy: p.contactSectionBodyText
     }
 
     return pageData

@@ -4,16 +4,37 @@
     data-src="{{{featuredImage.desktopUrl}}}"
     data-src-small="{{{featuredImage.mobileUrl}}}"
     class="b-lazy feature-image full-width"
-    alt="{{{featuredImage.alt}}}"
-    title="{{{featuredImage.title}}}" />
+    alt="{{{featuredImage.alt}}}" />
   </div>
 </div>
 
 <div class="row __text">
   <h1 class="size-h1"> {{{h1}}} </h1>
-  <p class="leader"> {{{leader}}} </p>
-  {{{main}}}
 </div>
+
+{{!-- Studio Chantown Section --}}
+<div class='row'>
+    <div class='feature'>
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+    data-src="{{{studioChantownLogo.desktopUrl}}}"
+    data-src-small="{{{studioChantownLogo.mobileUrl}}}"
+    class="b-lazy logo"
+    alt="{{{studioChantownLogo.alt}}}" />
+    </div>
+</div>
+
+<div class="row __text">
+  <h2>{{{studioChantownTitle}}}</h2>
+  <p>
+    <span class="leader">{{{studioChantownLeaderText}}}</span>
+{{{studioChantownBodyCopy}}} </p>
+  <p>
+    <a href='create.html' class="underlined">{{{studioChantownMoreLink}}}</a>
+  </p>
+</div>
+
+
+
 
 <div class="row">
   <div class="cta-block">
@@ -24,10 +45,50 @@
 <script src="https://snapwidget.com/js/snapwidget.js"></script>
 <iframe src="https://snapwidget.com/embed/452140" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; width:100%;"></iframe>
 
-
-    <!-- {{{link1}}}
-    {{{link2}}} -->
-
-
   </div>
 </div>
+
+{{!-- Chantown Creative Section --}}
+<div class='row'>
+    <div>
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+    data-src="{{{chantownCreativeLogo.desktopUrl}}}"
+    data-src-small="{{{chantownCreativeLogo.mobileUrl}}}"
+    class="b-lazy logo"
+    alt="{{{chantownCreativeLogo.alt}}}" />
+    </div>
+</div>
+
+<div class="row __text">
+  <h2>{{{chantownCreativeTitle}}}</h2>
+  <p>
+    <span class="leader">{{{chantownCreativeLeaderText}}}</span>
+{{{chantownCreativeBodyCopy}}} </p>
+  <p>
+    <a href='create.html' class="underlined">{{{chantownCreativeMoreLink}}}</a>
+  </p>
+</div>
+
+
+{{!-- Contact Section --}}
+<div class="row __text">
+  <div class="left-profile-image">
+      <div class="side-image-content">
+        <h2>{{{contactSectionTitle}}}</h2>
+        <p>{{{contactSectionTextNextToImage}}}</p>
+      </div>
+  <div class="images-wrapper" style="background: url({{{contactImage.mobileUrl}}}) top center no-repeat; background-size: contain;"></div>
+  </div>
+</div>
+<div class="row __text">
+  {{{contactSectionBodyCopy}}}
+</div>
+
+
+
+
+{{!-- Contact Section --}}
+
+
+
+
