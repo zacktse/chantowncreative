@@ -26,7 +26,7 @@
 .filter-btns {
   @include margin(30, 0, 60, 0);
   @include media($tablet-up) {
-    //@extend .__text;
+    //@extend .text-content;
   }
   @include media($desktop-up) {
     text-align:center;
@@ -118,7 +118,7 @@
         margin-right: 0;
       }
 
-      //@extend .__text;
+      //@extend .text-content;
     }
     @include media($desktop-up) {
 
