@@ -11,12 +11,25 @@ footer {
     text-align: center;
     font-size: 12px;
     padding-top: 30px;
-    padding-bottom: 80px;
+
 
     background-color: white;
     a {
       @include animated-link-underline();
     }
+    // @include media($desktop-up) {
+    //     padding-bottom: 24px;
+    // }
+  }
+
+  .extra-footnote {
+    color: $medium-gray;
+    text-align: center;
+    font-size: 12px;
+    clear: both;
+    padding-top: 6px;
+    background-color: white;
+    padding-bottom: 80px;
     @include media($desktop-up) {
         padding-bottom: 24px;
     }

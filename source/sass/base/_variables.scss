@@ -44,6 +44,11 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $l
 $default-transition-speed: 333ms;
 
 
+// margins
+$default-margin: 30;
+
+$default-padding: 30;
+
 // sprites
 $ieSprite: '.lt-ie9' !default;
 $sprite: map-get($icons, sprite) !default;

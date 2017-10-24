@@ -123,6 +123,7 @@ module.exports = (dato, root, i18n) => {
       chantownCreativeBodyCopy: p.chantownCreativeBodyText,
       chantownCreativeMoreLink: p.chantownCreativeMoreLink,
       contactSectionTitle: p.contactSectionTitle,
+      contactSectionTextNextToImage: p.contactSectionTextNextToImage,
       contactImage: {
         mobileUrl: p.contactImage.url({w:600, fm: 'png'}),
         desktopUrl: p.contactImage.url({w:600, fm: 'png'}),
