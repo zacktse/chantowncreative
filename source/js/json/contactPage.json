@@ -5,17 +5,17 @@
     "title": null,
     "alt": null
   },
-  "h1": "Let's chat",
-  "leader": "While we hope our website has been interesting and helpful, what we’d like most of all is to chat to you about your <a class=\"underlined\" href=\"consult.html\">creative communications</a>. ",
-  "content": "<p>For samples, quotes and advice please email us at <a class=\"underlined\" href=\"mailto:hello@chantown.com\">hello@chantown.com</a>.\n        Oh and we don’t post our number because we don’t like spam calls. But we do reply promptly to our emails.\n</p>",
-  "buttonText": "Email Us",
+  "h1": "Get in touch",
+  "leader": "<p class=\"leader\">Websites are lovely, but talking is better, so you can contact Vickie at <a class=\"underlined\" href=\"mailto:hello@chantown.com\">hello@chantown.com</a>. Vickie replies promptly to emails and never hesitates to pick up the phone, so be sure to include your number.</p>",
+  "content": null,
+  "buttonText": null,
   "bioImage": {
     "mobileUrl": "https://www.datocms-assets.com/159/1508692201-vc_3290sqblurheadshot.png?fm=jpg&w=400",
     "desktopUrl": "https://www.datocms-assets.com/159/1508692201-vc_3290sqblurheadshot.png?fm=jpg&w=600",
     "title": null,
     "alt": null
   },
-  "bioTitle": "Who?",
-  "bioText": "Vickie Chan is the Director of Chantown Creative. While enjoying many childhood summers in Hong Kong, Vickie was educated and grew up in the UK.\n              She decided to leave that often-blustery place for a more permanent stay in Hong Kong in 2006, working in Design and Marketing Communications – before setting up Chantown Creative in 2010.",
-  "bioTextUnder": "<p>With an appetite for learning and an interest in oh-so-many things, her background ranges from art, illustration and music, to branding, marketing, PR, copywriting and custom publishing. As a result, she has become an expert project manager too. Vickie gets a sense of satisfaction when she helps people flesh out their ideas, find their path or connect the dots.</p>\n<p>She also writes regularly for Hong Kong publications like the <a class=\"underlined\" href=\"http://www.scmp.com/author/vickie-chan\">South China Morning Post</a>.</p>"
+  "bioTitle": "Remind me who Vickie is",
+  "bioText": null,
+  "bioTextUnder": null
 }

@@ -431,6 +431,11 @@ blockquote {
 }
 
 
+ @include media($tablet-up){
+    .with-left-arrow:before {
+        content: "←";
+    }
+}
 
 // chevrons
 

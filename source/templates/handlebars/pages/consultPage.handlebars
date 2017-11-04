@@ -11,14 +11,25 @@
 
 <div class="row text-content">
   <h1 class="size-h1"> {{{h1}}} </h1>
-  <p class="leader"> {{{leader}}} </p>
-  {{{content1}}}
 </div>
+
+
+{{!-- Chantown Creative Section --}}
+<div class='row text-content'>
+    <div class='padding-top-2x'>
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+        data-src="{{{chantownCreativeLogo.desktopUrl}}}"
+        data-src-small="{{{chantownCreativeLogo.mobileUrl}}}"
+        class="b-lazy logo"
+        alt="{{{chantownCreativeLogo.alt}}}" />
+        </div>
+</div>
+
 <div class="row text-content">
-<br>
-{{{content2}}}
+    <br/>
+    {{{content1}}}
     <!-- Include book links -->
-    @@include('../widgets/_bookLinks.html')
+    {{!-- @@include('../widgets/_bookLinks.html') --}}
     <br>
 </div>
 

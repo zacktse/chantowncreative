@@ -144,6 +144,11 @@ module.exports = (dato, root, i18n) => {
           title: p.featuredImage.title,
           alt: p.featuredImage.alt
       },
+      chantownCreativeLogo: {
+        mobileUrl: p.chantownCreativeLogo.url({w:300, fm: 'png'}),
+        desktopUrl: p.chantownCreativeLogo.url({w:600, fm: 'png'}),
+        alt: p.chantownCreativeLogo.alt
+      },
       h1: p.h1,
       leader: p.leaderText,
       content1: p.contentSection1,

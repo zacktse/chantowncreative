@@ -1,25 +1,27 @@
+$base-line-height: 1.5em !default;
+$action-color: #477DCA !default;
+$dark-gray: #333 !default;
+$tablet-up: em(860) !default;
+
 .left-profile-image {
    background: transparent;
 
-   $base-line-height: 1.5em !default;
-   $action-color: #477DCA !default;
-   $dark-gray: #333 !default;
-   $tablet-up: em(860) !default;
-   $base-font-color: $dark-gray !default;
-   $side-image-background-top: #B5EBEB;
-   $side-image-background-bottom: #5DAC5D;
-   $side-image-content-background: #F9F9F9;
-   $side-image-border: 1px solid darken(transparentize($side-image-background-bottom, 0.8), 30%);
+
    @include margin(0,0,18,0);
+
    @include media($tablet-up) {
      clear: both;
-
      @include row(table);
      @include span-columns(8);
      @include padding(34,0,26,0);
+     display: flex;
+       align-items: center;
+
    }
    @include media($desktop-up) {
       @include span-columns(16);
+       display: flex;
+       align-items: center;
    }
    @include reset-display();
 
@@ -32,27 +34,17 @@
     margin              : 0 25%;
     padding             : 0;
 
-    @include background(url('../img/VickieChanHeadshot_w400.jpg'));
     background-size   : contain;
     background-repeat  : no-repeat;
     background-position: top center;
-    // @include background(url('/assets/img/VickieChanHeadshot.jpg'), linear-gradient($side-image-background-top, $side-image-background-bottom), no-repeat $side-image-background-top scroll);
-
 
      @include media($tablet-up) {
        width: 200px;
        margin: 0;
-      //  margin-top: 60px;
        margin-top: 0;
-       @include background(url('../img/VickieChanHeadshot_w1000.jpg'));
-       background-repeat: no-repeat;
-       background-position: top center;
-       background-size: contain;
        clear :none;
        @include span-columns(3);
-       //float: right;
 
-      //  border-right: $side-image-border;
      }
      @include media($desktop-up) {
         width: 240px;
@@ -60,14 +52,7 @@
         padding: 2em;
         margin-top: 64px;
         margin-top: 0;
-        @include background(url('../img/VickieChanHeadshot_w1000.jpg'));
-
-        background-repeat: no-repeat;
-        background-position: top center;
-        background-size: contain;
-
         @include span-columns(6);
-        // float: right;
      }
    }
 
@@ -80,7 +65,6 @@
      }
      @include media($desktop-up) {
        @include span-columns(10);
-       //@include shift(1);
      }
 
      h2 {
