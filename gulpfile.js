@@ -642,7 +642,7 @@ gulp.task('compilePortfolio', function () {
 
 gulp.task('compileFullGallery', function () {
 
-    var templateData = require ('./source/js/json/portfolioImages.json');
+    var templateData = require ('./source/js/json/fullGalleryImages.json');
     var options = {
         helpers : {
             capitals : function(str){
