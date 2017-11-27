@@ -1,0 +1,32 @@
+{
+  "icons": [
+    {
+      "title": "Pinterest",
+      "url": "https://www.pinterest.co.uk/chantown/",
+      "image": "https://www.datocms-assets.com/159/1511702593-pinterestponlyblueai300pxnew.png?fm=png&w=100",
+      "description": null,
+      "alt": null
+    },
+    {
+      "title": "Instagram",
+      "url": "https://www.instagram.com/studiochanpei/",
+      "image": "https://www.datocms-assets.com/159/1511702729-instagramlinesblueai300pxnew.png?fm=png&w=100",
+      "description": null,
+      "alt": null
+    },
+    {
+      "title": "Etsy",
+      "url": "https://www.etsy.com/hk-en/shop/Chantown",
+      "image": "https://www.datocms-assets.com/159/1511702966-etsyblueai300pxnew.png?fm=png&w=100",
+      "description": null,
+      "alt": null
+    },
+    {
+      "title": "Twitter",
+      "url": "https://twitter.com/hkchantown",
+      "image": "https://www.datocms-assets.com/159/1511702999-twitterblueai300pxnew.png?fm=png&w=100",
+      "description": null,
+      "alt": null
+    }
+  ]
+}

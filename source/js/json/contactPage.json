@@ -1,12 +1,18 @@
 {
   "featuredImage": {
-    "mobileUrl": "https://www.datocms-assets.com/159/1507469245-quotecontactsometimesquestions.png?fm=jpg&w=600",
-    "desktopUrl": "https://www.datocms-assets.com/159/1507469245-quotecontactsometimesquestions.png?fm=jpg&w=1000",
+    "mobileUrl": "https://www.datocms-assets.com/159/1511697124-quotecontactsometimesquestionsv2final.png?fm=jpg&w=600",
+    "desktopUrl": "https://www.datocms-assets.com/159/1511697124-quotecontactsometimesquestionsv2final.png?fm=jpg&w=1000",
+    "title": null,
+    "alt": null
+  },
+  "cocktailParty": {
+    "mobileUrl": "https://www.datocms-assets.com/159/1511712072-socialcheershorz2final.png?fm=png&w=600",
+    "desktopUrl": "https://www.datocms-assets.com/159/1511712072-socialcheershorz2final.png?fm=png&w=1000",
     "title": null,
     "alt": null
   },
   "h1": "Get in touch",
-  "leader": "<p class=\"leader\">Websites are lovely, but talking is better, so you can contact Vickie at <a class=\"underlined\" href=\"mailto:hello@chantown.com\">hello@chantown.com</a>. Vickie replies promptly to emails and never hesitates to pick up the phone, so be sure to include your number.</p>",
+  "leader": "<p class=\"leader\">Websites are lovely, but talking is better, so you can contact Vickie at <a class=\"underlined\" href=\"mailto:hello@chantown.com\">hello@chantown.com</a>. Vickie replies promptly to emails and never hesitates to pick up the phone, so be sure to include your number.&nbsp;</p>",
   "content": null,
   "buttonText": null,
   "bioImage": {

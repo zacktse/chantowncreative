@@ -20,60 +20,41 @@
       "showInPortfolio": true
     },
     {
-      "title": "Surviving Hong Kong: Wearing a Mask",
+      "title": "Surviving Hong Kong Series: Wearing a Mask",
       "year": "2015-09-23T00:00:00.000Z",
       "category": "illustration",
-      "srcImage": "https://www.datocms-assets.com/159/1506168216-8survhk201511masks.jpg?fm=jpg&w=400",
+      "srcImage": "https://www.datocms-assets.com/159/1510992459-8survhk201511maskssq.jpg?fm=jpg&w=400",
       "mobileImage": {
-        "src": "https://www.datocms-assets.com/159/1506168216-8survhk201511masks.jpg?fm=jpg&w=800",
+        "src": "https://www.datocms-assets.com/159/1510992459-8survhk201511maskssq.jpg?fm=jpg&w=800",
         "width": 800,
-        "height": 1219
+        "height": 809
       },
       "desktopImage": {
-        "src": "https://www.datocms-assets.com/159/1506168216-8survhk201511masks.jpg?fm=jpg&w=2000",
+        "src": "https://www.datocms-assets.com/159/1510992459-8survhk201511maskssq.jpg?fm=jpg&w=2000",
         "width": 2000,
-        "height": 3048
+        "height": 2023
       },
       "description": "Ink illustration",
-      "alt": "Surviving Hong Kong: Wearing a Mask illustration by Vickie Chan",
+      "alt": null,
       "showInPortfolio": true
     },
     {
-      "title": "Surviving Hong Kong Series: Railings",
-      "year": "2015-09-01T00:00:00.000Z",
-      "category": "illustration",
-      "srcImage": "https://www.datocms-assets.com/159/1506170230-1survhk201508railings.jpg?fm=jpg&w=400",
-      "mobileImage": {
-        "src": "https://www.datocms-assets.com/159/1506170230-1survhk201508railings.jpg?fm=jpg&w=800",
-        "width": 800,
-        "height": 902
-      },
-      "desktopImage": {
-        "src": "https://www.datocms-assets.com/159/1506170230-1survhk201508railings.jpg?fm=jpg&w=2000",
-        "width": 2000,
-        "height": 2255
-      },
-      "description": "Illustration",
-      "alt": "Surviving Hong Kong: Railings illustration by Vickie Chan",
-      "showInPortfolio": true
-    },
-    {
-      "title": "Surviving Hong Kong: Peripheral Vision",
+      "title": "Surviving Hong Kong Series: Peripheral Vision",
       "year": "2015-09-23T00:00:00.000Z",
       "category": "illustration",
-      "srcImage": "https://www.datocms-assets.com/159/1506170376-3survhk201508peripheralvision.jpg?fm=jpg&w=400",
+      "srcImage": "https://www.datocms-assets.com/159/1510992396-3survhk201508peripheralvisionsq.jpg?fm=jpg&w=400",
       "mobileImage": {
-        "src": "https://www.datocms-assets.com/159/1506170376-3survhk201508peripheralvision.jpg?fm=jpg&w=800",
+        "src": "https://www.datocms-assets.com/159/1510992396-3survhk201508peripheralvisionsq.jpg?fm=jpg&w=800",
         "width": 800,
-        "height": 1048
+        "height": 800
       },
       "desktopImage": {
-        "src": "https://www.datocms-assets.com/159/1506170376-3survhk201508peripheralvision.jpg?fm=jpg&w=2000",
+        "src": "https://www.datocms-assets.com/159/1510992396-3survhk201508peripheralvisionsq.jpg?fm=jpg&w=2000",
         "width": 2000,
-        "height": 2621
+        "height": 2001
       },
       "description": "Ink illlustration",
-      "alt": "Surviving Hong Kong Series: Peripheral Vision illustration by Vickie Chan",
+      "alt": null,
       "showInPortfolio": true
     },
     {
@@ -99,38 +80,19 @@
       "title": "Existentialism on Prom Night",
       "year": "2015-09-01T00:00:00.000Z",
       "category": "painting mixed-media",
-      "srcImage": "https://www.datocms-assets.com/159/1506170683-2015_existentialismonpromnight_20.jpg?fm=jpg&w=400",
+      "srcImage": "https://www.datocms-assets.com/159/1510991112-2015_existentialismonpromnight_20_smallcolour.jpg?fm=jpg&w=400",
       "mobileImage": {
-        "src": "https://www.datocms-assets.com/159/1506170683-2015_existentialismonpromnight_20.jpg?fm=jpg&w=800",
+        "src": "https://www.datocms-assets.com/159/1510991112-2015_existentialismonpromnight_20_smallcolour.jpg?fm=jpg&w=800",
         "width": 800,
-        "height": 800
+        "height": 794
       },
       "desktopImage": {
-        "src": "https://www.datocms-assets.com/159/1506170683-2015_existentialismonpromnight_20.jpg?fm=jpg&w=2000",
+        "src": "https://www.datocms-assets.com/159/1510991112-2015_existentialismonpromnight_20_smallcolour.jpg?fm=jpg&w=2000",
         "width": 2000,
-        "height": 2000
+        "height": 1986
       },
       "description": "Mixed media on canvas",
-      "alt": "Existentialism on Prom Night mixed media painting on canvas by Vickie Chan",
-      "showInPortfolio": true
-    },
-    {
-      "title": "But You'll Cry",
-      "year": "2015-04-30T00:00:00.000Z",
-      "category": "mixed-media painting",
-      "srcImage": "https://www.datocms-assets.com/159/1480881962-ButYoullCry-FULL.jpg?fm=jpg&w=400",
-      "mobileImage": {
-        "src": "https://www.datocms-assets.com/159/1480881962-ButYoullCry-FULL.jpg?fm=jpg&w=800",
-        "width": 800,
-        "height": 1097
-      },
-      "desktopImage": {
-        "src": "https://www.datocms-assets.com/159/1480881962-ButYoullCry-FULL.jpg?fm=jpg&w=2000",
-        "width": 2000,
-        "height": 2743
-      },
-      "description": "Mixed media painting on vinyl record ",
-      "alt": "But You'll Cry vinyl painting by Vickie Chan",
+      "alt": null,
       "showInPortfolio": true
     },
     {
@@ -153,47 +115,9 @@
       "showInPortfolio": true
     },
     {
-      "title": "Leicester Fox",
-      "year": "2015-09-01T00:00:00.000Z",
-      "category": "illustration",
-      "srcImage": "https://www.datocms-assets.com/159/1506171823-leicesterfoxclean.jpg?fm=jpg&w=400",
-      "mobileImage": {
-        "src": "https://www.datocms-assets.com/159/1506171823-leicesterfoxclean.jpg?fm=jpg&w=800",
-        "width": 800,
-        "height": 556
-      },
-      "desktopImage": {
-        "src": "https://www.datocms-assets.com/159/1506171823-leicesterfoxclean.jpg?fm=jpg&w=2000",
-        "width": 2000,
-        "height": 1391
-      },
-      "description": "Ink Illustration",
-      "alt": "Leicester Fox illustration by Vickie Chan",
-      "showInPortfolio": true
-    },
-    {
-      "title": "Ta Phrom",
-      "year": "2014-09-17T00:00:00.000Z",
-      "category": "Drawing",
-      "srcImage": "https://www.datocms-assets.com/159/1506172355-taphrom.jpg?fm=jpg&w=400",
-      "mobileImage": {
-        "src": "https://www.datocms-assets.com/159/1506172355-taphrom.jpg?fm=jpg&w=800",
-        "width": 800,
-        "height": 542
-      },
-      "desktopImage": {
-        "src": "https://www.datocms-assets.com/159/1506172355-taphrom.jpg?fm=jpg&w=2000",
-        "width": 2000,
-        "height": 1355
-      },
-      "description": "Ink drawing",
-      "alt": "Ta Phrom sketch by Vickie Chan",
-      "showInPortfolio": true
-    },
-    {
       "title": "Folkestone Crescent",
       "year": "2013-09-10T00:00:00.000Z",
-      "category": "illustration",
+      "category": "drawig",
       "srcImage": "https://www.datocms-assets.com/159/1506172552-folkestonecrescent.jpg?fm=jpg&w=400",
       "mobileImage": {
         "src": "https://www.datocms-assets.com/159/1506172552-folkestonecrescent.jpg?fm=jpg&w=800",
@@ -205,7 +129,7 @@
         "width": 2000,
         "height": 1407
       },
-      "description": "Ink illustration",
+      "description": "Ink drawing",
       "alt": "Folkestone Crescent sketch by Vickie Chan",
       "showInPortfolio": true
     },
@@ -226,25 +150,6 @@
       },
       "description": "Ink illustration",
       "alt": "Third St (colour) sketch by Vickie Chan",
-      "showInPortfolio": true
-    },
-    {
-      "title": "Rice Wine Bottle (colour)",
-      "year": "2013-09-25T00:00:00.000Z",
-      "category": "illustration",
-      "srcImage": "https://www.datocms-assets.com/159/1506172662-ricewinebottlecolour.jpg?fm=jpg&w=400",
-      "mobileImage": {
-        "src": "https://www.datocms-assets.com/159/1506172662-ricewinebottlecolour.jpg?fm=jpg&w=800",
-        "width": 800,
-        "height": 1127
-      },
-      "desktopImage": {
-        "src": "https://www.datocms-assets.com/159/1506172662-ricewinebottlecolour.jpg?fm=jpg&w=2000",
-        "width": 2000,
-        "height": 2818
-      },
-      "description": "Colour ink illustration",
-      "alt": "Rice wine bottle ink illustration by Vickie Chan",
       "showInPortfolio": true
     },
     {
@@ -288,26 +193,26 @@
     {
       "title": "68 Bus",
       "year": "2011-09-23T00:00:00.000Z",
-      "category": "Illustration",
-      "srcImage": "https://www.datocms-assets.com/159/1506174596-2011_1_68bus.jpg?fm=jpg&w=400",
+      "category": "illustration",
+      "srcImage": "https://www.datocms-assets.com/159/1510991381-68busbright.jpg?fm=jpg&w=400",
       "mobileImage": {
-        "src": "https://www.datocms-assets.com/159/1506174596-2011_1_68bus.jpg?fm=jpg&w=800",
+        "src": "https://www.datocms-assets.com/159/1510991381-68busbright.jpg?fm=jpg&w=800",
         "width": 800,
         "height": 531
       },
       "desktopImage": {
-        "src": "https://www.datocms-assets.com/159/1506174596-2011_1_68bus.jpg?fm=jpg&w=2000",
+        "src": "https://www.datocms-assets.com/159/1510991381-68busbright.jpg?fm=jpg&w=2000",
         "width": 2000,
         "height": 1327
       },
       "description": "Illustration on bus for 6IXTY 8IGHT",
-      "alt": "68 Bus – graphics by Vickie Chan",
+      "alt": null,
       "showInPortfolio": true
     },
     {
       "title": "Perhentian",
       "year": "2011-09-13T00:00:00.000Z",
-      "category": "Drawing",
+      "category": "drawing",
       "srcImage": "https://www.datocms-assets.com/159/1506174662-perhentian.jpg?fm=jpg&w=400",
       "mobileImage": {
         "src": "https://www.datocms-assets.com/159/1506174662-perhentian.jpg?fm=jpg&w=800",
@@ -319,7 +224,7 @@
         "width": 2000,
         "height": 1461
       },
-      "description": "Ink sketch",
+      "description": "Ink drawing",
       "alt": "Perhentian ink sketch by Vickie Chan",
       "showInPortfolio": true
     },
@@ -365,76 +270,76 @@
       "title": "Sailing on the Seven Seas",
       "year": "2010-09-23T00:00:00.000Z",
       "category": "painting mixed-media",
-      "srcImage": "https://www.datocms-assets.com/159/1506175304-sailingonthesevenseas_20_small.jpg?fm=jpg&w=400",
+      "srcImage": "https://www.datocms-assets.com/159/1510982105-2010_sailingonthesevenseas_20_small.jpg?fm=jpg&w=400",
       "mobileImage": {
-        "src": "https://www.datocms-assets.com/159/1506175304-sailingonthesevenseas_20_small.jpg?fm=jpg&w=800",
+        "src": "https://www.datocms-assets.com/159/1510982105-2010_sailingonthesevenseas_20_small.jpg?fm=jpg&w=800",
         "width": 800,
         "height": 800
       },
       "desktopImage": {
-        "src": "https://www.datocms-assets.com/159/1506175304-sailingonthesevenseas_20_small.jpg?fm=jpg&w=2000",
+        "src": "https://www.datocms-assets.com/159/1510982105-2010_sailingonthesevenseas_20_small.jpg?fm=jpg&w=2000",
         "width": 2000,
         "height": 2000
       },
       "description": "Mixed media on canvas",
-      "alt": "Sailing on the Seven Seas mixed media painting on canvas by Vickie Chan",
+      "alt": null,
       "showInPortfolio": true
     },
     {
-      "title": "Born to Lose",
+      "title": "A Little Bit of Hell",
       "year": "2010-09-23T00:00:00.000Z",
       "category": "painting mixed-media",
-      "srcImage": "https://www.datocms-assets.com/159/1506175445-borntolose_30_small.jpg?fm=jpg&w=400",
+      "srcImage": "https://www.datocms-assets.com/159/1510991685-2010_alittlebitofhell_30_small.jpg?fm=jpg&w=400",
       "mobileImage": {
-        "src": "https://www.datocms-assets.com/159/1506175445-borntolose_30_small.jpg?fm=jpg&w=800",
+        "src": "https://www.datocms-assets.com/159/1510991685-2010_alittlebitofhell_30_small.jpg?fm=jpg&w=800",
         "width": 800,
         "height": 794
       },
       "desktopImage": {
-        "src": "https://www.datocms-assets.com/159/1506175445-borntolose_30_small.jpg?fm=jpg&w=2000",
+        "src": "https://www.datocms-assets.com/159/1510991685-2010_alittlebitofhell_30_small.jpg?fm=jpg&w=2000",
         "width": 2000,
-        "height": 1986
+        "height": 1985
       },
       "description": "Mixed media on canvas",
-      "alt": "Born to Lose mixed media painting on canvas by Vickie Chan",
+      "alt": null,
       "showInPortfolio": true
     },
     {
       "title": "Untitled (Should I Stay?)",
       "year": "2008-09-23T00:00:00.000Z",
       "category": "painting mixed-media",
-      "srcImage": "https://www.datocms-assets.com/159/1506175840-untitled_shouldistay_30_small.jpg?fm=jpg&w=400",
+      "srcImage": "https://www.datocms-assets.com/159/1510991867-2008_untitled_shouldistay_30.jpg?fm=jpg&w=400",
       "mobileImage": {
-        "src": "https://www.datocms-assets.com/159/1506175840-untitled_shouldistay_30_small.jpg?fm=jpg&w=800",
+        "src": "https://www.datocms-assets.com/159/1510991867-2008_untitled_shouldistay_30.jpg?fm=jpg&w=800",
         "width": 800,
         "height": 798
       },
       "desktopImage": {
-        "src": "https://www.datocms-assets.com/159/1506175840-untitled_shouldistay_30_small.jpg?fm=jpg&w=2000",
+        "src": "https://www.datocms-assets.com/159/1510991867-2008_untitled_shouldistay_30.jpg?fm=jpg&w=2000",
         "width": 2000,
         "height": 1995
       },
       "description": "Mixed media on canvas",
-      "alt": "Untitled (Should I Stay) mixed media painting on canvas by Vickie Chan",
+      "alt": null,
       "showInPortfolio": true
     },
     {
       "title": "Sever",
       "year": "2008-09-23T00:00:00.000Z",
       "category": "painting mixed-media",
-      "srcImage": "https://www.datocms-assets.com/159/1506175923-sever_20_small.jpg?fm=jpg&w=400",
+      "srcImage": "https://www.datocms-assets.com/159/1510992070-2008_sever_20_small.jpg?fm=jpg&w=400",
       "mobileImage": {
-        "src": "https://www.datocms-assets.com/159/1506175923-sever_20_small.jpg?fm=jpg&w=800",
+        "src": "https://www.datocms-assets.com/159/1510992070-2008_sever_20_small.jpg?fm=jpg&w=800",
         "width": 800,
         "height": 798
       },
       "desktopImage": {
-        "src": "https://www.datocms-assets.com/159/1506175923-sever_20_small.jpg?fm=jpg&w=2000",
+        "src": "https://www.datocms-assets.com/159/1510992070-2008_sever_20_small.jpg?fm=jpg&w=2000",
         "width": 2000,
         "height": 1995
       },
       "description": "Mixed media on canvas",
-      "alt": "Sever mixed media painting on canvas by Vickie Chan",
+      "alt": null,
       "showInPortfolio": true
     },
     {
@@ -457,6 +362,44 @@
       "showInPortfolio": true
     },
     {
+      "title": "Colver Road",
+      "year": "2005-09-23T00:00:00.000Z",
+      "category": "Drawing",
+      "srcImage": "https://www.datocms-assets.com/159/1506177914-colver.jpg?fm=jpg&w=400",
+      "mobileImage": {
+        "src": "https://www.datocms-assets.com/159/1506177914-colver.jpg?fm=jpg&w=800",
+        "width": 800,
+        "height": 890
+      },
+      "desktopImage": {
+        "src": "https://www.datocms-assets.com/159/1506177914-colver.jpg?fm=jpg&w=2000",
+        "width": 2000,
+        "height": 2226
+      },
+      "description": "Ink drawing",
+      "alt": "Colver Road ink sketch by Vickie Chan",
+      "showInPortfolio": true
+    },
+    {
+      "title": "Me, Myself and I",
+      "year": "2002-09-30T00:00:00.000Z",
+      "category": "screenprint illustration",
+      "srcImage": "https://www.datocms-assets.com/159/1506178722-memyselfi_tri-print-wht.jpg?fm=jpg&w=400",
+      "mobileImage": {
+        "src": "https://www.datocms-assets.com/159/1506178722-memyselfi_tri-print-wht.jpg?fm=jpg&w=800",
+        "width": 800,
+        "height": 589
+      },
+      "desktopImage": {
+        "src": "https://www.datocms-assets.com/159/1506178722-memyselfi_tri-print-wht.jpg?fm=jpg&w=2000",
+        "width": 2000,
+        "height": 1474
+      },
+      "description": "Screenprint",
+      "alt": "Me, Myself and I screenprint by Vickie Chan",
+      "showInPortfolio": true
+    },
+    {
       "title": "Chinatown Window, SF",
       "year": "2002-09-23T00:00:00.000Z",
       "category": "screenprint illustration",
@@ -476,9 +419,28 @@
       "showInPortfolio": true
     },
     {
+      "title": "Birdcage",
+      "year": "2002-09-17T00:00:00.000Z",
+      "category": "drawing",
+      "srcImage": "https://www.datocms-assets.com/159/1506179270-birdcage.jpg?fm=jpg&w=400",
+      "mobileImage": {
+        "src": "https://www.datocms-assets.com/159/1506179270-birdcage.jpg?fm=jpg&w=800",
+        "width": 800,
+        "height": 873
+      },
+      "desktopImage": {
+        "src": "https://www.datocms-assets.com/159/1506179270-birdcage.jpg?fm=jpg&w=2000",
+        "width": 2000,
+        "height": 2183
+      },
+      "description": "Ink drawing",
+      "alt": "Birdcage ink sketch by Vickie Chan",
+      "showInPortfolio": true
+    },
+    {
       "title": "Gville Terrazzo Flora Brush (Purple)",
       "year": "2017-05-01T00:00:00.000Z",
-      "category": "Surface pattern",
+      "category": "pattern",
       "srcImage": "https://www.datocms-assets.com/159/1510372244-201705_gvilleterrazzoflorabrushesblpurp_scchop_small.jpg?fm=jpg&w=400",
       "mobileImage": {
         "src": "https://www.datocms-assets.com/159/1510372244-201705_gvilleterrazzoflorabrushesblpurp_scchop_small.jpg?fm=jpg&w=800",
@@ -497,7 +459,7 @@
     {
       "title": "Thunder Rolling Ahead (Pena)",
       "year": "2017-08-27T00:00:00.000Z",
-      "category": "Illustration Drawing",
+      "category": "illustration drawing",
       "srcImage": "https://www.datocms-assets.com/159/1510372502-201708_thunderrollingoverheadpena_small.jpg?fm=jpg&w=400",
       "mobileImage": {
         "src": "https://www.datocms-assets.com/159/1510372502-201708_thunderrollingoverheadpena_small.jpg?fm=jpg&w=800",
@@ -509,14 +471,33 @@
         "width": 2000,
         "height": 2916
       },
-      "description": "Drawing",
+      "description": "Drawing in alcohol-based pen",
+      "alt": null,
+      "showInPortfolio": true
+    },
+    {
+      "title": "You Like Your Coffee Black (Southbank)",
+      "year": "2017-08-16T00:00:00.000Z",
+      "category": "illustration drawing",
+      "srcImage": "https://www.datocms-assets.com/159/1510372563-201708_southbankyoulikeyourcoffeeblack.jpg?fm=jpg&w=400",
+      "mobileImage": {
+        "src": "https://www.datocms-assets.com/159/1510372563-201708_southbankyoulikeyourcoffeeblack.jpg?fm=jpg&w=800",
+        "width": 800,
+        "height": 1131
+      },
+      "desktopImage": {
+        "src": "https://www.datocms-assets.com/159/1510372563-201708_southbankyoulikeyourcoffeeblack.jpg?fm=jpg&w=2000",
+        "width": 2000,
+        "height": 2828
+      },
+      "description": "Illustration with roller ball pen",
       "alt": null,
       "showInPortfolio": true
     },
     {
       "title": "Untitled (National Theatre Garden)",
       "year": "2017-08-16T00:00:00.000Z",
-      "category": "Drawing Surface pattern",
+      "category": "drawing pattern",
       "srcImage": "https://www.datocms-assets.com/159/1510372707-201708_nationaltheatregarden_scchop_small.jpg?fm=jpg&w=400",
       "mobileImage": {
         "src": "https://www.datocms-assets.com/159/1510372707-201708_nationaltheatregarden_scchop_small.jpg?fm=jpg&w=800",
@@ -528,14 +509,14 @@
         "width": 2000,
         "height": 2829
       },
-      "description": "Five-layer drawing and surface pattern",
+      "description": "Five-layer drawing/ surface pattern",
       "alt": null,
       "showInPortfolio": true
     },
     {
       "title": "Mercado de Ribeira",
       "year": "2017-08-27T00:00:00.000Z",
-      "category": "Drawing Illustration",
+      "category": "drawing illustration",
       "srcImage": "https://www.datocms-assets.com/159/1510372763-201708_mercadodaribeira_small.jpg?fm=jpg&w=400",
       "mobileImage": {
         "src": "https://www.datocms-assets.com/159/1510372763-201708_mercadodaribeira_small.jpg?fm=jpg&w=800",
@@ -547,33 +528,14 @@
         "width": 2000,
         "height": 1413
       },
-      "description": "Drawing",
-      "alt": null,
-      "showInPortfolio": true
-    },
-    {
-      "title": "Surviving HK Series: Sweaty Bum",
-      "year": "2017-06-05T00:00:00.000Z",
-      "category": "Illustration",
-      "srcImage": "https://www.datocms-assets.com/159/1510372827-201706a_23survhk-sweatybum.jpg?fm=jpg&w=400",
-      "mobileImage": {
-        "src": "https://www.datocms-assets.com/159/1510372827-201706a_23survhk-sweatybum.jpg?fm=jpg&w=800",
-        "width": 800,
-        "height": 800
-      },
-      "desktopImage": {
-        "src": "https://www.datocms-assets.com/159/1510372827-201706a_23survhk-sweatybum.jpg?fm=jpg&w=2000",
-        "width": 2000,
-        "height": 2000
-      },
-      "description": "Illustration for Surviving HK series",
+      "description": "Drawing in alcohol-based pen",
       "alt": null,
       "showInPortfolio": true
     },
     {
       "title": "Succulent (Sunset Harbour)",
       "year": "2017-02-01T00:00:00.000Z",
-      "category": "Surface pattern",
+      "category": "pattern",
       "srcImage": "https://www.datocms-assets.com/159/1510372888-201706_wallpapersunsetharboursucculentroomscenechop.jpg?fm=jpg&w=400",
       "mobileImage": {
         "src": "https://www.datocms-assets.com/159/1510372888-201706_wallpapersunsetharboursucculentroomscenechop.jpg?fm=jpg&w=800",
@@ -592,7 +554,7 @@
     {
       "title": "Palm Frond (Sunset Harbour)",
       "year": "2017-06-06T00:00:00.000Z",
-      "category": "Surface pattern",
+      "category": "pattern",
       "srcImage": "https://www.datocms-assets.com/159/1510372954-201706_wallpapersunsetharbourpalmfrondroomscenechop.jpg?fm=jpg&w=400",
       "mobileImage": {
         "src": "https://www.datocms-assets.com/159/1510372954-201706_wallpapersunsetharbourpalmfrondroomscenechop.jpg?fm=jpg&w=800",
@@ -609,47 +571,9 @@
       "showInPortfolio": true
     },
     {
-      "title": "Leaf Frond (Sunset Harbour)",
-      "year": "2017-06-06T00:00:00.000Z",
-      "category": "Surface pattern",
-      "srcImage": "https://www.datocms-assets.com/159/1510373018-201706_sunsetharbourleaffrondroomscenechop.jpg?fm=jpg&w=400",
-      "mobileImage": {
-        "src": "https://www.datocms-assets.com/159/1510373018-201706_sunsetharbourleaffrondroomscenechop.jpg?fm=jpg&w=800",
-        "width": 800,
-        "height": 1198
-      },
-      "desktopImage": {
-        "src": "https://www.datocms-assets.com/159/1510373018-201706_sunsetharbourleaffrondroomscenechop.jpg?fm=jpg&w=2000",
-        "width": 2000,
-        "height": 2996
-      },
-      "description": "Surface pattern design for wallpaper",
-      "alt": null,
-      "showInPortfolio": true
-    },
-    {
-      "title": "Jawbone (Killer Jaws)",
-      "year": "2017-09-15T00:00:00.000Z",
-      "category": "Surface pattern",
-      "srcImage": "https://www.datocms-assets.com/159/1510373063-201705_killerjaws-jawbone-rgb-schop.jpg?fm=jpg&w=400",
-      "mobileImage": {
-        "src": "https://www.datocms-assets.com/159/1510373063-201705_killerjaws-jawbone-rgb-schop.jpg?fm=jpg&w=800",
-        "width": 800,
-        "height": 722
-      },
-      "desktopImage": {
-        "src": "https://www.datocms-assets.com/159/1510373063-201705_killerjaws-jawbone-rgb-schop.jpg?fm=jpg&w=2000",
-        "width": 2000,
-        "height": 1806
-      },
-      "description": "Geometric surface pattern",
-      "alt": null,
-      "showInPortfolio": true
-    },
-    {
       "title": "El Tiburon (Killer Jaws)",
       "year": "2017-09-11T00:00:00.000Z",
-      "category": "Surface pattern",
+      "category": "pattern",
       "srcImage": "https://www.datocms-assets.com/159/1510373119-201705_killerjaws-eltiburon-rgb_schop_small-copy.jpg?fm=jpg&w=400",
       "mobileImage": {
         "src": "https://www.datocms-assets.com/159/1510373119-201705_killerjaws-eltiburon-rgb_schop_small-copy.jpg?fm=jpg&w=800",
@@ -668,7 +592,7 @@
     {
       "title": "Gville Terrazzo Flora Brush (Olive)",
       "year": "2017-05-01T00:00:00.000Z",
-      "category": "Surface pattern ",
+      "category": "pattern ",
       "srcImage": "https://www.datocms-assets.com/159/1510373178-201705_gvilleterrazzoflorabrusholive.jpg?fm=jpg&w=400",
       "mobileImage": {
         "src": "https://www.datocms-assets.com/159/1510373178-201705_gvilleterrazzoflorabrusholive.jpg?fm=jpg&w=800",
@@ -685,9 +609,9 @@
       "showInPortfolio": true
     },
     {
-      "title": "Gville Terrazo Flora Pop-splot (White)",
+      "title": "Gville Terrazzo Flora Pop-splot (White)",
       "year": "2017-05-01T00:00:00.000Z",
-      "category": "Surface pattern",
+      "category": "pattern",
       "srcImage": "https://www.datocms-assets.com/159/1510373262-201705_gvilleterrazoflorapopsplotlightwhite_scchop_small.jpg?fm=jpg&w=400",
       "mobileImage": {
         "src": "https://www.datocms-assets.com/159/1510373262-201705_gvilleterrazoflorapopsplotlightwhite_scchop_small.jpg?fm=jpg&w=800",
@@ -700,6 +624,386 @@
         "height": 1415
       },
       "description": "Surface pattern design",
+      "alt": null,
+      "showInPortfolio": true
+    },
+    {
+      "title": "Sundae Best Bunny",
+      "year": "2017-03-01T00:00:00.000Z",
+      "category": "pattern",
+      "srcImage": "https://www.datocms-assets.com/159/1510738078-201703_sundaebestbunnylimegreenrabbit-scchop.jpg?fm=jpg&w=400",
+      "mobileImage": {
+        "src": "https://www.datocms-assets.com/159/1510738078-201703_sundaebestbunnylimegreenrabbit-scchop.jpg?fm=jpg&w=800",
+        "width": 800,
+        "height": 628
+      },
+      "desktopImage": {
+        "src": "https://www.datocms-assets.com/159/1510738078-201703_sundaebestbunnylimegreenrabbit-scchop.jpg?fm=jpg&w=2000",
+        "width": 2000,
+        "height": 1570
+      },
+      "description": "Chequer surface pattern design with illustration",
+      "alt": null,
+      "showInPortfolio": true
+    },
+    {
+      "title": "Sundae Best Picnic Polka Lucky Charms",
+      "year": "2017-03-01T00:00:00.000Z",
+      "category": "pattern",
+      "srcImage": "https://www.datocms-assets.com/159/1510738120-201703_picnicpolkaluckycharms_roomrgb_scchop_small.jpg?fm=jpg&w=400",
+      "mobileImage": {
+        "src": "https://www.datocms-assets.com/159/1510738120-201703_picnicpolkaluckycharms_roomrgb_scchop_small.jpg?fm=jpg&w=800",
+        "width": 800,
+        "height": 1198
+      },
+      "desktopImage": {
+        "src": "https://www.datocms-assets.com/159/1510738120-201703_picnicpolkaluckycharms_roomrgb_scchop_small.jpg?fm=jpg&w=2000",
+        "width": 2000,
+        "height": 2996
+      },
+      "description": "Surface pattern design",
+      "alt": null,
+      "showInPortfolio": true
+    },
+    {
+      "title": "Lazy Sundae Placement Print Lucky Charms",
+      "year": "2017-03-01T00:00:00.000Z",
+      "category": "pattern illustration",
+      "srcImage": "https://www.datocms-assets.com/159/1510738179-201703_lazysundaeplacementprintluckycharms-sundaebest_scchoprgb.png?fm=jpg&w=400",
+      "mobileImage": {
+        "src": "https://www.datocms-assets.com/159/1510738179-201703_lazysundaeplacementprintluckycharms-sundaebest_scchoprgb.png?fm=jpg&w=800",
+        "width": 800,
+        "height": 631
+      },
+      "desktopImage": {
+        "src": "https://www.datocms-assets.com/159/1510738179-201703_lazysundaeplacementprintluckycharms-sundaebest_scchoprgb.png?fm=jpg&w=2000",
+        "width": 2000,
+        "height": 1577
+      },
+      "description": "Illustration for placement print",
+      "alt": null,
+      "showInPortfolio": true
+    },
+    {
+      "title": "Kitty Up, Kitty Down",
+      "year": "2017-02-02T00:00:00.000Z",
+      "category": "pattern illustration",
+      "srcImage": "https://www.datocms-assets.com/159/1510738256-201702_kittyupkittydown_chop.jpg?fm=jpg&w=400",
+      "mobileImage": {
+        "src": "https://www.datocms-assets.com/159/1510738256-201702_kittyupkittydown_chop.jpg?fm=jpg&w=800",
+        "width": 800,
+        "height": 565
+      },
+      "desktopImage": {
+        "src": "https://www.datocms-assets.com/159/1510738256-201702_kittyupkittydown_chop.jpg?fm=jpg&w=2000",
+        "width": 2000,
+        "height": 1413
+      },
+      "description": "Character-based surface pattern design",
+      "alt": null,
+      "showInPortfolio": true
+    },
+    {
+      "title": " Beanleaf Succulents (Museum Fox)",
+      "year": "2017-02-02T00:00:00.000Z",
+      "category": "pattern",
+      "srcImage": "https://www.datocms-assets.com/159/1510738319-201702_beanleafsucculentsmuseumfox_rgb_schop_small.jpg?fm=jpg&w=400",
+      "mobileImage": {
+        "src": "https://www.datocms-assets.com/159/1510738319-201702_beanleafsucculentsmuseumfox_rgb_schop_small.jpg?fm=jpg&w=800",
+        "width": 800,
+        "height": 1131
+      },
+      "desktopImage": {
+        "src": "https://www.datocms-assets.com/159/1510738319-201702_beanleafsucculentsmuseumfox_rgb_schop_small.jpg?fm=jpg&w=2000",
+        "width": 2000,
+        "height": 2828
+      },
+      "description": "Surface pattern design for wallpaper",
+      "alt": null,
+      "showInPortfolio": true
+    },
+    {
+      "title": "Beanleaf Alien Bean (Sunset Harbour)",
+      "year": "2017-02-02T00:00:00.000Z",
+      "category": "pattern",
+      "srcImage": "https://www.datocms-assets.com/159/1510738381-201702_beanleafalienbeansunsetharbour_scchop.jpg?fm=jpg&w=400",
+      "mobileImage": {
+        "src": "https://www.datocms-assets.com/159/1510738381-201702_beanleafalienbeansunsetharbour_scchop.jpg?fm=jpg&w=800",
+        "width": 800,
+        "height": 1131
+      },
+      "desktopImage": {
+        "src": "https://www.datocms-assets.com/159/1510738381-201702_beanleafalienbeansunsetharbour_scchop.jpg?fm=jpg&w=2000",
+        "width": 2000,
+        "height": 2828
+      },
+      "description": "Surface pattern design for wallpaper",
+      "alt": null,
+      "showInPortfolio": true
+    },
+    {
+      "title": "Surviving Hong Kong Series: Hong Kong Street Dogs",
+      "year": "2016-12-01T00:00:00.000Z",
+      "category": "illustration screenprint",
+      "srcImage": "https://www.datocms-assets.com/159/1510738613-201612_survhktonggauprintbright.jpg?fm=jpg&w=400",
+      "mobileImage": {
+        "src": "https://www.datocms-assets.com/159/1510738613-201612_survhktonggauprintbright.jpg?fm=jpg&w=800",
+        "width": 800,
+        "height": 792
+      },
+      "desktopImage": {
+        "src": "https://www.datocms-assets.com/159/1510738613-201612_survhktonggauprintbright.jpg?fm=jpg&w=2000",
+        "width": 2000,
+        "height": 1980
+      },
+      "description": "Risograph of illustration for Surviving Hong Kong series",
+      "alt": null,
+      "showInPortfolio": true
+    },
+    {
+      "title": "Butterfly Heart II",
+      "year": "2016-11-01T00:00:00.000Z",
+      "category": "illustration",
+      "srcImage": "https://www.datocms-assets.com/159/1510738785-201611_butterflyheartiilayeredsqcolour_small.jpg?fm=jpg&w=400",
+      "mobileImage": {
+        "src": "https://www.datocms-assets.com/159/1510738785-201611_butterflyheartiilayeredsqcolour_small.jpg?fm=jpg&w=800",
+        "width": 800,
+        "height": 800
+      },
+      "desktopImage": {
+        "src": "https://www.datocms-assets.com/159/1510738785-201611_butterflyheartiilayeredsqcolour_small.jpg?fm=jpg&w=2000",
+        "width": 2000,
+        "height": 2000
+      },
+      "description": "Ink illustration on paper",
+      "alt": null,
+      "showInPortfolio": true
+    },
+    {
+      "title": "Leaving Cats in Trees",
+      "year": "2016-08-31T00:00:00.000Z",
+      "category": "illustration",
+      "srcImage": "https://www.datocms-assets.com/159/1510739028-201608_csmeditorial-cattreeheadlineonly.jpg?fm=jpg&w=400",
+      "mobileImage": {
+        "src": "https://www.datocms-assets.com/159/1510739028-201608_csmeditorial-cattreeheadlineonly.jpg?fm=jpg&w=800",
+        "width": 800,
+        "height": 1092
+      },
+      "desktopImage": {
+        "src": "https://www.datocms-assets.com/159/1510739028-201608_csmeditorial-cattreeheadlineonly.jpg?fm=jpg&w=2000",
+        "width": 2000,
+        "height": 2731
+      },
+      "description": "Ink illustration inspired by editorial",
+      "alt": null,
+      "showInPortfolio": true
+    },
+    {
+      "title": "Chan Can Cook (Book)",
+      "year": "2016-08-31T00:00:00.000Z",
+      "category": "illustration",
+      "srcImage": "https://www.datocms-assets.com/159/1510739082-201608_csm_kitchenbook.jpg?fm=jpg&w=400",
+      "mobileImage": {
+        "src": "https://www.datocms-assets.com/159/1510739082-201608_csm_kitchenbook.jpg?fm=jpg&w=800",
+        "width": 800,
+        "height": 958
+      },
+      "desktopImage": {
+        "src": "https://www.datocms-assets.com/159/1510739082-201608_csm_kitchenbook.jpg?fm=jpg&w=2000",
+        "width": 2000,
+        "height": 2395
+      },
+      "description": "Illustration/ book cover",
+      "alt": null,
+      "showInPortfolio": true
+    },
+    {
+      "title": "Herbal Geometrea",
+      "year": "2017-09-15T00:00:00.000Z",
+      "category": "pattern",
+      "srcImage": "https://www.datocms-assets.com/159/1510754673-geotriangleteatowelchop-03.png?fm=jpg&w=400",
+      "mobileImage": {
+        "src": "https://www.datocms-assets.com/159/1510754673-geotriangleteatowelchop-03.png?fm=jpg&w=800",
+        "width": 800,
+        "height": 1231
+      },
+      "desktopImage": {
+        "src": "https://www.datocms-assets.com/159/1510754673-geotriangleteatowelchop-03.png?fm=jpg&w=2000",
+        "width": 2000,
+        "height": 3079
+      },
+      "description": "Geometric surface pattern design for tea towel",
+      "alt": null,
+      "showInPortfolio": true
+    },
+    {
+      "title": "Tea Plantation",
+      "year": "2017-09-15T00:00:00.000Z",
+      "category": "pattern",
+      "srcImage": "https://www.datocms-assets.com/159/1510754821-geotriangleteatowelnochop_201710-04low.png?fm=jpg&w=400",
+      "mobileImage": {
+        "src": "https://www.datocms-assets.com/159/1510754821-geotriangleteatowelnochop_201710-04low.png?fm=jpg&w=800",
+        "width": 800,
+        "height": 1232
+      },
+      "desktopImage": {
+        "src": "https://www.datocms-assets.com/159/1510754821-geotriangleteatowelnochop_201710-04low.png?fm=jpg&w=2000",
+        "width": 2000,
+        "height": 3080
+      },
+      "description": "Geometric surface pattern design for tea towel",
+      "alt": null,
+      "showInPortfolio": true
+    },
+    {
+      "title": "Bee a Tiger",
+      "year": "2017-10-01T00:00:00.000Z",
+      "category": "pattern",
+      "srcImage": "https://www.datocms-assets.com/159/1510757085-giftwrapbeebeeatigernobleedchop-03-1500pxlow.png?fm=jpg&w=400",
+      "mobileImage": {
+        "src": "https://www.datocms-assets.com/159/1510757085-giftwrapbeebeeatigernobleedchop-03-1500pxlow.png?fm=jpg&w=800",
+        "width": 800,
+        "height": 1120
+      },
+      "desktopImage": {
+        "src": "https://www.datocms-assets.com/159/1510757085-giftwrapbeebeeatigernobleedchop-03-1500pxlow.png?fm=jpg&w=2000",
+        "width": 2000,
+        "height": 2800
+      },
+      "description": "Surface pattern design",
+      "alt": null,
+      "showInPortfolio": true
+    },
+    {
+      "title": "Leaky Bee",
+      "year": "2017-10-03T00:00:00.000Z",
+      "category": "pattern illustration",
+      "srcImage": "https://www.datocms-assets.com/159/1510757165-giftwrapbeeleakybeenobleedchop-05-1500pxlow.png?fm=jpg&w=400",
+      "mobileImage": {
+        "src": "https://www.datocms-assets.com/159/1510757165-giftwrapbeeleakybeenobleedchop-05-1500pxlow.png?fm=jpg&w=800",
+        "width": 800,
+        "height": 1120
+      },
+      "desktopImage": {
+        "src": "https://www.datocms-assets.com/159/1510757165-giftwrapbeeleakybeenobleedchop-05-1500pxlow.png?fm=jpg&w=2000",
+        "width": 2000,
+        "height": 2800
+      },
+      "description": "Surface pattern design/ placement print",
+      "alt": null,
+      "showInPortfolio": true
+    },
+    {
+      "title": "Royal Jelly",
+      "year": "2017-10-03T00:00:00.000Z",
+      "category": "pattern",
+      "srcImage": "https://www.datocms-assets.com/159/1510757201-giftwrapbeeroyaljellynobleedchop-04-1500pxlow.png?fm=jpg&w=400",
+      "mobileImage": {
+        "src": "https://www.datocms-assets.com/159/1510757201-giftwrapbeeroyaljellynobleedchop-04-1500pxlow.png?fm=jpg&w=800",
+        "width": 800,
+        "height": 1120
+      },
+      "desktopImage": {
+        "src": "https://www.datocms-assets.com/159/1510757201-giftwrapbeeroyaljellynobleedchop-04-1500pxlow.png?fm=jpg&w=2000",
+        "width": 2000,
+        "height": 2800
+      },
+      "description": "Surface pattern design",
+      "alt": null,
+      "showInPortfolio": true
+    },
+    {
+      "title": "Stripes and Spots Lucky Charms",
+      "year": "2017-03-01T00:00:00.000Z",
+      "category": "pattern",
+      "srcImage": "https://www.datocms-assets.com/159/1510758334-stripesandspotsluckycharms-sundaebest-scchop-low.png?fm=jpg&w=400",
+      "mobileImage": {
+        "src": "https://www.datocms-assets.com/159/1510758334-stripesandspotsluckycharms-sundaebest-scchop-low.png?fm=jpg&w=800",
+        "width": 800,
+        "height": 663
+      },
+      "desktopImage": {
+        "src": "https://www.datocms-assets.com/159/1510758334-stripesandspotsluckycharms-sundaebest-scchop-low.png?fm=jpg&w=2000",
+        "width": 2000,
+        "height": 1658
+      },
+      "description": "Surface pattern design",
+      "alt": null,
+      "showInPortfolio": true
+    },
+    {
+      "title": "Busy Bee",
+      "year": "2017-10-04T00:00:00.000Z",
+      "category": "pattern",
+      "srcImage": "https://www.datocms-assets.com/159/1510758810-giftwrapbeebusybeenobleedchop.png?fm=jpg&w=400",
+      "mobileImage": {
+        "src": "https://www.datocms-assets.com/159/1510758810-giftwrapbeebusybeenobleedchop.png?fm=jpg&w=800",
+        "width": 800,
+        "height": 1120
+      },
+      "desktopImage": {
+        "src": "https://www.datocms-assets.com/159/1510758810-giftwrapbeebusybeenobleedchop.png?fm=jpg&w=2000",
+        "width": 2000,
+        "height": 2800
+      },
+      "description": "Surface pattern design",
+      "alt": null,
+      "showInPortfolio": true
+    },
+    {
+      "title": "K Bear #3 (Triptych)",
+      "year": "2016-08-17T00:00:00.000Z",
+      "category": "illustration",
+      "srcImage": "https://www.datocms-assets.com/159/1510982552-201608_kbear3final.jpg?fm=jpg&w=400",
+      "mobileImage": {
+        "src": "https://www.datocms-assets.com/159/1510982552-201608_kbear3final.jpg?fm=jpg&w=800",
+        "width": 800,
+        "height": 800
+      },
+      "desktopImage": {
+        "src": "https://www.datocms-assets.com/159/1510982552-201608_kbear3final.jpg?fm=jpg&w=2000",
+        "width": 2000,
+        "height": 2000
+      },
+      "description": "Illustration – third in K Bear series inspired by Kafka quote",
+      "alt": null,
+      "showInPortfolio": true
+    },
+    {
+      "title": "Hong Kong and Everything After",
+      "year": "2017-09-13T00:00:00.000Z",
+      "category": "illustration",
+      "srcImage": "https://www.datocms-assets.com/159/1510984558-201710hongkongeverythingafterdkbl_lo.jpg?fm=jpg&w=400",
+      "mobileImage": {
+        "src": "https://www.datocms-assets.com/159/1510984558-201710hongkongeverythingafterdkbl_lo.jpg?fm=jpg&w=800",
+        "width": 800,
+        "height": 1031
+      },
+      "desktopImage": {
+        "src": "https://www.datocms-assets.com/159/1510984558-201710hongkongeverythingafterdkbl_lo.jpg?fm=jpg&w=2000",
+        "width": 2000,
+        "height": 2578
+      },
+      "description": "Illustration",
+      "alt": null,
+      "showInPortfolio": true
+    },
+    {
+      "title": "Cais Sodre",
+      "year": "2017-08-31T00:00:00.000Z",
+      "category": "drawing",
+      "srcImage": "https://www.datocms-assets.com/159/1511188534-201708_caissodre.jpg?fm=jpg&w=400",
+      "mobileImage": {
+        "src": "https://www.datocms-assets.com/159/1511188534-201708_caissodre.jpg?fm=jpg&w=800",
+        "width": 800,
+        "height": 560
+      },
+      "desktopImage": {
+        "src": "https://www.datocms-assets.com/159/1511188534-201708_caissodre.jpg?fm=jpg&w=2000",
+        "width": 2000,
+        "height": 1400
+      },
+      "description": "Drawing",
       "alt": null,
       "showInPortfolio": true
     }

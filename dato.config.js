@@ -78,6 +78,22 @@ module.exports = (dato, root, i18n) => {
     }
   };
 
+  let buildPaddedIconsJson = (images) => {
+    let iconsArray = images.map(item => {
+      return {
+        title: item.title,
+        url: item.linkUrl,
+        image: item.image.url({ w: 100, fm: 'png' }),
+        description: item.image.title,
+        alt: item.image.alt,
+      };
+    });
+
+    return {
+      "icons" : iconsArray
+    }
+  };
+
   let buildPaddedBooksJson = (items) => {
     let booksArray = items.map(item => {
       return {
@@ -185,6 +201,12 @@ module.exports = (dato, root, i18n) => {
         title: p.featuredImage.title,
         alt: p.featuredImage.alt
       },
+      cocktailParty: {
+        mobileUrl: p.cocktailPartyHeaderImage.url({w: 600, fm: 'png'}),
+        desktopUrl: p.cocktailPartyHeaderImage.url({w: 1000, fm: 'png'}),
+        title: p.cocktailPartyHeaderImage.title,
+        alt: p.cocktailPartyHeaderImage.alt
+      },
       h1: p.h1,
       leader: p.leaderText,
       content: p.contentText,
@@ -212,6 +234,9 @@ module.exports = (dato, root, i18n) => {
 
   dato.clients
     root.createDataFile('source/js/json/clients.json', 'json', buildPaddedClientsJson(dato.clients));
+  
+  dato.icons
+    root.createDataFile('source/js/json/customIcons.json', 'json', buildPaddedIconsJson(dato.socialIcons));
 
   dato.books
     root.createDataFile('source/js/json/books.json', 'json', buildPaddedBooksJson(dato.books));

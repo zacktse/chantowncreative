@@ -707,6 +707,25 @@ gulp.task('compileClients', function () {
 
 
 /*******************************************************************************
+## Compile Social Icons
+## generates html for the social icons by accessing the json data
+## from datoCMS (social-icons.json) and running it through a handlebars template
+*******************************************************************************/
+
+gulp.task('compileIcons', function () {
+  
+      var templateData = require ('./source/js/json/customIcons.json');
+      var options = {
+      };
+  
+      return gulp.src('source/templates/handlebars/illustrated-social-icons/socials.handlebars')
+        .pipe(handlebars(templateData, options))
+        .pipe(rename('_illustratedIcons.html'))
+        .pipe(gulp.dest('source/prototypes/partials/widgets'));
+  });
+  
+
+/*******************************************************************************
 ## Compile Homepage
 ## generates html for the homepage by accessing the json data
 ## from datoCMS (homePage.json) and running it through the handlebars template
@@ -793,7 +812,7 @@ gulp.task('compileContactPage', function () {
 gulp.task('buildFromDato', function(callback) {
   runSequence('fetchFromDatoCMS',
               ['compilePortfolio','compileFullGallery','compileClients','compileBooks'],
-              ['compileContactPage', 'compileHomepage', 'compileCreatePage', 'compileConsultPage'],
+              ['compileContactPage', 'compileHomepage', 'compileCreatePage', 'compileConsultPage', 'compileIcons'],
               callback);
 });
 //

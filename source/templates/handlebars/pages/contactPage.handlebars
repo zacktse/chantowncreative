@@ -1,5 +1,9 @@
 <div class="row">
-  <div class="feature">
+   <h1 class="size-h1"> {{{h1}}} </h1>
+</div>
+
+<div class="row text-content">
+ <div class="feature">
     <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
     data-src="{{{featuredImage.desktopUrl}}}"
     data-src-small="{{{featuredImage.mobileUrl}}}"
@@ -7,14 +11,10 @@
     alt="{{{featuredImage.alt}}}"
     title="{{{featuredImage.title}}}" />
   </div>
-</div>
-
-<div class="row text-content">
-  <h1 class="size-h1"> {{{h1}}} </h1>
-  <p class="leader"> {{{leader}}} </p>
  {{!--  {{{content}}} --}}
   <br>
   <br>
+  <p class="leader"> {{{leader}}} </p>
 </div>
 <!-- <div class="row text-content">
   <p><a href="mailto:hello@chantown.com" style="max-width: 250px" class="fancy-btn btn-w-icon btn-3d icon-bolt contact-btn" data-url="mailto:hello@chantown.com">{{buttonText}}</a></p>
@@ -27,14 +27,26 @@
             <h2><a class="underlined with-left-arrow" href="./home.html#contact-vc"><strong>{{{bioTitle}}}</strong></a></h2>
         </div>
       </div>
-
-
 </div>
 <div class="row text-content">
-  {{!-- {{{bioTextUnder}}} --}}
-    <h2>Join the cocktail party</h2>
-
+    {{!-- <h2>Join the cocktail party</h2> --}}
+    <div class="feature">
+      <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+      data-src="{{{cocktailParty.desktopUrl}}}"
+      data-src-small=" {{{cocktailParty.mobileUrl}}}"
+      class="b-lazy feature-image full-width"
+      alt="{{{cocktailParty.alt}}}"/>
+  </div>
 <br/>
-  new icons here
+  
+</div>
+
+<div class="row text-content clients-wrapper"></div>
+  <div class="row ">
+      <ul class="list__clients">
+        <!-- Include hand drawn social links -->
+        @@include('../widgets/_illustratedIcons.html')
+      </ul>
+    </div>
 </div>
 
