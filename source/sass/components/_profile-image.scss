@@ -81,3 +81,11 @@ $tablet-up: em(860) !default;
      p { width: 100%; }
    }
 }
+
+
+.remind-me-link {
+  text-align: center;
+  @include media($desktop-up) {
+    text-align: left;
+  }
+}

@@ -431,7 +431,20 @@ blockquote {
 }
 
 
+  .with-left-arrow {
+    display:block;
+    margin-top: 16px;
+    text-align: center;
+    width: 100%;
+    
+  }
+ .with-left-arrow:before {  
+   content: "↑ ";
+ }
  @include media($tablet-up){
+    .with-left-arrow {
+      text-align: left;
+    }
     .with-left-arrow:before {
         content: "←";
     }
