@@ -30,7 +30,7 @@ if ( (wWidth > 960) ) {
       triggerHook: "onLeave"
     }
   });
-  if (document.title === "Create: Chantown Creative") {
+  if (document.title === "Create: Chantown Creative" || document.title === "Portfolio: Chantown Creative") {
 
     var filtersController = new ScrollMagic.Controller({
       globalSceneOptions: {

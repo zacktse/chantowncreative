@@ -10,8 +10,9 @@
 <div id="js-content" class="page-container">
   <section class="content-main" role="main">
 
-    <h2>Portfolio</h2>
+  
     <div class="row clearfix">
+      <h2 style="text-align: center">Portfolio</h2>
       <div class="row clearfix" class="filter-btns-container">
 
         <div id="isotope-filters" class="row filter-btns">
@@ -26,21 +27,19 @@
       </div>
     </div>
 
-
-
-
+    <div class="gallery-wrap">
+        <div id="gallery_container" class="gallery_container isotope-grid" itemscope itemtype="http://schema.org/ImageGallery">
+            <div class="grid-sizer"></div>
+            <div class="gutter-sizer"></div>
+            <!-- Include gallery data -->
+            @@include('partials/widgets/_portfolioInner.html')
+        </div>
+      </div>
   </section>
 
   <!-- isotope  -->
 
-  <div class="gallery-wrap">
-    <div id="gallery_container" class="gallery_container isotope-grid" itemscope itemtype="http://schema.org/ImageGallery">
-        <div class="grid-sizer"></div>
-        <div class="gutter-sizer"></div>
-        <!-- Include gallery data -->
-        @@include('partials/widgets/_portfolioInner.html')
-    </div>
-  </div>
+  
 
 
   <!-- Root element of PhotoSwipe. Must have class pswp. -->
