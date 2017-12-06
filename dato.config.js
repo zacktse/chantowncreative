@@ -121,8 +121,8 @@ module.exports = (dato, root, i18n) => {
       },
       h1: p.h1,
       studioChantownLogo: {
-        mobileUrl: p.studioChantownLogo.url({w:300, fm: 'png'}),
-        desktopUrl: p.studioChantownLogo.url({w:600, fm: 'png'}),
+        mobileUrl: p.studioChantownLogo.url({w:120, fm: 'png'}),
+        desktopUrl: p.studioChantownLogo.url({w:120, fm: 'png'}),
         alt: p.studioChantownLogo.alt
       },
       studioChantownTitle: p.studioChantownSectionTitle,
@@ -131,7 +131,7 @@ module.exports = (dato, root, i18n) => {
       studioChantownMoreLink: p.studioChantownMoreLink,
       chantownCreativeLogo: {
         mobileUrl: p.chantownCreativeLogo.url({w:300, fm: 'png'}),
-        desktopUrl: p.chantownCreativeLogo.url({w:600, fm: 'png'}),
+        desktopUrl: p.chantownCreativeLogo.url({w:400, fm: 'png'}),
         alt: p.chantownCreativeLogo.alt
       },
       chantownCreativeTitle: p.chantownCreativeSectionTitle,

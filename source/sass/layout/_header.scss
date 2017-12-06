@@ -85,14 +85,14 @@ header.main-header {
     @include media($desktop-up) {
       position: relative;
       @include outer-container();
-      width: 76.5%;
+      width: 66.5%;
       max-width: 1280px;
 
 
     }
   }
 
-  .logo-wrapper{
+  .logo-wrapper {
     position: relative;
     @include clearfix;
     //@include outer-container;
@@ -147,7 +147,7 @@ header.main-header {
       top: 26px;
       //width: 450px;
       width: 480px;
-      margin-left: 8px;
+      margin-left: 4px;
       max-height: $navigation-height-desktop;
     }
     z-index: $z-above-nav;
@@ -163,7 +163,7 @@ header.main-header {
   ul.navigation-menu {
     padding-top: 10px;
     padding-left: 16px;
-    padding-right: 16px;
+    padding-right: 26px;
     max-height: 52px;
 
     text-align: justify;
@@ -218,9 +218,9 @@ header.main-header {
   .nav-link a {
     // height: 38px;
     position: relative;
-    line-height: 34px;
+    line-height: 38px;
     display: inline-block;
-    font-size: 14px;
+    font-size: 11px;
     font-family: $joesfin;
     text-align: left;
     vertical-align: middle;
@@ -235,6 +235,7 @@ header.main-header {
     }
     @include media($tablet-up) {
       // margin-right: 36px;
+      font-size: 12px;
       padding-left: 16px;
       padding-right: 16px;
       line-height: 30px;
@@ -242,6 +243,7 @@ header.main-header {
 
 
     @include media ($horizontal-bar-mode) {
+      font-size: 14px;
       text-align: center;
       line-height: 24px;
       @include padding(15, 16, 10, 16);

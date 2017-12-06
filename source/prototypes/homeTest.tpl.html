@@ -29,7 +29,7 @@
   <!-- End Google Tag Manager -->
 
 <div class='full-height-wrapper'>
-   <canvas class="uk-position-top" style="position: absolute; top: 0;height: 100%; opacity:.6; z-index: 1;" color-swarm="" h="4/5" ></canvas>
+   <canvas class="uk-position-top" style="position: absolute; top: 0;height: 100%; opacity:1; z-index: 1;" color-swarm="" h="4/5" ></canvas>
 </div>
 
 <header id="global-header" class="main-header" role="banner">
@@ -56,7 +56,7 @@
   </li>
 
 </ul>
-li
+
   </div>
 
   <div id="js-global-nav" class="navigation-wrapper">
@@ -106,7 +106,7 @@ win.colorSwarm = function(canvas) {
     var ctx;
     var circles;
     var tick = 0;
-    var numCircles = 300;
+    var numCircles = 100;
     var h = eval(canvas.getAttribute('h') || '2/3');
 
 
@@ -117,7 +117,8 @@ win.colorSwarm = function(canvas) {
     };
 
     var resize = window.resize = function() {
-        canvas.height = $(canvas).parent().outerHeight() * h;
+        // canvas.height = $(canvas).parent().outerHeight() * h;
+        canvas.height = window.innerHeight;
         canvas.width = window.innerWidth;
     };
 
@@ -187,11 +188,13 @@ win.colorSwarm = function(canvas) {
     };
 
     Circle.prototype.draw = function() {
-        ctx.fillStyle = this.c;
-        ctx.beginPath();
-        ctx.arc(this.pos[0], this.pos[1], this.r, 0, 2 * Math.PI, false);
-        ctx.fill();
-    };
+      ctx.fillStyle = this.c;
+      // ctx.beginPath();
+      ctx.fillRect(this.pos[0], this.pos[1], this.r, this.r);
+      // ctx.arc(this.pos[0], this.pos[1], this.r, 0, 2 * Math.PI, false);
+      // ctx.fill();
+  };
+
 }
 
 $(function() {
