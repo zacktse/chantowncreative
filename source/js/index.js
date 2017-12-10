@@ -3,7 +3,7 @@ var equalheights = require('./modules/equal_heights');
 var back_to_top = require('./modules/back_to_top');
 var isotope = require('./modules/isotope');
 var scroll = require('./modules/scroll');
-var dp = require('./modules/pixels');
+// var dp = require('./modules/pixels');
 var StickyHeader = require('./modules/sticky-header');
 // var Instafeed = require("./modules/instafeed.min");
 // var pixel_bg = new dp.DeadPixels();
@@ -58,19 +58,20 @@ if (document.querySelector('.my-gallery') !== null) {
       var ctx;
       var circles;
       var tick = 0;
-      var numCircles = 100;
+      var numCircles = 250;
       var h = eval(canvas.getAttribute('h') || '2/3');
       
     
     // returns a random color from an array of possible colour values (colors array)
-      let randomColor = function() {
-        let colors = ['#FF5000', '#0078AE', '#F65097'];
+      var randomColor = function() {
+        var colors = ['#FF5000', '#0078AE', '#F65097'];
         return colors[Math.floor(Math.random() * colors.length)]
       };
     
       var resize = window.resize = function() {
-          canvas.height = $(canvas).parent().outerHeight() * h;
-          canvas.width = window.innerWidth;
+        //   canvas.height = $(canvas).parent().outerHeight() * h;
+        canvas.height = doc.body.offsetHeight; 
+        canvas.width = window.innerWidth;
       };
   
       $(function() {
