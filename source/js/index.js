@@ -59,6 +59,9 @@ if (document.querySelector('.my-gallery') !== null) {
       var circles;
       var tick = 0;
       var numCircles = 250;
+      if (window.innerWidth < 400) {
+          numCircles = 100;
+      }
       var h = eval(canvas.getAttribute('h') || '2/3');
       
     
