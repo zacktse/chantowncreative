@@ -306,6 +306,10 @@ p a {
 }
 
 a.underlined{ @include animated-link-underline(); font-family: $joesfin;}
+
+a.underlined-inverted {
+  @include animated-link-underline-inverted();
+}
 a.underlined.black { color: $chantown-gray;}
 
 p.centered {
@@ -433,9 +437,9 @@ blockquote {
 
   .with-left-arrow {
     display:block;
-    margin-top: 16px;
     text-align: center;
     margin: 0 auto;
+    padding-top: 16px;
   }
  .with-left-arrow:before {  
    content: "↑ ";
@@ -443,6 +447,7 @@ blockquote {
  @include media($tablet-up){
     .with-left-arrow {
       text-align: left;
+      margin-top: 16px;
     }
     .with-left-arrow:before {
         content: "←";

@@ -87,7 +87,7 @@ header.main-header {
       @include outer-container();
       width: 66.5%;
       max-width: 1280px;
-
+      
 
     }
   }
@@ -105,43 +105,46 @@ header.main-header {
     @include media ($tablet-up) {
       max-width: 1280px;
       width: 90%;
+      height: 90px;
     }
     @include media ($horizontal-bar-mode) {
       margin-top: 0px;
       margin-left: 0;
+      height: 112px;
     }
 
   }
   .logo {
     display: block;
     //max-height: $navigation-height;
-    width: 300px;
+    width: 80%;
     padding-top: 16px;
     padding-bottom: 30px;
-    margin-left: auto;
+    margin-left: 18%;
     margin-right: auto;
     @include hide-text;
     background-repeat: no-repeat;
-    background-size: 94%;
-    background-position: 12px 60%;
-    // background-size: 100%;
-    // background-position: 55% 60%;
-    // background-image: url(../img/ChantownCreative_LOGO_mobile.png);
-    background-image:$mobile-logo-datauri;
+    // background-size: 94%;
+    // background-position: 12px 60%;
+    background-size: 100%;
+    background-position: 55% 60%;
+    background-image: url(../img/chantown-logo-header-new-v1.png);
+    // background-image:$mobile-logo-datauri;
     @include transition(all $default-transition-speed ease-out);
     @include media($tablet-up) {
       padding-top: 30px;
       padding-bottom: 30px;
       background-position: 100% 100%;
-      margin-left: -6px;
+      // margin-left: -6px;
+      margin-left: 0;
       max-height: 72px;
       width: 360px;
       //width: 504px;
     }
 
     @include media($desktop-up) {
-      // background-image: url(../img/ChantownCreative_LOGO_desktop.png);
-      background-image: $desktop-logo-datauri;
+      background-image: url(../img/chantown-logo-header-new-v1.png);
+      // background-image: $desktop-logo-datauri;
       background-position: top left;
       position: absolute;
       top: 26px;
@@ -173,7 +176,7 @@ header.main-header {
       padding-left: 6px;
       padding-right: 6px;
       max-height: 48px;
-      max-width: 740px;
+      max-width: 680px;
       //max-width: 100%;
       margin: 0 auto;
 
@@ -190,7 +193,7 @@ header.main-header {
       text-align: center;
       max-height: 48px;
       //max-width: 100%;
-      max-width: 80%;
+      max-width: 840px;
     }
     &:after {
       content: '';
@@ -248,8 +251,8 @@ header.main-header {
       line-height: 24px;
       @include padding(15, 16, 10, 16);
       //margin-right: 42px;
-      margin-left: 42px;
-      margin-right: 42px;
+      margin-left: 27px;
+      margin-right: 27px;
 
       @include animated-link-underline($chantown-gray);
 
@@ -323,7 +326,7 @@ nav.main-nav {
     //border: 0;
     border-top: 0;
     border-bottom: 0;
-    // max-width: 1280px;
+    max-width: 1280px;
     // width: 76.5%;
     @include outer-container();
     // @extend .text-content;

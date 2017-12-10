@@ -54,7 +54,7 @@ ul.list__clients {
   padding-bottom: 60px;
   @include media($tablet-up) {
     // margin-top: -24px;
-    justify-content: flex-start;
+    // justify-content: flex-start;
     max-width: 800px;
   }
 
@@ -89,4 +89,19 @@ ul.list__clients {
     }
   }
 
+}
+
+
+ul.hand-drawn-icons {
+  @extend ul.list__clients;
+  padding-top: 30px;
+  padding-bottom: 0;
+  li {
+    width: 40px;
+    min-height: 60px;
+    @include media($tablet-up) {
+      width: 90px;
+      margin: 10px 20px;
+    }
+  }
 }
