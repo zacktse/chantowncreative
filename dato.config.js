@@ -83,7 +83,7 @@ module.exports = (dato, root, i18n) => {
       return {
         title: item.title,
         url: item.linkUrl,
-        image: item.image.url({ w: 100, fm: 'png' }),
+        image: item.image.url({ w: 200, fm: 'png' }),
         description: item.image.title,
         alt: item.image.alt,
       };
@@ -114,24 +114,24 @@ module.exports = (dato, root, i18n) => {
     let pageData =
     {
       featuredImage: {
-          mobileUrl: p.featuredImage.url({w: 600, fm: 'jpg'}),
-          desktopUrl: p.featuredImage.url({w: 1000, fm: 'jpg'}),
+          mobileUrl: p.featuredImage.url({w: 800, fm: 'jpg'}),
+          desktopUrl: p.featuredImage.url({w: 2000, fm: 'jpg'}),
           title: p.featuredImage.title,
           alt: p.featuredImage.alt
       },
       h1: p.h1,
-      studioChantownLogo: {
-        mobileUrl: p.studioChantownLogo.url({w:240, fm: 'png'}),
-        desktopUrl: p.studioChantownLogo.url({w:240, fm: 'png'}),
-        alt: p.studioChantownLogo.alt
+      studioChanpeiLogo: {
+        mobileUrl: p.studioChanpeiLogo.url({w:240, fm: 'png'}),
+        desktopUrl: p.studioChanpeiLogo.url({w:480, fm: 'png'}),
+        alt: p.studioChanpeiLogo.alt
       },
-      studioChantownTitle: p.studioChantownSectionTitle,
-      studioChantownLeaderText: p.studioChantownLeaderText,
-      studioChantownBodyCopy: p.studioChantownBodyCopy,
-      studioChantownMoreLink: p.studioChantownMoreLink,
+      studioChanpeiTitle: p.studioChanpeiSectionTitle,
+      studioChanpeiLeaderText: p.studioChanpeiLeaderText,
+      studioChanpeiBodyCopy: p.studioChanpeiBodyCopy,
+      studioChanpeiMoreLink: p.studioChanpeiMoreLink,
       chantownCreativeLogo: {
-        mobileUrl: p.chantownCreativeLogo.url({w:400, fm: 'png'}),
-        desktopUrl: p.chantownCreativeLogo.url({w:600, fm: 'png'}),
+        mobileUrl: p.chantownCreativeLogo.url({w:800, fm: 'png'}),
+        desktopUrl: p.chantownCreativeLogo.url({w:800, fm: 'png'}),
         alt: p.chantownCreativeLogo.alt
       },
       chantownCreativeTitle: p.chantownCreativeSectionTitle,
@@ -155,8 +155,8 @@ module.exports = (dato, root, i18n) => {
     let pageData =
     {
       featuredImage: {
-          mobileUrl: p.featuredImage.url({w: 600, fm: 'jpg'}),
-          desktopUrl: p.featuredImage.url({w: 1000, fm: 'jpg'}),
+          mobileUrl: p.featuredImage.url({w: 800, fm: 'jpg'}),
+          desktopUrl: p.featuredImage.url({w: 2000, fm: 'jpg'}),
           title: p.featuredImage.title,
           alt: p.featuredImage.alt
       },
@@ -179,8 +179,8 @@ module.exports = (dato, root, i18n) => {
     let pageData =
     {
       featuredImage: {
-          mobileUrl: p.featuredImage.url({w: 600, fm: 'jpg'}),
-          desktopUrl: p.featuredImage.url({w: 1000, fm: 'jpg'}),
+          mobileUrl: p.featuredImage.url({w: 800, fm: 'jpg'}),
+          desktopUrl: p.featuredImage.url({w: 2000, fm: 'jpg'}),
           title: p.featuredImage.title,
           alt: p.featuredImage.alt
       },
@@ -196,8 +196,8 @@ module.exports = (dato, root, i18n) => {
     let pageData =
     {
       featuredImage: {
-        mobileUrl: p.featuredImage.url({w: 600, fm: 'jpg'}),
-        desktopUrl: p.featuredImage.url({w: 1000, fm: 'jpg'}),
+        mobileUrl: p.featuredImage.url({w: 800, fm: 'jpg'}),
+        desktopUrl: p.featuredImage.url({w: 2000, fm: 'jpg'}),
         title: p.featuredImage.title,
         alt: p.featuredImage.alt
       },
