@@ -28,8 +28,15 @@ module.exports = (dato, root, i18n) => {
       }
 
     });
+
+    sortedArray = imagesArray.sort(function(a,b){
+      var c = new Date(a.year);
+      var d = new Date(b.year);
+      return d-c;
+      });
+
     return {
-      "images" : imagesArray
+      "images" : sortedArray
     }
   };
 
@@ -58,8 +65,15 @@ module.exports = (dato, root, i18n) => {
           showInPortfolio: item.portfolio
         });
     });
+
+    sortedArray = imagesArray.sort(function(a,b){
+      var c = new Date(a.year);
+      var d = new Date(b.year);
+      return d-c;
+      });
+
     return {
-      "images" : imagesArray
+      "images" : sortedArray
     }
   };
 
