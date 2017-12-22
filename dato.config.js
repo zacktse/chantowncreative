@@ -175,8 +175,8 @@ module.exports = (dato, root, i18n) => {
           alt: p.featuredImage.alt
       },
       chantownCreativeLogo: {
-        mobileUrl: p.chantownCreativeLogo.url({w:300, fm: 'png'}),
-        desktopUrl: p.chantownCreativeLogo.url({w:600, fm: 'png'}),
+        mobileUrl: p.chantownCreativeLogo.url({w:800, fm: 'png'}),
+        desktopUrl: p.chantownCreativeLogo.url({w:1600, fm: 'png'}),
         alt: p.chantownCreativeLogo.alt
       },
       h1: p.h1,
