@@ -198,6 +198,11 @@ module.exports = (dato, root, i18n) => {
           title: p.featuredImage.title,
           alt: p.featuredImage.alt
       },
+      studioChanpeiLogo: {
+        mobileUrl: p.studioChanpeiLogo.url({w:240, fm: 'png'}),
+        desktopUrl: p.studioChanpeiLogo.url({w:480, fm: 'png'}),
+        alt: p.studioChanpeiLogo.alt
+      },
       h1: p.h1,
       leader: p.leaderText,
       content: p.pageContent
