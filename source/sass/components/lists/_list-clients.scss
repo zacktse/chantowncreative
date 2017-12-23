@@ -94,8 +94,8 @@ ul.list__clients {
 
 ul.hand-drawn-icons {
   @extend ul.list__clients;
-  padding-top: 30px;
-  padding-bottom: 0;
+  margin-top: -10px;
+  padding-bottom: 60px;
   li {
     width: 40px;
     min-height: 60px;
@@ -104,4 +104,10 @@ ul.hand-drawn-icons {
       margin: 10px 20px;
     }
   }
+  @include media($desktop-up) {
+    padding-top: 30px;
+    padding-bottom: 0;
+    margin-top: 0;
+  }
+
 }
