@@ -220,12 +220,6 @@ module.exports = (dato, root, i18n) => {
         title: p.featuredImage.title,
         alt: p.featuredImage.alt
       },
-      cocktailParty: {
-        mobileUrl: p.cocktailPartyHeaderImage.url({w: 600, fm: 'png'}),
-        desktopUrl: p.cocktailPartyHeaderImage.url({w: 1000, fm: 'png'}),
-        title: p.cocktailPartyHeaderImage.title,
-        alt: p.cocktailPartyHeaderImage.alt
-      },
       h1: p.h1,
       leader: p.leaderText,
       content: p.contentText,
