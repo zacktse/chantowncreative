@@ -842,9 +842,7 @@ gulp.task('buildHtmlTemplates', function(callback) {
 gulp.task('watch', function() {
   // gulp.watch('source/js/**/*.js', ['js-lint', 'js-uglify', 'js-concat','js-copy-vendorscripts']);    //Watch Scripts
 
-  browserSync.init({
-
-  });
+  browserSync.init({});
 
   gulp.watch('source/js/**/*.js', ['js-watch']); // Watch Scripts
 
@@ -903,6 +901,14 @@ gulp.task('minify-html', function() {
 gulp.task('deploy-to-production', ['minify-images', 'minify-html', 'deploy-files-to-production']);
 
 
+// copy robots.txt file for production site to root of build folder
+gulp.task('copy-prod-robots-txt', function() {
+  gulp.src('./source/robots-txt/production/robots.txt')
+    .pipe(plumber())
+    .pipe(gulp.dest('./build/'));
+});
+
+
 gulp.task('deploy-files-to-production', function() {
   var conn = ftp.create({
     host: ftp_details.host,
@@ -957,7 +963,7 @@ gulp.task('deploy-to-staging', function() {
 
 // copy robots.txt file for staging site (SEO no follow) to root of build folder
 gulp.task('copy-no-follow-robots-txt', function() {
-  gulp.src('./source/staging-includes/robots.txt')
+  gulp.src('./source/robots-txt/staging/robots.txt')
     .pipe(plumber())
     .pipe(gulp.dest('./build/'));
 });
@@ -973,15 +979,10 @@ gulp.task('copy-no-follow-robots-txt', function() {
 gulp.task('build', [
   'buildHtmlTemplates',
   'copy-static-img-assets',
-  // 'iconify',
   'build_fonts',
-  //'js-uglify',
-  //'js-lint',
-  //'js-concat',
   'js-browserify',
   'js-copy-scripts',
   'js-copy-json',
-  // 'responsive-imgs',
   'copy-favicon',
   'copy-sprites',
   'sass']);
@@ -998,15 +999,10 @@ gulp.task('build', [
 gulp.task('default', [
   'buildHtmlTemplates',
   'copy-static-img-assets',
-  // 'iconify',
   'build_fonts',
-  //'js-uglify',
-  //'js-lint',
-  //'js-concat',
   'js-browserify',
   'js-copy-scripts',
   'js-copy-json',
-  // 'responsive-imgs',
   'copy-favicon',
   'copy-sprites',
   'sass',
