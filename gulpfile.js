@@ -955,6 +955,15 @@ gulp.task('deploy-to-staging', function() {
 
 
 
+// copy robots.txt file for staging site (SEO no follow) to root of build folder
+gulp.task('copy-no-follow-robots-txt', function() {
+  gulp.src('./source/staging-includes/robots.txt')
+    .pipe(plumber())
+    .pipe(gulp.dest('./build/'));
+});
+
+
+
 
 /*******************************************************************************
 ##  GULP Build
