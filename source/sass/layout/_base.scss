@@ -167,6 +167,22 @@ body {
 }
 
 
+.logo--studio-chanpei {
+  max-width: 80px; 
+  max-height: 80px;
+
+  @include media($desktop-up) {
+  max-width: 120px!important; 
+  max-height: 120px;
+  }
+}
+
+
+.logo--chantown-inpage {
+  max-width: 500px !important; 
+  max-height: 80px;
+}
+
 .flex-center {
   display: flex;
   justify-content: center; 
