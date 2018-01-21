@@ -6,13 +6,13 @@ Theme files for chantown.com - a mobile-first, static homepage for Chantown Crea
 - Development: Pete Richardson
 
 
-## Chantown.com 
+## Chantown - front end
 Front end built using a combo of HTML5 boilerplate, Bourbon, Neat, Bitters, mustache templating, browserify and SASS.
 
-## Chantown - datoCMS / Netlify
+## Chantown - back end - datoCMS / Netlify
 Website content and images are managed and hosted on DatoCMS. 
 Content amends are made in datoCMS. 
-Any new publish tasks from datoCMS integrate with Netlify to run the build steps which genereate the static site and netlify handles the deployment to either the staging or live environment.
+Any new publish tasks from datoCMS integrate with Netlify to run the build steps which genereate the static site and netlify handles the deployment to either the staging or live environments.
 
 
 ## Deploying updates to staging   
@@ -48,7 +48,7 @@ Click status button (top right) -> then click "publish to LIVE" to send your con
 2. Create a new pull request from staging branch to the master branch.
 3. When the new pull request is merged into the master branch netlify will trigger a new build and deployment to the live site.
 
-## Setting up local dev environment to make template, CSS or JS changes
+# Setting up local dev environment to make template, CSS or JS changes
 
 1. Clone repo
 2. Make sure you have node.js and gulp installed on your system.
