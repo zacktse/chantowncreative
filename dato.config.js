@@ -7,6 +7,7 @@ module.exports = (dato, root, i18n) => {
     images.forEach(item => {
       if(item.portfolio) {
         imagesArray.push({
+            position: item.position,
             title: item.title,
             year: item.year,
             category: item.category,
@@ -29,12 +30,23 @@ module.exports = (dato, root, i18n) => {
 
     });
 
+
+    // sort by Date
+    // sortedArray = imagesArray.sort(function(a,b){
+    //   var c = new Date(a.year);
+    //   var d = new Date(b.year);
+    //   return d-c;
+    //   });
+    
+    // sort by Dato CMS position
+    // images at bottom of image list in datocms, appear first on front end
     sortedArray = imagesArray.sort(function(a,b){
-      var c = new Date(a.year);
-      var d = new Date(b.year);
+      var c = a.position;
+      var d = b.position;
       return d-c;
       });
-
+   
+    
     return {
       "images" : sortedArray
     }
@@ -67,10 +79,11 @@ module.exports = (dato, root, i18n) => {
     });
 
     sortedArray = imagesArray.sort(function(a,b){
-      var c = new Date(a.year);
-      var d = new Date(b.year);
+      var c = a.position;
+      var d = b.position;
       return d-c;
       });
+   
 
     return {
       "images" : sortedArray
@@ -135,8 +148,8 @@ module.exports = (dato, root, i18n) => {
       },
       h1: p.h1,
       studioChanpeiLogo: {
-        mobileUrl: p.studioChanpeiLogo.url({w:240, fm: 'png'}),
-        desktopUrl: p.studioChanpeiLogo.url({w:480, fm: 'png'}),
+        mobileUrl: p.studioChanpeiLogo.url({w:281, fm: 'png'}),
+        desktopUrl: p.studioChanpeiLogo.url({w:281, fm: 'png'}),
         alt: p.studioChanpeiLogo.alt
       },
       studioChanpeiTitle: p.studioChanpeiSectionTitle,
@@ -145,7 +158,7 @@ module.exports = (dato, root, i18n) => {
       studioChanpeiMoreLink: p.studioChanpeiMoreLink,
       chantownCreativeLogo: {
         mobileUrl: p.chantownCreativeLogo.url({w:800, fm: 'png'}),
-        desktopUrl: p.chantownCreativeLogo.url({w:800, fm: 'png'}),
+        desktopUrl: p.chantownCreativeLogo.url({w:1000, fm: 'png'}),
         alt: p.chantownCreativeLogo.alt
       },
       chantownCreativeTitle: p.chantownCreativeSectionTitle,
@@ -176,7 +189,7 @@ module.exports = (dato, root, i18n) => {
       },
       chantownCreativeLogo: {
         mobileUrl: p.chantownCreativeLogo.url({w:800, fm: 'png'}),
-        desktopUrl: p.chantownCreativeLogo.url({w:1600, fm: 'png'}),
+        desktopUrl: p.chantownCreativeLogo.url({w:1000, fm: 'png'}),
         alt: p.chantownCreativeLogo.alt
       },
       h1: p.h1,
@@ -199,8 +212,8 @@ module.exports = (dato, root, i18n) => {
           alt: p.featuredImage.alt
       },
       studioChanpeiLogo: {
-        mobileUrl: p.studioChanpeiLogo.url({w:240, fm: 'png'}),
-        desktopUrl: p.studioChanpeiLogo.url({w:480, fm: 'png'}),
+        mobileUrl: p.studioChanpeiLogo.url({w:281, fm: 'png'}),
+        desktopUrl: p.studioChanpeiLogo.url({w:281, fm: 'png'}),
         alt: p.studioChanpeiLogo.alt
       },
       h1: p.h1,
@@ -266,4 +279,4 @@ module.exports = (dato, root, i18n) => {
   dato.contactPage
     root.createDataFile('source/js/json/contactPage.json', 'json', buildContactPageJson(dato.contactPage) );
 
-};
+  };
