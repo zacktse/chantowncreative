@@ -44,6 +44,11 @@ if (document.querySelector('.my-gallery') !== null) {
 
 $(document).ready(function(){
 
+    // var cHeight = document.body.clientHeight;
+    // console.log(cHeight);
+
+    // document.getElementsByClassName("full-height-wrapper")[0].setAttribute("height", cHeight);
+
     /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
     particlesJS.load('particles-js', '/assets/json/particlesjs-config.json', function() {
         console.log('callback - particles-js config loaded');
