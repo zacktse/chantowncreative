@@ -8,53 +8,9 @@ var Isotope = require('isotope-layout');
 var PhotoSwipe = require('../vendor/photoswipe.min.js');
 var Handlebars = require('handlebars');
 var PhotoSwipeUI_Default = require('../vendor/photoswipe-ui-default.min.js');
-//var sb = require('./../vendor/share-button');
 
-
-
-
-
-// function loadGalleryJSON(callback) {
-//
-//   var xobj = new XMLHttpRequest();
-//   xobj.overrideMimeType("application/json");
-//   xobj.open('GET', '/../assets/json/portfolioImages.json', true);
-//   xobj.onreadystatechange = function() {
-//     if (xobj.readyState == 4 && xobj.status == "200") {
-//       // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-//       callback(xobj.responseText);
-//     }
-//   };
-//   xobj.send(null);
-// }
 
 var gallery_items = {};
-
-// helper function to process json to escape ' and " use escape inside handlebars templates to run this on the output
-// Handlebars.registerHelper('escape', function(variable) {
-//   return variable.replace(/(['"])/g, '\\$1');
-// });
-
-
-// Handlebars.registerHelper('thumbnailSrc', function(image) {
-//   var hasCustomThumb = Handlebars.escapeExpression(image.hasCustomThumbnail),
-//     customThumbSrc = Handlebars.escapeExpression(image.customThumbImage);
-//
-//   if (hasCustomThumb) {
-//     return new Handlebars.SafeString("src='" + customThumbSrc + "'");
-//   } else {
-//     return new Handlebars.SafeString("src='" + image.srcImage + "_w800" + image.imageExtension + "'");
-//   }
-//
-// });
-
-
-
-
-
-
-
-
 
 var runPhotoswipe = function() {
   var $window = $(window);
@@ -72,8 +28,6 @@ var runPhotoswipe = function() {
     $(this.element).addClass('isotope-hidden');
   };
 
-
-  // imagesLoaded( _portfolio_gallery, function() {
 
   var isotope_gallery = new Isotope('.isotope-grid', {
     // percentPosition: true,
@@ -134,35 +88,16 @@ var runPhotoswipe = function() {
 
 
 
-  // console.log(Chantown);
-  // re-run lazy load when isotope has re-arranged the images to load any that have been shuffled into the viewport
-  // isotope_gallery.on('arrangeComplete', function() {
-  //
-  //
-  //   // calcEdges();
-  // });
 
   function onArrange() {
     window.bLazy.revalidate();
-    // scroll to the top of the list of images when re-filtering
-    // $('html, body').animate({
-    //   scrollTop: ($("#gallery_container").offset().top - $("#isotope-filters").height() - 60)
-    // }, 300);
   }
   // bind event listener
   isotope_gallery.on( 'arrangeComplete', onArrange );
 
   isotope_gallery.on( 'layoutComplete', function( laidOutItems ) {
 
-    // var filteredElems = isotope_gallery.getFilteredItemElements();
-    // var firstEightElems = filteredElems.slice(0,7);
-    // getFurthestRightXCoord(firstEightElems);
-    //calcEdges();
   } );
-  // align the isotope layout every 500ms
-  // window.setInterval(function() {
-  //   isotope_gallery.arrange({})
-  // }, 1000);
 
   // show the images once aligned
   _portfolio_gallery.find("figure").css("visibility", "visible");
@@ -540,17 +475,6 @@ if (_portfolio_gallery.length > 0) {
 
   runPhotoswipe();
 
-
-
-  // if placing the json file on an external server, could use this code.
-  // loadGalleryJSON(function(response) {
-  //   // Parse JSON string into object
-  //     gallery_items = JSON.parse(response);
-  //     buildGalleryHTML(gallery_items);
-  //     runPhotoswipe();
-  // });
-
-
 }
 
 
@@ -589,7 +513,6 @@ console.log("the width should be resized to ", (largestValue - galleryContainerL
   // console.log('set the left margin to: ', calcGalleryLeftMargin(largestValue, galleryContainerRightX));
   var gallery_wrap = document.querySelector('.gallery-wrap');
 
-
   // gallery_wrap.style.marginLeft = calcGalleryLeftMargin(largestValue,galleryContainerRightX) + "px";
   gallery_wrap.style.width = (largestValue - galleryContainerLeftX) + "px";
 
@@ -597,7 +520,6 @@ console.log("the width should be resized to ", (largestValue - galleryContainerL
 
 
 function calcEdges() {
-  console.log('this ran!');
   var galleryItemsInDOM = document.querySelectorAll('figure.item');
   for (var i = 0; i < 10; i++) {
     console.log(galleryItemsInDOM[i].getBoundingClientRect());

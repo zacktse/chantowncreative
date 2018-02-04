@@ -3,6 +3,7 @@ var equalheights = require('./modules/equal_heights');
 var back_to_top = require('./modules/back_to_top');
 var isotope = require('./modules/isotope');
 var scroll = require('./modules/scroll');
+// var particlesJS = require('./modules/particles.js');
 // var dp = require('./modules/pixels');
 var StickyHeader = require('./modules/sticky-header');
 // var Instafeed = require("./modules/instafeed.min");
@@ -33,7 +34,6 @@ window.bLazy = new Blazy({
 }
 );
 
-// pixel_bg.initialize();
 
 
 // execute photoswipe function if there is a gallery on the page
@@ -42,74 +42,83 @@ if (document.querySelector('.my-gallery') !== null) {
 }
 
 
-// if (document.getElementById('instafeed') ) {
-//     var feed = new Instafeed({
-//         accessToken: '5667361962.1677ed0.939ab53a59ef4ecdb67d5c69f25cbd15'
-//     });
-//     feed.run();
-// }
+$(document).ready(function(){
+
+    // var cHeight = document.body.clientHeight;
+    // console.log(cHeight);
+
+    // document.getElementsByClassName("full-height-wrapper")[0].setAttribute("height", cHeight);
+
+    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+    particlesJS.load('particles-js', '/assets/json/particlesjs-config.json', function() {
+        console.log('callback - particles-js config loaded');
+    });
+});
 
 
-(function(win, doc, $){
+
+
+
+//  (function(win, doc, $){
   
   
-  win.colorSwarm = function(canvas) {
+//   win.colorSwarm = function(canvas) {
   
-      var ctx;
-      var circles;
-      var tick = 0;
-      var numCircles = 250;
-      if (window.innerWidth < 400) {
-          numCircles = 100;
-      }
-      var h = eval(canvas.getAttribute('h') || '2/3');
+//       var ctx;
+//       var circles;
+//       var tick = 0;
+//       var numCircles = 250;
+//       if (window.innerWidth < 400) {
+//           numCircles = 100;
+//       }
+//       var h = eval(canvas.getAttribute('h') || '2/3');
       
     
-    // returns a random color from an array of possible colour values (colors array)
-      var randomColor = function() {
-        var colors = ['#FF5000', '#0078AE', '#F65097'];
-        return colors[Math.floor(Math.random() * colors.length)]
-      };
+//     // returns a random color from an array of possible colour values (colors array)
+//       var randomColor = function() {
+//         var colors = ['#FF5000', '#0078AE', '#F65097'];
+//         return colors[Math.floor(Math.random() * colors.length)]
+//       };
     
-      var resize = window.resize = function() {
-        //   canvas.height = $(canvas).parent().outerHeight() * h;
-        canvas.height = doc.body.offsetHeight; 
-        canvas.width = window.innerWidth;
-      };
+//       var resize = window.resize = function() {
+//         //   canvas.height = $(canvas).parent().outerHeight() * h;
+//         canvas.height = doc.body.offsetHeight; 
+//         canvas.width = window.innerWidth;
+//       };
   
-      $(function() {
-          ctx = canvas.getContext('2d');
-          resize();
+//       $(function() {
+//           ctx = canvas.getContext('2d');
+//           resize();
         
-          circles = [];
+//           circles = [];
   
-          for (var i=0; i<numCircles; i++) {
-              var x = Math.random()*canvas.width;
-              var y = Math.random()*canvas.height;
-              var c = new Circle(x, y, canvas.width, canvas.height);
-              c.draw();
-              circles.push(c);
-          }
+//           for (var i=0; i<numCircles; i++) {
+//               var x = Math.random()*canvas.width;
+//               var y = Math.random()*canvas.height;
+//               var c = new Circle(x, y, canvas.width, canvas.height);
+//               c.draw();
+//               circles.push(c);
+//           }
   
-          var loop = function() {
-              window.requestAnimFrame(loop);
-              ctx.clearRect(0, 0, canvas.width, canvas.height);
-              for (var i=0; i<circles.length; i++) {
-              circles[i].frame();
-              }
-          };
+//           var loop = function() {
+//               window.requestAnimFrame(loop);
+//               ctx.clearRect(0, 0, canvas.width, canvas.height);
+//               for (var i=0; i<circles.length; i++) {
+//               circles[i].frame();
+//               }
+//           };
   
-          window.requestAnimFrame = function(){
-              return window.requestAnimationFrame ||
-              window.webkitRequestAnimationFrame ||
-              window.mozRequestAnimationFrame ||
-              window.oRequestAnimationFrame ||
-              window.msRequestAnimationFrame ||
-              function(a) { window.setTimeout(a,1E3/60); };
-          }();
+//           window.requestAnimFrame = function(){
+//               return window.requestAnimationFrame ||
+//               window.webkitRequestAnimationFrame ||
+//               window.mozRequestAnimationFrame ||
+//               window.oRequestAnimationFrame ||
+//               window.msRequestAnimationFrame ||
+//               function(a) { window.setTimeout(a,1E3/60); };
+//           }();
   
-          loop();
-      });
+//           loop();
+//       });
   
     
     
@@ -117,45 +126,45 @@ if (document.querySelector('.my-gallery') !== null) {
     
       
     
-      var Circle = function(x, y) {
-          this.pos = [ x, y ];
-          this.r = (1.5*Math.random())+0.2;
-          this.c = randomColor();
-          this.v = [
-              (Math.random()-0.5)*0.08,
-              (Math.random()-0.5)*0.08
-          ];
-      };
+//       var Circle = function(x, y) {
+//           this.pos = [ x, y ];
+//           this.r = (1.5*Math.random())+0.2;
+//           this.c = randomColor();
+//           this.v = [
+//               (Math.random()-0.5)*0.08,
+//               (Math.random()-0.5)*0.08
+//           ];
+//       };
   
-      Circle.prototype.getBound = function(i) {
-          return i ? canvas.height : canvas.width;
-      };
+//       Circle.prototype.getBound = function(i) {
+//           return i ? canvas.height : canvas.width;
+//       };
   
-      var i;
-      Circle.prototype.frame = function() {
-          for (i=0; i<2; i++) {
-              if (this.pos[i] > this.getBound(i)-10) { this.v[i] *= -1; }
-              else if (this.pos[i] < 10) { this.v[i] *= -1; }
-              this.pos[i] += this.v[i]*10;
-          }
+//       var i;
+//       Circle.prototype.frame = function() {
+//           for (i=0; i<2; i++) {
+//               if (this.pos[i] > this.getBound(i)-10) { this.v[i] *= -1; }
+//               else if (this.pos[i] < 10) { this.v[i] *= -1; }
+//               this.pos[i] += this.v[i]*10;
+//           }
   
-          this.draw();
-      };
+//           this.draw();
+//       };
   
-      Circle.prototype.draw = function() {
-          ctx.fillStyle = this.c;
-          ctx.beginPath();
-          ctx.arc(this.pos[0], this.pos[1], this.r, 0, 2 * Math.PI, false);
-          ctx.fill();
-      };
-  }
+//       Circle.prototype.draw = function() {
+//           ctx.fillStyle = this.c;
+//           ctx.beginPath();
+//           ctx.arc(this.pos[0], this.pos[1], this.r, 0, 2 * Math.PI, false);
+//           ctx.fill();
+//       };
+//   }
   
-  $(function() {
-      $('canvas[color-swarm]').each(function() {
-          colorSwarm(this);
-      });
-  })
+//   $(function() {
+//       $('canvas[color-swarm]').each(function() {
+//           colorSwarm(this);
+//       });
+//   })
   
   
   
-  })(window, document, $);
+//   })(window, document, $);
