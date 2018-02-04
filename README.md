@@ -48,7 +48,7 @@ Click status button (top right) -> then click "publish to LIVE" to send your con
 2. Create a new pull request from staging branch to the master branch.
 3. When the new pull request is merged into the master branch netlify will trigger a new build and deployment to the live site.
 
-# Setting up local dev environment to make template, CSS or JS changes
+## Setting up local dev environment to make template, CSS or JS changes
 
 1. Clone repo
 2. Make sure you have node.js and gulp installed on your system.
