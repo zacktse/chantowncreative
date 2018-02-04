@@ -3,7 +3,6 @@
 html {
   min-height: 100%;
   height: 100%;
-  height: 100vh;
   box-sizing: border-box;
   background-color: $lighter-orange;
   padding: 6px;
@@ -80,7 +79,8 @@ body {
 }
 
 .full-height-wrapper{
-  position: absolute;
+  // position: absolute;
+  position: fixed;
   top: 0;
   min-height: 100%;
   max-height: 100%;
@@ -179,8 +179,12 @@ body {
 
 
 .logo--chantown-inpage {
-  max-width: 500px !important; 
-  max-height: 80px;
+
+  max-width: 330px; 
+  @include media($desktop-up) {
+    max-width: 500px!important; 
+    max-height: 80px;
+  }
 }
 
 .flex-center {
