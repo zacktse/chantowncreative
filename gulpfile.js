@@ -212,8 +212,6 @@ gulp.task('js-browserify', function() {
     .pipe(gulp.dest('./build/assets/js'));
 });
 
-
-
 // copy  js to build folder
 gulp.task('js-copy-scripts', function() {
   gulp.src(path.js_vendor_src)
@@ -969,6 +967,16 @@ gulp.task('copy-no-follow-robots-txt', function() {
 });
 
 
+gulp.task('generate-service-worker', function(callback) {
+  var swPrecache = require('sw-precache');
+  var rootDir = 'build';
+
+  swPrecache.write(`${rootDir}/service-worker.js`, {
+    staticFileGlobs: [rootDir + '/**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff}'],
+    stripPrefix: rootDir
+  }, callback);
+});
+
 
 
 /*******************************************************************************
@@ -985,7 +993,8 @@ gulp.task('build', [
   'js-copy-json',
   'copy-favicon',
   'copy-sprites',
-  'sass']);
+  'sass',
+  'generate-service-worker']);
 
 
 
